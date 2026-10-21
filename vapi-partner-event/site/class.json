@@ -71,7 +71,13 @@
       "title": "I find a reason to use mine almost every day",
       "bullets": [],
       "note": "",
-      "image": "/slides/vapi-partner-event/06.png"
+      "image": "/slides/vapi-partner-event/06.png",
+      "audio": [
+        {
+          "label": "Bat information line — the call",
+          "src": "/slides/vapi-partner-event/bat-hotline.mp3"
+        }
+      ]
     },
     {
       "n": 7,
