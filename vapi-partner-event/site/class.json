@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "vapi-partner-event",
-  "title": "Your First Phone Agent",
+  "title": "Build Your First Phone Agent",
   "icon": "☎",
   "owner": "Dana Sacco",
   "summary": "Half an hour with a voice interviewer that designs your agent and writes the prompt, then an hour wiring it into Vapi until a real phone number answers in a voice you chose. No code, nothing to install.",
@@ -15,9 +15,9 @@
   "setupMinutes": 15,
   "runner": "interview",
   "prereqs": [
-    "A Deepgram API key with permission to create temporary tokens.",
-    "Headphones and a microphone, on a desktop browser.",
-    "A Vapi account to paste the finished prompt into."
+    "A Deepgram API key with permission to create temporary tokens. It is used for this session only and never stored.",
+    "A laptop with a desktop browser. Headsets with a built-in mic are provided in the room.",
+    "A Vapi account, with your Deepgram key added under Integrations, and its private API key to see your calls here."
   ],
   "artifact": "A working phone number the attendee can call, running the prompt written from their own answers.",
   "links": {
@@ -27,399 +27,363 @@
   "slides": [
     {
       "n": 1,
-      "kicker": "OPENING",
+      "kicker": "",
       "title": "Your First Phone Agent",
       "bullets": [],
-      "note": "In the next hour we turn the prompt you just wrote into a real phone number a real person can call. No code required."
+      "note": "",
+      "image": "/slides/vapi-partner-event/01.png"
     },
     {
       "n": 2,
-      "kicker": "WELCOME",
-      "title": "Where we end up",
+      "kicker": "",
+      "title": "Welcome to 505 Howard Street",
       "bullets": [],
-      "note": "You will call a phone number, and something you built will pick up. Not a demo video — an actual number on the actual phone network, answering in a voice you chose."
+      "note": "",
+      "image": "/slides/vapi-partner-event/02.png"
     },
     {
       "n": 3,
-      "kicker": "WELCOME",
-      "title": "How tonight works — I drive, you follow",
-      "bullets": [
-        "No writing code",
-        "No terminal, no command line",
-        "No installing anything",
-        "Two websites, side by side in your browser",
-        "Copy, paste, and dropdown menus",
-        "One phone call at the end"
-      ],
-      "note": "If you fall behind, put your hand up. Nobody is behind; the whole room is doing this for the first time."
+      "kicker": "",
+      "title": "What Deepgram does",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/03.png"
     },
     {
       "n": 4,
-      "kicker": "THE MENTAL MODEL",
-      "title": "Every voice agent is three parts",
-      "bullets": [
-        "Ears — turns what the caller says into text, and decides when they have stopped talking",
-        "Brain — reads that text, follows your instructions, writes a reply",
-        "Mouth — turns the reply into speech the caller hears"
-      ],
-      "note": "That loop runs every time the caller pauses. Round and round, until somebody hangs up."
+      "kicker": "",
+      "title": "Amanda, over to you",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/04.png"
     },
     {
       "n": 5,
-      "kicker": "THE MENTAL MODEL",
-      "title": "Two companies, two jobs",
-      "bullets": [
-        "Deepgram — the voice. The ears and the mouth: Flux to listen, Aura to speak.",
-        "Vapi — the phone system. The number, answering the call, moving audio, hanging up."
-      ],
-      "note": "The brain comes from a third place, Anthropic, and it is in the same dropdown. Three vendors, one screen."
+      "kicker": "",
+      "title": "How businesses use AI phone agents",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/05.png"
     },
     {
       "n": 6,
-      "kicker": "TONIGHT’S ROUTE",
-      "title": "Seven steps",
-      "bullets": [
-        "Get a Deepgram API key",
-        "Paste that key into Vapi",
-        "Create an assistant and set the ears, brain and mouth",
-        "Paste in the prompt you wrote during the first half hour",
-        "Test it in the browser before you spend a phone number on it",
-        "Get a free phone number and point it at your assistant",
-        "Call it"
-      ],
-      "note": "Everything happens live on the screen. These slides just say where we are and why."
+      "kicker": "",
+      "title": "I find a reason to use mine almost every day",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/06.png"
     },
     {
       "n": 7,
-      "kicker": "YOUR PROMPT",
-      "title": "That giant thing you just wrote",
-      "bullets": [
-        "What it is: a job description — who the agent is, what it is for, what to say, what never to say",
-        "Where it goes: one box, in step 4, called System Prompt"
-      ],
-      "note": "Right now: open that prompt in its own browser tab and leave it there."
+      "kicker": "",
+      "title": "First decision: what’s yours for?",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/07.png"
     },
     {
       "n": 8,
-      "kicker": "STEP 1 · DEEPGRAM KEY",
-      "title": "Get your Deepgram API key",
-      "bullets": [
-        "Sign up — no credit card, and you land on $200 of free credit",
-        "Give the key any name you will recognise later",
-        "Copy it and paste it somewhere safe right now — it is shown once"
-      ],
-      "note": "console.deepgram.com → Settings → API Keys → Create a New API Key. Once you close that dialog the key is gone; if you lose it, just make another."
+      "kicker": "",
+      "title": "You will call a phone number, and something you built will pick up",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/08.png"
     },
     {
       "n": 9,
-      "kicker": "STEP 1 · DEEPGRAM KEY",
-      "title": "What an API key actually is",
-      "bullets": [
-        "Treat it exactly like a password",
-        "Never paste it into a chat, a doc or a screenshot",
-        "If it leaks, delete it in the console and make a new one"
-      ],
-      "note": "It is a password a program uses instead of a person. You are in a room full of people — do not leave your key on screen when someone comes over to help."
+      "kicker": "",
+      "title": "I drive, you follow",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/09.png"
     },
     {
       "n": 10,
-      "kicker": "STEP 1 · DEEPGRAM KEY",
-      "title": "What tonight costs you",
-      "bullets": [
-        "$200 free Deepgram credit on a new account, no card",
-        "$5 free Vapi credit on a new account",
-        "Under $0.20 is roughly what tonight’s testing actually consumes"
-      ],
-      "note": "The free credit covers a lot more than one evening."
+      "kicker": "",
+      "title": "Every voice agent is three parts",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/10.png"
     },
     {
       "n": 11,
-      "kicker": "STEP 2 · CONNECT THE KEY",
-      "title": "Hand the key to Vapi",
-      "bullets": [
-        "Sign up at vapi.ai and open the dashboard",
-        "Left sidebar: scroll to Integrations and click it",
-        "Find the Deepgram card under Voice Providers",
-        "Paste your key into API Key and save. Leave API Url alone."
-      ],
-      "note": "Once it saves, Deepgram jumps to a Connected row at the top. That is how you know it took. Deepgram now bills you directly for speech instead of Vapi passing it through."
+      "kicker": "",
+      "title": "Two companies, two jobs",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/11.png"
     },
     {
       "n": 12,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "Create the assistant",
-      "bullets": [
-        "Sidebar → Assistants → Create Assistant → Blank Template",
-        "Give it a name you will recognise — “front desk”, not “Assistant”"
-      ],
-      "note": "By the end of the night people have four things called Assistant and cannot tell them apart. Vapi fills the three parts with a default preset; we are about to replace all three."
+      "kicker": "",
+      "title": "Seven steps",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/12.png"
     },
     {
       "n": 13,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "A tour before we touch anything",
-      "bullets": [
-        "Cost and latency meters along the top, moving as you change things",
-        "Model presets: Balanced, High Intelligence, Ultra Fast, Cost Saver",
-        "Three cards: Transcriber, Model, Voice",
-        "First Message — what it says when it picks up",
-        "System Prompt — where your big prompt goes",
-        "Talk to test it, Publish to make it live"
-      ],
-      "note": "Note the latency number before we start. Write it down. We are going to make it smaller."
+      "kicker": "",
+      "title": "Get your Deepgram API key",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/13.png"
     },
     {
       "n": 14,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "Transcriber, Model, Voice",
-      "bullets": [
-        "Card 1 — ears — Transcriber",
-        "Card 2 — brain — Model",
-        "Card 3 — mouth — Voice"
-      ],
-      "note": "Vapi’s names for the same three parts. Each card shows its own latency and cost; the three added together are what the caller feels."
+      "kicker": "",
+      "title": "What an API key actually is",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/14.png"
     },
     {
       "n": 15,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "The ears: Deepgram Flux",
-      "bullets": [
-        "Transcriber → Deepgram → Flux General English"
-      ],
-      "note": "There is a multilingual Flux if your caller might switch languages mid-sentence. The card reports its word error rate — around 2.3%."
+      "kicker": "",
+      "title": "What tonight costs you",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/15.png"
     },
     {
       "n": 16,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "Flux knows when you have stopped talking",
-      "bullets": [
-        "The old way: count the silence. Too short and it cuts you off; too long and you wait.",
-        "Flux: turn detection is built into the model, so it can tell an unfinished thought from a finished one.",
-        "200–600ms cut from response time",
-        "~30% fewer times the agent talks over the caller",
-        "95% of turns detected within 1.5 seconds"
-      ],
-      "note": "No timer setting fixes both problems. Understanding the sentence does."
+      "kicker": "",
+      "title": "The Flux interview",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/16.png"
     },
     {
       "n": 17,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "And it mishears less than anything else",
-      "bullets": [
-        "54% accuracy lead on streaming audio — the mode a phone call runs in",
-        "47% accuracy lead on pre-recorded transcription",
-        "100 key terms you can prime it with"
-      ],
-      "note": "Keyterm Prompting is the one to remember: hand it your company name, your menu items, the street you are on, and it stops guessing at them."
+      "kicker": "",
+      "title": "That giant thing it just wrote",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/17.png"
     },
     {
       "n": 18,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "The brain: Claude Haiku",
-      "bullets": [
-        "Model → Anthropic → Claude Haiku",
-        "The edit icon opens a panel with the model dropdown and a temperature slider",
-        "Change the model; leave temperature where it is"
-      ],
-      "note": "Watch the latency meter. Swapping the default model for Haiku is the single biggest drop you will see all night."
+      "kicker": "",
+      "title": "Hand the key to Vapi",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/18.png"
     },
     {
       "n": 19,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "On a phone call, fast beats brilliant",
-      "bullets": [
-        "Answering from your prompt is not a hard reasoning task",
-        "Cheapest per call, so experimenting costs almost nothing",
-        "It is one dropdown — move up to a bigger model later if you need it"
-      ],
-      "note": "A caller notices a one-second gap. They do not notice that your agent could have written a better essay. Dead air is what people mean when they say it felt robotic."
+      "kicker": "",
+      "title": "Create the assistant",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/19.png"
     },
     {
       "n": 20,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "The mouth: a Deepgram voice",
-      "bullets": [
-        "Voice → search “Deepgram” → Aura or Aura-2 → pick a voice"
-      ],
-      "note": "The voice list is long, so search. Aura-2 is the newer one. Preview two or three out loud — this is the part people actually enjoy."
+      "kicker": "",
+      "title": "A tour before we touch anything",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/20.png"
     },
     {
       "n": 21,
-      "kicker": "STEP 3 · BUILD THE ASSISTANT",
-      "title": "The pause before it speaks is what people judge",
-      "bullets": [
-        "90ms — Aura-2 time to first byte",
-        "~300ms — the gap a human expects in natural conversation",
-        "3 parts that each add to that gap, every single turn"
-      ],
-      "note": "Your caller’s patience is one budget shared across all three boxes. Slow any one and the whole call feels laggy."
+      "kicker": "",
+      "title": "Transcriber, Model, Voice",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/21.png"
     },
     {
       "n": 22,
-      "kicker": "STEP 4 · THE PROMPT",
-      "title": "What it says when it picks up",
-      "bullets": [
-        "First Message → one short sentence",
-        "End it in a question, so the caller knows it is their turn"
-      ],
-      "note": "Avoid “Hello, you have reached the automated virtual assistant for…” — by word six the caller is already talking over it."
+      "kicker": "",
+      "title": "The ears: Deepgram Flux",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/22.png"
     },
     {
       "n": 23,
-      "kicker": "STEP 4 · THE PROMPT",
-      "title": "Paste your prompt in, then publish",
-      "bullets": [
-        "System Prompt → paste everything → Publish",
-        "Length is fine — paste the whole thing"
-      ],
-      "note": "Publish is the step everyone forgets. If you change something and nothing seems different, you did not publish."
+      "kicker": "",
+      "title": "Flux knows when you’ve stopped talking",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/23.png"
     },
     {
       "n": 24,
-      "kicker": "STEP 4 · THE PROMPT",
-      "title": "Three things a phone prompt needs",
-      "bullets": [
-        "It knows it is on a phone — no bullet points, no links, no “as you can see below”",
-        "It keeps answers short — two or three sentences, then stop",
-        "It knows what it does not know — say exactly what to do when asked something outside its job"
-      ],
-      "note": "A paragraph that reads fine on screen is forty seconds of someone talking at you. Without the third rule, it invents an answer."
+      "kicker": "",
+      "title": "And it mishears less than anything else",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/24.png"
     },
     {
       "n": 25,
-      "kicker": "STEP 5 · TEST IT",
-      "title": "Talk to it before you give it a phone number",
-      "bullets": [
-        "Publish → Talk → allow the microphone"
-      ],
-      "note": "The Talk button runs the exact same agent through your laptop mic. Much faster to iterate on than dialling every time. It is about to get loud in here."
+      "kicker": "",
+      "title": "The brain: Claude Haiku",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/25.png"
     },
     {
       "n": 26,
-      "kicker": "STEP 5 · TEST IT",
-      "title": "Listen for these four things",
-      "bullets": [
-        "Interrupting — does it cut you off? Check the transcriber is actually on Flux.",
-        "Dead air — does it take too long? Check the brain is Haiku, then shorten your prompt.",
-        "Waffling — does it go on forever? Add “keep answers to two sentences” near the top.",
-        "Inventing — does it make things up? Your prompt does not say what to do when it does not know."
-      ],
-      "note": "Change one thing → Publish → Talk again. That loop is the whole job."
+      "kicker": "",
+      "title": "On a phone call, fast beats brilliant",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/26.png"
     },
     {
       "n": 27,
-      "kicker": "STEP 6 · THE NUMBER",
-      "title": "Get your free phone number",
-      "bullets": [
-        "Pick Free Vapi number",
-        "Enter a three-digit US area code — 415 or 707 if you want it to look local",
-        "Press Create. It takes a couple of minutes to go live."
-      ],
-      "note": "Sidebar → Phone numbers → Create phone number."
+      "kicker": "",
+      "title": "The mouth: a Deepgram voice",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/27.png"
     },
     {
       "n": 28,
-      "kicker": "STEP 6 · THE NUMBER",
-      "title": "The fine print on free numbers",
-      "bullets": [
-        "One free number per account",
-        "US area codes only",
-        "Inbound only — it can answer calls, it cannot make them"
-      ],
-      "note": "If you see “you have reached the maximum number”, you already have your one free number. The number is free; the calls are about five cents a minute plus what the models use."
+      "kicker": "",
+      "title": "The pause before it speaks is what people judge",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/28.png"
     },
     {
       "n": 29,
-      "kicker": "STEP 6 · THE NUMBER",
-      "title": "Point the number at your assistant",
-      "bullets": [
-        "Open your number → Inbound settings → choose your assistant → Save"
-      ],
-      "note": "This is the wire between the number and the thing you built, and the one people skip. A number with no assistant attached just rings out."
+      "kicker": "",
+      "title": "What it says when it picks up",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/29.png"
     },
     {
       "n": 30,
-      "kicker": "STEP 7 · CALL IT",
-      "title": "Pick up your phone and call your number",
+      "kicker": "",
+      "title": "Paste your prompt in, then publish",
       "bullets": [],
-      "note": "Out loud, on speaker, right now. The room should get noisy."
+      "note": "",
+      "image": "/slides/vapi-partner-event/30.png"
     },
     {
       "n": 31,
-      "kicker": "STEP 7 · CALL IT",
-      "title": "Four things that go wrong",
-      "bullets": [
-        "Rings out or a network message — the number is not live yet. Wait a few minutes.",
-        "Picks up then silence — no assistant attached. Inbound settings → assistant → Save.",
-        "Greeting plays then nothing — it cannot hear you, or the prompt is enormous.",
-        "Answers but ignores your prompt — you changed it and never published."
-      ],
-      "note": "Nothing here is broken code. Every one of these is a dropdown or a button."
+      "kicker": "",
+      "title": "Three things a phone prompt needs",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/31.png"
     },
     {
       "n": 32,
-      "kicker": "MAKE IT YOURS",
-      "title": "Change one thing, call again",
-      "bullets": [
-        "Swap the voice. Try three and call after each.",
-        "Halve the first message. Hear how much snappier the call feels.",
-        "Add one rule — “never give a price over the phone” — then try to make it break the rule.",
-        "Give it a personality. One line changes the whole call."
-      ],
-      "note": "You now own a loop that takes thirty seconds. Publish after every change, then call."
+      "kicker": "",
+      "title": "Talk to it before you give it a phone number",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/32.png"
     },
     {
       "n": 33,
-      "kicker": "MAKE IT YOURS",
-      "title": "Three knobs, and you can reach all of them",
-      "bullets": [
-        "Ears — which model listens, and how patiently it waits for you to finish",
-        "Brain — which model thinks, and the instructions it follows",
-        "Mouth — which voice speaks, and how fast it starts"
-      ],
-      "note": "Every voice agent you meet from here is these same three boxes with different settings and a longer prompt. You now know where the boxes are."
+      "kicker": "",
+      "title": "Listen for these four things",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/33.png"
     },
     {
       "n": 34,
-      "kicker": "COSTS",
-      "title": "What a real minute costs",
-      "bullets": [
-        "Hosting the call — Vapi — $0.05 / min",
-        "Speech to text (Nova-3) — Deepgram — $0.0077 / min",
-        "The brain — Anthropic, passed through at cost — fractions of a cent",
-        "Text to speech (Aura-2) — Deepgram — $0.030 / 1,000 chars"
-      ],
-      "note": "Deepgram is roughly 2× cheaper than the cloud providers on speech to text, and 20–40% under the alternatives on speech."
+      "kicker": "",
+      "title": "Get your free phone number",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/34.png"
     },
     {
       "n": 35,
-      "kicker": "HOUSEKEEPING",
-      "title": "Before you close the laptop",
-      "bullets": [
-        "Save your number — text it to yourself",
-        "Save your prompt — keep the version that worked, outside Vapi",
-        "Your key still works — it is tied to your Deepgram account, not to tonight",
-        "Nothing expires — the agent stays up and answers calls until you delete it"
-      ],
-      "note": "It is what you will want to show someone tomorrow."
+      "kicker": "",
+      "title": "The fine print on free numbers",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/35.png"
     },
     {
       "n": 36,
-      "kicker": "NEXT",
-      "title": "If you want to keep going",
-      "bullets": [
-        "Tools — let the agent look something up or book an appointment mid-call",
-        "Logs — every call is recorded and transcribed in the dashboard",
-        "Your own number — bring one in from Twilio to unlock outbound calling"
-      ],
-      "note": "Reading your own transcripts is the fastest way to improve a prompt. Docs: developers.deepgram.com for the models, docs.vapi.ai for calls."
+      "kicker": "",
+      "title": "Point the number at your assistant",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/36.png"
     },
     {
       "n": 37,
-      "kicker": "CLOSING",
+      "kicker": "",
+      "title": "Pick up your phone and call your number",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/37.png"
+    },
+    {
+      "n": 38,
+      "kicker": "",
+      "title": "Four things that go wrong",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/38.png"
+    },
+    {
+      "n": 39,
+      "kicker": "",
+      "title": "Change one thing, call again",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/39.png"
+    },
+    {
+      "n": 40,
+      "kicker": "",
+      "title": "Three knobs, and you can reach all of them",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/40.png"
+    },
+    {
+      "n": 41,
+      "kicker": "",
+      "title": "What a real minute costs",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/41.png"
+    },
+    {
+      "n": 42,
+      "kicker": "",
+      "title": "Before you close the laptop",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/42.png"
+    },
+    {
+      "n": 43,
+      "kicker": "",
+      "title": "If you want to keep going",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/43.png"
+    },
+    {
+      "n": 44,
+      "kicker": "",
+      "title": "Part two: build it, break it, fix it",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/44.png"
+    },
+    {
+      "n": 45,
+      "kicker": "",
       "title": "You built a thing that answers the phone",
       "bullets": [],
-      "note": "An hour ago you had never done this. AI Collaboration Hub · 505 Howard Street · events every week."
+      "note": "",
+      "image": "/slides/vapi-partner-event/45.png"
     }
   ],
   "flow": [
@@ -427,18 +391,18 @@
       "type": "slides",
       "title": "Before the interview",
       "from": 1,
-      "to": 6
+      "to": 16
     },
     {
       "type": "runner",
       "title": "Your Flux interview",
-      "note": "About half an hour. Talk it through, then take the prompt it writes with you — you will paste it into Vapi at step 4."
+      "note": "Talk it through, let it write your prompt, then test that prompt right here on Deepgram before you move it to Vapi. Your Vapi calls show up at the bottom."
     },
     {
       "type": "slides",
       "title": "Building it in Vapi",
-      "from": 7,
-      "to": 37
+      "from": 17,
+      "to": 45
     }
   ],
   "sections": [],
