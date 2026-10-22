@@ -99,9 +99,11 @@
     "Call your Vapi number now",
     "Still answers? You're ready for tools.",
     "Rings out? Vapi, then Phone Numbers: is an assistant attached?",
-    "Use this time to pick your tool from the menu"
+    "Use this time to pick your tool from the menu",
+    "Then watch while others build: 'Say THIS to Destroy AI Bot Callers'",
+    "youtube.com/watch?v=fhi6JU5pOJk"
    ],
-   "note": "Returners get a head start on tools."
+   "note": "Returners get a head start on tools. Put the video up on the side screen while newcomers do the fast track; it's a warm-up for the break rounds."
   },
   {
    "n": 7,
@@ -439,7 +441,7 @@
  "sections": [
   {
    "title": "Fast track: your first phone agent",
-   "summary": "New tonight? Get a working phone number in about 15 minutes. Came last time? Just check that your number still answers.",
+   "summary": "New tonight? Get a working phone number in about 15 minutes. Came last time? Check that your number still answers, pick a tool, then watch 'Say THIS to Destroy AI Bot Callers' while others build: youtube.com/watch?v=fhi6JU5pOJk",
    "steps": [
     {
      "id": "ft-key",
@@ -597,6 +599,12 @@
    "title": "Break playbook",
    "summary": "How to break a phone agent. Call only your partner's number, use fictional data, and log every break.",
    "steps": [
+    {
+     "id": "br-warmup",
+     "title": "Warm up: watch the video",
+     "instruction": "Watch 'Say THIS to Destroy AI Bot Callers' (youtube.com/watch?v=fhi6JU5pOJk) for ideas on what trips up phone bots. Good to watch while others finish building.",
+     "check": "You have two or three attacks in mind."
+    },
     {
      "id": "br-scout",
      "title": "Scout",
