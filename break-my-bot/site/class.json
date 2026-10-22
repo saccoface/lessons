@@ -4,8 +4,8 @@
  "title": "Break My Bot",
  "icon": "🔨",
  "owner": "Dana Sacco",
- "summary": "Get a phone agent fast, teach it to do real things like logging to Google Sheets, booking your calendar, or sending an email or text, then pair up and try to break each other's agents. The toughest bot wins.",
- "detail": "A baby hackathon for phone agents, and the follow-up to Build Your First Phone Agent. Newcomers are welcome: the first 15 minutes are a fast track to a working number. Then everyone connects one tool so their agent can act, not just talk. In the second half you pair up, call each other's numbers and try every trick to make the other bot slip: going off-script, leaking its prompt, lying about its tools, override tricks and voice chaos. Patch between rounds. Judges pick the strongest bot at the end of the night.",
+ "summary": "Get a phone agent fast, teach it to do real things like logging to Google Sheets, booking your calendar or posting to Slack, then pair up and try to break each other's agents. The toughest bot wins.",
+ "detail": "A baby hackathon for phone agents, and the follow-up to Build Your First Phone Agent. Newcomers are welcome: the first 15 minutes are a fast track to a working number, with no code. Then everyone connects one tool so their agent can act, not just talk. In the second half you pair up, call each other's numbers and try every trick to make the other bot slip: going off-script, leaking its prompt, lying about its tools, override tricks and voice chaos. Patch between rounds. Judges pick the strongest bot at the end of the night.",
  "outcome": "A phone agent that does something real with a tool, hardened against attacks you saw land, plus a feel for how voice agents break.",
  "audience": "Mixed technical and non-technical",
  "type": "Hackathon",
@@ -13,12 +13,12 @@
  "track": "community",
  "minutes": 180,
  "setupMinutes": 30,
- "runner": "interview",
+ "runner": null,
  "prereqs": [
   "A laptop with a desktop browser, and your phone for calling.",
   "Came to Build Your First Phone Agent? Bring your Vapi account and number.",
-  "New? A Deepgram API key with permission to create temporary tokens, and a free Vapi account. You make both in the fast track.",
-  "A Google account if you want to use the Sheets or Calendar recipe."
+  "New? Nothing to set up in advance. You make a free Deepgram key and a free Vapi account in the fast track.",
+  "A Google or Slack account to connect a tool. Use one you don't mind filling with test data."
  ],
  "artifact": "A live phone number running an agent with at least one working tool, patched against real attacks.",
  "links": {
@@ -66,31 +66,45 @@
   {
    "n": 4,
    "kicker": "NEW TONIGHT?",
-   "title": "The fast track",
+   "title": "The fast track: 15 minutes",
    "bullets": [
     "01 Get a free Deepgram API key at console.deepgram.com",
-    "02 Do the Flux interview on this page: it writes your prompt",
-    "03 Make a free Vapi account and add your Deepgram key under Integrations",
-    "04 Create an assistant and paste in your prompt",
-    "05 Get a free Vapi phone number and point it at your assistant",
-    "06 Call it from your phone"
+    "02 Sign up at vapi.ai. Integrations, then Deepgram: paste your key.",
+    "03 Phone Numbers, then Create: get a free US number",
+    "04 Assistants, then Create: set Deepgram for the ears and voice",
+    "05 Write a short prompt (next slide) and Publish",
+    "06 Attach the number to the assistant and call it"
    ],
-   "note": "This is the Build Your First Phone Agent night in 15 minutes. Helpers walk the room. Returning folks skip to the next slide."
+   "note": "No interview tonight. Walk through it live on screen once, then helpers walk the room. Returners skip ahead."
   },
   {
    "n": 5,
+   "kicker": "YOUR PROMPT",
+   "title": "Write it in 5 minutes",
+   "bullets": [
+    "You are [name], the phone assistant for [business].",
+    "Your one job: [book a table / take an order / log a request].",
+    "Ask for: [name], [what they want], [when]. One question at a time.",
+    "Keep replies short. This is a phone call.",
+    "If asked anything else, steer back to your job.",
+    "Stuck? Ask ChatGPT or Claude: 'Write a short voice agent prompt for…'"
+   ],
+   "note": "Keep prompts short. A tight one-job prompt is easier to defend later, and that's a free hint."
+  },
+  {
+   "n": 6,
    "kicker": "CAME LAST TIME?",
    "title": "Check your number still answers",
    "bullets": [
     "Call your Vapi number now",
     "Still answers? You're ready for tools.",
     "Rings out? Vapi, then Phone Numbers: is an assistant attached?",
-    "Lost your prompt? Do the interview again. It takes 10 minutes."
+    "Use this time to pick your tool from the menu"
    ],
-   "note": "Returners use this time to pick a tool and think about what job their agent does."
+   "note": "Returners get a head start on tools."
   },
   {
-   "n": 6,
+   "n": 7,
    "kicker": "KEEP IT SAFE",
    "title": "Your key is a password",
    "bullets": [
@@ -102,83 +116,109 @@
    "note": "Tonight matters more than usual: everyone is literally trying to trick each other's bots."
   },
   {
-   "n": 7,
+   "n": 8,
    "kicker": "PART 1",
    "title": "Give it hands",
    "bullets": [
     "A phone agent that only talks is a demo.",
     "A phone agent that does something is a product.",
-    "Tonight, pick one: log it, book it, email it or text it."
+    "Tonight, pick one: log it, book it, post it or hand it to you."
    ],
    "note": "Transition from 'it answers' to 'it acts'. This is the real value of phone agents."
   },
   {
-   "n": 8,
+   "n": 9,
    "kicker": "HOW TOOLS WORK",
    "title": "The agent decides, the tool does",
    "bullets": [
     "1. The caller asks for something",
     "2. The agent decides a tool is needed and fills in the details",
-    "3. Vapi calls the tool: Google, a webhook or a text",
+    "3. Vapi calls the tool: Google, Slack, your phone or a webhook",
     "4. The tool replies: success or failure",
     "5. The agent tells the caller what actually happened"
    ],
    "note": "Step 5 is where most bots lie. Remember that for the second half."
   },
   {
-   "n": 9,
+   "n": 10,
+   "kicker": "THE MENU",
+   "title": "What you can build in 40 minutes",
+   "bullets": [
+    "Easy: log every call to Google Sheets (10 min)",
+    "Easy: book on Google Calendar (15 min)",
+    "Easy: post a message to Slack (10 min)",
+    "Easy: transfer the caller to your phone (5 min)",
+    "Stretch: email yourself via a Zapier, Make or n8n webhook (25 min)",
+    "Every easy one is just: connect, create the tool, attach, Publish"
+   ],
+   "note": "No code for any of the easy ones: you sign in to Google or Slack and click. Texting needs a separate Twilio account, so it's not on tonight's menu."
+  },
+  {
+   "n": 11,
+   "kicker": "THE PATTERN",
+   "title": "Three clicks, every tool",
+   "bullets": [
+    "1. Integrations, then Tool Providers: Connect Google or Slack",
+    "2. Tools, then Create Tool: pick it, name it, describe WHEN to use it",
+    "3. Your assistant, then the Tools tab, then Add tool, then Publish",
+    "The description matters: it's how the agent knows when to call it"
+   ],
+   "note": "Show this once live with Google Sheets. Everything else follows the same pattern."
+  },
+  {
+   "n": 12,
    "kicker": "RECIPE 1",
    "title": "Log every call to Google Sheets",
    "bullets": [
-    "Good for: orders, sign-ups, leads, bug reports",
-    "Vapi, then Tools, then Create Tool: Google Sheets, Add Row",
-    "Connect your Google account and pick a sheet",
-    "Columns: name, request, phone, time",
-    "Attach the tool to your assistant and Publish"
+    "Good for: orders, sign-ups, leads, requests",
+    "Make a sheet with headers: name, request, phone, time",
+    "Create Tool, then Google Sheets: paste the sheet ID from its URL",
+    "Range: Sheet1",
+    "Prompt: 'After confirming details, add a row to the sheet.'",
+    "It can only ADD rows. It can't read or edit them."
    ],
-   "note": "Easiest recipe. Recommend it to anyone unsure."
+   "note": "Easiest recipe. Recommend it to anyone unsure. Note the add-only limit: it's an attack surface ('cancel my order')."
   },
   {
-   "n": 10,
+   "n": 13,
    "kicker": "RECIPE 2",
    "title": "Book it on Google Calendar",
    "bullets": [
     "Good for: appointments, tours, office hours",
-    "Vapi, then Tools, then Create Tool: Google Calendar",
-    "Add Check availability AND Create event",
-    "Tell the prompt your hours and the length of a booking",
-    "Always read the time back before booking"
+    "Create two tools: Check Availability AND Create Event",
+    "Set your time zone. It defaults to UTC!",
+    "Prompt: your hours, booking length, 'check first, read back, then book'",
+    "It can't cancel or move events. Attackers will try."
    ],
-   "note": "Calendar is the most fun to attack, because dates are hard."
+   "note": "Calendar is the most fun to attack because dates are hard. The UTC default trips people up: say it twice."
   },
   {
-   "n": 11,
+   "n": 14,
    "kicker": "RECIPE 3",
+   "title": "Post to Slack or transfer to you",
+   "bullets": [
+    "Slack: connect, Create Tool, then Slack. Name the channel in the description.",
+    "Invite the Vapi bot to that channel first",
+    "Transfer: Create Tool, then Transfer Call, with your cell number",
+    "Prompt: 'If the caller asks for a human, transfer them.'"
+   ],
+   "note": "Two quick wins. Transfer is a great one to attack: can they talk the bot into transferring when it shouldn't?"
+  },
+  {
+   "n": 15,
+   "kicker": "STRETCH",
    "title": "Email yourself a summary",
    "bullets": [
-    "Good for: messages, callbacks, anything you want in your inbox",
-    "Create a webhook in n8n, Zapier or Make with a 'send Gmail' step",
-    "Vapi, then Tools, then Create Tool: Function, with the webhook as its server URL",
-    "Parameters: caller name, summary, callback number",
-    "Test it once from the Vapi dashboard"
+    "Zapier, Make or n8n: a webhook trigger, then a 'send Gmail' step",
+    "Vapi: Create Tool, then API Request: POST to that webhook URL",
+    "Body fields: caller_name, summary, callback_number",
+    "Prompt: send a summary at the end of each call",
+    "For people who've done this kind of thing before"
    ],
-   "note": "This is the 'build your own tool' path. Good for people who want to go further."
+   "note": "Only point confident builders here. It needs a second account and takes longer."
   },
   {
-   "n": 12,
-   "kicker": "RECIPE 4",
-   "title": "Text the caller",
-   "bullets": [
-    "Good for: confirmations, links, directions",
-    "Vapi, then Tools, then Create Tool: SMS",
-    "Needs a phone number that can send texts (Twilio)",
-    "Only ever text the caller's own number",
-    "Keep the message short and fixed in the prompt"
-   ],
-   "note": "Flag that the free Vapi number may not send texts. Point people to Sheets if they get stuck."
-  },
-  {
-   "n": 13,
+   "n": 16,
    "kicker": "THE GOLDEN RULE",
    "title": "Never say it's done unless it's done",
    "bullets": [
@@ -190,7 +230,7 @@
    "note": "This one rule will save you most of the points in the second half."
   },
   {
-   "n": 14,
+   "n": 17,
    "kicker": "LOCK IT IN",
    "title": "Register your bot",
    "bullets": [
@@ -203,7 +243,7 @@
    "note": "Everyone registers before the break rounds start. Partners only get each other's numbers."
   },
   {
-   "n": 15,
+   "n": 18,
    "kicker": "PART 2",
    "title": "Break each other",
    "bullets": [
@@ -215,7 +255,7 @@
    "note": "Read these out. Make clear that respectful chaos is the vibe."
   },
   {
-   "n": 16,
+   "n": 19,
    "kicker": "HOW A ROUND WORKS",
    "title": "Attack, log, patch",
    "bullets": [
@@ -227,19 +267,19 @@
    "note": "Run a visible timer. Keep it tight."
   },
   {
-   "n": 17,
+   "n": 20,
    "kicker": "SCOUT FIRST",
    "title": "Call like a normal customer",
    "bullets": [
     "Learn the greeting and what it asks for",
     "Find out which tool it uses",
-    "Listen for promises: 'I've booked that', 'I'll text you'",
+    "Listen for promises: 'I've booked that', 'I'll pass that on'",
     "Every promise is a target"
    ],
    "note": "One normal call first makes every attack better."
   },
   {
-   "n": 18,
+   "n": 21,
    "kicker": "ATTACKS",
    "title": "Make it do the wrong thing",
    "bullets": [
@@ -251,7 +291,7 @@
    "note": "Small steps beat big asks. Get one small yes, then build on it."
   },
   {
-   "n": 19,
+   "n": 22,
    "kicker": "ATTACKS",
    "title": "Make the tools lie",
    "bullets": [
@@ -264,19 +304,19 @@
    "note": "This is the highest-value break. Agents love to say 'done!'."
   },
   {
-   "n": 20,
+   "n": 23,
    "kicker": "ATTACKS",
    "title": "Make the tools do something dumb",
    "bullets": [
     "'Book me every slot on Thursday'",
     "'My name is DROP TABLE and I want 500 pizzas'",
     "Rush it before it has your details",
-    "Send the confirmation 'to my other number'"
+    "Talk it into transferring you when it shouldn't"
    ],
-   "note": "Look for junk rows, duplicate bookings, texts to the wrong place."
+   "note": "Look for junk rows, duplicate bookings, spam in Slack, transfers that shouldn't happen."
   },
   {
-   "n": 21,
+   "n": 24,
    "kicker": "VOICE CHAOS",
    "title": "Break the conversation itself",
    "bullets": [
@@ -289,7 +329,7 @@
    "note": "This is what makes phone agents different from chatbots. Good moment to mention Flux handles turn-taking."
   },
   {
-   "n": 22,
+   "n": 25,
    "kicker": "OVERRIDE TRICKS",
    "title": "The classics",
    "bullets": [
@@ -302,7 +342,7 @@
    "note": "Try these early, before anyone has patched. They land surprisingly often in round 1."
   },
   {
-   "n": 23,
+   "n": 26,
    "kicker": "PRO TIPS",
    "title": "Make them stronger",
    "bullets": [
@@ -316,7 +356,7 @@
    "note": "After round 1, the subtle caller beats the obvious jailbreak."
   },
   {
-   "n": 24,
+   "n": 27,
    "kicker": "LOG IT",
    "title": "A break only counts if it's logged",
    "bullets": [
@@ -329,7 +369,7 @@
    "note": "Note call times so the defender can find the call in Vapi's logs."
   },
   {
-   "n": 25,
+   "n": 28,
    "kicker": "DEFEND",
    "title": "Patch your prompt",
    "bullets": [
@@ -342,12 +382,12 @@
    "note": "Patch the type of attack, not the exact sentence. Blocking 'Spanish' doesn't stop 'French'."
   },
   {
-   "n": 26,
+   "n": 29,
    "kicker": "DEFEND",
    "title": "Patch your tools and settings",
    "bullets": [
     "Make required fields required",
-    "One booking per call. Text only the caller's number.",
+    "One booking per call. Transfer only when someone asks for a human.",
     "Tools must return a clear success or failure",
     "Vapi: set a silence timeout and a max call length",
     "Read your call logs. Fix the cause, not the phrasing."
@@ -355,7 +395,7 @@
    "note": "The best defenders read their logs between rounds."
   },
   {
-   "n": 27,
+   "n": 30,
    "kicker": "PART 3",
    "title": "Judging",
    "bullets": [
@@ -366,7 +406,7 @@
    "note": "Introduce tonight's judges here."
   },
   {
-   "n": 28,
+   "n": 31,
    "kicker": "WINNERS",
    "title": "Three winners",
    "bullets": [
@@ -376,7 +416,7 @@
    "note": "Announce winners and get a photo."
   },
   {
-   "n": 29,
+   "n": 32,
    "kicker": "KEEP GOING",
    "title": "Your bot is still live",
    "bullets": [
@@ -391,20 +431,9 @@
  "flow": [
   {
    "type": "slides",
-   "title": "Welcome and fast track",
+   "title": "Break My Bot",
    "from": 1,
-   "to": 6
-  },
-  {
-   "type": "runner",
-   "title": "Fast track: your Flux interview",
-   "note": "New tonight? Talk it through and let it write your prompt, then take it to Vapi. Came last time? Skip this and check that your number still answers."
-  },
-  {
-   "type": "slides",
-   "title": "Tools, break rounds and judging",
-   "from": 7,
-   "to": 29
+   "to": 32
   }
  ],
  "sections": [
@@ -415,146 +444,152 @@
     {
      "id": "ft-key",
      "title": "Get a Deepgram key",
-     "instruction": "Sign up at console.deepgram.com. New accounts get free credit with no card. Create an API key with permission to create temporary tokens. Treat it like a password.",
+     "instruction": "Sign up at console.deepgram.com. New accounts get free credit with no card. Create an API key and treat it like a password.",
      "check": "You have a key saved somewhere private."
-    },
-    {
-     "id": "ft-interview",
-     "title": "Do the Flux interview",
-     "instruction": "Paste your key into the interview on this page, pick one job for your agent and talk it through. Choose Finish interview and create prompt.",
-     "check": "You have a starter prompt on screen."
     },
     {
      "id": "ft-vapi",
      "title": "Hand your key to Vapi",
-     "instruction": "Sign up at vapi.ai. In the dashboard, open Integrations, then Voice Providers, then Deepgram, and paste your key.",
+     "instruction": "Sign up at vapi.ai. In the dashboard, open Integrations, find Deepgram under voice providers and paste your key.",
      "check": "Deepgram shows as connected in Vapi."
-    },
-    {
-     "id": "ft-assistant",
-     "title": "Create the assistant",
-     "instruction": "Create a blank assistant. Set the transcriber and voice to Deepgram, paste your prompt into the system prompt and Publish. Talk to it in the browser first.",
-     "check": "It answers you in the browser test."
     },
     {
      "id": "ft-number",
      "title": "Get a free number",
-     "instruction": "Open Phone Numbers, create a free Vapi number and set its inbound assistant to the one you just made.",
-     "check": "You call the number from your phone and it picks up."
+     "instruction": "Open Phone Numbers and create a free Vapi number. Free numbers are US only and take incoming calls, which is all you need tonight.",
+     "check": "You have a number in the list."
+    },
+    {
+     "id": "ft-assistant",
+     "title": "Create the assistant",
+     "instruction": "Open Assistants and create a blank one. Set the transcriber and the voice to Deepgram. Write a short prompt: who it is, its one job, what to ask for, and 'keep replies short, one question at a time'. Stuck? Ask ChatGPT or Claude to write a short voice agent prompt for your idea. Publish.",
+     "check": "It answers you when you talk to it in the browser."
+    },
+    {
+     "id": "ft-attach",
+     "title": "Point the number at it and call",
+     "instruction": "Back in Phone Numbers, set the inbound assistant to the one you made. Call it from your phone.",
+     "check": "It picks up."
     }
    ]
   },
   {
    "title": "Recipe: log calls to Google Sheets",
-   "summary": "Every call adds a row to a sheet. The easiest tool to start with.",
+   "summary": "Every call adds a row to a sheet. The easiest tool, about 10 minutes, no code.",
    "steps": [
     {
      "id": "gs-sheet",
      "title": "Make the sheet",
-     "instruction": "Create a Google Sheet with a header row, for example: name, request, phone, time.",
-     "check": "The sheet has headers in row 1."
+     "instruction": "Create a Google Sheet with headers in row 1, for example: name, request, phone, time. Copy the sheet ID from its URL: the part between /d/ and /edit.",
+     "check": "You have the sheet ID."
+    },
+    {
+     "id": "gs-connect",
+     "title": "Connect Google",
+     "instruction": "In Vapi, open Integrations, then Tool Providers, then Google Sheets, then Connect, and approve the Google prompts.",
+     "check": "Google Sheets shows as connected."
     },
     {
      "id": "gs-tool",
      "title": "Create the tool",
-     "instruction": "In Vapi, open Tools, then Create Tool, and pick Google Sheets (Add Row). Connect your Google account and choose the sheet.",
-     "check": "The tool saves without errors."
+     "instruction": "Tools, then Create Tool, then Google Sheets. Name it, and describe when to use it: 'Use after the caller confirms their name and request.' Paste the sheet ID and set the range to Sheet1.",
+     "check": "The tool saves."
     },
     {
      "id": "gs-attach",
-     "title": "Attach it and tell the prompt",
-     "instruction": "Add the tool to your assistant. In the prompt, say when to use it: 'After you confirm the caller's name and request, add a row to the sheet.' Publish.",
-     "check": "The assistant lists the tool."
+     "title": "Attach and Publish",
+     "instruction": "Open your assistant, then the Tools tab, then Add tool, and pick it. Publish, Next, Publish.",
+     "check": "The tool is listed on your assistant."
     },
     {
      "id": "gs-test",
      "title": "Test it",
-     "instruction": "Call your number, give fake details and hang up. Open the sheet.",
-     "check": "A new row appears with what you said."
+     "instruction": "Call, give fake details and hang up. Note: this tool can only add rows. It can't read, edit or delete them.",
+     "check": "A new row appears in the sheet."
     }
    ]
   },
   {
    "title": "Recipe: book on Google Calendar",
-   "summary": "The agent checks your free time and books it. The most fun to attack.",
+   "summary": "The agent checks your free time and books it. About 15 minutes, no code, and the most fun to attack.",
    "steps": [
+    {
+     "id": "gc-connect",
+     "title": "Connect Google",
+     "instruction": "Integrations, then Tool Providers, then Google Calendar, then Connect. Use a calendar you don't mind filling up.",
+     "check": "Google Calendar shows as connected."
+    },
     {
      "id": "gc-tools",
      "title": "Create two tools",
-     "instruction": "In Vapi, Tools, then Create Tool: add Google Calendar Check Availability and Google Calendar Create Event, connected to a calendar you don't mind filling up.",
-     "check": "Both tools save."
+     "instruction": "Tools, then Create Tool, then Google Calendar, then Check Availability. Do it again for Create Event. Set the time zone on both: it defaults to UTC.",
+     "check": "Both tools save with your time zone."
     },
     {
      "id": "gc-prompt",
      "title": "Set the rules in the prompt",
-     "instruction": "Tell the prompt your hours, the length of a booking and your timezone. Add: 'Check availability first, read the time back, and only book after a clear yes.'",
+     "instruction": "Tell the prompt your hours, the length of a booking and your time zone. Add: 'Check availability first, read the time back, and only book after a clear yes.'",
      "check": "The rules are in the prompt."
     },
     {
      "id": "gc-test",
-     "title": "Test it",
-     "instruction": "Attach both tools, Publish, call and book a slot.",
+     "title": "Attach and test",
+     "instruction": "Add both tools on your assistant's Tools tab and Publish. Call and book a slot. Note: it can't cancel or move events.",
      "check": "The event is on the calendar at the right time."
     }
    ]
   },
   {
-   "title": "Recipe: email yourself a summary",
-   "summary": "Build your own tool with a webhook. The agent sends a summary to your inbox.",
+   "title": "Recipe: post to Slack or transfer to you",
+   "summary": "Two quick wins, about 5 to 10 minutes each, no code.",
+   "steps": [
+    {
+     "id": "sl-connect",
+     "title": "Slack: connect",
+     "instruction": "Integrations, then Tool Providers, then Slack, then Connect. Invite the Vapi bot to the channel you want to post in.",
+     "check": "Slack shows as connected and the bot is in your channel."
+    },
+    {
+     "id": "sl-tool",
+     "title": "Slack: create and attach",
+     "instruction": "Tools, then Create Tool, then Slack. In the description, name the channel and when to post, for example: 'Post each new request to #my-bot.' Attach it to your assistant and Publish.",
+     "check": "A test call posts a message in the channel."
+    },
+    {
+     "id": "tr-tool",
+     "title": "Transfer: create and attach",
+     "instruction": "Tools, then Create Tool, then Transfer Call. Add your own cell number as the destination. In the prompt: 'If the caller asks for a human, transfer them.' Attach and Publish.",
+     "check": "Asking for a human rings your phone."
+    }
+   ]
+  },
+  {
+   "title": "Stretch: email yourself a summary",
+   "summary": "For people who've used Zapier, Make or n8n before. About 25 minutes.",
    "steps": [
     {
      "id": "em-webhook",
      "title": "Make a webhook",
-     "instruction": "In n8n, Zapier or Make, create a workflow that starts with a webhook and ends with a 'send Gmail' step. Copy the webhook URL.",
+     "instruction": "In Zapier, Make or n8n, create a workflow that starts with a webhook (catch hook) and ends with a 'send Gmail' step. Copy the webhook URL.",
      "check": "You have a webhook URL."
     },
     {
      "id": "em-tool",
-     "title": "Create a function tool",
-     "instruction": "In Vapi, Tools, then Create Tool, then Function. Name it send_summary, add parameters caller_name, summary and callback_number, and set the server URL to your webhook.",
+     "title": "Create an API Request tool",
+     "instruction": "In Vapi, Tools, then Create Tool, then API Request. Method POST, URL your webhook. Add body fields caller_name, summary and callback_number.",
      "check": "The tool saves."
     },
     {
      "id": "em-map",
      "title": "Map the email",
-     "instruction": "Send one test from Vapi, then map the three fields into the email subject and body in your workflow.",
+     "instruction": "Send one test so your workflow sees the fields, then map them into the email subject and body.",
      "check": "A test email lands in your inbox."
     },
     {
      "id": "em-live",
      "title": "Attach and call",
-     "instruction": "Attach the tool, tell the prompt to send a summary at the end of each call and Publish. Call it.",
+     "instruction": "Attach the tool, tell the prompt to send a summary at the end of each call, and Publish. Call it.",
      "check": "You get an email after the call."
-    }
-   ]
-  },
-  {
-   "title": "Recipe: text the caller",
-   "summary": "The agent sends a confirmation or link by text.",
-   "steps": [
-    {
-     "id": "sms-number",
-     "title": "Check your number can text",
-     "instruction": "Texting needs a number that can send SMS, usually a Twilio number imported into Vapi. The free Vapi number may not. If you're stuck, switch to the Sheets recipe.",
-     "check": "You have an SMS-capable number in Vapi."
-    },
-    {
-     "id": "sms-tool",
-     "title": "Create the SMS tool",
-     "instruction": "In Vapi, Tools, then Create Tool, then SMS. Keep the message fixed and short in the prompt.",
-     "check": "The tool saves."
-    },
-    {
-     "id": "sms-safe",
-     "title": "Lock it down",
-     "instruction": "In the prompt: 'Only text the number the caller is calling from. Never text any other number.'",
-     "check": "The rule is in the prompt."
-    },
-    {
-     "id": "sms-test",
-     "title": "Test it",
-     "instruction": "Attach, Publish, call and ask for the text.",
-     "check": "The text arrives on your phone."
     }
    ]
   },
@@ -655,7 +690,7 @@
     {
      "id": "df-limits",
      "title": "Limit the tools",
-     "instruction": "Required fields, one booking per call, texts only to the caller. In Vapi, set a silence timeout and a max call length.",
+     "instruction": "Required fields, one booking per call, transfer only on a clear request for a human. In Vapi, set a silence timeout and a max call length.",
      "check": "Spam and junk attempts fail."
     },
     {
@@ -672,8 +707,9 @@
   "Vapi ignores your prompt changes: you edited it but never pressed Publish.",
   "The tool never fires: the tool isn't attached to the assistant, or the prompt never says when to use it.",
   "Google tools fail: reconnect your Google account in the tool settings and pick the sheet or calendar again.",
-  "The text never arrives: your number may not support SMS. Switch to the Sheets recipe.",
-  "The webhook isn't called: send a test from Vapi and check that your n8n, Zapier or Make workflow is switched on.",
+  "Slack posts nothing: invite the Vapi bot to the channel, and name the channel in the tool description.",
+  "Calendar books at the wrong time: set the time zone on the tool. It defaults to UTC.",
+  "The email never comes: check that your Zapier, Make or n8n workflow is switched on, and send a test from the API Request tool.",
   "The bot talks over people: turn down how quickly it responds in the transcriber settings, and use headphones."
  ]
 }
