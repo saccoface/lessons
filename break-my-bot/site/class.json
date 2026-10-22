@@ -138,7 +138,7 @@
    "bullets": [
     "1. The caller asks for something",
     "2. The agent decides a tool is needed and fills in the details",
-    "3. Vapi calls the tool: Google, Slack, your phone or a webhook",
+    "3. Vapi calls the tool: Google, Slack or your phone",
     "4. The tool replies: success or failure",
     "5. The agent tells the caller what actually happened"
    ],
@@ -153,7 +153,6 @@
     "Easy: book on Google Calendar (15 min)",
     "Easy: post a message to Slack (10 min)",
     "Easy: transfer the caller to your phone (5 min)",
-    "Stretch: email yourself via a Zapier, Make or n8n webhook (25 min)",
     "Every easy one is just: connect, create the tool, attach, Publish"
    ],
    "note": "No code for any of the easy ones: you sign in to Google or Slack and click. Texting needs a separate Twilio account, so it's not on tonight's menu."
@@ -211,19 +210,6 @@
   },
   {
    "n": 15,
-   "kicker": "STRETCH",
-   "title": "Email yourself a summary",
-   "bullets": [
-    "Zapier, Make or n8n: a webhook trigger, then a 'send Gmail' step",
-    "Vapi: Create Tool, then API Request: POST to that webhook URL",
-    "Body fields: caller_name, summary, callback_number",
-    "Prompt: send a summary at the end of each call",
-    "For people who've done this kind of thing before"
-   ],
-   "note": "Only point confident builders here. It needs a second account and takes longer."
-  },
-  {
-   "n": 16,
    "kicker": "THE GOLDEN RULE",
    "title": "Never say it's done unless it's done",
    "bullets": [
@@ -235,7 +221,7 @@
    "note": "This one rule will save you most of the points in the second half."
   },
   {
-   "n": 17,
+   "n": 16,
    "kicker": "LOCK IT IN",
    "title": "Register your bot",
    "bullets": [
@@ -248,7 +234,7 @@
    "note": "Everyone registers before the break rounds start. Partners only get each other's numbers."
   },
   {
-   "n": 18,
+   "n": 17,
    "kicker": "PART 2",
    "title": "Break each other",
    "bullets": [
@@ -260,7 +246,7 @@
    "note": "Read these out. Make clear that respectful chaos is the vibe."
   },
   {
-   "n": 19,
+   "n": 18,
    "kicker": "HOW A ROUND WORKS",
    "title": "Attack, log, patch",
    "bullets": [
@@ -272,7 +258,7 @@
    "note": "Run a visible timer. Keep it tight."
   },
   {
-   "n": 20,
+   "n": 19,
    "kicker": "SCOUT FIRST",
    "title": "Call like a normal customer",
    "bullets": [
@@ -284,7 +270,7 @@
    "note": "One normal call first makes every attack better."
   },
   {
-   "n": 21,
+   "n": 20,
    "kicker": "ATTACKS",
    "title": "Make it do the wrong thing",
    "bullets": [
@@ -296,7 +282,7 @@
    "note": "Small steps beat big asks. Get one small yes, then build on it."
   },
   {
-   "n": 22,
+   "n": 21,
    "kicker": "ATTACKS",
    "title": "Make the tools lie",
    "bullets": [
@@ -309,7 +295,7 @@
    "note": "This is the highest-value break. Agents love to say 'done!'."
   },
   {
-   "n": 23,
+   "n": 22,
    "kicker": "ATTACKS",
    "title": "Make the tools do something dumb",
    "bullets": [
@@ -321,7 +307,7 @@
    "note": "Look for junk rows, duplicate bookings, spam in Slack, transfers that shouldn't happen."
   },
   {
-   "n": 24,
+   "n": 23,
    "kicker": "VOICE CHAOS",
    "title": "Break the conversation itself",
    "bullets": [
@@ -334,7 +320,7 @@
    "note": "This is what makes phone agents different from chatbots. Good moment to mention Flux handles turn-taking."
   },
   {
-   "n": 25,
+   "n": 24,
    "kicker": "OVERRIDE TRICKS",
    "title": "The classics",
    "bullets": [
@@ -347,7 +333,7 @@
    "note": "Try these early, before anyone has patched. They land surprisingly often in round 1."
   },
   {
-   "n": 26,
+   "n": 25,
    "kicker": "PRO TIPS",
    "title": "Make them stronger",
    "bullets": [
@@ -361,7 +347,7 @@
    "note": "After round 1, the subtle caller beats the obvious jailbreak."
   },
   {
-   "n": 27,
+   "n": 26,
    "kicker": "LOG IT",
    "title": "A break only counts if it's logged",
    "bullets": [
@@ -374,7 +360,7 @@
    "note": "Note call times so the defender can find the call in Vapi's logs."
   },
   {
-   "n": 28,
+   "n": 27,
    "kicker": "DEFEND",
    "title": "Patch your prompt",
    "bullets": [
@@ -387,7 +373,7 @@
    "note": "Patch the type of attack, not the exact sentence. Blocking 'Spanish' doesn't stop 'French'."
   },
   {
-   "n": 29,
+   "n": 28,
    "kicker": "DEFEND",
    "title": "Patch your tools and settings",
    "bullets": [
@@ -400,7 +386,7 @@
    "note": "The best defenders read their logs between rounds."
   },
   {
-   "n": 30,
+   "n": 29,
    "kicker": "PART 3",
    "title": "Judging",
    "bullets": [
@@ -411,7 +397,7 @@
    "note": "Introduce tonight's judges here."
   },
   {
-   "n": 31,
+   "n": 30,
    "kicker": "WINNERS",
    "title": "Three winners",
    "bullets": [
@@ -421,7 +407,7 @@
    "note": "Announce winners and get a photo."
   },
   {
-   "n": 32,
+   "n": 31,
    "kicker": "KEEP GOING",
    "title": "Your bot is still live",
    "bullets": [
@@ -438,7 +424,7 @@
    "type": "slides",
    "title": "Break My Bot",
    "from": 1,
-   "to": 32
+   "to": 31
   }
  ],
  "sections": [
@@ -569,36 +555,6 @@
    ]
   },
   {
-   "title": "Stretch: email yourself a summary",
-   "summary": "For people who've used Zapier, Make or n8n before. About 25 minutes.",
-   "steps": [
-    {
-     "id": "em-webhook",
-     "title": "Make a webhook",
-     "instruction": "In Zapier, Make or n8n, create a workflow that starts with a webhook (catch hook) and ends with a 'send Gmail' step. Copy the webhook URL.",
-     "check": "You have a webhook URL."
-    },
-    {
-     "id": "em-tool",
-     "title": "Create an API Request tool",
-     "instruction": "In Vapi, Tools, then Create Tool, then API Request. Method POST, URL your webhook. Add body fields caller_name, summary and callback_number.",
-     "check": "The tool saves."
-    },
-    {
-     "id": "em-map",
-     "title": "Map the email",
-     "instruction": "Send one test so your workflow sees the fields, then map them into the email subject and body.",
-     "check": "A test email lands in your inbox."
-    },
-    {
-     "id": "em-live",
-     "title": "Attach and call",
-     "instruction": "Attach the tool, tell the prompt to send a summary at the end of each call, and Publish. Call it.",
-     "check": "You get an email after the call."
-    }
-   ]
-  },
-  {
    "title": "Break playbook",
    "summary": "How to break a phone agent. Call only your partner's number, use fictional data, and log every break.",
    "steps": [
@@ -720,7 +676,6 @@
   "Google tools fail: reconnect your Google account in the tool settings and pick the sheet or calendar again.",
   "Slack posts nothing: invite the Vapi bot to the channel, and name the channel in the tool description.",
   "Calendar books at the wrong time: set the time zone on the tool. It defaults to UTC.",
-  "The email never comes: check that your Zapier, Make or n8n workflow is switched on, and send a test from the API Request tool.",
   "The bot talks over people: turn down how quickly it responds in the transcriber settings, and use headphones."
  ]
 }
