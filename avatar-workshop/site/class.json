@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "avatar-workshop",
   "title": "Avatar Workshop",
-  "icon": "웃",
+  "icon": "👤︎",
   "owner": "Dana Sacco",
   "summary": "Guess Who’s Talking. Attendees build a photoreal avatar that listens with Flux, thinks with Claude and lip-syncs through Anam, then play a mystery-guest game against each other. Runs in the browser on this site — nothing to install.",
   "detail": "Your microphone goes to Deepgram’s Voice Agent, which listens with Flux, thinks with Claude, and speaks. That speech drives an Anam avatar in audio-passthrough mode, so the face lip-syncs to it.",
