@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "vapi-partner-event",
   "title": "Build Your First Phone Agent",
-  "icon": "☎",
+  "icon": "🧑‍💼",
   "owner": "Dana Sacco",
   "summary": "Half an hour with a voice interviewer that designs your agent and writes the prompt, then an hour wiring it into Vapi until a real phone number answers in a voice you chose. No code, nothing to install.",
   "detail": "Two halves. First a voice interviewer asks what your agent should do, who it talks to and what it must refuse, then writes the prompt for you. Then you take that prompt to Vapi, wire up the ears, brain and mouth, and point a real phone number at it. No code, nothing to install.",
