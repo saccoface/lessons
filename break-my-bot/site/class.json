@@ -100,10 +100,13 @@
     "Still answers? You're ready for tools.",
     "Rings out? Vapi, then Phone Numbers: is an assistant attached?",
     "Use this time to pick your tool from the menu",
-    "Then watch while others build: 'Say THIS to Destroy AI Bot Callers'",
-    "youtube.com/watch?v=fhi6JU5pOJk"
+    "Then watch the video below while others build"
    ],
-   "note": "Returners get a head start on tools. Put the video up on the side screen while newcomers do the fast track; it's a warm-up for the break rounds."
+   "note": "Returners get a head start on tools. Put the video up on the side screen while newcomers do the fast track; it's a warm-up for the break rounds.",
+   "video": {
+    "title": "Say THIS to Destroy AI Bot Callers",
+    "youtube": "fhi6JU5pOJk"
+   }
   },
   {
    "n": 7,
