@@ -2,7 +2,7 @@
  "schemaVersion": 1,
  "id": "break-my-bot",
  "title": "Break My Bot",
- "icon": "🧑‍💻",
+ "icon": "🔨",
  "owner": "Dana Sacco",
  "summary": "Get a phone agent fast, teach it to do real things like logging to Google Sheets, booking your calendar or posting to Slack, then pair up and try to break each other's agents. The toughest bot wins.",
  "detail": "A baby hackathon for phone agents, and the follow-up to Build Your First Phone Agent. Newcomers are welcome: the first 15 minutes are a fast track to a working number, with no code. Then everyone connects one tool so their agent can act, not just talk. In the second half you pair up and run eight attacks on your partner's bot: going off-script, leaking its prompt, override tricks, lying about its tools, voice chaos and more. A practice round, one patch, then a scored round where your partner scores each attack from 1 to 5. The top five go to the judges, who pick three winners.",
