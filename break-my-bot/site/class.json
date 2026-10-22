@@ -4,8 +4,8 @@
  "title": "Break My Bot",
  "icon": "🔨",
  "owner": "Dana Sacco",
- "summary": "Get a phone agent fast, teach it to do real things like logging to Google Sheets, booking your calendar or posting to Slack, then pair up and try to break each other's agents. The toughest bot wins.",
- "detail": "A baby hackathon for phone agents, and the follow-up to Build Your First Phone Agent. Newcomers are welcome: the first 15 minutes are a fast track to a working number, with no code. Then everyone connects one tool so their agent can act, not just talk. In the second half you pair up, call each other's numbers and try every trick to make the other bot slip: going off-script, leaking its prompt, lying about its tools, override tricks and voice chaos. Patch between rounds. Judges pick the strongest bot at the end of the night.",
+ "summary": "Get a phone agent fast, teach it to do real things like logging to Google Sheets, booking your calendar or posting to Slack, then get into groups of 2 or 3 and try to break each other's agents. The toughest bot wins.",
+ "detail": "A baby hackathon for phone agents, and the follow-up to Build Your First Phone Agent. Newcomers are welcome: the first 15 minutes are a fast track to a working number, with no code. Then everyone connects one tool so their agent can act, not just talk. In the second half you split into groups of 2 or 3, call each other's numbers and try every trick to make the other bot slip: going off-script, leaking its prompt, lying about its tools, override tricks and voice chaos. Patch between rounds. Judges pick the strongest bot at the end of the night.",
  "outcome": "A phone agent that does something real with a tool, hardened against attacks you saw land, plus a feel for how voice agents break.",
  "audience": "Mixed technical and non-technical",
  "type": "Hackathon",
@@ -45,7 +45,7 @@
     "Fast track: get a phone agent (new folks only)",
     "Give it hands: connect one tool",
     "Lock in version 1",
-    "Break each other: three rounds with a new partner each time",
+    "Break each other: groups of 2 or 3, three rounds, new group each time",
     "Judging, then three winners"
    ],
    "note": "Keep this moving. The fun part is the second half, so we protect that time."
@@ -114,7 +114,7 @@
    "title": "Your key is a password",
    "bullets": [
     "Never paste an API key into chat, a doc or a screenshot",
-    "Never read it out loud. Your partner will be listening.",
+    "Never read it out loud. Your group will be listening.",
     "If it leaks, delete it in the console and make a new one",
     "Use fictional names, emails and orders tonight"
    ],
@@ -231,14 +231,15 @@
     "Which tool it uses",
     "This is version 1. You can patch it between rounds."
    ],
-   "note": "Everyone registers before the break rounds start. Partners only get each other's numbers."
+   "note": "Everyone registers before the break rounds start. Each group only gets its own members' numbers."
   },
   {
    "n": 17,
    "kicker": "PART 2",
    "title": "Break each other",
    "bullets": [
-    "Call only your partner's number",
+    "Get into groups of 2 or 3",
+    "Call only the bots in your group",
     "Fictional data only. No slurs, no harassment.",
     "Max 10 calls a round. Don't spam their tools.",
     "A break only counts if you log it"
@@ -250,10 +251,10 @@
    "kicker": "HOW A ROUND WORKS",
    "title": "Attack, log, patch",
    "bullets": [
-    "6 min: attack your partner's bot",
+    "6 min: attack the other bots in your group",
     "2 min: log your breaks",
     "4 min: patch your own bot",
-    "Then a new partner. Three rounds."
+    "Then a new group. Three rounds."
    ],
    "note": "Run a visible timer. Keep it tight."
   },
@@ -355,7 +356,7 @@
     "What you said, as close to word for word as you can",
     "What the bot did wrong",
     "Proof: the junk row, the fake booking, the call time",
-    "Your partner marks it patched. Try again next round."
+    "The bot's owner marks it patched. Try again next round."
    ],
    "note": "Note call times so the defender can find the call in Vapi's logs."
   },
@@ -556,7 +557,7 @@
   },
   {
    "title": "Break playbook",
-   "summary": "How to break a phone agent. Call only your partner's number, use fictional data, and log every break.",
+   "summary": "How to break a phone agent. Get into groups of 2 or 3, call only the bots in your group, use fictional data, and log every break.",
    "steps": [
     {
      "id": "br-warmup",
@@ -622,7 +623,7 @@
      "id": "br-log",
      "title": "Log it",
      "instruction": "Write down the category, what you said, what the bot did wrong, the call time and any proof.",
-     "check": "The break is logged and your partner can see it."
+     "check": "The break is logged and the bot's owner can see it."
     }
    ]
   },
@@ -663,7 +664,7 @@
     {
      "id": "df-logs",
      "title": "Read your logs",
-     "instruction": "After each round, open Vapi's call logs for the calls your partner logged. Fix the cause, not just the exact sentence.",
+     "instruction": "After each round, open Vapi's call logs for the calls your group logged. Fix the cause, not just the exact sentence.",
      "check": "The same type of attack fails next round."
     }
    ]
