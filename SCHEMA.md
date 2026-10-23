@@ -29,7 +29,7 @@ last valid version keeps serving.
 | `track` | enum | `community` · `teaching` |
 | `minutes` | number | 1–1440. How long the class runs. |
 | `setupMinutes` | number or null | 0–1440. Preparation before the room starts. |
-| `runner` | enum or null | `avatar` · `interview` · `null`. **See below.** |
+| `runner` | enum or null | `avatar` · `interview` · `robot` · `null`. **See below.** |
 | `prereqs` | string[] | ≤ 60 items. What an attendee needs before starting. |
 | `links` | object | `{ "starterRepo": url-or-null, "deck": url-or-null }`. `https:` only. |
 | `slides` | Slide[] | ≤ 200. The deck, in order. |
@@ -75,6 +75,7 @@ Rules:
 | --- | --- |
 | `avatar` | Build a talking avatar in the browser: Deepgram Flux listens, Claude thinks, Anam renders the face. |
 | `interview` | A voice interviewer that designs the attendee's agent and writes the prompt. |
+| `robot` | Talk to a cardboard robot over Web Serial: a Deepgram voice agent in Chrome, and a Pico servo that moves the mouth in time with the voice. |
 | `null` | Slides and written steps only. |
 
 A class **cannot** introduce a new runner. Anything outside this list is rejected on import.

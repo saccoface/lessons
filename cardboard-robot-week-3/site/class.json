@@ -1,0 +1,132 @@
+{
+ "schemaVersion": 1,
+ "owner": "Dana Sacco",
+ "audience": "Mixed technical and non-technical",
+ "type": "Workshop",
+ "track": "community",
+ "minutes": 60,
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "sections": [],
+ "id": "cardboard-robot-week-3",
+ "title": "Week 3: A brain of its own",
+ "icon": "🧠",
+ "difficulty": "medium",
+ "setupMinutes": 45,
+ "runner": "robot",
+ "series": {
+  "id": "cardboard-robot",
+  "title": "Physical AI Lab: Cardboard Robot",
+  "summary": "",
+  "part": 3
+ },
+ "summary": "The laptop steps aside. A Raspberry Pi 4 becomes the robot's brain and an EMEET speakerphone becomes its ears and voice, so the robot runs on its own.",
+ "detail": "Each table gets a Raspberry Pi 4 with its memory card already set up, and an EMEET M0 Plus speakerphone. The Pi runs Chrome and opens this same page, so the robot keeps last week's personality, voice and neck settings once you enter them. You control the Pi from your laptop's browser while you set it up, then unplug the laptop.",
+ "outcome": "Your robot talks, moves its mouth and turns its head with no laptop attached, running from its own Raspberry Pi.",
+ "artifact": "A self-contained cardboard robot running on a Raspberry Pi 4 with a speakerphone.",
+ "prereqs": [
+  "Your robot from Week 2.",
+  "Your Deepgram API key.",
+  "Your laptop, for setting up the Pi. It doesn't stay plugged in.",
+  "On your table: a Raspberry Pi 4 with its memory card ready, its power supply, and an EMEET M0 Plus speakerphone."
+ ],
+ "slides": [
+  {
+   "n": 1,
+   "kicker": "WELCOME BACK",
+   "title": "Week 3: A brain of its own",
+   "bullets": [
+    "Until now the laptop did the listening and talking.",
+    "Tonight a Raspberry Pi does it, inside the robot's world.",
+    "Same app, new home."
+   ],
+   "note": ""
+  },
+  {
+   "n": 2,
+   "kicker": "SUPPLIES CHECKLIST",
+   "title": "What each robot needs this week",
+   "bullets": [
+    "☐ Your robot from Week 2, with its Pico, servos and power bank",
+    "☐ 1 × Raspberry Pi 4, its memory card already set up",
+    "☐ 1 × Raspberry Pi USB-C power supply (5.1 V, 3 A)",
+    "☐ 1 × EMEET M0 Plus speakerphone and its cable",
+    "☐ 1 × USB-A to micro-USB data cable, for the Pico (the Pi has USB-A ports)",
+    "☐ A card with this Pi's remote link and the room's wifi",
+    "Bring: your laptop and your Deepgram key"
+   ],
+   "note": "Before class, set up every memory card: Raspberry Pi OS, Chromium, the room's wifi and remote screen access, with the lesson page as Chromium's home page. Write each Pi's remote link on its card. Helper table: 2 spare ready Pis, spare USB-A to micro-USB data cables, a power strip per table."
+  },
+  {
+   "n": 3,
+   "kicker": "BUILD 1 OF 3",
+   "title": "Plug in the Pi",
+   "bullets": [
+    "Speakerphone into a blue USB port on the Pi.",
+    "The Pico into another blue port, with the USB-A to micro-USB cable.",
+    "Power supply into the Pi last."
+   ],
+   "note": "Done when: the Pi's green light flickers and the speakerphone lights up."
+  },
+  {
+   "n": 4,
+   "kicker": "BUILD 2 OF 3",
+   "title": "Open the Pi from your laptop",
+   "bullets": [
+    "On your laptop, open the Pi link on the card at your table.",
+    "You're now looking at the Pi's screen in your browser.",
+    "On the Pi, Chrome opens this lesson page."
+   ],
+   "note": "The Pis are prepared before class with Chromium and remote screen access. Each card lists that Pi's link."
+  },
+  {
+   "n": 5,
+   "kicker": "BUILD 3 OF 3",
+   "title": "Set it up on the Pi",
+   "bullets": [
+    "Paste your Deepgram key and connect the robot, like week 1.",
+    "Pick the speakerphone if Chrome asks for a microphone.",
+    "Set the mouth and neck sliders again, they're saved on the Pi.",
+    "Start talking, then close the link on your laptop."
+   ],
+   "note": "The speakerphone sits right next to the robot, so keep Speaker is inside the box switched on."
+  },
+  {
+   "n": 6,
+   "kicker": "NEXT WEEK",
+   "title": "Week 4: cut the cord",
+   "bullets": [
+    "A battery pack powers everything.",
+    "No cables at all. Bring your robot back."
+   ],
+   "note": ""
+  }
+ ],
+ "flow": [
+  {
+   "type": "slides",
+   "title": "Move to the Pi",
+   "from": 1,
+   "to": 5
+  },
+  {
+   "type": "runner",
+   "title": "Run it on the Pi",
+   "note": "Open this page in Chrome on the Raspberry Pi, not on your laptop."
+  },
+  {
+   "type": "slides",
+   "title": "Next week",
+   "from": 6,
+   "to": 6
+  }
+ ],
+ "troubleshooting": [
+  "Connect robot shows nothing on the Pi: the Pico cable is in a charge-only port or is a charge-only cable. Try another port, then another cable.",
+  "The robot can't hear you: in Chrome on the Pi, click the lock icon and pick the EMEET as the microphone.",
+  "No sound: set the EMEET as the Pi's audio output in the speaker menu at the top right.",
+  "The Pi link won't open: check the Pi and your laptop are on the same wifi, then ask a helper."
+ ]
+}

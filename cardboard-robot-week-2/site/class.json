@@ -1,0 +1,147 @@
+{
+ "schemaVersion": 1,
+ "owner": "Dana Sacco",
+ "audience": "Mixed technical and non-technical",
+ "type": "Workshop",
+ "track": "community",
+ "minutes": 60,
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "sections": [],
+ "id": "cardboard-robot-week-2",
+ "title": "Week 2: Give it a neck",
+ "icon": "🔄",
+ "difficulty": "easy",
+ "setupMinutes": 30,
+ "runner": "robot",
+ "series": {
+  "id": "cardboard-robot",
+  "title": "Physical AI Lab: Cardboard Robot",
+  "summary": "",
+  "part": 2
+ },
+ "summary": "Your talking box gets a neck. A second cut-down box, a servo and a lazy-susan bearing let the head turn, and the voice agent learns two new moves: turn its head and look around the room.",
+ "detail": "Bring last week's robot. You build a short base box with a servo and a 3 inch lazy-susan bearing on top, then sit the head on it. Two servos need more power than a laptop gives, so the servos run from a battery pack while the Pico stays on USB. Back on this page, switch on the neck, set how far it turns each way, and the robot can turn toward you or look around when it talks.",
+ "outcome": "Your robot turns its head and looks around on its own while it talks.",
+ "artifact": "A two-servo cardboard robot with a turning head, driven by voice-agent function calls.",
+ "prereqs": [
+  "Your robot from Week 1, and the same laptop with Chrome.",
+  "Your Deepgram API key.",
+  "The neck kit on your table: a second box, a servo, a 3 inch lazy-susan bearing, jumpers and a battery pack with a servo power lead."
+ ],
+ "slides": [
+  {
+   "n": 1,
+   "kicker": "WELCOME BACK",
+   "title": "Week 2: Give it a neck",
+   "bullets": [
+    "Last week: it talks and its mouth moves.",
+    "Tonight: the head turns.",
+    "Same app, one new switch."
+   ],
+   "note": "Have one finished week 2 robot look around the room as people sit down."
+  },
+  {
+   "n": 2,
+   "kicker": "SUPPLIES CHECKLIST",
+   "title": "What each robot needs this week",
+   "bullets": [
+    "☐ Your robot from Week 1, the Pico and its USB cable",
+    "☐ 1 more 8×8×8 inch box, cut down for the base",
+    "☐ 1 × MG90S micro servo (the neck)",
+    "☐ 1 × 3 inch lazy-susan bearing, with 4 small screws",
+    "☐ 1 × male-to-female jumper wire (neck signal)",
+    "☐ 1 × mini breadboard, to share power between the two servos",
+    "☐ 6 × male-to-male jumper wires",
+    "☐ 1 × USB-to-jumper power lead",
+    "☐ 1 × Anker 20,000 mAh power bank, charged",
+    "Bring: a laptop with Chrome, and your Deepgram key"
+   ],
+   "note": "Two servos need more power than a laptop USB port gives, so the power bank arrives this week, not in Week 4. Shared per table: hot-glue gun and glue sticks, a small screwdriver, a box cutter. Helper table: spare servos, spare jumpers, spare loaded Picos. Charge every power bank the night before."
+  },
+  {
+   "n": 3,
+   "kicker": "BUILD 1 OF 3",
+   "title": "Make the base",
+   "bullets": [
+    "Cut the second box down to about 3 inches tall.",
+    "Hot-glue the neck servo in the middle, horn pointing up through a hole in the top.",
+    "Screw or glue the lazy-susan bearing on top, centred on the horn."
+   ],
+   "note": "Done when: the bearing spins freely and the servo horn sits in the middle of it."
+  },
+  {
+   "n": 4,
+   "kicker": "BUILD 2 OF 3",
+   "title": "Mount the head",
+   "bullets": [
+    "Glue a horn arm to the underside of the head, in the middle.",
+    "Sit the head on the bearing so the horn arm locks onto the servo.",
+    "The bearing carries the weight; the servo only turns it."
+   ],
+   "note": "Done when: turning the head by hand turns the servo, and the head doesn't wobble."
+  },
+  {
+   "n": 5,
+   "kicker": "BUILD 3 OF 3",
+   "title": "Wire and power it",
+   "bullets": [
+    "Neck signal (orange) to GP14, pin 19, right above the mouth wire.",
+    "Both red wires to the battery pack's power lead, not to the Pico.",
+    "Both brown wires to the battery lead's ground, and one ground jumper to a Pico GND pin.",
+    "The Pico stays plugged into the laptop for its data."
+   ],
+   "note": "A laptop USB port can only power one servo. Without the battery, the Pico resets every time the head moves. The shared ground matters: without it the servos twitch randomly."
+  },
+  {
+   "n": 6,
+   "kicker": "IN THE APP",
+   "title": "Switch on the neck",
+   "bullets": [
+    "Connect the robot like last week.",
+    "Open Week 2: neck, tick My robot has a neck servo.",
+    "Set Looking left and Looking right, then press Look around.",
+    "Start talking. Ask it to look around, or to look left."
+   ],
+   "note": "The agent gets two new functions, turn_head and look_around. Point out the Tool lines in the transcript when it uses them."
+  },
+  {
+   "n": 7,
+   "kicker": "NEXT WEEK",
+   "title": "Week 3: a brain of its own",
+   "bullets": [
+    "A Raspberry Pi 4 and a speakerphone take over from the laptop.",
+    "Bring your robot back."
+   ],
+   "note": ""
+  }
+ ],
+ "flow": [
+  {
+   "type": "slides",
+   "title": "Build the neck",
+   "from": 1,
+   "to": 6
+  },
+  {
+   "type": "runner",
+   "title": "Turn the head",
+   "note": "Plug the robot in, connect it, then open Week 2: neck on the Plug in card."
+  },
+  {
+   "type": "slides",
+   "title": "Next week",
+   "from": 7,
+   "to": 7
+  }
+ ],
+ "troubleshooting": [
+  "The Pico resets or disconnects when the head moves: the servos are on laptop power. Move both red wires to the battery lead.",
+  "The servos twitch or jitter on their own: the battery ground isn't joined to the Pico's GND. Add the ground jumper.",
+  "The head turns the wrong way: swap the Looking left and Looking right numbers.",
+  "The head wobbles or sags: the weight is on the servo, not the bearing. Re-seat the head so it rests on the bearing.",
+  "It never turns its head: check My robot has a neck servo is ticked before you press Start talking."
+ ]
+}

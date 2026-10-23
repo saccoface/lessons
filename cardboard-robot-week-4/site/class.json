@@ -1,0 +1,117 @@
+{
+ "schemaVersion": 1,
+ "owner": "Dana Sacco",
+ "audience": "Mixed technical and non-technical",
+ "type": "Workshop",
+ "track": "community",
+ "minutes": 60,
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "sections": [],
+ "id": "cardboard-robot-week-4",
+ "title": "Week 4: Cut the cord",
+ "icon": "🔋",
+ "difficulty": "easy",
+ "setupMinutes": 20,
+ "runner": "robot",
+ "series": {
+  "id": "cardboard-robot",
+  "title": "Physical AI Lab: Cardboard Robot",
+  "summary": "",
+  "part": 4
+ },
+ "summary": "The last step: an Anker 20,000 mAh battery powers the Pi and the servos, so your robot runs with no cables at all. Then take it for a walk and show it off.",
+ "detail": "Mount the battery pack in the base, move the Pi and servo power onto it, and check it all still runs. Then the robot is fully wireless: pick it up, carry it across the room and keep talking. We finish with a show-and-tell and a group video.",
+ "outcome": "A finished cardboard robot that runs anywhere on its own battery, listening, talking, moving its mouth and turning its head.",
+ "artifact": "A fully wireless talking cardboard robot, and a clip of it out in the world.",
+ "prereqs": [
+  "Your robot from Week 3, with its Raspberry Pi.",
+  "Your Deepgram API key.",
+  "On your table: an Anker 20,000 mAh power bank and its cables."
+ ],
+ "slides": [
+  {
+   "n": 1,
+   "kicker": "FINAL WEEK",
+   "title": "Week 4: Cut the cord",
+   "bullets": [
+    "One battery for everything.",
+    "Then pick it up and walk around with it."
+   ],
+   "note": ""
+  },
+  {
+   "n": 2,
+   "kicker": "SUPPLIES CHECKLIST",
+   "title": "What each robot needs this week",
+   "bullets": [
+    "☐ Your robot from Week 3, with its Pi, speakerphone and Pico",
+    "☐ The Anker 20,000 mAh power bank from Week 2, fully charged",
+    "☐ 1 × short USB-C to USB-C cable, battery to Pi",
+    "☐ The servo power lead from Week 2",
+    "☐ Velcro strips or tape, to hold the battery in the base",
+    "Bring: your laptop and your Deepgram key"
+   ],
+   "note": "The Pi 4 wants a steady 3 A. If a Pi shows a lightning bolt or restarts on battery, swap to a port marked for higher power or a thicker cable. Helper table: spare charged power banks, spare short USB-C cables, a phone tripod for the show-and-tell video."
+  },
+  {
+   "n": 3,
+   "kicker": "BUILD 1 OF 2",
+   "title": "Mount the battery",
+   "bullets": [
+    "Charge check: press the button on the power bank, all lights should show.",
+    "Slide the battery into the base box, behind the neck servo.",
+    "Tape it down so it can't slide when the head turns."
+   ],
+   "note": "The battery is the heaviest part, so low in the base keeps the robot from tipping."
+  },
+  {
+   "n": 4,
+   "kicker": "BUILD 2 OF 2",
+   "title": "Move the power over",
+   "bullets": [
+    "Pi power cable from the battery's USB-C port.",
+    "Servo power lead from the battery's other port.",
+    "Unplug the wall supply. Everything should keep running."
+   ],
+   "note": "Done when: the wall plug is out and the robot still answers."
+  },
+  {
+   "n": 5,
+   "kicker": "SHOW AND TELL",
+   "title": "Take it for a walk",
+   "bullets": [
+    "Carry it to another table and have a conversation.",
+    "Film a clip and share it with #RobotLunchLab.",
+    "Vote for best personality, best voice and best build."
+   ],
+   "note": "Wrap up: thank everyone for four weeks. Robots go home with their builders."
+  }
+ ],
+ "flow": [
+  {
+   "type": "slides",
+   "title": "Add the battery",
+   "from": 1,
+   "to": 4
+  },
+  {
+   "type": "runner",
+   "title": "Final test, unplugged",
+   "note": "Open this page on the robot's Pi. Unplug every cable, then start talking."
+  },
+  {
+   "type": "slides",
+   "title": "Show and tell",
+   "from": 5,
+   "to": 5
+  }
+ ],
+ "troubleshooting": [
+  "The Pi restarts when the head moves: the Pi and servos are pulling too much from one port. Use separate ports on the battery.",
+  "The Pi shows a lightning bolt: the battery is low or the cable is thin. Charge the battery or swap the cable.",
+  "The battery switches itself off: some power banks sleep on low current. Press its button to wake it."
+ ]
+}
