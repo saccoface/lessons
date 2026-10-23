@@ -89,11 +89,12 @@
    "bullets": [
     "Neck signal (orange) to GP14, pin 19, right above the mouth wire.",
     "Move the mouth servo's red wire off the Pico. Both red wires go to the breadboard's + row.",
-    "Both brown wires to the breadboard's − row, plus one jumper from − to a Pico GND pin.",
+    "Both brown wires to the breadboard's − row, plus one jumper from − to the Pico's GND, pin 23.",
     "Power lead from the power bank to the breadboard's + and − rows.",
     "The Pico stays plugged into your laptop."
    ],
-   "note": "A laptop USB port can't power two servos: without the power bank, the Pico resets every time the head moves. The shared ground matters: without it the servos twitch randomly."
+   "note": "A laptop USB port can't power two servos: without the power bank, the Pico resets every time the head moves. The shared ground matters: without it the servos twitch randomly.",
+   "image": "/slides/cardboard-robot/week-2-wiring.svg"
   },
   {
    "n": 6,
