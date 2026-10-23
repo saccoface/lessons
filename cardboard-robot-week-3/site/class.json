@@ -22,17 +22,17 @@
   "summary": "",
   "part": 3
  },
- "summary": "Optional: bring your own Raspberry Pi and it becomes the robot's brain, with a speakerphone for its ears and voice and the Week 2 battery powering everything. Then unplug it and walk away with it. No Pi? Your robot stays on your laptop and you spend the session in Deepgram's voice studio.",
- "detail": "This week is optional and bring-your-own: if you want your robot to run without a laptop, bring a Raspberry Pi 4 or 5 that you've set up at home (the steps are under Before you start). The Pi runs Chromium and opens this same page, so your robot works exactly as before. You control the Pi from your laptop with Raspberry Pi Connect while you set it up, then close it and carry your robot away. No Pi? Your robot keeps running from your laptop, and you work through the voice studio track instead.",
+ "summary": "Optional: bring your own Raspberry Pi and USB speakerphone, and the Pi becomes the robot's brain, with the speakerphone as its ears and voice and the Week 2 battery powering everything. Then unplug it and walk away with it. No Pi? Your robot stays on your laptop and you spend the session in Deepgram's voice studio.",
+ "detail": "This week is optional and bring-your-own: if you want your robot to run without a laptop, bring a Raspberry Pi 4 or 5 that you've set up at home, plus a USB speakerphone (the steps are under Before you start). The Pi runs Chromium and opens this same page, so your robot works exactly as before. You control the Pi from your laptop with Raspberry Pi Connect while you set it up, then close it and carry your robot away. No Pi? Your robot keeps running from your laptop, and you work through the voice studio track instead.",
  "outcome": "Pi track: a robot that talks, moves its mouth and turns its head with no laptop and no wall plug. No Pi: a sharper personality and a robot tuned for a noisy room.",
  "artifact": "A fully wireless talking cardboard robot, or a better-tuned laptop robot.",
  "prereqs": [
   "Your robot from Week 2, with its power bank charged. Your laptop and your Deepgram key.",
-  "Doing the Pi upgrade? Bring a Raspberry Pi 4 or 5 (2 GB or more), its memory card and its power supply, set up at home as below. No Pi? Skip the rest of this list.",
+  "Doing the Pi upgrade? Bring a Raspberry Pi 4 or 5 (2 GB or more) with its memory card and power supply, set up at home as below, and a USB speakerphone (any brand, for example an EMEET M0 Plus). No Pi? Skip the rest of this list.",
   "1. On your computer, install Raspberry Pi Imager from raspberrypi.com/software and use it to put Raspberry Pi OS (64-bit, with desktop) on the memory card. In its settings, add a username and password and the Hub's wifi from your event email.",
   "2. Start the Pi once with a screen, keyboard and mouse, and finish the welcome steps.",
   "3. Turn on Raspberry Pi Connect (its icon is in the top bar) and sign in with a free Raspberry Pi ID. On your laptop, check you can see the Pi's screen at connect.raspberrypi.com.",
-  "4. On the Pi, open Chromium and visit this page once, so it's ready."
+  "4. Plug in your speakerphone, check the Pi plays sound through it, then open Chromium and visit this page once, so it's ready."
  ],
  "slides": [
   {
@@ -53,13 +53,13 @@
    "bullets": [
     "☐ Your robot from Week 2, with its Pico, breadboard and power bank (charged)",
     "Pi track: ☐ your Raspberry Pi 4 or 5, set up at home, and its power supply",
-    "Pi track: ☐ 1 × EMEET M0 Plus speakerphone (on the table)",
+    "Pi track: ☐ your USB speakerphone",
     "Pi track: ☐ 1 × USB-A to micro-USB data cable, for the Pico (on the table)",
     "Pi track: ☐ 1 × short cable from the power bank to the Pi's USB-C port (on the table)",
     "Pi track: ☐ Velcro strips or tape",
     "Bring: your laptop and your Deepgram key"
    ],
-   "note": "Attendees bring the Pi and its memory card; we supply the speakerphone and cables. Helper table: a setup station with a screen, keyboard, mouse and micro-HDMI cable for anyone whose Pi isn't set up yet; spare cables; spare charged power banks. A Pi 5 run from a power bank limits its USB ports, so it may warn about power; that's fine for this build because the servos run from the breadboard."
+   "note": "Attendees bring the Pi, its memory card and a USB speakerphone; we supply the cables. Helper table: a setup station with a screen, keyboard, mouse and micro-HDMI cable for anyone whose Pi isn't set up yet; spare cables; spare charged power banks. A Pi 5 run from a power bank limits its USB ports, so it may warn about power; that's fine for this build because the servos run from the breadboard."
   },
   {
    "n": 3,
@@ -158,8 +158,8 @@
   "The Pi isn't on the wifi, or Connect can't find it: take it to the setup station and fix the wifi with a screen and keyboard.",
   "Connect robot does nothing on the Pi: open the page in Chromium, not another browser.",
   "Connect robot shows nothing on the Pi: the Pico cable is charge-only. Swap it for a data cable.",
-  "The robot can't hear you: in Chromium, click the lock icon and pick the EMEET as the microphone.",
-  "No sound: set the EMEET as the Pi's audio output in the speaker menu at the top right.",
+  "The robot can't hear you: in Chromium, click the lock icon and pick your speakerphone as the microphone.",
+  "No sound: set your speakerphone as the Pi's audio output in the speaker menu at the top right.",
   "The Pi shows a lightning bolt or restarts: the battery port can't keep up. Try the other port or a thicker cable, or plug in your Pi's own power supply for now.",
   "The battery switches itself off: some power banks sleep on low current. Press its button to wake it."
  ]

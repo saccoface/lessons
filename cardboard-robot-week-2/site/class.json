@@ -123,11 +123,11 @@
    "kicker": "NEXT WEEK",
    "title": "Week 3: make it standalone (optional)",
    "bullets": [
-    "Want your robot to run without your laptop? Bring your own Raspberry Pi 4 or 5.",
+    "Want your robot to run without your laptop? Bring your own Raspberry Pi 4 or 5 and a USB speakerphone.",
     "Set it up at home first: the steps are on the Week 3 page.",
     "No Pi? Come anyway. Your robot keeps running from your laptop, and there's a voice studio track for you."
    ],
-   "note": "Say this twice and put it in the follow-up email: anyone bringing a Pi must set it up at home before Week 3."
+   "note": "Say this twice and put it in the follow-up email: anyone doing the Pi upgrade brings their own Pi and USB speakerphone, and sets the Pi up at home before Week 3."
   }
  ],
  "flow": [
