@@ -82,7 +82,8 @@
     "Plug the Pico into your laptop with the USB cable",
     "Check every wire twice before you plug in"
    ],
-   "note": "Hold the Pico with the USB port at the top and the pins facing you. Pin 1 is top left. Helpers check wiring before anyone plugs in. Aim to have every robot plugged in by minute 18."
+   "note": "Hold the Pico with the USB port at the top and the Raspberry Pi logo facing you. Pin 1 is top left. Helpers check wiring before anyone plugs in. Aim to have every robot plugged in by minute 18.",
+   "image": "/slides/cardboard-robot/week-1-wiring.svg"
   },
   {
    "n": 5,
