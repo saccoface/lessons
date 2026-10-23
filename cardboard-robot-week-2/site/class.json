@@ -142,9 +142,10 @@
    "bullets": [
     "Want your robot to run without your laptop? Bring your own Raspberry Pi 4 or 5 and a USB speakerphone.",
     "Set it up at home first: the steps are on the Week 3 page.",
+    "Want it to run longer? There's an optional battery upgrade list on the Week 3 page. Buy it yourself and bring it in.",
     "No Pi? Come anyway. Your robot keeps running from your laptop, and there's a voice studio track for you."
    ],
-   "note": "Say this twice and put it in the follow-up email: anyone doing the Pi upgrade brings their own Pi and USB speakerphone, and sets the Pi up at home before Week 3."
+   "note": "Say this twice and put it in the follow-up email: anyone doing the Pi upgrade brings their own Pi and USB speakerphone, and sets the Pi up at home before Week 3. Mention the optional upgrade list too: anyone who wants a bigger battery buys it before Week 3. The free power bank works fine."
   }
  ],
  "flow": [

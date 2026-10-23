@@ -29,6 +29,8 @@
  "prereqs": [
   "Your robot from Week 2, with its power bank charged. Your laptop and your Deepgram key.",
   "Doing the Pi upgrade? Bring a Raspberry Pi 4 or 5 (2 GB or more) with its memory card and power supply, set up at home as below, and a USB speakerphone (any brand, for example an EMEET M0 Plus). No Pi? Skip the rest of this list.",
+  "Power, pick one. Free: the 10,000 mAh power bank you got in Week 2. It runs a Pi robot for about 3 hours. Upgrade: buy your own bigger battery and bring it in. It runs about twice as long.",
+  "Optional upgrade list, to match the instructor's robot. Buy these yourself: ☐ Raspberry Pi 5 (4 GB) ☐ Raspberry Pi 5 Active Cooler ☐ 32 GB microSD card ☐ Official Raspberry Pi 27 W USB-C power supply, for setting up at home ☐ USB speakerphone, for example an EMEET M0 Plus ☐ Anker 20,000 mAh power bank with a USB-C port rated 30 W or more. Already have a Pi 4? Keep it and just add the power bank.",
   "1. On your computer, install Raspberry Pi Imager from raspberrypi.com/software and use it to put Raspberry Pi OS (64-bit, with desktop) on the memory card. In its settings, add a username and password and the Hub's wifi from your event email.",
   "2. Start the Pi once with a screen, keyboard and mouse, and finish the welcome steps.",
   "3. Turn on Raspberry Pi Connect (its icon is in the top bar) and sign in with a free Raspberry Pi ID. On your laptop, check you can see the Pi's screen at connect.raspberrypi.com.",
@@ -51,7 +53,8 @@
    "kicker": "SUPPLIES CHECKLIST",
    "title": "What each robot needs this week",
    "bullets": [
-    "☐ Your robot from Week 2, with its Pico, breadboard and power bank (charged)",
+    "☐ Your robot from Week 2, with its Pico and breadboard",
+    "☐ A charged power bank: the free one from Week 2, or your own upgrade",
     "Pi track: ☐ your Raspberry Pi 4 or 5, set up at home, and its power supply",
     "Pi track: ☐ your USB speakerphone",
     "Pi track: ☐ 1 × USB-A to micro-USB data cable, for the Pico (on the table)",
@@ -63,6 +66,18 @@
   },
   {
    "n": 3,
+   "kicker": "POWER · YOUR CHOICE",
+   "title": "Two ways to power it",
+   "bullets": [
+    "Free: the 10,000 mAh power bank from Week 2. About 3 hours on a Pi.",
+    "Upgrade: your own 20,000 mAh power bank with a 30 W USB-C port, like the instructor's robot. About twice as long.",
+    "Either way: the Pi goes in the USB-C port and the servo lead goes in the other port.",
+    "The upgrade list is on this page, under Before you start."
+   ],
+   "note": "Nobody has to buy anything: the free power bank works. Helper table: spare charged free power banks for anyone who forgot theirs."
+  },
+  {
+   "n": 4,
    "kicker": "PI TRACK · 1 OF 3",
    "title": "Plug in the Pi",
    "bullets": [
@@ -74,7 +89,7 @@
    "note": "Done when: the Pi's light flickers and the speakerphone lights up. The battery is the heaviest part, so low in the box keeps the robot from tipping."
   },
   {
-   "n": 4,
+   "n": 5,
    "kicker": "PI TRACK · 2 OF 3",
    "title": "Open the Pi from your laptop",
    "bullets": [
@@ -84,7 +99,7 @@
    "note": "If someone's Pi didn't come up on the wifi, send them to the setup station."
   },
   {
-   "n": 5,
+   "n": 6,
    "kicker": "PI TRACK · 3 OF 3",
    "title": "Set it up on the Pi",
    "bullets": [
@@ -96,7 +111,7 @@
    "note": "The speakerphone sits right next to the robot, so keep Speaker is inside the box switched on."
   },
   {
-   "n": 6,
+   "n": 7,
    "kicker": "NO PI? · VOICE STUDIO",
    "title": "Make it a better talker",
    "bullets": [
@@ -108,7 +123,7 @@
    "note": "Everything here runs on the laptop, exactly like Weeks 1 and 2. Pair a no-Pi person with a Pi person for the walk test at the end."
   },
   {
-   "n": 7,
+   "n": 8,
    "kicker": "CUT THE CORD",
    "title": "Walk away with it",
    "bullets": [
@@ -118,7 +133,7 @@
    "note": "Done when: it holds a conversation on the far side of the room."
   },
   {
-   "n": 8,
+   "n": 9,
    "kicker": "NEXT WEEK",
    "title": "Week 4: Demo day",
    "bullets": [
@@ -134,13 +149,13 @@
    "type": "slides",
    "title": "Pi track: move it onto the Pi",
    "from": 1,
-   "to": 5
+   "to": 6
   },
   {
    "type": "slides",
    "title": "No Pi? Voice studio track",
-   "from": 6,
-   "to": 6
+   "from": 7,
+   "to": 7
   },
   {
    "type": "runner",
@@ -150,8 +165,8 @@
   {
    "type": "slides",
    "title": "Cut the cord",
-   "from": 7,
-   "to": 8
+   "from": 8,
+   "to": 9
   }
  ],
  "troubleshooting": [
