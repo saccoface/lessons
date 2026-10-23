@@ -56,7 +56,7 @@
     "☐ 1 × half-size breadboard with + and − power rails, to share power between the two servos",
     "☐ 6 × male-to-male jumper wires",
     "☐ 1 × USB-to-jumper power lead",
-    "☐ 1 × Anker 20,000 mAh power bank, charged",
+    "☐ 1 × 10,000 mAh power bank with two ports (one USB-C, 20 W or more), charged",
     "Bring: a laptop with Chrome, and your Deepgram key"
    ],
    "note": "The power bank stays with the robot for the rest of the series: in Week 3 it powers the Pi too. Charge every one the night before. Shared per table: hot-glue gun and glue sticks, a small screwdriver, a box cutter. Helper table: spare servos, jumpers and power leads, plus spare Week 1 robots for anyone who missed it. Check every build has its ground jumper before it's powered on."
