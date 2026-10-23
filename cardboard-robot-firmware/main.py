@@ -2,13 +2,13 @@
 #
 # The browser sends one command per line over USB serial:
 #   "35"  or "M35"  move the mouth servo to 35 degrees   (week 1)
-#   "N120"          move the neck servo to 120 degrees   (week 4)
+#   "N120"          move the neck servo to 120 degrees   (week 2)
 #   "?"             answers "ROBOT READY", so the page knows it found the right board
 #
 # Wiring (MG90S servos, Pico held with the USB port at the top):
 #   mouth signal (orange/yellow) -> GP15  (pin 20, bottom left)
 #   neck signal  (orange/yellow) -> GP14  (pin 19, just above it)
-#   red (power, 5 V)             -> VBUS  (pin 40, top right)   mouth only; in week 4 both
+#   red (power, 5 V)             -> VBUS  (pin 40, top right)   mouth only; from week 2 both
 #                                   servos move to the battery-fed breadboard instead
 #   brown (ground)               -> GND   (pin 38)
 #

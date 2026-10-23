@@ -2,148 +2,125 @@
  "schemaVersion": 1,
  "owner": "Dana Sacco",
  "audience": "Mixed technical and non-technical",
- "type": "Workshop",
  "track": "community",
- "minutes": 60,
+ "runner": "robot",
  "links": {
   "starterRepo": null,
   "deck": null
  },
  "sections": [],
  "id": "cardboard-robot-week-4",
- "title": "Week 4: Give it a neck",
- "icon": "🔄",
+ "title": "Week 4: Demo day",
+ "icon": "🎤",
+ "type": "Demo day",
  "difficulty": "easy",
+ "minutes": 90,
  "setupMinutes": 30,
- "runner": "robot",
  "series": {
   "id": "cardboard-robot",
   "title": "Physical AI Lab: Cardboard Robot",
   "summary": "",
   "part": 4
  },
- "summary": "Your talking box gets a neck. A second cut-down box, a servo and a lazy-susan bearing let the head turn, and the voice agent learns two new moves: turn its head and look around the room.",
- "detail": "Bring your wireless robot. You build a short base box with a servo and a 3 inch lazy-susan bearing on top, then sit the head on it. Two servos need more power than the Pi's USB ports give, so the servos run straight from the battery's second port while the Pico stays plugged into the Pi. Then switch on the neck, set how far it turns each way, and the robot turns toward you and looks around when it talks. We finish with show and tell.",
- "outcome": "Your robot turns its head and looks around on its own while it talks.",
- "artifact": "A two-servo cardboard robot with a turning head, driven by voice-agent function calls.",
+ "summary": "The finale. Catch up on anything you missed, give your robot a job and a new personality for the show, then demo it to guests and vote for the best robots.",
+ "detail": "The first half is open studio: helpers have kits for every stage so anyone who missed a week can catch up, and everyone else polishes their robot and teaches it a trick for the demo. The second half is demo day: each robot gets a couple of minutes with a guest, we film them, and the room votes.",
+ "outcome": "A finished robot with a job and a personality of your own, shown off to a live audience, and a clip of it.",
+ "artifact": "A demo-ready talking robot and a video of it in front of guests.",
  "prereqs": [
-  "Your robot from Week 3, with its Pi and battery.",
+  "Your robot, fully charged.",
   "Your Deepgram API key.",
-  "Your laptop, for the Pi's remote link.",
-  "The neck kit on your table: a second box, a servo, a 3 inch lazy-susan bearing, a mini breadboard, jumpers and a USB-to-jumper power lead."
+  "Your laptop, for the Pi's remote link."
  ],
  "slides": [
   {
    "n": 1,
    "kicker": "FINAL WEEK",
-   "title": "Week 4: Give it a neck",
+   "title": "Week 4: Demo day",
    "bullets": [
-    "It talks, it moves its mouth, it runs on a battery.",
-    "Tonight the head turns.",
-    "Then show and tell."
+    "It talks, it moves, it turns its head, it runs on its own.",
+    "First: catch up, polish, and teach it a new trick.",
+    "Then: show it off."
    ],
-   "note": "Have one finished robot look around the room as people sit down."
+   "note": ""
   },
   {
    "n": 2,
    "kicker": "SUPPLIES CHECKLIST",
    "title": "What each robot needs this week",
    "bullets": [
-    "☐ Your robot from Week 3, with its Pi, Pico and charged battery",
-    "☐ 1 more 8×8×8 inch box, cut down for the base",
-    "☐ 1 × MG90S micro servo (the neck)",
-    "☐ 1 × 3 inch lazy-susan bearing, with 4 small screws",
-    "☐ 1 × male-to-female jumper wire (neck signal)",
-    "☐ 1 × mini breadboard, to share power between the two servos",
-    "☐ 6 × male-to-male jumper wires",
-    "☐ 1 × USB-to-jumper power lead, into the battery's second port",
+    "☐ Your robot, with its Pi, speakerphone and power bank, fully charged",
     "Bring: your laptop and your Deepgram key"
    ],
-   "note": "Two servos need more power than the Pi's USB ports give, so they run straight from the battery. Shared per table: hot-glue gun and glue sticks, a small screwdriver, a box cutter. Helper table: spare servos, jumpers, power leads, charged power banks. Check every build has the ground jumper before it's powered on."
+   "note": "Helper table: catch-up kits for every stage (ready Week 1 robots, neck kits, ready Pis), spare charged power banks, spare cables. For the demo: a phone tripod, a plain backdrop, voting cards. Invite guests for the second half."
   },
   {
    "n": 3,
-   "kicker": "BUILD 1 OF 3",
-   "title": "Make the base",
+   "kicker": "CATCH UP · 20 MIN",
+   "title": "Catch up or polish",
    "bullets": [
-    "Cut the second box down to about 3 inches tall.",
-    "Hot-glue the neck servo in the middle, horn pointing up through a hole in the top.",
-    "Screw or glue the lazy-susan bearing on top, centred on the horn."
+    "Missed a week? Helpers have a kit for every stage.",
+    "Fix anything wobbly, buzzing or slow.",
+    "Decorate it. It's going on stage."
    ],
-   "note": "Done when: the bearing spins freely and the servo horn sits in the middle of it."
+   "note": ""
   },
   {
    "n": 4,
-   "kicker": "BUILD 2 OF 3",
-   "title": "Mount the head",
+   "kicker": "VOICE STUDIO · 25 MIN",
+   "title": "Teach it a new trick",
    "bullets": [
-    "Glue a horn arm to the underside of the head, in the middle.",
-    "Sit the head on the bearing so the horn arm locks onto the servo.",
-    "The bearing carries the weight; the servo only turns it."
+    "Give it a job for the demo: tour guide, game-show host, fortune teller.",
+    "Rewrite its personality to fit. Keep replies short.",
+    "Use its skills: the weather, the calendar, looking around.",
+    "Tune Patience so it doesn't talk over guests.",
+    "Rehearse with a partner playing a guest."
    ],
-   "note": "Done when: turning the head by hand turns the servo, and the head doesn't wobble."
+   "note": "Walk the room and push people to change one thing at a time and test again."
   },
   {
    "n": 5,
-   "kicker": "BUILD 3 OF 3",
-   "title": "Wire and power it",
+   "kicker": "DEMO · 40 MIN",
+   "title": "Show it off",
    "bullets": [
-    "Neck signal (orange) to GP14, pin 19, right above the mouth wire.",
-    "Move the mouth servo's red wire off the Pico. Both red wires go to the breadboard's + row.",
-    "Both brown wires to the breadboard's − row, plus one jumper from − to a Pico GND pin.",
-    "The USB-to-jumper lead goes from the battery's second port to the breadboard rows.",
-    "The Pico stays plugged into the Pi."
+    "Each robot gets two minutes with a guest.",
+    "Film it and share it with #RobotLunchLab.",
+    "Votes: best personality, best voice, best build."
    ],
-   "note": "Without the battery feed, the Pico resets every time the head moves. The shared ground matters: without it the servos twitch randomly."
+   "note": ""
   },
   {
    "n": 6,
-   "kicker": "IN THE APP",
-   "title": "Switch on the neck",
+   "kicker": "WRAP",
+   "title": "Four weeks, one robot",
    "bullets": [
-    "On the Pi, open the lesson page and connect the robot.",
-    "Open Neck on the Plug in card, tick My robot has a neck servo.",
-    "Set Looking left and Looking right, then press Look around.",
-    "Start talking. Ask it to look around, or to look left."
+    "A box that listens, thinks, talks, moves and runs on its own.",
+    "Thank you for building with us."
    ],
-   "note": "The agent gets two new functions, turn_head and look_around. Point out the Tool lines in the transcript when it uses them."
-  },
-  {
-   "n": 7,
-   "kicker": "SHOW AND TELL",
-   "title": "Take it for a walk",
-   "bullets": [
-    "Carry it to another table and have it look around.",
-    "Film a clip and share it with #RobotLunchLab.",
-    "Vote for best personality, best voice and best build."
-   ],
-   "note": "Wrap up: thank everyone for four weeks. Robots go home with their builders."
+   "note": "Ask what people would add next. Collect ideas for the next series."
   }
  ],
  "flow": [
   {
    "type": "slides",
-   "title": "Build the neck",
+   "title": "Catch up and teach it a trick",
    "from": 1,
-   "to": 6
+   "to": 4
   },
   {
    "type": "runner",
-   "title": "Turn the head",
-   "note": "Open this page on the robot's Pi, connect the robot, then open Neck on the Plug in card."
+   "title": "Polish your robot",
+   "note": "Open this page on the robot's Pi (or your laptop if you're catching up)."
   },
   {
    "type": "slides",
-   "title": "Show and tell",
-   "from": 7,
-   "to": 7
+   "title": "Demo and wrap",
+   "from": 5,
+   "to": 6
   }
  ],
  "troubleshooting": [
-  "The Pico resets or disconnects when the head moves: the servos are still on the Pi's power. Move both red wires to the breadboard fed by the battery.",
-  "The servos twitch or jitter on their own: the breadboard's − row isn't joined to the Pico's GND. Add the ground jumper.",
-  "The head turns the wrong way: swap the Looking left and Looking right numbers.",
-  "The head wobbles or sags: the weight is on the servo, not the bearing. Re-seat the head so it rests on the bearing.",
-  "It never turns its head: check My robot has a neck servo is ticked before you press Start talking."
+  "Behind? Ask a helper for the kit for the stage you're on: you can demo at any stage.",
+  "It talks over guests: raise Patience a little.",
+  "The battery dies mid-demo: helpers have charged spares."
  ]
 }
