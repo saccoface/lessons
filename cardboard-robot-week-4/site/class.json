@@ -27,9 +27,9 @@
  "outcome": "A finished robot with a job and a personality of your own, shown off to a live audience, and a clip of it.",
  "artifact": "A demo-ready talking robot and a video of it in front of guests.",
  "prereqs": [
-  "Your robot, fully charged.",
+  "Your robot, fully charged if it runs on a Pi.",
   "Your Deepgram API key.",
-  "Your laptop, for the Pi's remote link."
+  "Your laptop: it runs your robot, or opens your Pi with Raspberry Pi Connect."
  ],
  "slides": [
   {
@@ -48,17 +48,17 @@
    "kicker": "SUPPLIES CHECKLIST",
    "title": "What each robot needs this week",
    "bullets": [
-    "☐ Your robot, with its Pi, speakerphone and power bank, fully charged",
+    "☐ Your robot, fully charged if it runs on a Pi",
     "Bring: your laptop and your Deepgram key"
    ],
-   "note": "Helper table: catch-up kits for every stage (ready Week 1 robots, neck kits, ready Pis), spare charged power banks, spare cables. For the demo: a phone tripod, a plain backdrop, voting cards. Invite guests for the second half."
+   "note": "Helper table: catch-up kits (ready Week 1 robots, neck kits), spare charged power banks, spare cables. Robots without a Pi demo from a laptop. For the demo: a phone tripod, a plain backdrop, voting cards. Invite guests for the second half."
   },
   {
    "n": 3,
    "kicker": "CATCH UP · 20 MIN",
    "title": "Catch up or polish",
    "bullets": [
-    "Missed a week? Helpers have a kit for every stage.",
+    "Missed a week? Helpers have kits for the box and the neck.",
     "Fix anything wobbly, buzzing or slow.",
     "Decorate it. It's going on stage."
    ],
@@ -109,7 +109,7 @@
   {
    "type": "runner",
    "title": "Polish your robot",
-   "note": "Open this page on the robot's Pi (or your laptop if you're catching up)."
+   "note": "Open this page on the robot's Pi, or on your laptop if your robot runs from it."
   },
   {
    "type": "slides",
@@ -119,7 +119,7 @@
   }
  ],
  "troubleshooting": [
-  "Behind? Ask a helper for the kit for the stage you're on: you can demo at any stage.",
+  "Behind? Ask a helper for the kit for the stage you're on. You can demo at any stage, from a laptop or a Pi.",
   "It talks over guests: raise Patience a little.",
   "The battery dies mid-demo: helpers have charged spares."
  ]

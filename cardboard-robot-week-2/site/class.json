@@ -121,13 +121,13 @@
   {
    "n": 8,
    "kicker": "NEXT WEEK",
-   "title": "Week 3: make it standalone",
+   "title": "Week 3: make it standalone (optional)",
    "bullets": [
-    "A Raspberry Pi and a speakerphone take over from your laptop.",
-    "It runs on the battery you already have.",
-    "Then unplug everything and walk away with it."
+    "Want your robot to run without your laptop? Bring your own Raspberry Pi 4 or 5.",
+    "Set it up at home first: the steps are on the Week 3 page.",
+    "No Pi? Come anyway. Your robot keeps running from your laptop, and there's a voice studio track for you."
    ],
-   "note": ""
+   "note": "Say this twice and put it in the follow-up email: anyone bringing a Pi must set it up at home before Week 3."
   }
  ],
  "flow": [
