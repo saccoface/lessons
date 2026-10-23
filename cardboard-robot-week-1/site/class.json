@@ -18,7 +18,7 @@
  "setupMinutes": 60,
  "series": {
   "id": "cardboard-robot",
-  "title": "Physical AI Lab: Cardboard Robot",
+  "title": "Physical AI Lab: Cardboard Robot (4 week course)",
   "summary": "A four-week build, one session a week. Week 1: a cardboard box that talks, with a mouth that moves. Week 2: a turning neck. Week 3 (optional, bring your own Raspberry Pi): it runs on its own, no laptop or cables. Week 4: demo day. Most of every session is spent in Deepgram's voice studio, not on the glue gun.",
   "part": 1
  },
