@@ -66,21 +66,24 @@
    "kicker": "BUILD 1 OF 3",
    "title": "Make the base",
    "bullets": [
-    "Hot-glue the neck servo in the middle of the short box, horn pointing up through a hole in the top.",
-    "Screw or glue the lazy-susan bearing on top, centred on the horn."
+    "Cut a small hole in the middle of the short box's lid.",
+    "Hot-glue the neck servo under the lid by its two tabs, so its shaft pokes up through the hole.",
+    "Screw or glue the lazy-susan bearing on top, centred on the shaft."
    ],
-   "note": "Done when: the bearing spins freely and the servo horn sits in the middle of it."
+   "note": "Done when: the bearing spins freely and the servo's shaft sits in the middle of it.",
+   "image": "/slides/cardboard-robot/week-2-neck-base.svg"
   },
   {
    "n": 4,
    "kicker": "BUILD 2 OF 3",
    "title": "Mount the head",
    "bullets": [
-    "Glue a horn arm to the underside of the head, in the middle.",
-    "Sit the head on the bearing so the horn arm locks onto the servo.",
+    "Glue a servo horn to the middle of the head's underside.",
+    "Lower the head onto the bearing so the horn pushes onto the servo's shaft.",
     "The bearing carries the weight; the servo only turns it."
    ],
-   "note": "Done when: turning the head by hand turns the servo, and the head doesn't wobble."
+   "note": "Done when: turning the head by hand turns the servo, and the head doesn't wobble.",
+   "image": "/slides/cardboard-robot/week-2-neck-head.svg"
   },
   {
    "n": 5,
@@ -109,6 +112,19 @@
   },
   {
    "n": 7,
+   "kicker": "HOW IT WORKS",
+   "title": "How the head turns",
+   "bullets": [
+    "You ask: \"Who is on your left?\"",
+    "The agent decides to call turn_head with direction \"left\".",
+    "The page turns \"left\" into an angle (150° by default) and sends it to the Pico, a few degrees at a time.",
+    "The Pico moves the neck servo and the head turns. look_around is left, then right, then straight ahead."
+   ],
+   "note": "The servo can point anywhere from 0° to 180°. Looking left and Looking right on the page set the two angles; if the head turns the wrong way, swap them.",
+   "image": "/slides/cardboard-robot/week-2-neck-turns.svg"
+  },
+  {
+   "n": 8,
    "kicker": "VOICE STUDIO · 15 MIN",
    "title": "Teach it when to move",
    "bullets": [
@@ -120,7 +136,7 @@
    "note": "Same idea as last week's weather skill: the agent decides when to call a function, and the page carries it out. Here the function moves something real."
   },
   {
-   "n": 8,
+   "n": 9,
    "kicker": "NEXT WEEK",
    "title": "Week 3: make it standalone (optional)",
    "bullets": [
@@ -142,7 +158,7 @@
    "type": "slides",
    "title": "Bring the neck to life",
    "from": 6,
-   "to": 7
+   "to": 8
   },
   {
    "type": "runner",
@@ -152,8 +168,8 @@
   {
    "type": "slides",
    "title": "Next week",
-   "from": 8,
-   "to": 8
+   "from": 9,
+   "to": 9
   }
  ],
  "troubleshooting": [
