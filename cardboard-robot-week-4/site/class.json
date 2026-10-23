@@ -11,10 +11,10 @@
  },
  "sections": [],
  "id": "cardboard-robot-week-4",
- "title": "Week 4: Cut the cord",
- "icon": "🔋",
+ "title": "Week 4: Give it a neck",
+ "icon": "🔄",
  "difficulty": "easy",
- "setupMinutes": 20,
+ "setupMinutes": 30,
  "runner": "robot",
  "series": {
   "id": "cardboard-robot",
@@ -22,68 +22,98 @@
   "summary": "",
   "part": 4
  },
- "summary": "The last step: an Anker 20,000 mAh battery powers the Pi and the servos, so your robot runs with no cables at all. Then take it for a walk and show it off.",
- "detail": "Mount the battery pack in the base, move the Pi and servo power onto it, and check it all still runs. Then the robot is fully wireless: pick it up, carry it across the room and keep talking. We finish with a show-and-tell and a group video.",
- "outcome": "A finished cardboard robot that runs anywhere on its own battery, listening, talking, moving its mouth and turning its head.",
- "artifact": "A fully wireless talking cardboard robot, and a clip of it out in the world.",
+ "summary": "Your talking box gets a neck. A second cut-down box, a servo and a lazy-susan bearing let the head turn, and the voice agent learns two new moves: turn its head and look around the room.",
+ "detail": "Bring your wireless robot. You build a short base box with a servo and a 3 inch lazy-susan bearing on top, then sit the head on it. Two servos need more power than the Pi's USB ports give, so the servos run straight from the battery's second port while the Pico stays plugged into the Pi. Then switch on the neck, set how far it turns each way, and the robot turns toward you and looks around when it talks. We finish with show and tell.",
+ "outcome": "Your robot turns its head and looks around on its own while it talks.",
+ "artifact": "A two-servo cardboard robot with a turning head, driven by voice-agent function calls.",
  "prereqs": [
-  "Your robot from Week 3, with its Raspberry Pi.",
+  "Your robot from Week 3, with its Pi and battery.",
   "Your Deepgram API key.",
-  "On your table: an Anker 20,000 mAh power bank and its cables."
+  "Your laptop, for the Pi's remote link.",
+  "The neck kit on your table: a second box, a servo, a 3 inch lazy-susan bearing, a mini breadboard, jumpers and a USB-to-jumper power lead."
  ],
  "slides": [
   {
    "n": 1,
    "kicker": "FINAL WEEK",
-   "title": "Week 4: Cut the cord",
+   "title": "Week 4: Give it a neck",
    "bullets": [
-    "One battery for everything.",
-    "Then pick it up and walk around with it."
+    "It talks, it moves its mouth, it runs on a battery.",
+    "Tonight the head turns.",
+    "Then show and tell."
    ],
-   "note": ""
+   "note": "Have one finished robot look around the room as people sit down."
   },
   {
    "n": 2,
    "kicker": "SUPPLIES CHECKLIST",
    "title": "What each robot needs this week",
    "bullets": [
-    "☐ Your robot from Week 3, with its Pi, speakerphone and Pico",
-    "☐ The Anker 20,000 mAh power bank from Week 2, fully charged",
-    "☐ 1 × short USB-C to USB-C cable, battery to Pi",
-    "☐ The servo power lead from Week 2",
-    "☐ Velcro strips or tape, to hold the battery in the base",
+    "☐ Your robot from Week 3, with its Pi, Pico and charged battery",
+    "☐ 1 more 8×8×8 inch box, cut down for the base",
+    "☐ 1 × MG90S micro servo (the neck)",
+    "☐ 1 × 3 inch lazy-susan bearing, with 4 small screws",
+    "☐ 1 × male-to-female jumper wire (neck signal)",
+    "☐ 1 × mini breadboard, to share power between the two servos",
+    "☐ 6 × male-to-male jumper wires",
+    "☐ 1 × USB-to-jumper power lead, into the battery's second port",
     "Bring: your laptop and your Deepgram key"
    ],
-   "note": "The Pi 4 wants a steady 3 A. If a Pi shows a lightning bolt or restarts on battery, swap to a port marked for higher power or a thicker cable. Helper table: spare charged power banks, spare short USB-C cables, a phone tripod for the show-and-tell video."
+   "note": "Two servos need more power than the Pi's USB ports give, so they run straight from the battery. Shared per table: hot-glue gun and glue sticks, a small screwdriver, a box cutter. Helper table: spare servos, jumpers, power leads, charged power banks. Check every build has the ground jumper before it's powered on."
   },
   {
    "n": 3,
-   "kicker": "BUILD 1 OF 2",
-   "title": "Mount the battery",
+   "kicker": "BUILD 1 OF 3",
+   "title": "Make the base",
    "bullets": [
-    "Charge check: press the button on the power bank, all lights should show.",
-    "Slide the battery into the base box, behind the neck servo.",
-    "Tape it down so it can't slide when the head turns."
+    "Cut the second box down to about 3 inches tall.",
+    "Hot-glue the neck servo in the middle, horn pointing up through a hole in the top.",
+    "Screw or glue the lazy-susan bearing on top, centred on the horn."
    ],
-   "note": "The battery is the heaviest part, so low in the base keeps the robot from tipping."
+   "note": "Done when: the bearing spins freely and the servo horn sits in the middle of it."
   },
   {
    "n": 4,
-   "kicker": "BUILD 2 OF 2",
-   "title": "Move the power over",
+   "kicker": "BUILD 2 OF 3",
+   "title": "Mount the head",
    "bullets": [
-    "Pi power cable from the battery's USB-C port.",
-    "Servo power lead from the battery's other port.",
-    "Unplug the wall supply. Everything should keep running."
+    "Glue a horn arm to the underside of the head, in the middle.",
+    "Sit the head on the bearing so the horn arm locks onto the servo.",
+    "The bearing carries the weight; the servo only turns it."
    ],
-   "note": "Done when: the wall plug is out and the robot still answers."
+   "note": "Done when: turning the head by hand turns the servo, and the head doesn't wobble."
   },
   {
    "n": 5,
+   "kicker": "BUILD 3 OF 3",
+   "title": "Wire and power it",
+   "bullets": [
+    "Neck signal (orange) to GP14, pin 19, right above the mouth wire.",
+    "Move the mouth servo's red wire off the Pico. Both red wires go to the breadboard's + row.",
+    "Both brown wires to the breadboard's − row, plus one jumper from − to a Pico GND pin.",
+    "The USB-to-jumper lead goes from the battery's second port to the breadboard rows.",
+    "The Pico stays plugged into the Pi."
+   ],
+   "note": "Without the battery feed, the Pico resets every time the head moves. The shared ground matters: without it the servos twitch randomly."
+  },
+  {
+   "n": 6,
+   "kicker": "IN THE APP",
+   "title": "Switch on the neck",
+   "bullets": [
+    "On the Pi, open the lesson page and connect the robot.",
+    "Open Neck on the Plug in card, tick My robot has a neck servo.",
+    "Set Looking left and Looking right, then press Look around.",
+    "Start talking. Ask it to look around, or to look left."
+   ],
+   "note": "The agent gets two new functions, turn_head and look_around. Point out the Tool lines in the transcript when it uses them."
+  },
+  {
+   "n": 7,
    "kicker": "SHOW AND TELL",
    "title": "Take it for a walk",
    "bullets": [
-    "Carry it to another table and have a conversation.",
+    "Carry it to another table and have it look around.",
     "Film a clip and share it with #RobotLunchLab.",
     "Vote for best personality, best voice and best build."
    ],
@@ -93,25 +123,27 @@
  "flow": [
   {
    "type": "slides",
-   "title": "Add the battery",
+   "title": "Build the neck",
    "from": 1,
-   "to": 4
+   "to": 6
   },
   {
    "type": "runner",
-   "title": "Final test, unplugged",
-   "note": "Open this page on the robot's Pi. Unplug every cable, then start talking."
+   "title": "Turn the head",
+   "note": "Open this page on the robot's Pi, connect the robot, then open Neck on the Plug in card."
   },
   {
    "type": "slides",
    "title": "Show and tell",
-   "from": 5,
-   "to": 5
+   "from": 7,
+   "to": 7
   }
  ],
  "troubleshooting": [
-  "The Pi restarts when the head moves: the Pi and servos are pulling too much from one port. Use separate ports on the battery.",
-  "The Pi shows a lightning bolt: the battery is low or the cable is thin. Charge the battery or swap the cable.",
-  "The battery switches itself off: some power banks sleep on low current. Press its button to wake it."
+  "The Pico resets or disconnects when the head moves: the servos are still on the Pi's power. Move both red wires to the breadboard fed by the battery.",
+  "The servos twitch or jitter on their own: the breadboard's − row isn't joined to the Pico's GND. Add the ground jumper.",
+  "The head turns the wrong way: swap the Looking left and Looking right numbers.",
+  "The head wobbles or sags: the weight is on the servo, not the bearing. Re-seat the head so it rests on the bearing.",
+  "It never turns its head: check My robot has a neck servo is ticked before you press Start talking."
  ]
 }

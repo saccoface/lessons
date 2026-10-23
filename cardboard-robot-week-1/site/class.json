@@ -131,11 +131,11 @@
   {
    "n": 9,
    "kicker": "NEXT WEEK",
-   "title": "Week 2: give it a neck",
+   "title": "Week 2: a brain of its own",
    "bullets": [
     "Bring your robot back next week.",
-    "We add a second box, a servo and a lazy-susan bearing.",
-    "Then the head can turn and look around the room when it talks."
+    "A Raspberry Pi and a speakerphone take over from your laptop.",
+    "Then your robot can talk without a laptop attached."
    ],
    "note": "Ask everyone to take their robot home in one piece, or leave it on the shelf at The Hub."
   }
@@ -176,6 +176,6 @@
   "id": "cardboard-robot",
   "title": "Physical AI Lab: Cardboard Robot",
   "part": 1,
-  "summary": "A four-week build, one session a week. Week 1 turns a shipping box into a robot whose mouth moves when it talks. Week 2 adds a neck so the head turns. Week 3 swaps the laptop for a Raspberry Pi brain. Week 4 adds a battery so it runs with no cables at all. Log in, plug in, no coding."
+  "summary": "A four-week build, one session a week. Week 1 turns a shipping box into a robot whose mouth moves when it talks. Week 2 swaps the laptop for a Raspberry Pi brain. Week 3 adds a battery so it runs with no cables. Week 4 gives it a neck so the head turns. Log in, plug in, no coding."
  }
 }

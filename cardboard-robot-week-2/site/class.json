@@ -11,10 +11,10 @@
  },
  "sections": [],
  "id": "cardboard-robot-week-2",
- "title": "Week 2: Give it a neck",
- "icon": "🔄",
- "difficulty": "easy",
- "setupMinutes": 30,
+ "title": "Week 2: A brain of its own",
+ "icon": "🧠",
+ "difficulty": "medium",
+ "setupMinutes": 45,
  "runner": "robot",
  "series": {
   "id": "cardboard-robot",
@@ -22,98 +22,84 @@
   "summary": "",
   "part": 2
  },
- "summary": "Your talking box gets a neck. A second cut-down box, a servo and a lazy-susan bearing let the head turn, and the voice agent learns two new moves: turn its head and look around the room.",
- "detail": "Bring last week's robot. You build a short base box with a servo and a 3 inch lazy-susan bearing on top, then sit the head on it. Two servos need more power than a laptop gives, so the servos run from a battery pack while the Pico stays on USB. Back on this page, switch on the neck, set how far it turns each way, and the robot can turn toward you or look around when it talks.",
- "outcome": "Your robot turns its head and looks around on its own while it talks.",
- "artifact": "A two-servo cardboard robot with a turning head, driven by voice-agent function calls.",
+ "summary": "The laptop steps aside. A Raspberry Pi 4 becomes the robot's brain and an EMEET speakerphone becomes its ears and voice, so the robot runs on its own.",
+ "detail": "Each table gets a Raspberry Pi 4 with its memory card already set up, and an EMEET M0 Plus speakerphone. The Pi runs Chrome and opens this same page, so your robot keeps working the same way: enter your key, personality and voice once, and the Pi remembers them. You control the Pi from your laptop's browser while you set it up, then unplug the laptop.",
+ "outcome": "Your robot talks and moves its mouth with no laptop attached, running from its own Raspberry Pi.",
+ "artifact": "A self-contained cardboard robot running on a Raspberry Pi 4 with a speakerphone.",
  "prereqs": [
-  "Your robot from Week 1, and the same laptop with Chrome.",
+  "Your robot from Week 1.",
   "Your Deepgram API key.",
-  "The neck kit on your table: a second box, a servo, a 3 inch lazy-susan bearing, jumpers and a battery pack with a servo power lead."
+  "Your laptop, for setting up the Pi. It doesn't stay plugged in.",
+  "On your table: a Raspberry Pi 4 with its memory card ready, its power supply, and an EMEET M0 Plus speakerphone."
  ],
  "slides": [
   {
    "n": 1,
    "kicker": "WELCOME BACK",
-   "title": "Week 2: Give it a neck",
+   "title": "Week 2: A brain of its own",
    "bullets": [
-    "Last week: it talks and its mouth moves.",
-    "Tonight: the head turns.",
-    "Same app, one new switch."
+    "Last week the laptop did the listening and talking.",
+    "Tonight a Raspberry Pi does it.",
+    "Same app, new home."
    ],
-   "note": "Have one finished week 2 robot look around the room as people sit down."
+   "note": ""
   },
   {
    "n": 2,
    "kicker": "SUPPLIES CHECKLIST",
    "title": "What each robot needs this week",
    "bullets": [
-    "☐ Your robot from Week 1, the Pico and its USB cable",
-    "☐ 1 more 8×8×8 inch box, cut down for the base",
-    "☐ 1 × MG90S micro servo (the neck)",
-    "☐ 1 × 3 inch lazy-susan bearing, with 4 small screws",
-    "☐ 1 × male-to-female jumper wire (neck signal)",
-    "☐ 1 × mini breadboard, to share power between the two servos",
-    "☐ 6 × male-to-male jumper wires",
-    "☐ 1 × USB-to-jumper power lead",
-    "☐ 1 × Anker 20,000 mAh power bank, charged",
-    "Bring: a laptop with Chrome, and your Deepgram key"
+    "☐ Your robot from Week 1, with its Pico and servo",
+    "☐ 1 × Raspberry Pi 4, its memory card already set up",
+    "☐ 1 × Raspberry Pi USB-C power supply (5.1 V, 3 A)",
+    "☐ 1 × EMEET M0 Plus speakerphone and its cable",
+    "☐ 1 × USB-A to micro-USB data cable, for the Pico (the Pi has USB-A ports)",
+    "☐ A card with this Pi's remote link and the room's wifi",
+    "Bring: your laptop and your Deepgram key"
    ],
-   "note": "Two servos need more power than a laptop USB port gives, so the power bank arrives this week, not in Week 4. Shared per table: hot-glue gun and glue sticks, a small screwdriver, a box cutter. Helper table: spare servos, spare jumpers, spare loaded Picos. Charge every power bank the night before."
+   "note": "Before class, set up every memory card: Raspberry Pi OS, Chromium, the room's wifi and remote screen access, with the lesson page as Chromium's home page. Write each Pi's remote link on its card. Helper table: 2 spare ready Pis, spare USB-A to micro-USB data cables, a power strip per table."
   },
   {
    "n": 3,
    "kicker": "BUILD 1 OF 3",
-   "title": "Make the base",
+   "title": "Plug in the Pi",
    "bullets": [
-    "Cut the second box down to about 3 inches tall.",
-    "Hot-glue the neck servo in the middle, horn pointing up through a hole in the top.",
-    "Screw or glue the lazy-susan bearing on top, centred on the horn."
+    "Speakerphone into a blue USB port on the Pi.",
+    "The Pico into another blue port, with the USB-A to micro-USB cable.",
+    "Power supply into the Pi last."
    ],
-   "note": "Done when: the bearing spins freely and the servo horn sits in the middle of it."
+   "note": "Done when: the Pi's green light flickers and the speakerphone lights up."
   },
   {
    "n": 4,
    "kicker": "BUILD 2 OF 3",
-   "title": "Mount the head",
+   "title": "Open the Pi from your laptop",
    "bullets": [
-    "Glue a horn arm to the underside of the head, in the middle.",
-    "Sit the head on the bearing so the horn arm locks onto the servo.",
-    "The bearing carries the weight; the servo only turns it."
+    "On your laptop, open the Pi link on the card at your table.",
+    "You're now looking at the Pi's screen in your browser.",
+    "On the Pi, Chrome opens this lesson page."
    ],
-   "note": "Done when: turning the head by hand turns the servo, and the head doesn't wobble."
+   "note": "The Pis are prepared before class with Chromium and remote screen access. Each card lists that Pi's link."
   },
   {
    "n": 5,
    "kicker": "BUILD 3 OF 3",
-   "title": "Wire and power it",
+   "title": "Set it up on the Pi",
    "bullets": [
-    "Neck signal (orange) to GP14, pin 19, right above the mouth wire.",
-    "Both red wires to the battery pack's power lead, not to the Pico.",
-    "Both brown wires to the battery lead's ground, and one ground jumper to a Pico GND pin.",
-    "The Pico stays plugged into the laptop for its data."
+    "Paste your Deepgram key and connect the robot, like week 1.",
+    "Pick the speakerphone if Chrome asks for a microphone.",
+    "Set the mouth sliders again. They're saved on the Pi.",
+    "Start talking, then close the link on your laptop."
    ],
-   "note": "A laptop USB port can only power one servo. Without the battery, the Pico resets every time the head moves. The shared ground matters: without it the servos twitch randomly."
+   "note": "The speakerphone sits right next to the robot, so keep Speaker is inside the box switched on."
   },
   {
    "n": 6,
-   "kicker": "IN THE APP",
-   "title": "Switch on the neck",
-   "bullets": [
-    "Connect the robot like last week.",
-    "Open Week 2: neck, tick My robot has a neck servo.",
-    "Set Looking left and Looking right, then press Look around.",
-    "Start talking. Ask it to look around, or to look left."
-   ],
-   "note": "The agent gets two new functions, turn_head and look_around. Point out the Tool lines in the transcript when it uses them."
-  },
-  {
-   "n": 7,
    "kicker": "NEXT WEEK",
-   "title": "Week 3: a brain of its own",
+   "title": "Week 3: cut the cord",
    "bullets": [
-    "A Raspberry Pi 4 and a speakerphone take over from the laptop.",
-    "Bring your robot back."
+    "A battery pack powers the Pi.",
+    "No wall plug, no laptop, no cables. Bring your robot back."
    ],
    "note": ""
   }
@@ -121,27 +107,27 @@
  "flow": [
   {
    "type": "slides",
-   "title": "Build the neck",
+   "title": "Move to the Pi",
    "from": 1,
-   "to": 6
+   "to": 5
   },
   {
    "type": "runner",
-   "title": "Turn the head",
-   "note": "Plug the robot in, connect it, then open Week 2: neck on the Plug in card."
+   "title": "Run it on the Pi",
+   "note": "Open this page in Chrome on the Raspberry Pi, not on your laptop."
   },
   {
    "type": "slides",
    "title": "Next week",
-   "from": 7,
-   "to": 7
+   "from": 6,
+   "to": 6
   }
  ],
  "troubleshooting": [
-  "The Pico resets or disconnects when the head moves: the servos are on laptop power. Move both red wires to the battery lead.",
-  "The servos twitch or jitter on their own: the battery ground isn't joined to the Pico's GND. Add the ground jumper.",
-  "The head turns the wrong way: swap the Looking left and Looking right numbers.",
-  "The head wobbles or sags: the weight is on the servo, not the bearing. Re-seat the head so it rests on the bearing.",
-  "It never turns its head: check My robot has a neck servo is ticked before you press Start talking."
+  "Connect robot shows nothing on the Pi: the Pico cable is in a charge-only port or is a charge-only cable. Try another port, then another cable.",
+  "The robot can't hear you: in Chrome on the Pi, click the lock icon and pick the EMEET as the microphone.",
+  "No sound: set the EMEET as the Pi's audio output in the speaker menu at the top right.",
+  "The Pi link won't open: check the Pi and your laptop are on the same wifi, then ask a helper.",
+  "The Pi or Pico restarts when the mouth moves: the Pi's USB ports share a small power budget. Turn the speakerphone volume down a little, and tell a helper."
  ]
 }
