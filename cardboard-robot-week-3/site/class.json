@@ -84,9 +84,9 @@
     "Speakerphone into a blue USB port on the Pi.",
     "Unplug the Pico from your laptop and plug it into another blue port, with the USB-A cable.",
     "Power the Pi from the power bank's other port.",
-    "Tuck the Pi and battery low inside the box and fix them with velcro or tape."
+    "Put the Pi and battery on the floor of the base box, under the neck, and fix them with velcro or tape. Cut a small notch at the back for the charging cable."
    ],
-   "note": "Done when: the Pi's light flickers and the speakerphone lights up. The battery is the heaviest part, so low in the box keeps the robot from tipping."
+   "note": "Done when: the Pi's light flickers and the speakerphone lights up. The battery is the heaviest part, so on the floor of the base keeps the robot from tipping. Tip: tape the base floor on one side only, like a hinge, so you can open it to charge or fix things."
   },
   {
    "n": 5,
