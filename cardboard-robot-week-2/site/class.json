@@ -39,7 +39,7 @@
    "bullets": [
     "Last week: it talks and its mouth moves.",
     "Tonight: the head turns, and it decides when to look around.",
-    "Plus a battery pack, because two servos need more power than a laptop gives."
+    "Plus your own power bank, so in Week 3 it can go cordless."
    ],
    "note": "Have one finished robot look around the room as people sit down."
   },
@@ -48,18 +48,16 @@
    "kicker": "SUPPLIES CHECKLIST",
    "title": "What each robot needs this week",
    "bullets": [
-    "☐ Your robot from Week 1, with its Pico and USB cable",
+    "☐ Your robot from Week 1, with its Pico, breadboard, power lead and USB cable",
     "☐ 1 more 8×8×8 inch box, cut down to about 3 inches tall",
     "☐ 1 × MG90S micro servo (the neck)",
     "☐ 1 × 3 inch lazy-susan bearing, with 4 small screws",
     "☐ 1 × male-to-female jumper wire (neck signal)",
-    "☐ 1 × half-size breadboard with + and − power rails, to share power between the two servos",
-    "☐ 6 × male-to-male jumper wires",
-    "☐ 1 × USB-to-jumper power lead",
+    "☐ 2 × male-to-male jumper wires (neck power)",
     "☐ 1 × 10,000 mAh power bank with two ports (one USB-C, 20 W or more), charged",
     "Bring: a laptop with Chrome, and your Deepgram key"
    ],
-   "note": "The power bank stays with the robot for the rest of the series: in Week 3 it powers the Pi too. Charge every one the night before. Shared per table: hot-glue gun and glue sticks, a small screwdriver, a box cutter. Helper table: spare servos, jumpers and power leads, plus spare Week 1 robots for anyone who missed it. Check every build has its ground jumper before it's powered on."
+   "note": "The power bank stays with the robot for the rest of the series: in Week 3 it powers the Pi too. Charge every one the night before. Shared per table: hot-glue gun and glue sticks, a small screwdriver, a box cutter. Helper table: spare servos, jumpers, breadboards and power leads, plus spare Week 1 robots for anyone who missed it. Check every build has its ground jumper before it's powered on."
   },
   {
    "n": 3,
@@ -91,12 +89,12 @@
    "title": "Wire and power it",
    "bullets": [
     "Neck signal (orange) to GP14, pin 19, right above the mouth wire.",
-    "Move the mouth servo's red wire off the Pico. Both red wires go to the breadboard's + row.",
-    "Both brown wires to the breadboard's − row, plus one jumper from − to the Pico's GND, pin 23.",
-    "Power lead from the power bank to the breadboard's + and − rows.",
+    "Neck red to the breadboard's + row, neck brown to the − row, next to the mouth servo's.",
+    "Everything else stays where it was in Week 1, including the ground jumper to pin 23.",
+    "Power lead into the table charger or your power bank. Nothing on pin 40.",
     "The Pico stays plugged into your laptop."
    ],
-   "note": "A laptop USB port can't power two servos: without the power bank, the Pico resets every time the head moves. The shared ground matters: without it the servos twitch randomly.",
+   "note": "The power is the same as Week 1: both servos share the breadboard rails, and the Pico only sends signals. If anyone still has their mouth servo's red on pin 40 from an old build, move it to the + row now. The shared ground matters: without it the servos twitch randomly.",
    "image": "/slides/cardboard-robot/week-2-wiring.svg"
   },
   {
@@ -174,9 +172,9 @@
   }
  ],
  "troubleshooting": [
-  "The Pico resets or disconnects when the head moves: a servo is still on the Pico's power. Move both red wires to the breadboard fed by the power bank.",
+  "The Pico resets or disconnects when the head moves: a servo is still on the Pico's power. Both red wires go to the breadboard's + row, with the charger or power bank plugged in. The page reconnects on its own once it's back.",
   "The servos twitch or jitter on their own: the breadboard's − row isn't joined to the Pico's GND. Add the ground jumper.",
-  "Nothing moves at all: the power bank may have gone to sleep. Press its button.",
+  "Nothing moves at all: the power bank may have gone to sleep. Press its button, or plug the power lead into the table charger.",
   "The head turns the wrong way: swap the Looking left and Looking right numbers.",
   "The head wobbles or sags: the weight is on the servo, not the bearing. Re-seat the head so it rests on the bearing.",
   "It never turns its head: check My robot has a neck servo is ticked before you press Start talking."

@@ -8,12 +8,22 @@
 # Wiring (MG90S servos, Pico held with the USB port at the top):
 #   mouth signal (orange/yellow) -> GP15  (pin 20, bottom left)
 #   neck signal  (orange/yellow) -> GP14  (pin 19, just above it)
-#   red (power, 5 V)             -> VBUS  (pin 40, top right)   mouth only; from week 2 both
-#                                   servos move to the battery-fed breadboard instead
-#   brown (ground)               -> GND   (pin 38)
+#   red (power) and brown (ground) of every servo go to a breadboard's + and - rails,
+#   fed 5 V by a USB charger or power bank. One jumper joins the - rail to GND (pin 23).
+#   Nothing goes on VBUS (pin 40): a servo powered from the Pico resets it when it moves fast.
 #
-# Flash: install MicroPython on the Pico, then save this file to the board as
-# main.py (Thonny: File > Save as > Raspberry Pi Pico). It runs on every power-up.
+# Works on the Pico, Pico H, Pico 2 and Pico 2 W.
+#
+# Flash it with Thonny (thonny.org):
+#   1. Hold BOOTSEL while plugging the Pico in. A drive appears: RPI-RP2 (Pico) or RP2350 (Pico 2).
+#   2. Bottom-right corner > Install MicroPython. Family RP2; pick the variant that matches the
+#      board (for example "Raspberry Pi - Pico 2 W"). Install, then close the window.
+#   3. Unplug and replug without BOOTSEL. Bottom-right corner > MicroPython (Raspberry Pi Pico),
+#      and wait for >>> in the Shell. Press Stop if you don't see it.
+#   4. Paste this file into the editor at the top (not the Shell), then
+#      File > Save as > Raspberry Pi Pico > main.py. It runs on every power-up.
+#      If Save as never asks where to save, Thonny isn't connected to the board: redo step 3.
+#   5. Quit Thonny before opening the lesson page. Only one program can use the Pico at a time.
 import sys
 import select
 import time

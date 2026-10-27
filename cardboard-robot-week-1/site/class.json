@@ -23,13 +23,13 @@
   "part": 1
  },
  "summary": "A cardboard robot whose mouth moves when it talks. The box comes ready-built, so attendees spend 15 minutes finishing it and about 40 minutes in Deepgram's voice studio: writing its personality, choosing its voice, tuning Flux turn-taking and giving it skills.",
- "detail": "Your robot box arrives already folded with its servo glued in. You draw its face, hook up the paperclip that opens its mouth, and plug in three wires. Then the rest of the session happens on this page: give it a personality, try different Deepgram voices, tune how Flux decides you've finished talking, and let it check the weather and read a calendar. The mouth opens and shuts in time with its voice. Finish by filming a clip of your robot talking.",
+ "detail": "Your robot box arrives already folded with its servo glued in. You draw its face, hook up the paperclip that opens its mouth, and wire it to a small breadboard. Then the rest of the session happens on this page: give it a personality, try different Deepgram voices, tune how Flux decides you've finished talking, and let it check the weather and read a calendar. The mouth opens and shuts in time with its voice. Finish by filming a clip of your robot talking.",
  "outcome": "A cardboard robot on your table that holds a real conversation in a voice and personality you chose, moves its mouth as it speaks, and checks the weather, plus a clip of it to share.",
  "artifact": "A talking cardboard robot running the attendee's own Deepgram voice agent, and a short video of it.",
  "prereqs": [
   "A laptop with Google Chrome. Safari and Firefox can't talk to USB devices.",
   "A free Deepgram account and API key. Use the sign-up QR code at your table.",
-  "A USB port on your laptop. We have USB-C adapters if you need one.",
+  "A USB port on your laptop. USB-C only laptop? We have USB-C to micro-USB cables.",
   "Everything else is on the table."
  ],
  "slides": [
@@ -50,14 +50,17 @@
    "title": "What each robot needs",
    "bullets": [
     "☐ 1 × robot box, already built: folded, mouth flap hinged, tab glued in, servo glued down",
-    "☐ 1 × Raspberry Pi Pico H, loaded with the robot program",
-    "☐ 3 × male-to-female jumper wires",
-    "☐ 1 × USB-C to micro-USB data cable (not charge-only)",
+    "☐ 1 × Raspberry Pi Pico (Pico H, Pico 2 or Pico 2 W, with pins), loaded with the robot program",
+    "☐ 1 × half-size breadboard with + and − power rails",
+    "☐ 2 × male-to-female jumper wires (signal and ground)",
+    "☐ 2 × male-to-male jumper wires (servo power)",
+    "☐ 1 × USB-to-2-pin power lead, and a spot on the table's USB charger",
+    "☐ 1 × micro-USB data cable (not charge-only), USB-C or USB-A to match your laptop",
     "☐ 1 × jumbo paperclip",
     "☐ Tape and a marker",
     "Bring: a laptop with Chrome, and your Deepgram key"
    ],
-   "note": "Before class, helpers build every box (about 5 minutes each, so batch them the day before): fold the 8×8×8 inch box, tape the bottom shut, cut off the two front side flaps, glue the top front flap shut, glue a cut-off flap piece inside the bottom flap as a tab, and hot-glue an MG90S servo to the floor near the front with its horn on and facing up. Load and test every Pico with Connect robot. Helper table: spare built boxes, spare data cables, USB-C adapters, 2–3 spare Picos, extra paperclips, one glue gun for fixes."
+   "note": "Before class, helpers build every box (about 5 minutes each, so batch them the day before): fold the 8×8×8 inch box, tape the bottom shut, cut off the two front side flaps, glue the top front flap shut, glue a cut-off flap piece inside the bottom flap as a tab, and hot-glue an MG90S servo to the floor near the front with its horn on and facing up. Load and test every Pico with Connect robot. Each table gets a multi-port USB wall charger and a power strip. Helper table: spare built boxes, spare data cables (the one people forget), USB-C adapters, 2–3 spare Picos, extra paperclips, one glue gun for fixes."
   },
   {
    "n": 3,
@@ -76,13 +79,13 @@
    "kicker": "BUILD · 2 OF 2",
    "title": "Wire it up",
    "bullets": [
-    "Orange or yellow servo wire to GP15 (pin 20, bottom left with the USB at the top)",
-    "Red wire to VBUS (pin 40, top right)",
-    "Brown wire to GND (pin 38, two below VBUS)",
-    "Plug the Pico into your laptop with the USB cable",
-    "Check every wire twice before you plug in"
+    "Orange servo wire to GP15 (pin 20, bottom left with the USB at the top), with a male-to-female jumper.",
+    "Red to the breadboard's + row, brown to the − row, with male-to-male jumpers.",
+    "One jumper from the − row to the Pico's GND (pin 23).",
+    "Power lead into the + and − rows, then into the table's USB charger.",
+    "Nothing goes on VBUS (pin 40). Then plug the Pico into your laptop."
    ],
-   "note": "Hold the Pico with the USB port at the top and the Raspberry Pi logo facing you. Pin 1 is top left. Helpers check wiring before anyone plugs in. Aim to have every robot plugged in by minute 18.",
+   "note": "Hold the Pico with the USB port at the top and the Raspberry Pi logo facing you. Pin 1 is top left. Why the breadboard: a laptop's USB can't power the servo reliably, and when it moves fast the Pico resets and the page loses it. The charger powers the servo; the Pico only sends the signal. Helpers check every board before anyone plugs in: red on +, brown on −, ground jumper to pin 23, nothing on pin 40. Aim to have every robot plugged in by minute 18.",
    "image": "/slides/cardboard-robot/week-1-wiring.svg"
   },
   {
@@ -104,12 +107,12 @@
    "title": "First words",
    "bullets": [
     "Paste your Deepgram key.",
-    "Connect robot, then press Wiggle the mouth.",
-    "Drag the mouth sliders until shut is shut and open is open.",
-    "Press Start talking and say hello.",
-    "Notice: it waits until you've finished, then answers."
+    "Quit Thonny if it's open, then press Connect robot.",
+    "Set the mouth, slowly and in order: shut first, then open. Stop before it buzzes.",
+    "Press Wiggle the mouth to check.",
+    "Press Start talking and say hello."
    ],
-   "note": ""
+   "note": "The sliders move the servo live. Fast drags or pushing past the end of the mouth make it buzz and strain. Sensitivity sets how much the mouth opens for quiet words; it never goes past the open setting."
   },
   {
    "n": 7,
@@ -176,7 +179,7 @@
    "bullets": [
     "Bring your robot back next week.",
     "We add a second box, a servo and a turntable bearing, so the head turns.",
-    "And a battery pack, because two servos need more power than a laptop gives."
+    "And your own power bank, so later it can run without a wall socket."
    ],
    "note": "Robots can stay on the shelf at The Hub between sessions."
   }
@@ -207,12 +210,14 @@
   }
  ],
  "troubleshooting": [
-  "Connect robot shows no Pico in the list: the cable is probably charge-only. Swap it for a data cable from the helper table.",
+  "Connect robot shows \"No compatible devices found\": the Pico isn't running MicroPython and the robot program yet, it's in BOOTSEL mode (a drive called RPI-RP2 or RP2350 is open), or the cable only charges. Swap the cable first.",
   "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome on the laptop.",
   "It says the board did not answer: the Pico isn't running the robot program. Unplug it, plug it back in and connect again. If that fails, a helper swaps the Pico.",
-  "Could not open the USB port: another tab or app (often Thonny) has it. Close it and connect again.",
-  "The mouth moves the wrong way: swap the shut and open numbers on the sliders.",
-  "The servo buzzes or the Pico resets: check the red wire is on VBUS (pin 40).",
+  "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
+  "The page says the robot reset while talking or when you move a slider: the servo is pulling power from the Pico. Check red goes to the + row, the charger is plugged in, nothing is on pin 40, and the ground jumper is in. The page reconnects on its own once it's back.",
+  "The servo buzzes or twitches fast at one end: shut or open is pushing past where the mouth can go. Move it back 2 or 3 steps with the − and + buttons.",
+  "The mouth moves the wrong way: swap the shut and open numbers.",
+  "The servo twitches on its own: the ground jumper from the − row to pin 23 is missing.",
   "The robot talks to itself: keep \"Speaker is inside the box\" switched on.",
   "It cuts you off: raise Patience. It's slow to answer: lower it.",
   "No sound: turn up the laptop volume and check the output device in system settings.",
