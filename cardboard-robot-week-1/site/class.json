@@ -54,7 +54,7 @@
     "☐ 1 × half-size breadboard with + and − power rails",
     "☐ 2 × male-to-female jumper wires (signal and ground)",
     "☐ 2 × male-to-male jumper wires (servo power)",
-    "☐ 1 × USB-to-2-pin power lead, and a spot on the table's USB charger",
+    "☐ 1 × USB-to-2-pin power lead, plus a USB charger to plug it into (the table has one)",
     "☐ 1 × micro-USB data cable (not charge-only), USB-C or USB-A to match your laptop",
     "☐ 1 × jumbo paperclip",
     "☐ Tape and a marker",
@@ -82,10 +82,10 @@
     "Orange servo wire to GP15 (pin 20, bottom left with the USB at the top), with a male-to-female jumper.",
     "Red to the breadboard's + row, brown to the − row, with male-to-male jumpers.",
     "One jumper from the − row to the Pico's GND (pin 23).",
-    "Power lead into the + and − rows, then into the table's USB charger.",
+    "Power lead into the + and − rows, then into a USB charger: the one on your table, any phone charger, or a power bank.",
     "Nothing goes on VBUS (pin 40). Then plug the Pico into your laptop."
    ],
-   "note": "Hold the Pico with the USB port at the top and the Raspberry Pi logo facing you. Pin 1 is top left. Why the breadboard: a laptop's USB can't power the servo reliably, and when it moves fast the Pico resets and the page loses it. The charger powers the servo; the Pico only sends the signal. Helpers check every board before anyone plugs in: red on +, brown on −, ground jumper to pin 23, nothing on pin 40. Aim to have every robot plugged in by minute 18.",
+   "note": "Hold the Pico with the USB port at the top and the Raspberry Pi logo facing you. Pin 1 is top left. Why the breadboard: a laptop's USB can't power the servo reliably, and when it moves fast the Pico resets and the page loses it. The charger powers the servo (at home, any phone charger or power bank works); the Pico only sends the signal. Helpers check every board before anyone plugs in: red on +, brown on −, ground jumper to pin 23, nothing on pin 40. Aim to have every robot plugged in by minute 18.",
    "image": "/slides/cardboard-robot/week-1-wiring.svg"
   },
   {
@@ -214,7 +214,7 @@
   "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome on the laptop.",
   "It says the board did not answer: the Pico isn't running the robot program. Unplug it, plug it back in and connect again. If that fails, a helper swaps the Pico.",
   "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
-  "The page says the robot reset while talking or when you move a slider: the servo is pulling power from the Pico. Check red goes to the + row, the charger is plugged in, nothing is on pin 40, and the ground jumper is in. The page reconnects on its own once it's back.",
+  "The page says the robot reset while talking or when you move a slider: the servo is pulling power from the Pico. Check red goes to the + row, the power lead is in a charger or power bank, nothing is on pin 40, and the ground jumper is in. The page reconnects on its own once it's back.",
   "The servo buzzes or twitches fast at one end: shut or open is pushing past where the mouth can go. Move it back 2 or 3 steps with the − and + buttons.",
   "The mouth moves the wrong way: swap the shut and open numbers.",
   "The servo twitches on its own: the ground jumper from the − row to pin 23 is missing.",
