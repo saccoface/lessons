@@ -1,0 +1,44 @@
+{
+ "schemaVersion": 1,
+ "id": "conference-demo-drawings",
+ "title": "Conference Demo: Drawings",
+ "icon": "✎",
+ "owner": "Dana Sacco",
+ "summary": "A booth game for loud conference floors. A Deepgram voice agent describes a secret drawing one shape at a time, the visitor draws it blind with a mouse, then guesses what they made and sees it next to the real one.",
+ "detail": "Built for a booth with headsets and a laptop. Each visitor puts on a headset and the agent talks them through a simple drawing in plain shapes: a circle here, two triangles on top, a line down the middle. It never names a part or hints at the answer. When they're done they say their guess, the agent reacts, and the page shows their drawing beside the reference. Every drawing goes on a wall for that object, so the booth can crown the best jellyfish of the day. Rounds rotate through nine drawings and then start again. It shows off speech recognition in real noise, natural turn-taking and interruptions, and a function call that drives the reveal.",
+ "outcome": "A two-minute round per visitor that ends in a laugh, a side-by-side reveal and a drawing on the wall, with Deepgram doing the listening and talking in a loud room.",
+ "audience": "Mixed technical and non-technical",
+ "type": "Conference demo",
+ "difficulty": "easy",
+ "track": "community",
+ "minutes": 2,
+ "setupMinutes": 10,
+ "runner": "drawing",
+ "prereqs": [
+  "A laptop with Chrome, plugged into power.",
+  "A headset with a microphone. A boom mic works best on a loud floor.",
+  "A USB mouse. Trackpads are hard to draw with.",
+  "A Deepgram API key with Voice Agent access and credit."
+ ],
+ "artifact": "The visitor's drawing on the wall next to everyone else's, with a crown for the best one of each object.",
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "slides": [],
+ "flow": [
+  {
+   "type": "runner",
+   "title": "Play a round",
+   "note": "Headset on, mouse in hand, then start the round. The agent describes the drawing and asks for a guess at the end. Press Next person when they're done."
+  }
+ ],
+ "sections": [],
+ "troubleshooting": [
+  "The agent can't hear the visitor: check Chrome is using the headset mic (the camera icon in the address bar), then start the round again.",
+  "The agent talks over the visitor or cuts out: move the laptop speakers' volume to zero so only the headset plays audio.",
+  "The agent never asks for a guess or the reveal doesn't appear: press Reveal now. Their drawing still goes on the wall.",
+  "Deepgram stopped the session: check the key has Voice Agent access and account credit.",
+  "The wall is saved in this browser only. Don't clear the browser's site data during the event, and use the same laptop and browser all day."
+ ]
+}
