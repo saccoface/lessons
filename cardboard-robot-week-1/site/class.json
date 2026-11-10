@@ -23,11 +23,12 @@
   "part": 1
  },
  "summary": "A cardboard robot whose mouth moves when it talks. The box comes ready-built, so attendees spend 15 minutes finishing it and about 40 minutes in Deepgram's voice studio: writing its personality, choosing its voice, tuning Flux turn-taking and giving it skills.",
- "detail": "Your robot box arrives already folded with its servo glued in. You draw its face, hook up the paperclip that opens its mouth, and wire it to a small breadboard. Then the rest of the session happens on this page: give it a personality, try different Deepgram voices, tune how Flux decides you've finished talking, and let it check the weather and read a calendar. The mouth opens and shuts in time with its voice. Finish by filming a clip of your robot talking.",
+ "detail": "Bring your own Raspberry Pi Pico W with the pins already attached; we load the robot program onto it when you check in. Your robot box arrives already folded with its servo glued in. You draw its face, hook up the paperclip that opens its mouth, and wire it to a small breadboard. Then the rest of the session happens on this page: give it a personality, try different Deepgram voices, tune how Flux decides you've finished talking, and let it check the weather and read a calendar. The mouth opens and shuts in time with its voice. Finish by filming a clip of your robot talking.",
  "outcome": "A cardboard robot on your table that holds a real conversation in a voice and personality you chose, moves its mouth as it speaks, and checks the weather, plus a clip of it to share.",
  "artifact": "A talking cardboard robot running the attendee's own Deepgram voice agent, and a short video of it.",
  "prereqs": [
-  "A laptop with Google Chrome. Safari and Firefox can't talk to USB devices.",
+  "A laptop with Google Chrome. This matters: Safari and Firefox can't talk to USB devices, so the robot won't connect in them.",
+  "Your own Raspberry Pi Pico W WITH THE PINS ALREADY ATTACHED (about $7). Look for \"Pico WH\" or \"Pico W with headers\". A Pico 2 W with headers works too. A plain Pico W has no pins, so the wires can't attach without soldering.",
   "A free Deepgram account and API key. Use the sign-up QR code at your table.",
   "A USB port on your laptop. USB-C only laptop? We have USB-C to micro-USB cables.",
   "Everything else is on the table."
@@ -50,7 +51,7 @@
    "title": "What each robot needs",
    "bullets": [
     "☐ 1 × robot box, already built: folded, mouth flap hinged, tab glued in, servo glued down",
-    "☐ 1 × Raspberry Pi Pico (Pico H, Pico 2 or Pico 2 W, with pins), loaded with the robot program",
+    "☐ 1 × your own Raspberry Pi Pico W with pins (Pico WH, or Pico 2 W with headers), loaded with the robot program at check-in",
     "☐ 1 × half-size breadboard with + and − power rails",
     "☐ 2 × male-to-female jumper wires (signal and ground)",
     "☐ 2 × male-to-male jumper wires (servo power)",
@@ -58,9 +59,9 @@
     "☐ 1 × micro-USB data cable (not charge-only), USB-C or USB-A to match your laptop",
     "☐ 1 × jumbo paperclip",
     "☐ Tape and a marker",
-    "Bring: a laptop with Chrome, and your Deepgram key"
+    "Bring: your Pico W with pins, a laptop with Google Chrome, and your Deepgram key"
    ],
-   "note": "Before class, helpers build every box (about 5 minutes each, so batch them the day before): fold the 8×8×8 inch box, tape the bottom shut, cut off the two front side flaps, glue the top front flap shut, glue a cut-off flap piece inside the bottom flap as a tab, and hot-glue an MG90S servo to the floor near the front with its horn on and facing up. Load and test every Pico with Connect robot. Each table gets a multi-port USB wall charger and a power strip. Helper table: spare built boxes, spare data cables (the one people forget), USB-C adapters, 2–3 spare Picos, extra paperclips, one glue gun for fixes."
+   "note": "Before class, helpers build every box (about 5 minutes each, so batch them the day before): fold the 8×8×8 inch box, tape the bottom shut, cut off the two front side flaps, glue the top front flap shut, glue a cut-off flap piece inside the bottom flap as a tab, and hot-glue an MG90S servo to the floor near the front with its horn on and facing up. Attendees bring their own Picos, and they arrive blank, so run a loading station at check-in (2–3 laptops, about 2 minutes a board). For each Pico: hold BOOTSEL, plug it in, and drag on the MicroPython .uf2 that matches the board (Pico W / WH: the RP2040 \"Pico W\" build; Pico 2 W: the RP2350 \"Pico 2 W\" build). When it reboots, copy the robot program on with `mpremote cp main.py :main.py`, or use Thonny's Save as > Raspberry Pi Pico > main.py. Test it with Connect robot, then stick a dot on it so you know it's done. Turn away no one: a Pico with no pins, or no Pico at all, gets a spare from the helper table. Each table gets a multi-port USB wall charger and a power strip. Helper table: spare built boxes, spare data cables (the one people forget), USB-C adapters, 8–10 spare Pico WH boards (for people who forget, or bring one without pins), extra paperclips, one glue gun for fixes."
   },
   {
    "n": 3,
@@ -210,6 +211,7 @@
   }
  ],
  "troubleshooting": [
+  "Your Pico has no pins (a plain Pico W or Pico 2 W): the jumper wires can't attach without soldering. Swap it for a spare with headers from the helper table.",
   "Connect robot shows \"No compatible devices found\": the Pico isn't running MicroPython and the robot program yet, it's in BOOTSEL mode (a drive called RPI-RP2 or RP2350 is open), or the cable only charges. Swap the cable first.",
   "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome on the laptop.",
   "It says the board did not answer: the Pico isn't running the robot program. Unplug it, plug it back in and connect again. If that fails, a helper swaps the Pico.",
