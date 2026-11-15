@@ -1,118 +1,106 @@
 {
- "schemaVersion": 1,
- "id": "retro-gaming-zork",
- "title": "Zork, out loud",
- "icon": "🕹",
- "owner": "Dana Sacco",
- "series": {
-  "id": "retro-gaming",
-  "title": "Retro Gaming",
-  "summary": "Classic games, played with your voice. Each session takes one old game exactly as it shipped and puts Deepgram in front of it: Flux listens, a Flux voice reads the game to you, and you play by talking. First up: Zork I (1980).",
-  "part": 1
- },
- "summary": "Play the original Zork I by talking to it. Flux turns your voice into commands for the 1980 Infocom parser, a Flux voice reads every room out loud, and you see how keyterm prompting and turn detection make a 45-year-old text adventure feel like a conversation.",
- "detail": "Zork I is the text adventure that started it all: you type \"open mailbox\", it tells you what happens. Microsoft released its source under the MIT licence in 2025, so the real game now runs in your browser tab. In this session you play it with no keyboard. Deepgram Flux listens and decides when you have finished talking, a Flux voice narrates the game, and a little translation layer turns \"okay, go north and open the window\" into commands the 1980 parser understands. Then you tune it: pick the narrator's voice, see which words Flux mishears, and learn why keyterm prompting fixes them.",
- "outcome": "You will have played Zork I hands-free in your own browser, chosen a narrator voice, and seen exactly how speech becomes a game command: Flux transcript, turn detection, keyterms, and a parser from 1980.",
- "artifact": "A saved Zork game in your browser, played entirely by voice on your own Deepgram key.",
- "audience": "Mixed technical and non-technical",
- "type": "Workshop",
- "difficulty": "easy",
- "track": "community",
- "minutes": 45,
- "setupMinutes": 10,
- "runner": "retro",
- "prereqs": [
-  "A laptop with Google Chrome and a microphone.",
-  "Headphones or earbuds. The game talks back, and headphones stop it from hearing itself.",
-  "A free Deepgram account and API key. Use the sign-up QR code at your table."
- ],
- "links": {
-  "starterRepo": null,
-  "deck": null
- },
- "slides": [
-  {
-   "n": 1,
-   "kicker": "RETRO GAMING · PART 1",
-   "title": "Zork, out loud",
-   "bullets": [
-    "Zork I, 1980: the text adventure that started it all.",
-    "Today you play it with no keyboard.",
-    "Flux listens. A Flux voice reads the game to you."
-   ],
-   "note": "Open with the opening line read aloud: \"West of House. You are standing in an open field west of a white house.\" Ask who has played Zork before."
+  "schemaVersion": 1,
+  "id": "retro-gaming-zork",
+  "title": "Build your own text adventure",
+  "icon": "🕹",
+  "owner": "Dana Sacco",
+  "series": {
+    "id": "retro-gaming",
+    "title": "Retro Gaming",
+    "summary": "Classic games, rebuilt with your voice. Play the originals, then make your own: each session takes one old game as inspiration and gives you the tools to build something new with Deepgram. First up: Zork I (1980) and a text adventure of your own.",
+    "part": 1
   },
-  {
-   "n": 2,
-   "kicker": "THE GAME",
-   "title": "A parser from 1980",
-   "bullets": [
-    "You type short commands: north, open mailbox, take lamp.",
-    "The game answers in text. No graphics, no sound.",
-    "Microsoft released the source under the MIT licence in 2025, so the original game runs in your browser tab today."
-   ],
-   "note": "Point out that the parser is the \"AI\" here, and it hasn't changed since 1980. Nothing we add today rewrites the game."
+  "summary": "Invent and build your own Zork-style text adventure. A voice story coach interviews you about your plot and turns it into a game that works; the code sits beside you to read and change; and you play it, and Zork itself, by voice.",
+  "detail": "Zork I (1980) is the text adventure that started it all, and Microsoft released it under the MIT licence in 2025, so you start by playing a few minutes of it by voice. Then you make your own. A story coach (a Deepgram Voice Agent: Flux listens, Claude asks, a Flux voice speaks) interviews you about your setting, hero, villain, places, puzzles and ending, and builds a small game that it checks can actually be won. Your whole game is one readable file in a code panel beside you. You never have to touch it, but if you want to code, change any line and press Run. Then play it out loud.",
+  "outcome": "Your own text adventure: a plot you invented, turned into a playable game you can win, read, edit and play by voice, and a game.js file to take home.",
+  "artifact": "game.js: your adventure as one readable file, plus a game that runs in your browser on your own Deepgram key.",
+  "audience": "Mixed technical and non-technical",
+  "type": "Workshop",
+  "difficulty": "easy",
+  "track": "community",
+  "minutes": 75,
+  "setupMinutes": 10,
+  "runner": "retro",
+  "prereqs": [
+    "A laptop with Google Chrome and a microphone.",
+    "Headphones or earbuds. The coach and the game both talk, and headphones stop the mic hearing them.",
+    "A free Deepgram account and API key. Use the sign-up QR code at your table.",
+    "A story idea is welcome but not needed: the coach will help you find one."
+  ],
+  "links": {
+    "starterRepo": null,
+    "deck": null
   },
-  {
-   "n": 3,
-   "kicker": "HOW IT FITS",
-   "title": "Voice in, voice out",
-   "bullets": [
-    "Your mic → Flux: speech to text, and it decides when you've finished your turn.",
-    "Your words → a command: \"go north and open the window\" becomes \"north. open the window\".",
-    "The command → Zork I, running in the tab.",
-    "Zork's reply → a Flux voice reads it out. Talk over it to cut it off."
-   ],
-   "note": "No LLM in this loop on purpose. It shows how far good speech recognition plus a simple rule layer gets you."
-  },
-  {
-   "n": 4,
-   "kicker": "TRY IT",
-   "title": "Things to say",
-   "bullets": [
-    "\"Open the mailbox and read the leaflet.\"",
-    "\"Go around to the back of the house.\" (Hint: north, then east.)",
-    "\"What am I carrying?\"",
-    "\"Repeat that.\" · \"Stop.\" · \"Save.\" · \"Restore.\""
-   ],
-   "note": "Give the room ten minutes of free play before tuning anything. The first goal: get inside the white house."
-  },
-  {
-   "n": 5,
-   "kicker": "UNDER THE HOOD",
-   "title": "Why Flux gets \"mailbox\" right",
-   "bullets": [
-    "Keyterm prompting: the page tells Flux to expect Zork's words: mailbox, leaflet, lantern, trap door, troll, cyclops.",
-    "Turn detection: Flux hears that \"pick up the…\" isn't finished, and waits for \"…lamp\".",
-    "Barge-in: when you start talking, the narrator stops.",
-    "The narrator is a Flux voice streamed over one WebSocket, a sentence at a time."
-   ],
-   "note": "Ask people to say a tricky word (\"sceptre\", \"grating\") and watch the italic line: that's exactly what Flux heard."
-  },
-  {
-   "n": 6,
-   "kicker": "YOUR TURN",
-   "title": "Make it yours",
-   "bullets": [
-    "Pick a different Flux voice for the narrator.",
-    "Turn narration off and play by voice with your eyes on the screen.",
-    "Save your game. It stays in this browser until you come back."
-   ],
-   "note": "Wrap up: the same pattern (keyterms + turn detection + a small rule layer) works for any command-driven app, not just games."
-  }
- ],
- "flow": [
-  { "type": "slides", "title": "Welcome to the Great Underground Empire", "from": 1, "to": 4 },
-  { "type": "runner", "title": "Play Zork with your voice", "note": "Paste your Deepgram key, press Start Zork, then Talk. Headphones on. Say what you want to do in plain English; the italic line shows exactly what Flux heard." },
-  { "type": "slides", "title": "How it works, and making it yours", "from": 5, "to": 6 }
- ],
- "sections": [],
- "troubleshooting": [
-  "Nothing happens when I talk: check the status line says Listening. If Chrome blocked the mic, click the icon at the left of the address bar and allow the microphone.",
-  "The game answers itself or keeps getting cut off: the mic is hearing the narrator. Put headphones on, or untick \"Read the game out loud\".",
-  "\"I don't know the word …\": the 1980 parser has a small vocabulary. Say it more simply: \"take lamp\", \"go north\", \"open door\".",
-  "Flux misheard a word: look at the italic line. Say it again more slowly, or type the command in the box under the game.",
-  "\"Could not get a connection pass\": the key is wrong or has no balance. Paste it again, with no spaces.",
-  "Restore says it failed: saves live in this browser only, one slot. A private window forgets them when it closes."
- ]
+  "slides": [],
+  "flow": [
+    {
+      "type": "runner",
+      "title": "Your game studio",
+      "note": "Paste your Deepgram key once at the top. Then work through the three tabs: play a little Zork for inspiration, talk your story through with the coach until it builds your game, and play it. The code panel on the right is your game. Read it, change it, press Run."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1 · Get inspired",
+      "summary": "Ten minutes in the Great Underground Empire.",
+      "steps": [
+        {
+          "id": "play-zork",
+          "title": "Play Zork by voice",
+          "instruction": "Open the Play Zork tab, press Start Zork, then Talk. Try \"open the mailbox\", \"read the leaflet\", \"go north\". Notice what makes it fun: places, things to pick up, and problems you solve with them.",
+          "check": "You have heard the narrator read at least three rooms."
+        }
+      ]
+    },
+    {
+      "title": "2 · Plan your story",
+      "summary": "The coach asks one question at a time and shapes your answers into a plot that works.",
+      "steps": [
+        {
+          "id": "talk-coach",
+          "title": "Talk to the coach",
+          "instruction": "Open Plan your story and press Talk to the coach (or type). Answer its questions: where it happens, who you are, what you want, what stands in the way, the places, the puzzles and the ending.",
+          "check": "The coach has read your plot back to you."
+        },
+        {
+          "id": "build-it",
+          "title": "Let it build",
+          "instruction": "Say \"build it\". The coach adds your rooms, items and puzzles one by one, then checks the game can be won. If something blocks the ending, it tells you and fixes it.",
+          "check": "A yellow note says your game is in the code panel and can be won."
+        }
+      ]
+    },
+    {
+      "title": "3 · Build and play",
+      "summary": "Play it, find what feels wrong, change it.",
+      "steps": [
+        {
+          "id": "play-yours",
+          "title": "Play your game",
+          "instruction": "Press ▶ Run, then Talk. Play to the end.",
+          "check": "You reached THE END."
+        },
+        {
+          "id": "change-it",
+          "title": "Make it yours",
+          "instruction": "Change something in the code: a room description, a new item, a new exit. Press ▶ Run. The line under the code tells you if anything is broken, by line number. Or ask the coach: \"add a secret passage behind the bookcase\".",
+          "check": "Your change shows up when you play."
+        },
+        {
+          "id": "take-home",
+          "title": "Take it home",
+          "instruction": "Press Download to save game.js. It is plain data, so you can keep building it anywhere.",
+          "check": "game.js is in your Downloads folder."
+        }
+      ]
+    }
+  ],
+  "troubleshooting": [
+    "Nothing happens when I talk: check Chrome is allowed to use the microphone (the icon at the left of the address bar). You can always type instead.",
+    "The coach or the game keeps interrupting itself: the mic is hearing the speaker. Put headphones on.",
+    "The coach says it could not connect: your Deepgram key needs Voice Agent access and some credit. Check the key was pasted whole.",
+    "The coach is slow to build: it adds each room, item and puzzle separately, so a game takes a minute or so. Watch the Building… line count up.",
+    "Red lines under the code: that is the game telling you what is broken and on which line, usually a missing comma or quote, or a name that does not match.",
+    "My game was replaced: Example replaces your game with the starter. Download yours first; your latest code is also kept in this browser."
+  ]
 }
