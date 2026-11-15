@@ -1,0 +1,118 @@
+{
+ "schemaVersion": 1,
+ "id": "retro-gaming-zork",
+ "title": "Zork, out loud",
+ "icon": "🕹",
+ "owner": "Dana Sacco",
+ "series": {
+  "id": "retro-gaming",
+  "title": "Retro Gaming",
+  "summary": "Classic games, played with your voice. Each session takes one old game exactly as it shipped and puts Deepgram in front of it: Flux listens, a Flux voice reads the game to you, and you play by talking. First up: Zork I (1980).",
+  "part": 1
+ },
+ "summary": "Play the original Zork I by talking to it. Flux turns your voice into commands for the 1980 Infocom parser, a Flux voice reads every room out loud, and you see how keyterm prompting and turn detection make a 45-year-old text adventure feel like a conversation.",
+ "detail": "Zork I is the text adventure that started it all: you type \"open mailbox\", it tells you what happens. Microsoft released its source under the MIT licence in 2025, so the real game now runs in your browser tab. In this session you play it with no keyboard. Deepgram Flux listens and decides when you have finished talking, a Flux voice narrates the game, and a little translation layer turns \"okay, go north and open the window\" into commands the 1980 parser understands. Then you tune it: pick the narrator's voice, see which words Flux mishears, and learn why keyterm prompting fixes them.",
+ "outcome": "You will have played Zork I hands-free in your own browser, chosen a narrator voice, and seen exactly how speech becomes a game command: Flux transcript, turn detection, keyterms, and a parser from 1980.",
+ "artifact": "A saved Zork game in your browser, played entirely by voice on your own Deepgram key.",
+ "audience": "Mixed technical and non-technical",
+ "type": "Workshop",
+ "difficulty": "easy",
+ "track": "community",
+ "minutes": 45,
+ "setupMinutes": 10,
+ "runner": "retro",
+ "prereqs": [
+  "A laptop with Google Chrome and a microphone.",
+  "Headphones or earbuds. The game talks back, and headphones stop it from hearing itself.",
+  "A free Deepgram account and API key. Use the sign-up QR code at your table."
+ ],
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "slides": [
+  {
+   "n": 1,
+   "kicker": "RETRO GAMING · PART 1",
+   "title": "Zork, out loud",
+   "bullets": [
+    "Zork I, 1980: the text adventure that started it all.",
+    "Today you play it with no keyboard.",
+    "Flux listens. A Flux voice reads the game to you."
+   ],
+   "note": "Open with the opening line read aloud: \"West of House. You are standing in an open field west of a white house.\" Ask who has played Zork before."
+  },
+  {
+   "n": 2,
+   "kicker": "THE GAME",
+   "title": "A parser from 1980",
+   "bullets": [
+    "You type short commands: north, open mailbox, take lamp.",
+    "The game answers in text. No graphics, no sound.",
+    "Microsoft released the source under the MIT licence in 2025, so the original game runs in your browser tab today."
+   ],
+   "note": "Point out that the parser is the \"AI\" here, and it hasn't changed since 1980. Nothing we add today rewrites the game."
+  },
+  {
+   "n": 3,
+   "kicker": "HOW IT FITS",
+   "title": "Voice in, voice out",
+   "bullets": [
+    "Your mic → Flux: speech to text, and it decides when you've finished your turn.",
+    "Your words → a command: \"go north and open the window\" becomes \"north. open the window\".",
+    "The command → Zork I, running in the tab.",
+    "Zork's reply → a Flux voice reads it out. Talk over it to cut it off."
+   ],
+   "note": "No LLM in this loop on purpose. It shows how far good speech recognition plus a simple rule layer gets you."
+  },
+  {
+   "n": 4,
+   "kicker": "TRY IT",
+   "title": "Things to say",
+   "bullets": [
+    "\"Open the mailbox and read the leaflet.\"",
+    "\"Go around to the back of the house.\" (Hint: north, then east.)",
+    "\"What am I carrying?\"",
+    "\"Repeat that.\" · \"Stop.\" · \"Save.\" · \"Restore.\""
+   ],
+   "note": "Give the room ten minutes of free play before tuning anything. The first goal: get inside the white house."
+  },
+  {
+   "n": 5,
+   "kicker": "UNDER THE HOOD",
+   "title": "Why Flux gets \"mailbox\" right",
+   "bullets": [
+    "Keyterm prompting: the page tells Flux to expect Zork's words: mailbox, leaflet, lantern, trap door, troll, cyclops.",
+    "Turn detection: Flux hears that \"pick up the…\" isn't finished, and waits for \"…lamp\".",
+    "Barge-in: when you start talking, the narrator stops.",
+    "The narrator is a Flux voice streamed over one WebSocket, a sentence at a time."
+   ],
+   "note": "Ask people to say a tricky word (\"sceptre\", \"grating\") and watch the italic line: that's exactly what Flux heard."
+  },
+  {
+   "n": 6,
+   "kicker": "YOUR TURN",
+   "title": "Make it yours",
+   "bullets": [
+    "Pick a different Flux voice for the narrator.",
+    "Turn narration off and play by voice with your eyes on the screen.",
+    "Save your game. It stays in this browser until you come back."
+   ],
+   "note": "Wrap up: the same pattern (keyterms + turn detection + a small rule layer) works for any command-driven app, not just games."
+  }
+ ],
+ "flow": [
+  { "type": "slides", "title": "Welcome to the Great Underground Empire", "from": 1, "to": 4 },
+  { "type": "runner", "title": "Play Zork with your voice", "note": "Paste your Deepgram key, press Start Zork, then Talk. Headphones on. Say what you want to do in plain English; the italic line shows exactly what Flux heard." },
+  { "type": "slides", "title": "How it works, and making it yours", "from": 5, "to": 6 }
+ ],
+ "sections": [],
+ "troubleshooting": [
+  "Nothing happens when I talk: check the status line says Listening. If Chrome blocked the mic, click the icon at the left of the address bar and allow the microphone.",
+  "The game answers itself or keeps getting cut off: the mic is hearing the narrator. Put headphones on, or untick \"Read the game out loud\".",
+  "\"I don't know the word …\": the 1980 parser has a small vocabulary. Say it more simply: \"take lamp\", \"go north\", \"open door\".",
+  "Flux misheard a word: look at the italic line. Say it again more slowly, or type the command in the box under the game.",
+  "\"Could not get a connection pass\": the key is wrong or has no balance. Paste it again, with no spaces.",
+  "Restore says it failed: saves live in this browser only, one slot. A private window forgets them when it closes."
+ ]
+}
