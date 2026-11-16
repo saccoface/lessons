@@ -37,7 +37,7 @@
    "type": "game",
    "game": "unscanned",
    "title": "Play first: Unscanned",
-   "note": "Play for ten minutes before anything else. Click the game, allow the microphone, skip the trailer with an arrow key if you like, then hold F to smell your way to Wren. Walk up to people, press E and talk out loud. Notice how each character feels different, and what they decide."
+   "note": "Play for ten minutes before anything else. Click the game, allow the microphone, skip the trailer with an arrow key if you like, then hold F to smell your way to Maya. Walk up to people, press E and talk out loud. Notice how each character feels different, and what they decide."
   },
   {
    "type": "steps",
@@ -64,13 +64,13 @@
     {
      "id": "every-person-an-agent",
      "title": "Every person is a Deepgram Voice Agent",
-     "instruction": "When you press E next to someone, the game opens a websocket to the Deepgram Voice Agent and sends one Settings message. Flux listens, Claude (through Deepgram, no Anthropic account needed) plays the character, and a Flux voice speaks. A character is just this:\n\n```gdscript\nstatic func wren(main) -> Dictionary:\n\treturn {\n\t\t\"speaker\": \"WREN  (human)\",\n\t\t\"voice\": \"flux-hannah-en\",\n\t\t\"greeting\": \"You followed the incense. Good nose. What do you need?\",\n\t\t\"prompt\": WORLD + \"YOU ARE WREN: a human who passes as a unit ...\",\n\t\t\"functions\": [_fn(\"share_clue\", \"Call when you tell the player a clue.\",\n\t\t\t{\"topic\": {\"type\": \"string\", \"enum\": [\"way_out\", \"tells\", \"medallion\"]}}, [\"topic\"])],\n\t}\n```\n\nWORLD is one shared paragraph about San Francisco 2071 plus the speaking rules: one to three short sentences, no stage directions, never say you are an AI. Every character gets it, so they all live in the same world.",
+     "instruction": "When you press E next to someone, the game opens a websocket to the Deepgram Voice Agent and sends one Settings message. Flux listens, Claude (through Deepgram, no Anthropic account needed) plays the character, and a Flux voice speaks. A character is just this:\n\n```gdscript\nstatic func maya(main) -> Dictionary:\n\treturn {\n\t\t\"speaker\": \"MAYA  (human)\",\n\t\t\"voice\": \"flux-brooke-en\",\n\t\t\"greeting\": \"You followed the incense. Good nose. What do you need?\",\n\t\t\"prompt\": WORLD + \"YOU ARE MAYA: a human who passes as a unit ...\",\n\t\t\"functions\": [_fn(\"share_clue\", \"Call when you tell the player a clue.\",\n\t\t\t{\"topic\": {\"type\": \"string\", \"enum\": [\"way_out\", \"tells\", \"medallion\"]}}, [\"topic\"])],\n\t}\n```\n\nWORLD is one shared paragraph about San Francisco 2071 plus the speaking rules: one to three short sentences, no stage directions, never say you are an AI. Every character gets it, so they all live in the same world.",
      "check": "You can point to the prompt, voice, greeting and functions of one character."
     },
     {
      "id": "functions-change-the-game",
      "title": "Characters change the game with function calls",
-     "instruction": "A character can't touch the game directly. It calls a function, the game decides what that means, and the function result tells the character what to say next:\n\n```gdscript\nfunc _on_voice_fn(id, fn_name, args):\n\tif fn_name == \"judge\":            # a robot judged how you sounded\n\t\tmatch args[\"kind\"]:\n\t\t\t\"machine\": reply = \"They passed. Say: Acknowledged.\"\n\t\t\t\"joke\":    reply = \"Take it literally and get stuck on it.\"\n\t\t\t_:         reply = \"Say: That is not an answer a unit would give.\"\n\tvoice.respond(id, fn_name, reply)   # FunctionCallResponse\n```\n\nThat one pattern runs everything: Wren's share_clue adds a clue, MX-4's judge gives the drain code, the Ferryman's hold_boat makes the ferry appear, and the taste test decides the ending.",
+     "instruction": "A character can't touch the game directly. It calls a function, the game decides what that means, and the function result tells the character what to say next:\n\n```gdscript\nfunc _on_voice_fn(id, fn_name, args):\n\tif fn_name == \"judge\":            # a robot judged how you sounded\n\t\tmatch args[\"kind\"]:\n\t\t\t\"machine\": reply = \"They passed. Say: Acknowledged.\"\n\t\t\t\"joke\":    reply = \"Take it literally and get stuck on it.\"\n\t\t\t_:         reply = \"Say: That is not an answer a unit would give.\"\n\tvoice.respond(id, fn_name, reply)   # FunctionCallResponse\n```\n\nThat one pattern runs everything: Maya's share_clue adds a clue, MX-4's judge gives the drain code, the Ferryman's hold_boat makes the ferry appear, and the taste test decides the ending.",
      "check": "You can explain who decides (Claude) and who acts on it (the game)."
     },
     {
@@ -106,13 +106,13 @@
     {
      "id": "change-a-character",
      "title": "Change a character",
-     "instruction": "Open scripts/characters.gd and find wren(). Change her greeting, her voice (any Flux voice, for example flux-bree-en or flux-cliff-en) and one line of her prompt, then run the game and talk to her again.\n\nTip: keep the speaking rules from WORLD. Voice characters need short replies; a paragraph sounds like a lecture.",
-     "check": "Wren sounds and talks the way you wrote her."
+     "instruction": "Open scripts/characters.gd and find maya(). Change her greeting, her voice (any Flux voice, for example flux-bree-en or flux-cliff-en) and one line of her prompt, then run the game and talk to her again.\n\nTip: keep the speaking rules from WORLD. Voice characters need short replies; a paragraph sounds like a lecture.",
+     "check": "Maya sounds and talks the way you wrote her."
     },
     {
      "id": "new-character",
      "title": "Add a character of your own",
-     "instruction": "1. In characters.gd, copy wren() into a new function, for example baker(main), with its own speaker, voice, greeting and prompt.\n2. In main.gd, spawn them in _ready() next to the others:\n\n```gdscript\nbaker = _spawn_unique(\"baker\", \"The Baker\", true, Vector2(1270, 1470))\n```\n\n3. In _voice_talk(), route them to their agent:\n\n```gdscript\n\"baker\":\n\t_start_voice(\"baker\", Characters.baker(self), n)\n```\n\nDeclare var baker at the top of main.gd with the others.",
+     "instruction": "1. In characters.gd, copy maya() into a new function, for example baker(main), with its own speaker, voice, greeting and prompt.\n2. In main.gd, spawn them in _ready() next to the others:\n\n```gdscript\nbaker = _spawn_unique(\"baker\", \"The Baker\", true, Vector2(1270, 1470))\n```\n\n3. In _voice_talk(), route them to their agent:\n\n```gdscript\n\"baker\":\n\t_start_voice(\"baker\", Characters.baker(self), n)\n```\n\nDeclare var baker at the top of main.gd with the others.",
      "check": "You can walk up to your new character and talk to them."
     },
     {
