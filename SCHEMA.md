@@ -29,7 +29,7 @@ last valid version keeps serving.
 | `track` | enum | `community` · `teaching` |
 | `minutes` | number | 1–1440. How long the class runs. |
 | `setupMinutes` | number or null | 0–1440. Preparation before the room starts. |
-| `runner` | enum or null | `avatar` · `interview` · `robot` · `drawing` · `retro` · `null`. **See below.** |
+| `runner` | enum or null | `avatar` · `interview` · `robot` · `drawing` · `retro` · `gamecoach` · `null`. **See below.** |
 | `prereqs` | string[] | ≤ 60 items. What an attendee needs before starting. |
 | `links` | object | `{ "starterRepo": url-or-null, "deck": url-or-null }`. `https:` only. |
 | `slides` | Slide[] | ≤ 200. The deck, in order. |
@@ -53,12 +53,20 @@ The deck is not always shown uninterrupted. `flow` says what happens in what ord
 
     { "type": "slides", "title": "Before the interview", "from": 1, "to": 6 }
     { "type": "runner", "title": "Your Flux interview", "note": "…" }
+    { "type": "game", "title": "Play first: Zork I", "game": "zork", "note": "…" }
+    { "type": "steps", "title": "How it's built", "note": "…" }
 
 Rules:
 
 - A `slides` block may only cover slide numbers that exist.
 - Every slide must be covered by some block, or it would never be shown.
 - A `runner` block is only allowed when `runner` is not `null`.
+- A `game` block puts a game this site already hosts at that point in the lesson. `game` is
+  `zork` or `unscanned`, never a URL. Every video game lesson starts with one, so people play
+  before they build.
+- A `steps` block shows the written `sections` at that point. Without one, a class with a runner
+  tucks its sections into a "run it on your own machine" fold. Step instructions may contain
+  ``` code fences, which render as code.
 
 ### Section
 
@@ -78,6 +86,7 @@ Rules:
 | `robot` | Talk to a cardboard robot over Web Serial: a Deepgram voice agent in Chrome, and a Pico servo that moves the mouth in time with the voice. |
 | `drawing` | A booth game: a Deepgram voice agent describes a secret drawing in plain shapes, the visitor draws it with a mouse, guesses, and sees it beside the real one on a wall of drawings. |
 | `retro` | Play a classic text adventure (Zork I) by voice: Deepgram Flux listens with the game's words as keyterms, a Flux voice narrates, and the original game runs in the browser. |
+| `gamecoach` | A voice game design coach (Deepgram Voice Agent): a story interview or a build walkthrough for the attendee's own voice game, writing design.md and a Godot characters.gd as they talk. |
 | `null` | Slides and written steps only. |
 
 A class **cannot** introduce a new runner. Anything outside this list is rejected on import.

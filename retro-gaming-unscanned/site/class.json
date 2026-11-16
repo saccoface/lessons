@@ -1,0 +1,160 @@
+{
+ "schemaVersion": 1,
+ "id": "retro-gaming-unscanned",
+ "title": "Unscanned: build a game where every character talks back",
+ "icon": "◉",
+ "owner": "Dana Sacco",
+ "series": {
+  "id": "retro-gaming",
+  "title": "Retro Gaming",
+  "summary": "",
+  "part": 2
+ },
+ "summary": "Play Unscanned, a stealth game set in San Francisco 2071 where every person you meet is a live Deepgram voice. Then learn how it's built and make your own voice-driven game, with an optional voice coach to design the story or walk you through the build.",
+ "detail": "San Francisco, 2071. Humanoids keep humans as pets, and you just got out of your cage. In Unscanned you move with the keyboard, but you get through the city by talking: hidden humans give you clues, robots question you and judge whether you sound like a machine, and a Ferryman takes your call on the one payphone they don't tap. Every character is a Deepgram Voice Agent (Flux listens, Claude thinks, a Flux voice speaks) that changes the game through function calls. Play it first, then open the hood and build your own, starting from the full Godot project.",
+ "outcome": "You have played a complete voice game, you understand the pattern behind every character (a prompt, a voice and function calls), and you leave with your own game design and either a working character of your own in Godot or a step-by-step build plan for your game.",
+ "artifact": "design.md and characters.gd from the voice coach, plus the Unscanned Godot project with your own character added.",
+ "audience": "Mixed technical and non-technical",
+ "type": "Workshop",
+ "difficulty": "medium",
+ "track": "community",
+ "minutes": 90,
+ "setupMinutes": 10,
+ "runner": "gamecoach",
+ "prereqs": [
+  "A laptop with Google Chrome and a microphone.",
+  "Headphones or earbuds: the characters talk, and headphones stop the mic hearing them.",
+  "A free Deepgram account and API key (console.deepgram.com) for the voice coach and for building your own game. Playing Unscanned needs no key.",
+  "To build in code: Godot 4.3 (free, godotengine.org). No coding needed for the story coach."
+ ],
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "slides": [],
+ "flow": [
+  {
+   "type": "game",
+   "game": "unscanned",
+   "title": "Play first: Unscanned",
+   "note": "Play for ten minutes before anything else. Click the game, allow the microphone, skip the trailer with an arrow key if you like, then hold F to smell your way to Wren. Walk up to people, press E and talk out loud. Notice how each character feels different, and what they decide."
+  },
+  {
+   "type": "steps",
+   "title": "How it's built, and how to build yours",
+   "note": "First the five ideas that make Unscanned work, then the steps to turn the starter project into your own game."
+  },
+  {
+   "type": "runner",
+   "title": "Optional: design yours with a voice coach",
+   "note": "Paste your Deepgram key. Story interview: the coach asks about your world, characters, clues and ending, and writes your design on the right. Build walkthrough: it walks you through building it in Godot or another tool, writing each step with code. Download design.md and characters.gd when you're done."
+  }
+ ],
+ "sections": [
+  {
+   "title": "1 · How Unscanned works",
+   "summary": "Keyboard for the game, voice for the people. Five ideas carry the whole game.",
+   "steps": [
+    {
+     "id": "two-inputs",
+     "title": "Keyboard for the game, voice for the people",
+     "instruction": "You move, smell (F), hum (H), watch (Q) and sneak with the keyboard, the way your hands expect a game to work. The voice part is only for people: every human, humanoid and the Ferryman on the payphone is a live conversation. That split keeps the game fast to play and makes every conversation feel like a real moment.\n\nWhile you are talking, the game pauses the danger: your owner freezes and you get a two-second head start when you leave. Voice conversations take a little time, and players should never lose because a reply was slow.",
+     "check": "You can say which actions are keys and which are voice."
+    },
+    {
+     "id": "every-person-an-agent",
+     "title": "Every person is a Deepgram Voice Agent",
+     "instruction": "When you press E next to someone, the game opens a websocket to the Deepgram Voice Agent and sends one Settings message. Flux listens, Claude (through Deepgram, no Anthropic account needed) plays the character, and a Flux voice speaks. A character is just this:\n\n```gdscript\nstatic func wren(main) -> Dictionary:\n\treturn {\n\t\t\"speaker\": \"WREN  (human)\",\n\t\t\"voice\": \"flux-hannah-en\",\n\t\t\"greeting\": \"You followed the incense. Good nose. What do you need?\",\n\t\t\"prompt\": WORLD + \"YOU ARE WREN: a human who passes as a unit ...\",\n\t\t\"functions\": [_fn(\"share_clue\", \"Call when you tell the player a clue.\",\n\t\t\t{\"topic\": {\"type\": \"string\", \"enum\": [\"way_out\", \"tells\", \"medallion\"]}}, [\"topic\"])],\n\t}\n```\n\nWORLD is one shared paragraph about San Francisco 2071 plus the speaking rules: one to three short sentences, no stage directions, never say you are an AI. Every character gets it, so they all live in the same world.",
+     "check": "You can point to the prompt, voice, greeting and functions of one character."
+    },
+    {
+     "id": "functions-change-the-game",
+     "title": "Characters change the game with function calls",
+     "instruction": "A character can't touch the game directly. It calls a function, the game decides what that means, and the function result tells the character what to say next:\n\n```gdscript\nfunc _on_voice_fn(id, fn_name, args):\n\tif fn_name == \"judge\":            # a robot judged how you sounded\n\t\tmatch args[\"kind\"]:\n\t\t\t\"machine\": reply = \"They passed. Say: Acknowledged.\"\n\t\t\t\"joke\":    reply = \"Take it literally and get stuck on it.\"\n\t\t\t_:         reply = \"Say: That is not an answer a unit would give.\"\n\tvoice.respond(id, fn_name, reply)   # FunctionCallResponse\n```\n\nThat one pattern runs everything: Wren's share_clue adds a clue, MX-4's judge gives the drain code, the Ferryman's hold_boat makes the ferry appear, and the taste test decides the ending.",
+     "check": "You can explain who decides (Claude) and who acts on it (the game)."
+    },
+    {
+     "id": "human-edge",
+     "title": "The theme is the mechanic: things AI can't do",
+     "instruction": "Every tool the player has is something a machine can't do: smell (a scent trail to the next lead), humming (hidden humans hum back), sarcasm (robots take it literally and freeze), dreams (sleep for a hint), gut feeling (a pulse that points at your owner), and taste (the Ferryman's last test). The robots judge how you sound, so most of the game teaches you to talk like a machine, and the ending asks you to sound human again.",
+     "check": "You have one idea for a human-edge mechanic of your own."
+    },
+    {
+     "id": "phone-script",
+     "title": "A phone call is a script with beats",
+     "instruction": "The Ferryman is a phone agent with a written call script: pickup, who sent you, prove you're human, the plan, questions, hang up. The prompt lists the beats in order, says what passes and what fails, and names the function to call at each turn (hold_boat, hang_up, end_call). Read PHONE-CALL-SCRIPT.md in the starter project: it is the clearest way to design any scripted voice character.",
+     "check": "You can name the beats of the Ferryman's call."
+    }
+   ]
+  },
+  {
+   "title": "2 · Build your own",
+   "summary": "Start from the Unscanned project and change it into your game, one character at a time.",
+   "steps": [
+    {
+     "id": "install",
+     "title": "Install Godot and open the starter project",
+     "instruction": "1. Download Godot 4.3 (Standard, not .NET) from godotengine.org and install it.\n2. Download the starter project: https://dgeventhub.com/unscanned/unscanned-starter.zip\n3. Unzip it, open Godot, click Import, and pick project.godot.\n4. Press F5. The trailer plays; press an arrow key to skip into the game.",
+     "check": "The city appears and the arrow keys move you."
+    },
+    {
+     "id": "key",
+     "title": "Add your Deepgram key",
+     "instruction": "In the project folder, copy .env.example to .env and paste your key:\n\n```\nDEEPGRAM_API_KEY=your-key-here\n```\n\nRestart the game, walk to someone, press E and talk. On a Mac, allow Godot to use the microphone the first time (System Settings, Privacy & Security, Microphone). No mic? Press Tab in a conversation and type.\n\nNever put the key in a script or share the .env file: the game reads it at startup and it stays on your computer.",
+     "check": "A character answers you out loud."
+    },
+    {
+     "id": "change-a-character",
+     "title": "Change a character",
+     "instruction": "Open scripts/characters.gd and find wren(). Change her greeting, her voice (any Flux voice, for example flux-bree-en or flux-cliff-en) and one line of her prompt, then run the game and talk to her again.\n\nTip: keep the speaking rules from WORLD. Voice characters need short replies; a paragraph sounds like a lecture.",
+     "check": "Wren sounds and talks the way you wrote her."
+    },
+    {
+     "id": "new-character",
+     "title": "Add a character of your own",
+     "instruction": "1. In characters.gd, copy wren() into a new function, for example baker(main), with its own speaker, voice, greeting and prompt.\n2. In main.gd, spawn them in _ready() next to the others:\n\n```gdscript\nbaker = _spawn_unique(\"baker\", \"The Baker\", true, Vector2(1270, 1470))\n```\n\n3. In _voice_talk(), route them to their agent:\n\n```gdscript\n\"baker\":\n\t_start_voice(\"baker\", Characters.baker(self), n)\n```\n\nDeclare var baker at the top of main.gd with the others.",
+     "check": "You can walk up to your new character and talk to them."
+    },
+    {
+     "id": "give-it-a-decision",
+     "title": "Give your character a decision",
+     "instruction": "A decision is a function. Add one to your character, describe exactly when to call it in the prompt, then handle it in main.gd:\n\n```gdscript\n# characters.gd, inside baker()\n\"functions\": [_fn(\"give_bread\", \"Call when the player asks for food politely.\", {}, [])],\n\n# main.gd, inside _on_voice_fn()\n\"give_bread\":\n\tadd_clue(\"The Baker gave you bread. Robots never eat.\")\n\treply = \"Hand it over and tell them to eat it somewhere quiet.\"\n```\n\nWhatever the function returns is what the character is told to say next.",
+     "check": "Asking the right way adds a clue on screen."
+    },
+    {
+     "id": "a-judge",
+     "title": "Make a robot that judges you",
+     "instruction": "The street units use one shared rule (JUDGE_RULES in characters.gd): judge the player's first real reply as machine, human or joke, call judge exactly once, then say only what the result says. Copy street_unit() to make your own guard with its own question, and decide in _judge() what passing, failing and joking do in your game.",
+     "check": "Your guard reacts differently to a flat answer, a polite one and a joke."
+    },
+    {
+     "id": "phone-call",
+     "title": "Write a phone call script",
+     "instruction": "Pick a character the player calls instead of meets. Write the beats first, in plain words: what they say when they pick up, what they need to hear, what passes and fails at each beat, and how the call ends. Then turn the beats into the prompt, the same way ferryman_phone() does, with one function per outcome. Dial it from the payphone (main.gd, _answer()).",
+     "check": "Your call can be passed and failed, and both feel fair."
+    },
+    {
+     "id": "test-by-typing",
+     "title": "Test by typing instead of talking",
+     "instruction": "Voice is slow to test. Every conversation also accepts typed lines: press Tab in a conversation and type, or in code call voice.inject(\"Tomas gave me this number.\"). It sends a Voice Agent InjectUserMessage, so the character answers exactly as if you'd spoken, function calls and all. Test every pass and fail path this way before you test out loud.",
+     "check": "You have played your whole chain by typing."
+    },
+    {
+     "id": "ship-it",
+     "title": "Put it on the web without leaking your key",
+     "instruction": "Godot exports to the web (Project, Export, Web), but a web build must never contain your key: anyone could read it. Unscanned's web/server.mjs shows the safe pattern. The browser opens the conversation to your own small server, and the server adds the key and relays it to Deepgram. It only accepts your game's characters and limits how much each visitor can use.\n\n```\nbrowser  --ws-->  /unscanned/agent (your server, key here)  --ws-->  Deepgram Voice Agent\n```\n\nDEPLOY-web.md in the starter project walks through the export, the server and the limits.",
+     "check": "Your game runs in a browser and your key is only on your server."
+    }
+   ]
+  }
+ ],
+ "troubleshooting": [
+  "The game is silent: click inside the game first. Browsers only play sound after you click or press a key.",
+  "Nobody hears me: allow the microphone (the icon at the left of the address bar). In a conversation you can always press Tab and type.",
+  "Characters interrupt themselves: put headphones on. The mic is hearing the speaker.",
+  "My owner caught me: you're safe while you're talking, and you get a two-second head start after. Don't run near robots, and watch the red arc around you: it points at your owner.",
+  "The coach says it could not connect: check your Deepgram key has credit and Voice Agent access, and paste it again.",
+  "Godot says no microphone: on a Mac, allow Godot in System Settings, Privacy & Security, Microphone, then restart the game.",
+  "A function never fires: say exactly when to call it in the prompt, and keep the list of functions short. Test the path by typing."
+ ]
+}
