@@ -1,182 +1,167 @@
 {
- "schemaVersion": 1,
- "owner": "Dana Sacco",
- "audience": "Mixed technical and non-technical",
- "track": "community",
- "runner": "robot",
- "links": {
-  "starterRepo": null,
-  "deck": null
- },
- "sections": [],
- "id": "cardboard-robot-week-2",
- "title": "Week 2: Give it a neck",
- "icon": "🔄",
- "type": "Workshop",
- "difficulty": "medium",
- "minutes": 60,
- "setupMinutes": 30,
- "series": {
-  "id": "cardboard-robot",
-  "title": "Physical AI Lab: Cardboard Robot (4 week course)",
-  "summary": "",
-  "part": 2
- },
- "summary": "Your talking box gets a neck. A second cut-down box, a servo and a lazy-susan bearing let the head turn, a battery pack powers both servos, and the voice agent learns two new function calls: turn its head and look around.",
- "detail": "Bring last week's robot. You build a short base with a servo and a 3 inch lazy-susan bearing, sit the head on it, and power both servos from a battery pack while the Pico stays on your laptop. Then switch on the neck in the app and teach your agent when to use it.",
- "outcome": "Your robot turns its head and looks around on its own while it talks.",
- "artifact": "A two-servo cardboard robot with a turning head, driven by voice-agent function calls.",
- "prereqs": [
-  "Your robot from Week 1, and a laptop with Chrome.",
-  "Your Deepgram API key.",
-  "Everything else is on the table: the neck kit and a battery pack."
- ],
- "slides": [
-  {
-   "n": 1,
-   "kicker": "WELCOME BACK",
-   "title": "Week 2: Give it a neck",
-   "bullets": [
-    "Last week: it talks and its mouth moves.",
-    "Tonight: the head turns, and it decides when to look around.",
-    "Plus your own power bank, so in Week 3 it can go cordless."
-   ],
-   "note": "Have one finished robot look around the room as people sit down."
+  "schemaVersion": 1,
+  "id": "cardboard-robot-week-2",
+  "title": "Class 2 (lunch): Decorate it, give it eyes",
+  "icon": "👀",
+  "owner": "Dana Sacco",
+  "series": {
+    "id": "cardboard-robot",
+    "title": "Physical AI Lab: Build a Robot Desk Assistant (5 classes)",
+    "summary": "",
+    "part": 2
   },
-  {
-   "n": 2,
-   "kicker": "SUPPLIES CHECKLIST",
-   "title": "What each robot needs this week",
-   "bullets": [
-    "☐ Your robot from Week 1, with its Pico, breadboard, power lead and USB cable",
-    "☐ 1 more 8×8×8 inch box, cut down to about 3 inches tall",
-    "☐ 1 × MG90S micro servo (the neck)",
-    "☐ 1 × 3 inch lazy-susan bearing, with 4 small screws",
-    "☐ 1 × male-to-female jumper wire (neck signal)",
-    "☐ 2 × male-to-male jumper wires (neck power)",
-    "☐ 1 × 10,000 mAh power bank with two ports (one USB-C, 20 W or more), charged",
-    "Bring: a laptop with Chrome, and your Deepgram key"
-   ],
-   "note": "The power bank stays with the robot for the rest of the series: in Week 3 it powers the Pi too. Charge every one the night before. Shared per table: hot-glue gun and glue sticks, a small screwdriver, a box cutter. Helper table: spare servos, jumpers, breadboards and power leads, plus spare Week 1 robots for anyone who missed it. Check every build has its ground jumper before it's powered on."
+  "summary": "A lunchtime build session. Decorate your robot with the supplies on the table, and if you want, add the eyes upgrade: two moving eyes that glance around while it talks and that it can cross or point when you ask.",
+  "detail": "Bring your robot from Class 1. Most of the hour is decorating: we bring the supplies. Want more? Pick up an eyeball kit: two eyeballs, two small servos and four wires. They go in behind the face, plug into the same breadboard, and the robot program on your Pico already knows how to drive them. Tick My robot has moving eyes on this page, and your robot gets two new function calls: cross its eyes, and look left or right. While it talks, its eyes glance around on their own.",
+  "outcome": "A decorated robot with its own look and, if you took the upgrade, eyes that move while it talks and on request.",
+  "artifact": "A decorated talking robot, optionally with moving eyes driven by function calls.",
+  "audience": "Mixed technical and non-technical",
+  "type": "Workshop",
+  "difficulty": "easy",
+  "track": "community",
+  "minutes": 60,
+  "setupMinutes": 30,
+  "runner": "robot",
+  "prereqs": [
+    "Your robot from Class 1, with its Pico and breadboard.",
+    "Your laptop with Google Chrome, and your Deepgram API key.",
+    "Everything else is on the table: decorating supplies, and eyeball kits for the eyes upgrade."
+  ],
+  "links": {
+    "starterRepo": null,
+    "deck": null
   },
-  {
-   "n": 3,
-   "kicker": "BUILD 1 OF 3",
-   "title": "Make the base",
-   "bullets": [
-    "Cut a small hole in the middle of the short box's lid.",
-    "Hot-glue the neck servo under the lid by its two tabs, so its shaft pokes up through the hole.",
-    "Screw or glue the lazy-susan bearing on top, centred on the shaft."
-   ],
-   "note": "Done when: the bearing spins freely and the servo's shaft sits in the middle of it.",
-   "image": "/slides/cardboard-robot/week-2-neck-base.svg"
-  },
-  {
-   "n": 4,
-   "kicker": "BUILD 2 OF 3",
-   "title": "Mount the head",
-   "bullets": [
-    "Glue a servo horn to the middle of the head's underside.",
-    "Lower the head onto the bearing so the horn pushes onto the servo's shaft.",
-    "The bearing carries the weight; the servo only turns it."
-   ],
-   "note": "Done when: turning the head by hand turns the servo, and the head doesn't wobble.",
-   "image": "/slides/cardboard-robot/week-2-neck-head.svg"
-  },
-  {
-   "n": 5,
-   "kicker": "BUILD 3 OF 3",
-   "title": "Wire and power it",
-   "bullets": [
-    "Neck signal (orange) to GP14, pin 19, right above the mouth wire.",
-    "Neck red to the breadboard's + row, neck brown to the − row, next to the mouth servo's.",
-    "Everything else stays where it was in Week 1, including the ground jumper to pin 23.",
-    "Power lead into the table charger or your power bank. Nothing on pin 40.",
-    "The Pico stays plugged into your laptop."
-   ],
-   "note": "The power is the same as Week 1: both servos share the breadboard rails, and the Pico only sends signals. If anyone still has their mouth servo's red on pin 40 from an old build, move it to the + row now. The shared ground matters: without it the servos twitch randomly.",
-   "image": "/slides/cardboard-robot/week-2-wiring.svg"
-  },
-  {
-   "n": 6,
-   "kicker": "VOICE STUDIO · 5 MIN",
-   "title": "Switch on the neck",
-   "bullets": [
-    "Connect the robot like last week.",
-    "Open Neck on the Plug in card and tick My robot has a neck servo.",
-    "Set Looking left and Looking right, then press Look around."
-   ],
-   "note": ""
-  },
-  {
-   "n": 7,
-   "kicker": "HOW IT WORKS",
-   "title": "How the head turns",
-   "bullets": [
-    "You ask: \"Who is on your left?\"",
-    "The agent decides to call turn_head with direction \"left\".",
-    "The page turns \"left\" into an angle (150° by default) and sends it to the Pico, a few degrees at a time.",
-    "The Pico moves the neck servo and the head turns. look_around is left, then right, then straight ahead."
-   ],
-   "note": "The servo can point anywhere from 0° to 180°. Looking left and Looking right on the page set the two angles; if the head turns the wrong way, swap them.",
-   "image": "/slides/cardboard-robot/week-2-neck-turns.svg"
-  },
-  {
-   "n": 8,
-   "kicker": "VOICE STUDIO · 15 MIN",
-   "title": "Teach it when to move",
-   "bullets": [
-    "Your agent now has two new functions: turn_head and look_around.",
-    "Ask it to look around. Watch the Tool lines in the transcript.",
-    "Edit its personality: when should it turn its head? When it's curious? When someone new talks?",
-    "Test it. Does it move at the right moments, or too much?"
-   ],
-   "note": "Same idea as last week's weather skill: the agent decides when to call a function, and the page carries it out. Here the function moves something real."
-  },
-  {
-   "n": 9,
-   "kicker": "NEXT WEEK",
-   "title": "Week 3: make it standalone (optional)",
-   "bullets": [
-    "Want your robot to run without your laptop? Bring your own Raspberry Pi 4 or 5 and a USB speakerphone.",
-    "Set it up at home first: the steps are on the Week 3 page.",
-    "Want it to run longer? There's an optional battery upgrade list on the Week 3 page. Buy it yourself and bring it in.",
-    "No Pi? Come anyway. Your robot keeps running from your laptop, and there's a voice studio track for you."
-   ],
-   "note": "Say this twice and put it in the follow-up email: anyone doing the Pi upgrade brings their own Pi and USB speakerphone, and sets the Pi up at home before Week 3. Mention the optional upgrade list too: anyone who wants a bigger battery buys it before Week 3. The free power bank works fine."
-  }
- ],
- "flow": [
-  {
-   "type": "slides",
-   "title": "Build the neck",
-   "from": 1,
-   "to": 5
-  },
-  {
-   "type": "slides",
-   "title": "Bring the neck to life",
-   "from": 6,
-   "to": 8
-  },
-  {
-   "type": "runner",
-   "title": "Turn the head",
-   "note": "Plug the robot in, connect it, then open Neck on the Plug in card."
-  },
-  {
-   "type": "slides",
-   "title": "Next week",
-   "from": 9,
-   "to": 9
-  }
- ],
- "troubleshooting": [
-  "The Pico resets or disconnects when the head moves: a servo is still on the Pico's power. Both red wires go to the breadboard's + row, with the charger or power bank plugged in. The page reconnects on its own once it's back.",
-  "The servos twitch or jitter on their own: the breadboard's − row isn't joined to the Pico's GND. Add the ground jumper.",
-  "Nothing moves at all: the power bank may have gone to sleep. Press its button, or plug the power lead into the table charger.",
-  "The head turns the wrong way: swap the Looking left and Looking right numbers.",
-  "The head wobbles or sags: the weight is on the servo, not the bearing. Re-seat the head so it rests on the bearing.",
-  "It never turns its head: check My robot has a neck servo is ticked before you press Start talking."
- ]
+  "slides": [
+    {
+      "n": 1,
+      "kicker": "WELCOME BACK",
+      "title": "Class 2: Decorate it, give it eyes",
+      "bullets": [
+        "Lunch, glue and googly eyes.",
+        "Everyone decorates. Want moving eyes? Grab an eyeball kit.",
+        "Eat first, glue second: keep food away from the electronics."
+      ],
+      "note": "A relaxed lunch class. Show off a decorated robot with moving eyes at the start so people know what's possible."
+    },
+    {
+      "n": 2,
+      "kicker": "SUPPLIES CHECKLIST",
+      "title": "What each robot needs today",
+      "bullets": [
+        "☐ Your robot from Class 1, with its Pico and breadboard",
+        "☐ Decorating supplies, on the table",
+        "Eyes upgrade (optional): ☐ 2 × eyeballs ☐ 2 × MG90S servos with horns ☐ 2 × male-to-female jumper wires (signal) ☐ 4 × male-to-male jumper wires (power)",
+        "☐ Glue gun (one per table, with a helper nearby)",
+        "Bring: your laptop and your Deepgram key"
+      ],
+      "note": "Dana brings the eyeballs. Pre-bag the eye kits so people grab one and go. Every Pico already runs the program with eyes support (it's loaded at Class 1 check-in), so nobody reloads anything. If someone joined late with a blank Pico, load it at the helper table like Class 1."
+    },
+    {
+      "n": 3,
+      "kicker": "DECORATE · 25 MIN",
+      "title": "Give it a look",
+      "bullets": [
+        "Hair, ears, a hat, a cape: make it look like its personality.",
+        "Keep the mouth flap free to move, and don't glue over the servo.",
+        "Leave the back open so you can reach the wires."
+      ],
+      "note": "Walk the room with a robot that talks while people work. Remind anyone doing eyes to cut the eye holes before they decorate the face."
+    },
+    {
+      "n": 4,
+      "kicker": "EYES · 1 OF 3",
+      "title": "Mount the eyes",
+      "bullets": [
+        "Cut two holes in the face, above the mouth, just big enough for the eyeballs.",
+        "Glue each eyeball to the top of a servo horn, then push the horn onto its servo.",
+        "From inside, glue each servo behind its hole so the eyeball sits in the hole and can turn left and right.",
+        "Turn each eyeball gently by hand: it should swing freely."
+      ],
+      "note": "Check this against the eyeballs Dana brings and adjust the hole size. Done when: both eyes turn freely by hand without catching the face."
+    },
+    {
+      "n": 5,
+      "kicker": "EYES · 2 OF 3",
+      "title": "Wire the eyes",
+      "bullets": [
+        "Left eye's orange wire to GP13 (pin 17), right eye's to GP12 (pin 16), with male-to-female jumpers.",
+        "Both reds to the breadboard's + row, both browns to the − row, like the mouth.",
+        "Nothing new goes on the Pico's power pins.",
+        "Plug the Pico back into your laptop."
+      ],
+      "note": "Left and right mean the robot's left and right, as if you were the robot. Pins 16 and 17 are on the left side, just above GP14 (pin 19) and GP15 (pin 20). Helpers check every board before it's plugged in."
+    },
+    {
+      "n": 6,
+      "kicker": "EYES · 3 OF 3",
+      "title": "Switch them on",
+      "bullets": [
+        "Connect the robot, then open Eyes under Plug in your robot.",
+        "Tick My robot has moving eyes.",
+        "Press Cross eyes, Look left and Look right to test.",
+        "Start talking and ask it to cross its eyes. Watch the Tool line: that's a function call moving real hardware."
+      ],
+      "note": "If they cross outward, swap the two eye wires (GP12 and GP13). The eyes switch off when the robot is quiet, so they don't buzz. If nothing moves at all, the Pico has the old program: load the current one at the helper table."
+    },
+    {
+      "n": 7,
+      "kicker": "SHOW AND TELL · 5 MIN",
+      "title": "Meet the neighbours",
+      "bullets": [
+        "Turn to the next table and introduce your robot.",
+        "Let it introduce itself too.",
+        "Film a clip with Film a clip and share it with #RobotLunchLab."
+      ],
+      "note": ""
+    },
+    {
+      "n": 8,
+      "kicker": "NEXT CLASS",
+      "title": "Class 3: more personalities, more skills",
+      "bullets": [
+        "Give your robot more personalities and switch between them by voice.",
+        "Pick its skills: Muni trips, timers, notes, look-ups and more.",
+        "Bring your robot and your Deepgram key."
+      ],
+      "note": ""
+    }
+  ],
+  "flow": [
+    {
+      "type": "slides",
+      "title": "Decorate (25 min)",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "type": "slides",
+      "title": "Eyes upgrade (optional)",
+      "from": 4,
+      "to": 6
+    },
+    {
+      "type": "runner",
+      "title": "Test your robot",
+      "note": "Connect your robot, then tick My robot has moving eyes under Eyes if you added them."
+    },
+    {
+      "type": "slides",
+      "title": "Show and tell, and next class",
+      "from": 7,
+      "to": 8
+    }
+  ],
+  "sections": [],
+  "troubleshooting": [
+    "The eyes don't move at all: check the orange wires are on GP13 (pin 17) and GP12 (pin 16), and the reds and browns are on the + and − rows. Still nothing? The Pico has an old program: load the current one at the helper table.",
+    "The eyes cross outward: swap the left and right eye wires.",
+    "Left and right are backwards: swap the two eye wires.",
+    "An eye catches on the face: make the hole a little bigger, or move the servo back.",
+    "The Pico resets when the eyes move: the eye servos are getting power from the Pico. All reds go to the + row, never to the Pico.",
+    "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome (or Chromium on a Raspberry Pi).",
+    "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
+    "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the power lead is in a charger or power bank, nothing is on pin 40, and the ground jumper to pin 23 is in.",
+    "It cuts you off: raise Patience. It's slow to answer: lower it.",
+    "It talks to itself, or stops mid-sentence for no reason: it's hearing its own voice. Switch off Let me interrupt it (barge-in), or move the laptop away from the robot's speaker.",
+    "Deepgram stopped the session: check the key was pasted whole, and that the account has credit."
+  ]
 }

@@ -1,228 +1,228 @@
 {
- "schemaVersion": 1,
- "owner": "Dana Sacco",
- "audience": "Mixed technical and non-technical",
- "track": "community",
- "runner": "robot",
- "links": {
-  "starterRepo": null,
-  "deck": null
- },
- "sections": [],
- "id": "cardboard-robot-week-1",
- "title": "Week 1: Build a talking box",
- "icon": "🤖",
- "type": "Workshop",
- "difficulty": "medium",
- "minutes": 60,
- "setupMinutes": 60,
- "series": {
-  "id": "cardboard-robot",
-  "title": "Physical AI Lab: Cardboard Robot (4 week course)",
-  "summary": "A four-week build, one session a week. Week 1: a cardboard box that talks, with a mouth that moves. Week 2: a turning neck. Week 3 (optional, bring your own Raspberry Pi): it runs on its own, no laptop or cables. Week 4: demo day. Most of every session is spent in Deepgram's voice studio, not on the glue gun.",
-  "part": 1
- },
- "summary": "A cardboard robot whose mouth moves when it talks. The box comes ready-built, so attendees spend 15 minutes finishing it and about 40 minutes in Deepgram's voice studio: writing its personality, choosing its voice, tuning Flux turn-taking and giving it skills.",
- "detail": "Bring your own Raspberry Pi Pico W with the pins already attached; we load the robot program onto it when you check in. Your robot box arrives already folded with its servo glued in. You draw its face, hook up the paperclip that opens its mouth, and wire it to a small breadboard. Then the rest of the session happens on this page: give it a personality, try different Deepgram voices, tune how Flux decides you've finished talking, and let it check the weather and read a calendar. The mouth opens and shuts in time with its voice. Finish by filming a clip of your robot talking.",
- "outcome": "A cardboard robot on your table that holds a real conversation in a voice and personality you chose, moves its mouth as it speaks, and checks the weather, plus a clip of it to share.",
- "artifact": "A talking cardboard robot running the attendee's own Deepgram voice agent, and a short video of it.",
- "prereqs": [
-  "A laptop with Google Chrome. This matters: Safari and Firefox can't talk to USB devices, so the robot won't connect in them.",
-  "Your own Raspberry Pi Pico W WITH THE PINS ALREADY ATTACHED (about $7). Look for \"Pico WH\" or \"Pico W with headers\". A Pico 2 W with headers works too. A plain Pico W has no pins, so the wires can't attach without soldering.",
-  "A free Deepgram account and API key. Use the sign-up QR code at your table.",
-  "A USB port on your laptop. USB-C only laptop? We have USB-C to micro-USB cables.",
-  "Everything else is on the table."
- ],
- "slides": [
-  {
-   "n": 1,
-   "kicker": "WELCOME",
-   "title": "Talking Robot Box",
-   "bullets": [
-    "A cardboard robot that talks, and its mouth moves when it does.",
-    "15 minutes building. About 40 minutes making it talk with Deepgram. 5 minutes showing off.",
-    "No coding."
-   ],
-   "note": "Hold up a finished robot and have it say hello. That's the whole pitch. Keep the build moving: the voice studio is the main event."
+  "schemaVersion": 1,
+  "id": "cardboard-robot-week-1",
+  "title": "Class 1: Build your talking robot",
+  "icon": "🤖",
+  "owner": "Dana Sacco",
+  "series": {
+    "id": "cardboard-robot",
+    "title": "Physical AI Lab: Build a Robot Desk Assistant (5 classes)",
+    "summary": "Five classes, one robot. Class 1: build a robot that talks and moves its mouth when it speaks. Class 2 (lunch): decorate it, and add moving eyes if you want them. Class 3: give it more personalities and pick its skills: Muni trips, timers, notes, look-ups, the weather and Deepgram's upcoming events. Class 4 (daytime): bring a Raspberry Pi and a battery to make it fully wireless, or keep decorating. Class 5 (evening): show and tell. No coding needed; most of every class is spent in Deepgram's voice studio.",
+    "part": 1
   },
-  {
-   "n": 2,
-   "kicker": "SUPPLIES CHECKLIST",
-   "title": "What each robot needs",
-   "bullets": [
-    "☐ 1 × robot box, already built: folded, mouth flap hinged, tab glued in, servo glued down",
-    "☐ 1 × your own Raspberry Pi Pico W with pins (Pico WH, or Pico 2 W with headers), loaded with the robot program at check-in",
-    "☐ 1 × half-size breadboard with + and − power rails",
-    "☐ 2 × male-to-female jumper wires (signal and ground)",
-    "☐ 2 × male-to-male jumper wires (servo power)",
-    "☐ 1 × USB-to-2-pin power lead, plus a USB charger to plug it into (the table has one)",
-    "☐ 1 × micro-USB data cable (not charge-only), USB-C or USB-A to match your laptop",
-    "☐ 1 × jumbo paperclip",
-    "☐ Tape and a marker",
-    "Bring: your Pico W with pins, a laptop with Google Chrome, and your Deepgram key"
-   ],
-   "note": "Before class, helpers build every box (about 5 minutes each, so batch them the day before): fold the 8×8×8 inch box, tape the bottom shut, cut off the two front side flaps, glue the top front flap shut, glue a cut-off flap piece inside the bottom flap as a tab, and hot-glue an MG90S servo to the floor near the front with its horn on and facing up. Attendees bring their own Picos, and they arrive blank, so run a loading station at check-in (2–3 laptops, about 2 minutes a board). For each Pico: hold BOOTSEL, plug it in, and drag on the MicroPython .uf2 that matches the board (Pico W / WH: the RP2040 \"Pico W\" build; Pico 2 W: the RP2350 \"Pico 2 W\" build). When it reboots, copy the robot program on with `mpremote cp main.py :main.py`, or use Thonny's Save as > Raspberry Pi Pico > main.py. Test it with Connect robot, then stick a dot on it so you know it's done. Turn away no one: a Pico with no pins, or no Pico at all, gets a spare from the helper table. Each table gets a multi-port USB wall charger and a power strip. Helper table: spare built boxes, spare data cables (the one people forget), USB-C adapters, 8–10 spare Pico WH boards (for people who forget, or bring one without pins), extra paperclips, one glue gun for fixes."
+  "summary": "Build a desk robot that talks, with a mouth that moves when it speaks. The body comes ready-built, so you spend 15 minutes finishing and wiring it and about 40 minutes in Deepgram's voice studio: its personality, its voice, how it takes turns, and its first skills.",
+  "detail": "Bring your own Raspberry Pi Pico W with the pins already attached; we load the robot program onto it when you check in. Your robot's body arrives already folded with its servo glued in. You draw its face, hook up the paperclip that opens its mouth, and wire it to a small breadboard. Then the rest of the class happens on this page: meet Jervis, the snarky starter personality, then make it your own, try different Deepgram voices, tune how Flux decides you've finished talking, and switch on its first skills: the weather, and Deepgram's next event in San Francisco. Finish by filming a clip of your robot talking.",
+  "outcome": "A robot on your table that holds a real conversation in a voice and personality you chose, moves its mouth as it speaks, and can check the weather and tell you what Deepgram is doing next, plus a clip of it to share.",
+  "artifact": "A talking desk robot running the attendee's own Deepgram voice agent, and a short video of it.",
+  "audience": "Mixed technical and non-technical",
+  "type": "Workshop",
+  "difficulty": "medium",
+  "track": "community",
+  "minutes": 60,
+  "setupMinutes": 60,
+  "runner": "robot",
+  "prereqs": [
+    "A laptop with Google Chrome. This matters: Safari and Firefox can't talk to USB devices, so the robot won't connect in them.",
+    "Your own Raspberry Pi Pico W WITH THE PINS ALREADY ATTACHED (about $7). Look for \"Pico WH\" or \"Pico W with headers\". A Pico 2 W with headers works too. A plain Pico W has no pins, so the wires can't attach without soldering.",
+    "A free Deepgram account and API key. Use the sign-up QR code at your table.",
+    "A USB port on your laptop. USB-C only laptop? We have USB-C to micro-USB cables.",
+    "Everything else is on the table."
+  ],
+  "links": {
+    "starterRepo": null,
+    "deck": null
   },
-  {
-   "n": 3,
-   "kicker": "BUILD · 1 OF 2",
-   "title": "Finish your robot",
-   "bullets": [
-    "Put a strip of tape across the top flap and draw its eyes.",
-    "Bend the paperclip into an L.",
-    "Hook one end through a hole in the servo horn, and push the other end through the tab inside the mouth.",
-    "Turn the horn gently by hand: the mouth should open and shut."
-   ],
-   "note": "Done when: turning the horn by hand opens and closes the mouth. If it binds, bend the paperclip, don't force the servo."
-  },
-  {
-   "n": 4,
-   "kicker": "BUILD · 2 OF 2",
-   "title": "Wire it up",
-   "bullets": [
-    "Orange servo wire to GP15 (pin 20, bottom left with the USB at the top), with a male-to-female jumper.",
-    "Red to the breadboard's + row, brown to the − row, with male-to-male jumpers.",
-    "One jumper from the − row to the Pico's GND (pin 23).",
-    "Power lead into the + and − rows, then into a USB charger: the one on your table, any phone charger, or a power bank.",
-    "Nothing goes on VBUS (pin 40). Then plug the Pico into your laptop."
-   ],
-   "note": "Hold the Pico with the USB port at the top and the Raspberry Pi logo facing you. Pin 1 is top left. Why the breadboard: a laptop's USB can't power the servo reliably, and when it moves fast the Pico resets and the page loses it. The charger powers the servo (at home, any phone charger or power bank works); the Pico only sends the signal. Helpers check every board before anyone plugs in: red on +, brown on −, ground jumper to pin 23, nothing on pin 40. Aim to have every robot plugged in by minute 18.",
-   "image": "/slides/cardboard-robot/week-1-wiring.svg"
-  },
-  {
-   "n": 5,
-   "kicker": "HOW IT WORKS",
-   "title": "Meet the Deepgram Voice Agent",
-   "bullets": [
-    "Flux listens, and works out when you've finished talking.",
-    "A language model thinks, using the personality you write.",
-    "Flux speaks, in the voice you choose.",
-    "One live connection does all three, in real time.",
-    "Your page turns the loudness of its voice into mouth movement."
-   ],
-   "note": "Two minutes, no more. Point at the How the pieces fit diagram further down the page."
-  },
-  {
-   "n": 6,
-   "kicker": "VOICE STUDIO · 5 MIN",
-   "title": "First words",
-   "bullets": [
-    "Paste your Deepgram key.",
-    "Quit Thonny if it's open, then press Connect robot.",
-    "Set the mouth, slowly and in order: shut first, then open. Stop before it buzzes.",
-    "Press Wiggle the mouth to check.",
-    "Press Start talking and say hello."
-   ],
-   "note": "The sliders move the servo live. Fast drags or pushing past the end of the mouth make it buzz and strain. Sensitivity sets how much the mouth opens for quiet words; it never goes past the open setting."
-  },
-  {
-   "n": 7,
-   "kicker": "VOICE STUDIO · 10 MIN",
-   "title": "Give it a personality",
-   "bullets": [
-    "Press Stop, then rewrite Personality: who is it, how does it talk, what does it care about?",
-    "Keep its replies to one or two sentences. Short sounds natural out loud.",
-    "Change the first thing it says.",
-    "Start again. Does it stay in character when you try to throw it off?"
-   ],
-   "note": "Ideas to offer: a grumpy pirate box, a nervous first-day intern, an over-excited tour guide for The Hub, a box that's sure it's a fridge."
-  },
-  {
-   "n": 8,
-   "kicker": "VOICE STUDIO · 5 MIN",
-   "title": "Find its voice",
-   "bullets": [
-    "Try three different voices, one at a time.",
-    "Same personality, different voice: which one fits?",
-    "Listen for pace, warmth, and how it says your name."
-   ],
-   "note": "All of these are Deepgram Flux voices, generated live as it talks."
-  },
-  {
-   "n": 9,
-   "kicker": "VOICE STUDIO · 8 MIN",
-   "title": "Turn-taking with Flux",
-   "bullets": [
-    "Set Patience to 0.5. Pause halfway through a sentence. Does it jump in?",
-    "Set it to 0.9 and try again. Notice the wait before it answers.",
-    "Flux listens for when you're done talking, not just for silence.",
-    "Pick the setting that feels most like a real conversation."
-   ],
-   "note": "This is the part people remember: turn-taking is what makes a voice agent feel human or robotic."
-  },
-  {
-   "n": 10,
-   "kicker": "VOICE STUDIO · 7 MIN",
-   "title": "Give it skills",
-   "bullets": [
-    "Ask: what's the weather in Tokyo?",
-    "Ask: what's on my calendar today?",
-    "Watch the Tool lines in the transcript. That's a function call.",
-    "The agent decides when to call a function. Your page runs it and hands back the answer."
-   ],
-   "note": "The weather is real (Open-Meteo); the calendar is a made-up sample, so nobody's real schedule is read out."
-  },
-  {
-   "n": 11,
-   "kicker": "TEST CORNER · 5 MIN",
-   "title": "Show it off",
-   "bullets": [
-    "Ask it the weather somewhere far away.",
-    "Try to make it laugh.",
-    "Film a 20-second clip and share it with #RobotLunchLab."
-   ],
-   "note": "Set up one well-lit corner with a plain background for filming."
-  },
-  {
-   "n": 12,
-   "kicker": "NEXT WEEK",
-   "title": "Week 2: give it a neck",
-   "bullets": [
-    "Bring your robot back next week.",
-    "We add a second box, a servo and a turntable bearing, so the head turns.",
-    "And your own power bank, so later it can run without a wall socket."
-   ],
-   "note": "Robots can stay on the shelf at The Hub between sessions."
-  }
- ],
- "flow": [
-  {
-   "type": "slides",
-   "title": "Build it (15 min)",
-   "from": 1,
-   "to": 4
-  },
-  {
-   "type": "slides",
-   "title": "Make it talk with Deepgram (40 min)",
-   "from": 5,
-   "to": 10
-  },
-  {
-   "type": "runner",
-   "title": "Your robot's voice studio",
-   "note": "Plug the robot in, then work through the voice studio slides above, one at a time."
-  },
-  {
-   "type": "slides",
-   "title": "Test corner and next week",
-   "from": 11,
-   "to": 12
-  }
- ],
- "troubleshooting": [
-  "Your Pico has no pins (a plain Pico W or Pico 2 W): the jumper wires can't attach without soldering. Swap it for a spare with headers from the helper table.",
-  "Connect robot shows \"No compatible devices found\": the Pico isn't running MicroPython and the robot program yet, it's in BOOTSEL mode (a drive called RPI-RP2 or RP2350 is open), or the cable only charges. Swap the cable first.",
-  "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome on the laptop.",
-  "It says the board did not answer: the Pico isn't running the robot program. Unplug it, plug it back in and connect again. If that fails, a helper swaps the Pico.",
-  "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
-  "The page says the robot reset while talking or when you move a slider: the servo is pulling power from the Pico. Check red goes to the + row, the power lead is in a charger or power bank, nothing is on pin 40, and the ground jumper is in. The page reconnects on its own once it's back.",
-  "The servo buzzes or twitches fast at one end: shut or open is pushing past where the mouth can go. Move it back 2 or 3 steps with the − and + buttons.",
-  "The mouth moves the wrong way: swap the shut and open numbers.",
-  "The servo twitches on its own: the ground jumper from the − row to pin 23 is missing.",
-  "The robot talks to itself: keep \"Speaker is inside the box\" switched on.",
-  "It cuts you off: raise Patience. It's slow to answer: lower it.",
-  "No sound: turn up the laptop volume and check the output device in system settings.",
-  "Deepgram stopped the session: check the key was pasted whole, and that the account has credit."
- ]
+  "slides": [
+    {
+      "n": 1,
+      "kicker": "WELCOME",
+      "title": "Build your talking robot",
+      "bullets": [
+        "A desk robot that talks, and its mouth moves when it does.",
+        "15 minutes building. About 40 minutes making it talk with Deepgram. 5 minutes showing off.",
+        "No coding."
+      ],
+      "note": "Hold up a finished robot and have it say hello. That's the whole pitch. Keep the build moving: the voice studio is the main event."
+    },
+    {
+      "n": 2,
+      "kicker": "SUPPLIES CHECKLIST",
+      "title": "What each robot needs",
+      "bullets": [
+        "☐ 1 × robot body, already built: folded, mouth flap hinged, tab glued in, servo glued down",
+        "☐ 1 × your own Raspberry Pi Pico W with pins (Pico WH, or Pico 2 W with headers), loaded with the robot program at check-in",
+        "☐ 1 × half-size breadboard with + and − power rails",
+        "☐ 2 × male-to-female jumper wires (signal and ground)",
+        "☐ 2 × male-to-male jumper wires (servo power)",
+        "☐ 1 × USB-to-2-pin power lead, plus a USB charger to plug it into (the table has one)",
+        "☐ 1 × micro-USB data cable (not charge-only), USB-C or USB-A to match your laptop",
+        "☐ 1 × jumbo paperclip",
+        "☐ Tape and a marker",
+        "Bring: your Pico W with pins, a laptop with Google Chrome, and your Deepgram key"
+      ],
+      "note": "Before class, helpers build every body (about 5 minutes each, so batch them the day before): fold the 8×8×8 inch box, tape the bottom shut, cut off the two front side flaps, glue the top front flap shut, glue a cut-off flap piece inside the bottom flap as a tab, and hot-glue an MG90S servo to the floor near the front with its horn on and facing up. Attendees bring their own Picos, and they arrive blank, so run a loading station at check-in (2–3 laptops, about 2 minutes a board). For each Pico: hold BOOTSEL, plug it in, and drag on the MicroPython .uf2 that matches the board (Pico W / WH: the RP2040 \"Pico W\" build; Pico 2 W: the RP2350 \"Pico 2 W\" build). When it reboots, copy the robot program on with `mpremote cp main.py :main.py`, or use Thonny's Save as > Raspberry Pi Pico > main.py. The program already knows about the eyes, so nobody reloads it in Class 2. Test it with Connect robot, then stick a dot on it so you know it's done. Turn away no one: a Pico with no pins, or no Pico at all, gets a spare from the helper table. Each table gets a multi-port USB wall charger and a power strip. Helper table: spare built bodies, spare data cables (the one people forget), USB-C adapters, 8–10 spare Pico WH boards, extra paperclips, one glue gun for fixes."
+    },
+    {
+      "n": 3,
+      "kicker": "BUILD · 1 OF 2",
+      "title": "Finish your robot",
+      "bullets": [
+        "Put a strip of tape across the top flap and draw its eyes. (Moving eyes are an upgrade in Class 2.)",
+        "Bend the paperclip into an L.",
+        "Hook one end through a hole in the servo horn, and push the other end through the tab inside the mouth.",
+        "Turn the horn gently by hand: the mouth should open and shut."
+      ],
+      "note": "Done when: turning the horn by hand opens and closes the mouth. If it binds, bend the paperclip, don't force the servo."
+    },
+    {
+      "n": 4,
+      "kicker": "BUILD · 2 OF 2",
+      "title": "Wire it up",
+      "bullets": [
+        "Orange servo wire to GP15 (pin 20, bottom left with the USB at the top), with a male-to-female jumper.",
+        "Red to the breadboard's + row, brown to the − row, with male-to-male jumpers.",
+        "One jumper from the − row to the Pico's GND (pin 23).",
+        "Power lead into the + and − rows, then into a USB charger: the one on your table, any phone charger, or a power bank.",
+        "Nothing goes on VBUS (pin 40). Then plug the Pico into your laptop."
+      ],
+      "note": "Hold the Pico with the USB port at the top and the Raspberry Pi logo facing you. Pin 1 is top left. Why the breadboard: a laptop's USB can't power the servo reliably, and when it moves fast the Pico resets and the page loses it. The charger powers the servo; the Pico only sends the signal. Helpers check every board before anyone plugs in: red on +, brown on −, ground jumper to pin 23, nothing on pin 40. Aim to have every robot plugged in by minute 18.",
+      "image": "/slides/cardboard-robot/week-1-wiring.svg"
+    },
+    {
+      "n": 5,
+      "kicker": "HOW IT WORKS",
+      "title": "Meet the Deepgram Voice Agent",
+      "bullets": [
+        "Flux listens, and works out when you've finished talking.",
+        "A language model thinks, using the personality you write.",
+        "Deepgram speaks, in the voice you choose.",
+        "One live connection does all three, in real time.",
+        "Your page turns the loudness of its voice into mouth movement."
+      ],
+      "note": "Two minutes, no more. Point at the How the pieces fit diagram further down the page."
+    },
+    {
+      "n": 6,
+      "kicker": "VOICE STUDIO · 5 MIN",
+      "title": "First words",
+      "bullets": [
+        "Paste your Deepgram key.",
+        "Quit Thonny if it's open, then press Connect robot.",
+        "Set the mouth, slowly and in order: shut first, then open. Stop before it buzzes.",
+        "Press Wiggle the mouth to check.",
+        "Press Start talking and say hello to Jervis."
+      ],
+      "note": "The sliders move the servo live. Fast drags or pushing past the end of the mouth make it buzz and strain. Jervis is the starter personality: furry, snarky and a little passive-aggressive. Let people enjoy it before they change it."
+    },
+    {
+      "n": 7,
+      "kicker": "VOICE STUDIO · 10 MIN",
+      "title": "Make it yours",
+      "bullets": [
+        "Press Stop, then rewrite Personality: who is it, how does it talk, what does it care about?",
+        "Give it a Robot name and change the First thing it says.",
+        "Keep its replies to one or two sentences. Short sounds natural out loud.",
+        "Start again. Does it stay in character when you try to throw it off?"
+      ],
+      "note": "Ideas to offer: a grumpy pirate, a nervous first-day intern, an over-excited tour guide for The Hub, a robot that's sure it's a fridge. Everyone gets to build more personalities in Class 3, so one is enough tonight."
+    },
+    {
+      "n": 8,
+      "kicker": "VOICE STUDIO · 5 MIN",
+      "title": "Find its voice",
+      "bullets": [
+        "Try three different voices, one at a time.",
+        "Same personality, different voice: which one fits?",
+        "Listen for pace, warmth, and how it says your name."
+      ],
+      "note": "All of these are Deepgram voices, generated live as it talks."
+    },
+    {
+      "n": 9,
+      "kicker": "VOICE STUDIO · 8 MIN",
+      "title": "Turn-taking with Flux",
+      "bullets": [
+        "Set Patience to 0.5. Pause halfway through a sentence. Does it jump in?",
+        "Set it to 0.9 and try again. Notice the wait before it answers.",
+        "Flux listens for when you're done talking, not just for silence.",
+        "Try interrupting it mid-sentence: barge-in lets you cut in, like with a person."
+      ],
+      "note": "This is the part people remember: turn-taking is what makes a voice agent feel human or robotic. If a robot keeps stopping itself, it's hearing its own voice: switch off barge-in for that one."
+    },
+    {
+      "n": 10,
+      "kicker": "VOICE STUDIO · 7 MIN",
+      "title": "Its first skills",
+      "bullets": [
+        "Two skills are on already: Check the weather, and Deepgram events in San Francisco.",
+        "Ask: what's the weather in Tokyo?",
+        "Ask: what's Deepgram doing next?",
+        "Watch the Tool lines in the transcript. That's a function call: the agent decides to call it, your page runs it and hands back the answer."
+      ],
+      "note": "The weather is live from Open-Meteo, and the events are Deepgram's real upcoming San Francisco events from Luma. Five more skills wait under Skills (function calls); we pick them properly in Class 3, but nobody will stop the curious."
+    },
+    {
+      "n": 11,
+      "kicker": "TEST CORNER · 5 MIN",
+      "title": "Show it off",
+      "bullets": [
+        "Ask it the weather somewhere far away.",
+        "Try to make it laugh.",
+        "Film a 20-second clip with Film a clip and share it with #RobotLunchLab."
+      ],
+      "note": "Set up one well-lit corner with a plain background for filming."
+    },
+    {
+      "n": 12,
+      "kicker": "NEXT CLASS",
+      "title": "Class 2 (lunch): decorate it, give it eyes",
+      "bullets": [
+        "Bring your robot back. Robots can stay on the shelf at The Hub between classes.",
+        "We bring decorating supplies.",
+        "Want moving eyes? We have eyeball kits, and the program on your Pico already knows how to use them."
+      ],
+      "note": ""
+    }
+  ],
+  "flow": [
+    {
+      "type": "slides",
+      "title": "Build it (15 min)",
+      "from": 1,
+      "to": 4
+    },
+    {
+      "type": "slides",
+      "title": "Make it talk with Deepgram (40 min)",
+      "from": 5,
+      "to": 10
+    },
+    {
+      "type": "runner",
+      "title": "Your robot's voice studio",
+      "note": "Plug the robot in, then work through the voice studio slides above, one at a time."
+    },
+    {
+      "type": "slides",
+      "title": "Test corner and next class",
+      "from": 11,
+      "to": 12
+    }
+  ],
+  "sections": [],
+  "troubleshooting": [
+    "Your Pico has no pins (a plain Pico W or Pico 2 W): the jumper wires can't attach without soldering. Swap it for a spare with headers from the helper table.",
+    "Connect robot shows \"No compatible devices found\": the Pico isn't running MicroPython and the robot program yet, it's in BOOTSEL mode (a drive called RPI-RP2 or RP2350 is open), or the cable only charges. Swap the cable first.",
+    "It says the board did not answer: the Pico isn't running the robot program. Unplug it, plug it back in and connect again. If that fails, a helper swaps the Pico.",
+    "The servo buzzes or twitches fast at one end: shut or open is pushing past where the mouth can go. Move it back 2 or 3 steps with the − and + buttons.",
+    "The mouth moves the wrong way: swap the shut and open numbers.",
+    "The servo twitches on its own: the ground jumper from the − row to pin 23 is missing.",
+    "No sound: turn up the laptop volume and check the output device in system settings.",
+    "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome (or Chromium on a Raspberry Pi).",
+    "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
+    "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the power lead is in a charger or power bank, nothing is on pin 40, and the ground jumper to pin 23 is in.",
+    "It cuts you off: raise Patience. It's slow to answer: lower it.",
+    "It talks to itself, or stops mid-sentence for no reason: it's hearing its own voice. Switch off Let me interrupt it (barge-in), or move the laptop away from the robot's speaker.",
+    "Deepgram stopped the session: check the key was pasted whole, and that the account has credit."
+  ]
 }

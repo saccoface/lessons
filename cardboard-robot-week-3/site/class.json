@@ -1,181 +1,166 @@
 {
- "schemaVersion": 1,
- "owner": "Dana Sacco",
- "audience": "Mixed technical and non-technical",
- "track": "community",
- "runner": "robot",
- "links": {
-  "starterRepo": null,
-  "deck": null
- },
- "sections": [],
- "id": "cardboard-robot-week-3",
- "title": "Week 3: Make it standalone",
- "icon": "🧠",
- "type": "Workshop",
- "difficulty": "medium",
- "minutes": 60,
- "setupMinutes": 20,
- "series": {
-  "id": "cardboard-robot",
-  "title": "Physical AI Lab: Cardboard Robot (4 week course)",
-  "summary": "",
-  "part": 3
- },
- "summary": "Optional: bring your own Raspberry Pi and USB speakerphone, and the Pi becomes the robot's brain, with the speakerphone as its ears and voice and the Week 2 battery powering everything. Then unplug it and walk away with it. No Pi? Your robot stays on your laptop and you spend the session in Deepgram's voice studio.",
- "detail": "This week is optional and bring-your-own: if you want your robot to run without a laptop, bring a Raspberry Pi 4 or 5 that you've set up at home, plus a USB speakerphone (the steps are under Before you start). The Pi runs Chromium and opens this same page, so your robot works exactly as before. You control the Pi from your laptop with Raspberry Pi Connect while you set it up, then close it and carry your robot away. No Pi? Your robot keeps running from your laptop, and you work through the voice studio track instead.",
- "outcome": "Pi track: a robot that talks, moves its mouth and turns its head with no laptop and no wall plug. No Pi: a sharper personality and a robot tuned for a noisy room.",
- "artifact": "A fully wireless talking cardboard robot, or a better-tuned laptop robot.",
- "prereqs": [
-  "Your robot from Week 2, with its power bank charged. Your laptop and your Deepgram key.",
-  "Doing the Pi upgrade? Bring a Raspberry Pi 4 or 5 (2 GB or more) with its memory card and power supply, set up at home as below, and a USB speakerphone (any brand, for example an EMEET M0 Plus). No Pi? Skip the rest of this list.",
-  "Power, pick one. Free: the 10,000 mAh power bank you got in Week 2. It runs a Pi robot for about 3 hours. Upgrade: buy your own bigger battery and bring it in. It runs about twice as long.",
-  "Optional upgrade list, to match the instructor's robot. Buy these yourself: ☐ Raspberry Pi 5 (4 GB) ☐ Raspberry Pi 5 Active Cooler ☐ 32 GB microSD card ☐ Official Raspberry Pi 27 W USB-C power supply, for setting up at home ☐ USB speakerphone, for example an EMEET M0 Plus ☐ Anker 20,000 mAh power bank with a USB-C port rated 30 W or more. Already have a Pi 4? Keep it and just add the power bank.",
-  "1. On your computer, install Raspberry Pi Imager from raspberrypi.com/software and use it to put Raspberry Pi OS (64-bit, with desktop) on the memory card. In its settings, add a username and password and the Hub's wifi from your event email.",
-  "2. Start the Pi once with a screen, keyboard and mouse, and finish the welcome steps.",
-  "3. Turn on Raspberry Pi Connect (its icon is in the top bar) and sign in with a free Raspberry Pi ID. On your laptop, check you can see the Pi's screen at connect.raspberrypi.com.",
-  "4. Plug in your speakerphone, check the Pi plays sound through it, then open Chromium and visit this page once, so it's ready."
- ],
- "slides": [
-  {
-   "n": 1,
-   "kicker": "WELCOME BACK",
-   "title": "Week 3: Make it standalone",
-   "bullets": [
-    "Brought a Raspberry Pi? Tonight it takes over from your laptop, running on the battery you already have.",
-    "No Pi? Your robot stays on your laptop, and you take the voice studio track.",
-    "Either way, Deepgram does the listening and talking."
-   ],
-   "note": "Ask for a show of hands: who brought a Pi? Seat Pi people together so helpers can work the tables."
+  "schemaVersion": 1,
+  "id": "cardboard-robot-week-3",
+  "title": "Class 3: More personalities, more skills",
+  "icon": "🧠",
+  "owner": "Dana Sacco",
+  "series": {
+    "id": "cardboard-robot",
+    "title": "Physical AI Lab: Build a Robot Desk Assistant (5 classes)",
+    "summary": "",
+    "part": 3
   },
-  {
-   "n": 2,
-   "kicker": "SUPPLIES CHECKLIST",
-   "title": "What each robot needs this week",
-   "bullets": [
-    "☐ Your robot from Week 2, with its Pico and breadboard",
-    "☐ A charged power bank: the free one from Week 2, or your own upgrade",
-    "Pi track: ☐ your Raspberry Pi 4 or 5, set up at home, and its power supply",
-    "Pi track: ☐ your USB speakerphone",
-    "Pi track: ☐ 1 × USB-A to micro-USB data cable, for the Pico (on the table)",
-    "Pi track: ☐ 1 × short cable from the power bank to the Pi's USB-C port (on the table)",
-    "Pi track: ☐ Velcro strips or tape",
-    "Bring: your laptop and your Deepgram key"
-   ],
-   "note": "Attendees bring the Pi, its memory card and a USB speakerphone; we supply the cables. Helper table: a setup station with a screen, keyboard, mouse and micro-HDMI cable for anyone whose Pi isn't set up yet; spare cables; spare charged power banks. A Pi 5 run from a power bank limits its USB ports, so it may warn about power; that's fine for this build because the servos run from the breadboard."
+  "summary": "All voice studio, no glue. Give your robot several personalities it can switch between when you ask, then choose its skills from a menu of real function calls: plan a Muni trip with live arrival times, set timers, remember notes, look things up, roll dice, check the weather and hear about Deepgram's next event.",
+  "detail": "Your robot already has one personality. Tonight it gets more: each profile has its own name, personality, first line and voice, and you can say \"switch to Arnie\" mid-conversation and it changes on the spot. Then you pick its skills. Each one is a function call: the agent decides when it needs one, your page runs it and hands back a real answer. Ask how to get to the Ferry Building and it tells you which Muni bus to catch, where, and when the next one comes. Finish by giving your robot a job that mixes the right personality with the right skills.",
+  "outcome": "A robot with several personalities you can swap by voice, and the skills you picked, answering with real data instead of guesses.",
+  "artifact": "A multi-personality talking robot with the attendee's chosen function-call skills.",
+  "audience": "Mixed technical and non-technical",
+  "type": "Workshop",
+  "difficulty": "medium",
+  "track": "community",
+  "minutes": 60,
+  "setupMinutes": 15,
+  "runner": "robot",
+  "prereqs": [
+    "Your robot from Class 2, and your laptop with Google Chrome.",
+    "Your Deepgram API key.",
+    "Know a few places you go in San Francisco: you'll ask your robot how to get there."
+  ],
+  "links": {
+    "starterRepo": null,
+    "deck": null
   },
-  {
-   "n": 3,
-   "kicker": "POWER · YOUR CHOICE",
-   "title": "Two ways to power it",
-   "bullets": [
-    "Free: the 10,000 mAh power bank from Week 2. About 3 hours on a Pi.",
-    "Upgrade: your own 20,000 mAh power bank with a 30 W USB-C port, like the instructor's robot. About twice as long.",
-    "Either way: the Pi goes in the USB-C port and the servo lead goes in the other port.",
-    "The upgrade list is on this page, under Before you start."
-   ],
-   "note": "Nobody has to buy anything: the free power bank works. Helper table: spare charged free power banks for anyone who forgot theirs."
-  },
-  {
-   "n": 4,
-   "kicker": "PI TRACK · 1 OF 3",
-   "title": "Plug in the Pi",
-   "bullets": [
-    "Speakerphone into a blue USB port on the Pi.",
-    "Unplug the Pico from your laptop and plug it into another blue port, with the USB-A cable.",
-    "Power the Pi from the power bank's other port.",
-    "Put the Pi and battery on the floor of the base box, under the neck, and fix them with velcro or tape. Cut a small notch at the back for the charging cable."
-   ],
-   "note": "Done when: the Pi's light flickers and the speakerphone lights up. The battery is the heaviest part, so on the floor of the base keeps the robot from tipping. Tip: tape the base floor on one side only, like a hinge, so you can open it to charge or fix things."
-  },
-  {
-   "n": 5,
-   "kicker": "PI TRACK · 2 OF 3",
-   "title": "Open the Pi from your laptop",
-   "bullets": [
-    "On your laptop, go to connect.raspberrypi.com and open your Pi's screen.",
-    "On the Pi, open Chromium and go to this lesson page."
-   ],
-   "note": "If someone's Pi didn't come up on the wifi, send them to the setup station."
-  },
-  {
-   "n": 6,
-   "kicker": "PI TRACK · 3 OF 3",
-   "title": "Set it up on the Pi",
-   "bullets": [
-    "Paste your Deepgram key and connect the robot, like Week 1.",
-    "Pick the speakerphone if Chromium asks for a microphone.",
-    "Set the mouth and neck sliders again. They're saved on the Pi.",
-    "Start talking."
-   ],
-   "note": "The speakerphone sits right next to the robot, so keep Speaker is inside the box switched on."
-  },
-  {
-   "n": 7,
-   "kicker": "NO PI? · VOICE STUDIO",
-   "title": "Make it a better talker",
-   "bullets": [
-    "Write a second personality and see which one guests will like better.",
-    "Make it a quiz host: it asks questions and keeps score in its head.",
-    "Tune Patience for a noisy room. Does it still know when you're done?",
-    "Write a greeting that changes with the weather: ask it to check first."
-   ],
-   "note": "Everything here runs on the laptop, exactly like Weeks 1 and 2. Pair a no-Pi person with a Pi person for the walk test at the end."
-  },
-  {
-   "n": 8,
-   "kicker": "CUT THE CORD",
-   "title": "Walk away with it",
-   "bullets": [
-    "Pi track: close the Pi on your laptop, check nothing is plugged into a wall or laptop, then pick the robot up and carry it to another table. Keep talking.",
-    "No Pi? Show your new personality to a Pi builder, and hear theirs."
-   ],
-   "note": "Done when: it holds a conversation on the far side of the room."
-  },
-  {
-   "n": 9,
-   "kicker": "NEXT WEEK",
-   "title": "Week 4: Demo day",
-   "bullets": [
-    "Teach it a new trick and polish it.",
-    "Then show it off to guests.",
-    "Bring it fully charged. Laptop robots are welcome on stage too."
-   ],
-   "note": ""
-  }
- ],
- "flow": [
-  {
-   "type": "slides",
-   "title": "Pi track: move it onto the Pi",
-   "from": 1,
-   "to": 6
-  },
-  {
-   "type": "slides",
-   "title": "No Pi? Voice studio track",
-   "from": 7,
-   "to": 7
-  },
-  {
-   "type": "runner",
-   "title": "Run your robot",
-   "note": "Pi track: open this page in Chromium on the Raspberry Pi. No Pi: use it on your laptop as usual."
-  },
-  {
-   "type": "slides",
-   "title": "Cut the cord",
-   "from": 8,
-   "to": 9
-  }
- ],
- "troubleshooting": [
-  "The Pi isn't on the wifi, or Connect can't find it: take it to the setup station and fix the wifi with a screen and keyboard.",
-  "Connect robot does nothing on the Pi: open the page in Chromium, not another browser.",
-  "Connect robot shows nothing on the Pi: the Pico cable is charge-only. Swap it for a data cable.",
-  "The robot can't hear you: in Chromium, click the lock icon and pick your speakerphone as the microphone.",
-  "No sound: set your speakerphone as the Pi's audio output in the speaker menu at the top right.",
-  "The Pi shows a lightning bolt or restarts: the battery port can't keep up. Try the other port or a thicker cable, or plug in your Pi's own power supply for now.",
-  "The battery switches itself off: some power banks sleep on low current. Press its button to wake it."
- ]
+  "slides": [
+    {
+      "n": 1,
+      "kicker": "WELCOME BACK",
+      "title": "Class 3: More personalities, more skills",
+      "bullets": [
+        "Tonight is all voice studio.",
+        "First: more personalities, and switching between them by voice.",
+        "Then: skills. Real function calls that answer with real data."
+      ],
+      "note": "No hardware changes tonight. If anyone's robot isn't working, send them to the helper table first so they don't miss the studio time."
+    },
+    {
+      "n": 2,
+      "kicker": "PROFILES · 15 MIN",
+      "title": "A robot with more than one personality",
+      "bullets": [
+        "Under Profile, press Add a profile: start from a starter (like Arnie) or A blank one.",
+        "Give it a Robot name, a Personality, a First thing it says and its own Voice.",
+        "Make the two as different as you can: grumpy and cheerful, fast and slow.",
+        "Start talking and say: switch to (its name). It changes voice and personality on the spot."
+      ],
+      "note": "Switching is a function call too: the robot calls switch_profile and the page swaps its personality and voice live, without hanging up. Remove this profile deletes the one you're on, so check before pressing."
+    },
+    {
+      "n": 3,
+      "kicker": "HOW IT WORKS",
+      "title": "What a function call is",
+      "bullets": [
+        "You describe a function to the agent: its name, what it does, what it needs.",
+        "When the conversation calls for it, the agent asks your page to run it.",
+        "Your page does the real work: asks Muni, sets a timer, saves a note.",
+        "The answer goes back to the agent, and it says it in its own voice."
+      ],
+      "note": "Two minutes. Show the Tool lines in the transcript and the Code panel: the skills you tick become the functions in the agent's settings."
+    },
+    {
+      "n": 4,
+      "kicker": "SKILLS · 15 MIN",
+      "title": "Pick its skills",
+      "bullets": [
+        "Open Skills (function calls) and tick the ones you want:",
+        "Check the weather · Deepgram events in San Francisco · Timers",
+        "Remember notes · Plan a Muni trip · Look things up · Dice, coins and picking",
+        "Each one you tick shows a Try: line. Say it and watch the Tool lines."
+      ],
+      "note": "Fewer skills keep a robot focused. Push people to choose what fits their robot, not tick everything. Notes are kept in that browser only. Look things up uses Wikipedia, and says so when there's no article instead of guessing."
+    },
+    {
+      "n": 5,
+      "kicker": "SKILLS · MUNI",
+      "title": "Where to, and which bus?",
+      "bullets": [
+        "Tick Plan a Muni trip.",
+        "Ask: how do I get to the Ferry Building?",
+        "It tells you the line, where to catch it, which way it's heading, and when the next one comes.",
+        "Trips start from The Hub at 505 Howard, unless you say where you're starting from."
+      ],
+      "note": "Live arrival times come from 511.org; stops and routes come from Muni's published timetable. Short trips get \"just walk\". The credit line under the skills list is required by Muni's data licence; leave it there."
+    },
+    {
+      "n": 6,
+      "kicker": "MAKE IT USEFUL · 15 MIN",
+      "title": "Give it a job",
+      "bullets": [
+        "Pick a job: Hub concierge, study buddy, game-night host, commute helper.",
+        "Write a profile for that job, and tick only the skills it needs.",
+        "Tell it, in its personality, when to use each skill.",
+        "Test it with a partner playing someone who needs help."
+      ],
+      "note": "Good pairs: a commute helper with Muni and the weather; a game host with dice and timers; a study buddy with look-ups, notes and timers."
+    },
+    {
+      "n": 7,
+      "kicker": "TEST CORNER · 5 MIN",
+      "title": "Show a skill off",
+      "bullets": [
+        "Swap robots with your neighbour: switch it to a personality and ask it something useful.",
+        "Film your best function call and share it with #RobotLunchLab."
+      ],
+      "note": ""
+    },
+    {
+      "n": 8,
+      "kicker": "NEXT CLASS",
+      "title": "Class 4: go wireless (or keep decorating)",
+      "bullets": [
+        "Want it to run with no laptop? Bring a Raspberry Pi 4 or 5 and a battery pack. The setup steps are on the Class 4 page.",
+        "No Pi? Come anyway: decorate more and keep tuning your robot."
+      ],
+      "note": "Send the Class 4 page to anyone thinking about the Pi now, so they set it up at home before they come."
+    }
+  ],
+  "flow": [
+    {
+      "type": "slides",
+      "title": "More personalities (15 min)",
+      "from": 1,
+      "to": 2
+    },
+    {
+      "type": "slides",
+      "title": "Skills (30 min)",
+      "from": 3,
+      "to": 6
+    },
+    {
+      "type": "runner",
+      "title": "Your robot's voice studio",
+      "note": "Connect your robot, then work through Profile and Skills (function calls) in the voice studio."
+    },
+    {
+      "type": "slides",
+      "title": "Test corner and next class",
+      "from": 7,
+      "to": 8
+    }
+  ],
+  "sections": [],
+  "troubleshooting": [
+    "It won't switch personality: say the profile's Robot name clearly, and check the profile has a name.",
+    "It makes up an answer instead of using a skill: check the skill is ticked, then ask more directly (\"check the weather in Paris\").",
+    "Muni says it can't find a place: give a street address or a well-known place in San Francisco.",
+    "Muni gives a line but no time: the live feed didn't answer. It suggests the Muni app instead; try again in a minute.",
+    "A timer didn't go off: timers only run while this page is open and the robot is connected.",
+    "Its notes are gone: notes are kept in this browser. A different laptop or browser starts empty.",
+    "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome (or Chromium on a Raspberry Pi).",
+    "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
+    "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the power lead is in a charger or power bank, nothing is on pin 40, and the ground jumper to pin 23 is in.",
+    "It cuts you off: raise Patience. It's slow to answer: lower it.",
+    "It talks to itself, or stops mid-sentence for no reason: it's hearing its own voice. Switch off Let me interrupt it (barge-in), or move the laptop away from the robot's speaker.",
+    "Deepgram stopped the session: check the key was pasted whole, and that the account has credit."
+  ]
 }

@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "cardboard-robot-week-5",
+  "title": "Class 5: Show and tell",
+  "icon": "🎤",
+  "owner": "Dana Sacco",
+  "series": {
+    "id": "cardboard-robot",
+    "title": "Physical AI Lab: Build a Robot Desk Assistant (5 classes)",
+    "summary": "",
+    "part": 5
+  },
+  "summary": "The evening finale. A short polish session, then every robot gets the floor: show its look, its personalities and the coolest thing it can do. Guests welcome.",
+  "detail": "The first half hour is open studio: catch up on anything you missed, fix anything wobbly, and rehearse. Then show and tell: each builder gets a couple of minutes to introduce their robot, switch it between personalities, and show off its best skill, live, in front of the room. We film every robot, and the room votes.",
+  "outcome": "Your robot shown off to a live audience, and a clip of it.",
+  "artifact": "A finished talking robot and a video of it in front of guests.",
+  "audience": "Mixed technical and non-technical",
+  "type": "Demo day",
+  "difficulty": "easy",
+  "track": "community",
+  "minutes": 90,
+  "setupMinutes": 30,
+  "runner": "robot",
+  "prereqs": [
+    "Your robot, charged if it runs on a Pi.",
+    "Your Deepgram API key.",
+    "Your laptop: it runs your robot, or opens your Pi with Raspberry Pi Connect."
+  ],
+  "links": {
+    "starterRepo": null,
+    "deck": null
+  },
+  "slides": [
+    {
+      "n": 1,
+      "kicker": "SHOW AND TELL",
+      "title": "Class 5: Show and tell",
+      "bullets": [
+        "It talks, it moves its mouth, maybe its eyes.",
+        "It has personalities, skills, and maybe no wires at all.",
+        "Tonight it gets the floor."
+      ],
+      "note": "Open with your own robot doing its best trick. Invite guests for the show and tell half."
+    },
+    {
+      "n": 2,
+      "kicker": "SUPPLIES CHECKLIST",
+      "title": "What each robot needs tonight",
+      "bullets": [
+        "☐ Your robot, charged if it runs on a Pi",
+        "Bring: your laptop and your Deepgram key"
+      ],
+      "note": "Helper table: catch-up kits (ready Class 1 robots, eye kits), spare charged batteries, spare cables. For the show: a phone tripod, a plain backdrop, a mic or quiet corner, voting cards."
+    },
+    {
+      "n": 3,
+      "kicker": "POLISH · 30 MIN",
+      "title": "Get it ready",
+      "bullets": [
+        "Missed a class? Helpers have kits to catch up.",
+        "Fix anything wobbly, buzzing or slow.",
+        "Pick your demo: one personality switch and one skill.",
+        "Tune Patience for a full room so it doesn't talk over people.",
+        "Rehearse once with a partner."
+      ],
+      "note": "Walk the room and push people to keep the demo short: one switch, one skill, one laugh."
+    },
+    {
+      "n": 4,
+      "kicker": "SHOW AND TELL · 50 MIN",
+      "title": "Show it off",
+      "bullets": [
+        "Two minutes each: introduce your robot and let it introduce itself.",
+        "Switch it to another personality.",
+        "Show its best skill live: a Muni trip, a timer, a fact, a coin flip.",
+        "We film every robot. Share yours with #RobotLunchLab."
+      ],
+      "note": "Run the order by table. Keep a timer visible. If a robot freezes, the builder can demo from the laptop: it's the same page."
+    },
+    {
+      "n": 5,
+      "kicker": "VOTE",
+      "title": "And the winners are",
+      "bullets": [
+        "Best personality",
+        "Best skill",
+        "Best look",
+        "Most likely to take over The Hub"
+      ],
+      "note": "Hand out voting cards at the start of show and tell, count during the last demos."
+    },
+    {
+      "n": 6,
+      "kicker": "WRAP",
+      "title": "Five classes, one robot",
+      "bullets": [
+        "A robot that listens, thinks, talks, moves, looks things up and gets you to the bus on time.",
+        "Thank you for building with us."
+      ],
+      "note": "Ask what people would add next. Collect ideas for the next series."
+    }
+  ],
+  "flow": [
+    {
+      "type": "slides",
+      "title": "Polish",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "type": "runner",
+      "title": "Polish your robot",
+      "note": "Open this page on the robot's Pi, or on your laptop if your robot runs from it."
+    },
+    {
+      "type": "slides",
+      "title": "Show and tell",
+      "from": 4,
+      "to": 6
+    }
+  ],
+  "sections": [],
+  "troubleshooting": [
+    "Behind? Ask a helper for the kit for the stage you're on. You can demo at any stage, from a laptop or a Pi.",
+    "It talks over people in the noisy room: raise Patience a little, or switch off barge-in.",
+    "The battery dies mid-demo: helpers have charged spares, or run it from your laptop.",
+    "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome (or Chromium on a Raspberry Pi).",
+    "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
+    "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the power lead is in a charger or power bank, nothing is on pin 40, and the ground jumper to pin 23 is in.",
+    "It cuts you off: raise Patience. It's slow to answer: lower it.",
+    "It talks to itself, or stops mid-sentence for no reason: it's hearing its own voice. Switch off Let me interrupt it (barge-in), or move the laptop away from the robot's speaker.",
+    "Deepgram stopped the session: check the key was pasted whole, and that the account has credit."
+  ]
+}
