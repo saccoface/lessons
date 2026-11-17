@@ -44,7 +44,7 @@
     {
       "n": 3,
       "kicker": "",
-      "title": "What Deepgram does",
+      "title": "First, a favor: join our Discord",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/03.png"
@@ -52,7 +52,7 @@
     {
       "n": 4,
       "kicker": "",
-      "title": "Amanda, over to you",
+      "title": "What Deepgram does",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/04.png"
@@ -60,7 +60,7 @@
     {
       "n": 5,
       "kicker": "",
-      "title": "How businesses use AI phone agents",
+      "title": "Vitali, over to you",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/05.png"
@@ -68,7 +68,7 @@
     {
       "n": 6,
       "kicker": "",
-      "title": "I find a reason to use mine almost every day",
+      "title": "What businesses use them for",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/06.png",
@@ -86,7 +86,7 @@
     {
       "n": 7,
       "kicker": "",
-      "title": "First decision: what’s yours for?",
+      "title": "I can find a use for it every day",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/07.png"
@@ -94,7 +94,7 @@
     {
       "n": 8,
       "kicker": "",
-      "title": "You will call a phone number, and something you built will pick up",
+      "title": "Newest: a payphone in a video game",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/08.png"
@@ -102,7 +102,7 @@
     {
       "n": 9,
       "kicker": "",
-      "title": "I drive, you follow",
+      "title": "What’s yours for?",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/09.png"
@@ -110,7 +110,7 @@
     {
       "n": 10,
       "kicker": "",
-      "title": "Every voice agent is three parts",
+      "title": "I drive, you follow",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/10.png"
@@ -118,7 +118,7 @@
     {
       "n": 11,
       "kicker": "",
-      "title": "Two companies, two jobs",
+      "title": "Three parts to every agent",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/11.png"
@@ -126,7 +126,7 @@
     {
       "n": 12,
       "kicker": "",
-      "title": "Two LLMs, built by Deepgram",
+      "title": "Tonight’s phone agent",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/12.png"
@@ -150,7 +150,7 @@
     {
       "n": 15,
       "kicker": "",
-      "title": "Name your key vapi-nov17",
+      "title": "What an API key is",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/15.png"
@@ -158,7 +158,7 @@
     {
       "n": 16,
       "kicker": "",
-      "title": "What an API key actually is",
+      "title": "What tonight costs you",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/16.png"
@@ -166,7 +166,7 @@
     {
       "n": 17,
       "kicker": "",
-      "title": "What tonight costs you",
+      "title": "The Flux interview",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/17.png"
@@ -174,7 +174,7 @@
     {
       "n": 18,
       "kicker": "",
-      "title": "The Flux interview",
+      "title": "That giant thing it just wrote",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/18.png"
@@ -182,7 +182,7 @@
     {
       "n": 19,
       "kicker": "",
-      "title": "That giant thing it just wrote",
+      "title": "Hand the key to Vapi",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/19.png"
@@ -190,7 +190,7 @@
     {
       "n": 20,
       "kicker": "",
-      "title": "Hand the key to Vapi",
+      "title": "Create the assistant",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/20.png"
@@ -198,7 +198,7 @@
     {
       "n": 21,
       "kicker": "",
-      "title": "Create the assistant",
+      "title": "A tour before we touch anything",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/21.png"
@@ -206,7 +206,7 @@
     {
       "n": 22,
       "kicker": "",
-      "title": "A tour before we touch anything",
+      "title": "Transcriber, Model, Voice",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/22.png"
@@ -214,7 +214,7 @@
     {
       "n": 23,
       "kicker": "",
-      "title": "Transcriber, Model, Voice",
+      "title": "The ears: Deepgram Flux",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/23.png"
@@ -222,7 +222,7 @@
     {
       "n": 24,
       "kicker": "",
-      "title": "The ears: Deepgram Flux",
+      "title": "Flux knows when you’re done",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/24.png"
@@ -230,7 +230,7 @@
     {
       "n": 25,
       "kicker": "",
-      "title": "Flux knows when you’ve stopped talking",
+      "title": "It mishears less, too",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/25.png"
@@ -238,7 +238,7 @@
     {
       "n": 26,
       "kicker": "",
-      "title": "And it mishears less than anything else",
+      "title": "The mouth: a Deepgram voice",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/26.png"
@@ -246,7 +246,7 @@
     {
       "n": 27,
       "kicker": "",
-      "title": "The brain: Claude Haiku",
+      "title": "People judge the pause",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/27.png"
@@ -254,7 +254,7 @@
     {
       "n": 28,
       "kicker": "",
-      "title": "On a phone call, fast beats brilliant",
+      "title": "When it picks up",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/28.png"
@@ -262,7 +262,7 @@
     {
       "n": 29,
       "kicker": "",
-      "title": "The mouth: a Deepgram voice",
+      "title": "Paste, then publish",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/29.png"
@@ -270,7 +270,7 @@
     {
       "n": 30,
       "kicker": "",
-      "title": "The pause before it speaks is what people judge",
+      "title": "What a phone prompt needs",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/30.png"
@@ -278,7 +278,7 @@
     {
       "n": 31,
       "kicker": "",
-      "title": "What it says when it picks up",
+      "title": "Talk to it first",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/31.png"
@@ -286,7 +286,7 @@
     {
       "n": 32,
       "kicker": "",
-      "title": "Paste your prompt in, then publish",
+      "title": "Listen for these four things",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/32.png"
@@ -294,7 +294,7 @@
     {
       "n": 33,
       "kicker": "",
-      "title": "Three things a phone prompt needs",
+      "title": "Get your free phone number",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/33.png"
@@ -302,7 +302,7 @@
     {
       "n": 34,
       "kicker": "",
-      "title": "Talk to it before you give it a phone number",
+      "title": "The fine print on free numbers",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/34.png"
@@ -310,7 +310,7 @@
     {
       "n": 35,
       "kicker": "",
-      "title": "Listen for these four things",
+      "title": "Connect the number",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/35.png"
@@ -318,7 +318,7 @@
     {
       "n": 36,
       "kicker": "",
-      "title": "Get your free phone number",
+      "title": "Now call your number.",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/36.png"
@@ -326,7 +326,7 @@
     {
       "n": 37,
       "kicker": "",
-      "title": "The fine print on free numbers",
+      "title": "Four things that go wrong",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/37.png"
@@ -334,7 +334,7 @@
     {
       "n": 38,
       "kicker": "",
-      "title": "Point the number at your assistant",
+      "title": "Change one thing, call again",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/38.png"
@@ -342,7 +342,7 @@
     {
       "n": 39,
       "kicker": "",
-      "title": "Pick up your phone and call your number",
+      "title": "Three knobs you can reach",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/39.png"
@@ -350,7 +350,7 @@
     {
       "n": 40,
       "kicker": "",
-      "title": "Four things that go wrong",
+      "title": "What a real minute costs",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/40.png"
@@ -358,7 +358,7 @@
     {
       "n": 41,
       "kicker": "",
-      "title": "Change one thing, call again",
+      "title": "Before you close the laptop",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/41.png"
@@ -366,7 +366,7 @@
     {
       "n": 42,
       "kicker": "",
-      "title": "Three knobs, and you can reach all of them",
+      "title": "Keep going",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/42.png"
@@ -374,7 +374,7 @@
     {
       "n": 43,
       "kicker": "",
-      "title": "What a real minute costs",
+      "title": "Your calls are recorded",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/43.png"
@@ -382,7 +382,7 @@
     {
       "n": 44,
       "kicker": "",
-      "title": "Before you close the laptop",
+      "title": "December 1: Break My Agent",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/44.png"
@@ -390,7 +390,7 @@
     {
       "n": 45,
       "kicker": "",
-      "title": "If you want to keep going",
+      "title": "Also on December 1: tools",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/45.png"
@@ -398,7 +398,7 @@
     {
       "n": 46,
       "kicker": "",
-      "title": "Part two: build it, break it, fix it",
+      "title": "You built a phone agent.",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/46.png"
@@ -406,10 +406,18 @@
     {
       "n": 47,
       "kicker": "",
-      "title": "You built a thing that answers the phone",
+      "title": "Up next: Jax from ADAL",
       "bullets": [],
       "note": "",
       "image": "/slides/vapi-partner-event/47.png"
+    },
+    {
+      "n": 48,
+      "kicker": "",
+      "title": "Come back next year",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/48.png"
     }
   ],
   "flow": [
@@ -417,7 +425,7 @@
       "type": "slides",
       "title": "Before the interview",
       "from": 1,
-      "to": 18
+      "to": 17
     },
     {
       "type": "runner",
@@ -427,8 +435,8 @@
     {
       "type": "slides",
       "title": "Building it in Vapi",
-      "from": 19,
-      "to": 47
+      "from": 18,
+      "to": 48
     }
   ],
   "sections": [],
