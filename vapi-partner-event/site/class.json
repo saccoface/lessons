@@ -71,7 +71,15 @@
       "title": "What businesses use them for",
       "bullets": [],
       "note": "",
-      "image": "/slides/vapi-partner-event/06.png",
+      "image": "/slides/vapi-partner-event/06.png"
+    },
+    {
+      "n": 7,
+      "kicker": "",
+      "title": "I can find a use for it every day",
+      "bullets": [],
+      "note": "",
+      "image": "/slides/vapi-partner-event/07.png",
       "audio": [
         {
           "label": "Bat information line — the call",
@@ -82,14 +90,6 @@
           "src": "/slides/vapi-partner-event/fantasy-football.m4a"
         }
       ]
-    },
-    {
-      "n": 7,
-      "kicker": "",
-      "title": "I can find a use for it every day",
-      "bullets": [],
-      "note": "",
-      "image": "/slides/vapi-partner-event/07.png"
     },
     {
       "n": 8,
