@@ -336,8 +336,12 @@
     {
      "id": "qb-key",
      "title": "Get your Deepgram API key",
-     "instruction": "Open console.deepgram.com and sign up (no credit card; new accounts get $200 of free credit). On the left, open Settings, then API Keys, then Create a New API Key. Name it break-my-agent, keep the default permissions, and create it. Copy the key straight away: it is shown only once. Keep it somewhere private, never in a chat, doc or screenshot.",
-     "check": "The key is saved somewhere private."
+     "instruction": "Open console.deepgram.com and sign up (no credit card; new accounts get $200 of free credit). In the left sidebar, under Manage, click API keys, then the pink Create a new API key button. Name it break-my-agent, keep the default permissions, and create it. Copy the key straight away: it is shown only once. Keep it somewhere private, never in a chat, doc or screenshot.",
+     "check": "The key is saved somewhere private.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/dg-api-key.jpg",
+      "alt": "Deepgram console API keys page with API keys in the sidebar and the Create a new API key button"
+     }
     },
     {
      "id": "qb-connect",
