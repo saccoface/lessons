@@ -4,8 +4,8 @@
  "title": "Level Up Your Phone Agent",
  "icon": "🛠️",
  "owner": "Dana Sacco",
- "summary": "Teach your phone agent to do real things: book your calendar, log calls to a sheet, post to Slack, or run a whole n8n workflow mid-call. Three self-paced stations, from your very first agent to custom workflows.",
- "detail": "Three stations, at your own pace, headphones on. Station 1 is for anyone without a phone agent yet: build one in about 20 minutes with Deepgram Flux, Claude Haiku and a free Vapi number. Station 2 uses Vapi Composer, a chat box that builds for you, and Vapi's built-in tools: Google Calendar, Google Sheets, Slack, transfers and more. Station 3 connects your agent to n8n so one phone call can run a whole workflow. Show and tell at the end.",
+ "summary": "Teach your phone agent to do real things: book your calendar, log calls to a sheet, post to Slack, or reach apps Vapi doesn’t have, like Spotify and Notion, through n8n. Three self-paced stations, from your very first agent to custom workflows.",
+ "detail": "Three stations, at your own pace, headphones on. Station 1 is for anyone without a phone agent yet: build one in about 20 minutes with Deepgram Flux, Claude Haiku and a free Vapi number. Station 2 uses Vapi Composer, a chat box that builds for you, and Vapi's built-in tools: Google Calendar, Google Sheets, Slack, transfers and more. Station 3 connects your agent to n8n for the apps Vapi doesn’t have built in, like adding a song to a Spotify playlist or saving an idea to Notion. Show and tell at the end.",
  "outcome": "A phone agent with at least one working tool, so a phone call makes something real happen.",
  "audience": "Mixed technical and non-technical",
  "type": "Workshop",
@@ -19,7 +19,7 @@
   "Came to Build Your First Phone Agent? Bring your Vapi login. Your agent is ready for station 2.",
   "New? Nothing to set up in advance; station 1 covers it.",
   "For tools: a Google or Slack account you don't mind filling with test data.",
-  "Station 3: an n8n account (free trial)."
+  "Station 3: an n8n account. The free 14-day trial asks for a credit card."
  ],
  "artifact": "A live phone agent that books, logs or posts something real when you call it.",
  "links": {
@@ -144,27 +144,29 @@
   {
    "n": 10,
    "kicker": "STATION 3",
-   "title": "n8n: when you want a whole workflow",
+   "title": "n8n: the apps Vapi doesn't have",
    "bullets": [
-    "n8n is a visual automation tool: boxes joined by lines",
-    "Vapi calls an n8n webhook in the middle of a phone call",
-    "n8n does several steps: check the calendar, book, email, post to Slack",
-    "Then it sends one answer back for the agent to say",
-    "Free 14-day n8n Cloud trial, no install"
+    "Vapi already does calendar, Sheets, Slack and transfers on its own",
+    "n8n connects your agent to hundreds of other apps",
+    "Vapi calls an n8n webhook in the middle of the phone call",
+    "n8n does the work, then sends back one sentence for the agent to say",
+    "Free 14-day n8n Cloud trial, no install. It asks for a credit card: cancel before day 14 if you don't want to pay."
    ],
-   "note": "DEMO: your requestSong tool is the live example: a Vapi API Request tool that sends song and artist to an n8n webhook. Show the tool, then the n8n workflow behind it."
+   "note": "Make the point clearly: if Vapi has a built-in tool for it, use Vapi (station 2). Reach for n8n when the app you want isn't in Vapi's Create Tool menu, or when one call should do several things in a row."
   },
   {
    "n": 11,
    "kicker": "STATION 3",
-   "title": "Three workflows to try",
+   "title": "What n8n adds",
    "bullets": [
-    "Receptionist: check availability, book it, confirm by email",
-    "Lead catcher: add a row to Google Sheets, email a summary to you",
-    "Team alert: post the caller's request to Slack",
-    "Same shape every time: Webhook, do things, Respond to Webhook"
+    "Spotify: \"Add Mr. Brightside to the party playlist\" (tonight's demo)",
+    "Notion: save a caller's idea, order or bug report to your Notion database",
+    "HubSpot: turn every caller into a lead in your CRM",
+    "Shopify: \"Where's my order?\" The agent looks it up and reads back the status.",
+    "Philips Hue: \"Turn the office lights purple\"",
+    "Chain them: one call adds the song AND posts it to Discord"
    ],
-   "note": "Recommend the lead catcher for first-timers. It's the one most likely to work in an hour."
+   "note": "DEMO: call your agent and request a song. Show the requestSong tool in Vapi, then the n8n workflow: Webhook, Spotify Search Song, Add an item to a playlist, Respond to Webhook. Open the playlist so the room sees the song land."
   },
   {
    "n": 12,
@@ -400,12 +402,12 @@
   },
   {
    "title": "Station 3: workflows with n8n",
-   "summary": "For the more technical. n8n chains several steps together (check the calendar, book, email, post to Slack) and Vapi calls it mid-call. Shape: Vapi API Request tool → n8n Webhook → your steps → Respond to Webhook → the agent says the answer.",
+   "summary": "For the more technical. Use n8n for the apps Vapi doesn’t have built in (Spotify, Notion, HubSpot, Shopify, Philips Hue, Discord and hundreds more), or to chain several apps in one call. Shape: Vapi API Request tool → n8n Webhook → your steps → Respond to Webhook → the agent says the answer.",
    "steps": [
     {
      "id": "n-signup",
      "title": "Get n8n",
-     "instruction": "Sign up at n8n.io for the free 14-day Cloud trial. Create a new workflow.",
+     "instruction": "Sign up at n8n.io for the free 14-day Cloud trial. It asks for a credit card to start; you aren’t charged during the 14 days, and you can cancel before then in the Cloud console under Billing. Then create a new workflow.",
      "check": "You have an empty workflow open."
     },
     {
@@ -421,7 +423,7 @@
     {
      "id": "n-steps",
      "title": "Add your steps",
-     "instruction": "Pick a recipe. The caller’s details arrive in the webhook body (for example {{ $json.body.song }}). The example in the picture is Dana’s song line: Webhook → Spotify Search Song → Add an item to a playlist → Respond to Webhook.\n• Song request (fun demo): Spotify, Search → Spotify, Add an item to a playlist.\n• Lead catcher (easiest): Google Sheets, Append Row → Gmail, Send a summary to yourself.\n• Receptionist: Google Calendar, Get Availability → IF free → Google Calendar, Create Event → Gmail confirmation.\n• Team alert: Slack, Send Message with the caller’s request.\nSign in to Google or Slack inside each node when it asks.",
+     "instruction": "Pick a recipe. The caller’s details arrive in the webhook body (for example {{ $json.body.song }}). The example in the picture is Dana’s song line: Webhook → Spotify Search Song → Add an item to a playlist → Respond to Webhook.\n• Song request (the demo): Spotify, Search → Spotify, Add an item to a playlist. Reply: 'Added <song> to the playlist.'\n• Idea catcher: Notion, Create a database page with the caller’s name and idea. Reply: 'Saved your idea.'\n• Lead to CRM: HubSpot, Create or update a contact → Discord, Send a message to your team. Reply: 'Got it, someone will follow up.'\n• Order status: Shopify, Get an order by number. Reply with its status for the agent to read out.\nSign in to Spotify, Notion, HubSpot or Shopify inside each node when it asks (n8n calls this a credential).",
      "check": "Each node runs green when you test it with sample data.",
      "image": {
       "src": "/lesson-shots/vapi-quick-build/n8n-workflow.jpg",
@@ -467,7 +469,7 @@
     {
      "id": "n-test",
      "title": "Call it and watch it run",
-     "instruction": "Call your agent and ask for the thing. In n8n, open Executions to watch the run. In Vapi, Logs, then Calls shows what the agent sent. Check the sheet, calendar, inbox or Slack.",
+     "instruction": "Call your agent and ask for the thing. In n8n, open Executions to watch the run. In Vapi, Logs, then Calls shows what the agent sent. Check the playlist, Notion page, CRM or Discord channel.",
      "check": "The phone call made something real happen."
     }
    ]
