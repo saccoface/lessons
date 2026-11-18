@@ -19,7 +19,7 @@
   "Came to Build Your First Phone Agent? Bring your Vapi login. Your agent is ready for station 2.",
   "New? Nothing to set up in advance; station 1 covers it.",
   "For tools: a Google or Slack account you don't mind filling with test data.",
-  "Station 3: an n8n account. The free 14-day trial asks for a credit card."
+  "Station 3: a free n8n account (14-day trial, no credit card)."
  ],
  "artifact": "A live phone agent that books, logs or posts something real when you call it.",
  "links": {
@@ -150,7 +150,7 @@
     "n8n connects your agent to hundreds of other apps",
     "Vapi calls an n8n webhook in the middle of the phone call",
     "n8n does the work, then sends back one sentence for the agent to say",
-    "Free 14-day n8n Cloud trial, no install. It asks for a credit card: cancel before day 14 if you don't want to pay."
+    "Free 14-day n8n Cloud trial: no credit card, no install"
    ],
    "note": "Make the point clearly: if Vapi has a built-in tool for it, use Vapi (station 2). Reach for n8n when the app you want isn't in Vapi's Create Tool menu, or when one call should do several things in a row."
   },
@@ -407,7 +407,7 @@
     {
      "id": "n-signup",
      "title": "Get n8n",
-     "instruction": "Sign up at n8n.io for the free 14-day Cloud trial. It asks for a credit card to start; you aren’t charged during the 14 days, and you can cancel before then in the Cloud console under Billing. Then create a new workflow.",
+     "instruction": "Sign up at n8n.io for the free 14-day Cloud trial. No credit card needed. There’s no free Cloud plan after the 14 days (n8n’s free Community Edition is self-hosted only), so it’s perfect for tonight. Then create a new workflow.",
      "check": "You have an empty workflow open."
     },
     {
