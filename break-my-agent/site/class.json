@@ -342,56 +342,92 @@
     {
      "id": "qb-connect",
      "title": "Give the key to Vapi",
-     "instruction": "Sign up at vapi.ai and open dashboard.vapi.ai. In the left sidebar, scroll down to Integrations. Under Voice Providers, click Deepgram, paste your key into API Key and Save.",
-     "check": "Deepgram shows as Connected."
+     "instruction": "Sign up at vapi.ai and open dashboard.vapi.ai. In the left sidebar, click Integrations (hover over the icons to see their names). Under Voice Providers, click the Deepgram card, paste your key and save. Tip: the search box at the top finds any provider.",
+     "check": "Deepgram moves up to the Connected row.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-integrations.jpg",
+      "alt": "Vapi Integrations page: Deepgram under Connected and under Voice Providers"
+     }
     },
     {
      "id": "qb-create",
-     "title": "Create a blank assistant",
-     "instruction": "In the sidebar, click Assistants, then Create Assistant, then Blank Template. Name it something you will recognise, like pizza line or front desk. The page has three cards: Transcriber (the ears), Model (the brain) and Voice (the mouth).",
-     "check": "You are on your new assistant’s page."
+     "title": "Create an assistant",
+     "instruction": "In the sidebar, click Assistants, then the green Create Assistant button. It makes one straight away with Vapi's default settings, so next you swap the three cards on its page: Transcriber (the ears), Model (the brain) and Voice (the mouth). Each card has a pencil icon in its corner.",
+     "check": "You are on your new assistant’s page and can see the three cards.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-create.jpg",
+      "alt": "Vapi Assistants panel with the green Create Assistant button"
+     }
     },
     {
      "id": "qb-ears",
      "title": "Ears: Deepgram Flux",
-     "instruction": "Open the Transcriber card. Provider: Deepgram. Model: Flux General English (scroll past the Nova models). Flux knows when you have finished talking, so your agent stops cutting people off.",
-     "check": "Transcriber says Deepgram, Flux."
+     "instruction": "Click the pencil on the Transcriber card. Click the Model box, type flux, and pick Flux General English. Flux knows when you have finished talking, so your agent stops cutting people off. Close the panel with the X.",
+     "check": "The Transcriber card says Flux General English, Deepgram.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-transcriber.jpg",
+      "alt": "Vapi Transcriber Settings: searching flux shows Flux General English and Flux General Multilingual"
+     }
     },
     {
      "id": "qb-brain",
      "title": "Brain: Claude Haiku",
-     "instruction": "Open the Model card. Provider: Anthropic. Model: Claude Haiku. It is the fastest brain on the list, and you will see the latency number at the top of the page drop.",
-     "check": "Model says Anthropic, Claude Haiku."
+     "instruction": "Click the pencil on the Model card. Click the Model box, type haiku, and pick Claude Haiku 4.5 with the orange Anthropic logo. It is the fastest on the list: watch the Latency number at the top drop.",
+     "check": "The Model card says Claude Haiku 4.5, Anthropic.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-model.jpg",
+      "alt": "Vapi Model Settings: searching haiku shows Claude Haiku 4.5 and 5.5"
+     }
     },
     {
      "id": "qb-mouth",
      "title": "Mouth: a Deepgram Flux voice",
-     "instruction": "Open the Voice card. Provider: Deepgram. Model: Flux. Pick a voice: preview two or three and choose one that fits your agent. Don’t see Flux in the list? Choose Aura-2 instead.",
-     "check": "Voice says Deepgram, Flux, and a voice you like."
+     "instruction": "Click the pencil on the Voice card. Click the Voice model box, type flux, and pick Flux (Deepgram). Then open the Voice box under it, preview two or three voices and choose one that fits your agent.",
+     "check": "The Voice card shows a Deepgram Flux voice you like.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-voice.jpg",
+      "alt": "Vapi Voice Settings: searching flux in Voice model shows Deepgram Flux"
+     }
     },
     {
      "id": "qb-prompt",
      "title": "Write your own prompt",
-     "instruction": "First Message: one short sentence that ends in a question, like 'Tony’s Pizza, what can I get you?'. System Prompt: write who it is, its one job, what to ask for and how to talk. A template:\n```\nYou are [name], the phone assistant for [business].\nYour one job: [take an order / book a visit / answer questions about ...].\nAsk for: [name], [what they want], [when]. One question at a time.\nKeep every reply to one or two short sentences. This is a phone call: no lists or links.\nIf you don't know something, say so and offer to take a message.\n```\nStuck for an idea? Ask ChatGPT or Claude: 'Write a short phone agent prompt for…'. Then press Publish.",
-     "check": "Your prompt is in and you pressed Publish."
+     "instruction": "The big System prompt box is under the three cards. Write who it is, its one job, what to ask for and how to talk. A template:\n```\nYou are [name], the phone assistant for [business].\nYour one job: [take an order / book a visit / answer questions about ...].\nAsk for: [name], [what they want], [when]. One question at a time.\nKeep every reply to one or two short sentences. This is a phone call: no lists or links.\nIf you don't know something, say so and offer to take a message.\n```\nScroll to the bottom for First message: one short sentence that ends in a question, like 'Tony’s Pizza, what can I get you?'. Stuck for an idea? Ask ChatGPT or Claude: 'Write a short phone agent prompt for…'. Then click the orange Publish button, top right.",
+     "check": "Your prompt is in and you pressed Publish.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-prompt.jpg",
+      "alt": "Vapi assistant page: System prompt box, First message at the bottom, Talk and Publish at the top right"
+     }
     },
     {
      "id": "qb-talk",
      "title": "Talk to it in the browser",
-     "instruction": "Press Talk (top right), allow the microphone and talk to it with your headphones on. Cutting you off? Check the transcriber is Flux. Rambling? Add 'two sentences max' near the top of the prompt. Change one thing, Publish, Talk again.",
-     "check": "It answers you and stays on its job."
+     "instruction": "Click Talk (top right, next to Publish), allow the microphone and talk to it with your headphones on. Cutting you off? Check the transcriber is Flux. Rambling? Add 'two sentences max' near the top of the prompt. Change one thing, Publish, Talk again.",
+     "check": "It answers you and stays on its job.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-cards.jpg",
+      "alt": "Vapi assistant page with Flux, Claude Haiku 4.5 and Deepgram cards, and the Talk button at the top right"
+     }
     },
     {
      "id": "qb-number",
      "title": "Get a free phone number",
-     "instruction": "In the sidebar, click Phone Numbers, then Create Phone Number, then Free Vapi Number. Pick a US area code (415 is often sold out; try 707 or 628) and Create. Free numbers are US only, take incoming calls and can’t dial out. It can take a couple of minutes to go live.",
-     "check": "Your new number is in the list."
+     "instruction": "In the sidebar, click Phone Numbers, then Create Phone Number. The window opens on Import Twilio: click Free Vapi Number on the left instead. Type a US area code (415 is often sold out; try 707 or 628) and click Create. Free numbers are US only, one per account, and take incoming calls only. It can take a couple of minutes to go live.",
+     "check": "Your new number is in the list.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-number.jpg",
+      "alt": "Vapi Create Phone Number window with Free Vapi Number selected and the Area code box"
+     }
     },
     {
      "id": "qb-connect-number",
      "title": "Point the number at your agent and call it",
-     "instruction": "Open your number. Under Inbound Settings, choose your assistant and Save. Call the number from your phone. Bam: you have a phone agent.",
-     "check": "It picks up when you call."
+     "instruction": "Open your number and scroll down to Inbound Settings. Under Assistant, choose your assistant. If the top right button says Save, click it; when it says Saved, you're set. Call the number from your phone. Bam: you have a phone agent.",
+     "check": "It picks up when you call.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-inbound.jpg",
+      "alt": "Vapi phone number Inbound Settings with an assistant chosen"
+     }
     }
    ]
   },

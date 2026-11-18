@@ -152,7 +152,7 @@
     "Then it sends one answer back for the agent to say",
     "Free 14-day n8n Cloud trial, no install"
    ],
-   "note": "DEMO: show a finished workflow: Webhook, Google Calendar, Respond to Webhook. Then the Vapi API Request tool pointing at the webhook's Production URL."
+   "note": "DEMO: your requestSong tool is the live example: a Vapi API Request tool that sends song and artist to an n8n webhook. Show the tool, then the n8n workflow behind it. (Rebuild the n8n side first: the old n8n Cloud workspace is gone.)"
   },
   {
    "n": 11,
@@ -241,56 +241,92 @@
     {
      "id": "qb-connect",
      "title": "Give the key to Vapi",
-     "instruction": "Sign up at vapi.ai and open dashboard.vapi.ai. In the left sidebar, scroll down to Integrations. Under Voice Providers, click Deepgram, paste your key into API Key and Save.",
-     "check": "Deepgram shows as Connected."
+     "instruction": "Sign up at vapi.ai and open dashboard.vapi.ai. In the left sidebar, click Integrations (hover over the icons to see their names). Under Voice Providers, click the Deepgram card, paste your key and save. Tip: the search box at the top finds any provider.",
+     "check": "Deepgram moves up to the Connected row.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-integrations.jpg",
+      "alt": "Vapi Integrations page: Deepgram under Connected and under Voice Providers"
+     }
     },
     {
      "id": "qb-create",
-     "title": "Create a blank assistant",
-     "instruction": "In the sidebar, click Assistants, then Create Assistant, then Blank Template. Name it something you will recognise, like pizza line or front desk. The page has three cards: Transcriber (the ears), Model (the brain) and Voice (the mouth).",
-     "check": "You are on your new assistant’s page."
+     "title": "Create an assistant",
+     "instruction": "In the sidebar, click Assistants, then the green Create Assistant button. It makes one straight away with Vapi's default settings, so next you swap the three cards on its page: Transcriber (the ears), Model (the brain) and Voice (the mouth). Each card has a pencil icon in its corner.",
+     "check": "You are on your new assistant’s page and can see the three cards.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-create.jpg",
+      "alt": "Vapi Assistants panel with the green Create Assistant button"
+     }
     },
     {
      "id": "qb-ears",
      "title": "Ears: Deepgram Flux",
-     "instruction": "Open the Transcriber card. Provider: Deepgram. Model: Flux General English (scroll past the Nova models). Flux knows when you have finished talking, so your agent stops cutting people off.",
-     "check": "Transcriber says Deepgram, Flux."
+     "instruction": "Click the pencil on the Transcriber card. Click the Model box, type flux, and pick Flux General English. Flux knows when you have finished talking, so your agent stops cutting people off. Close the panel with the X.",
+     "check": "The Transcriber card says Flux General English, Deepgram.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-transcriber.jpg",
+      "alt": "Vapi Transcriber Settings: searching flux shows Flux General English and Flux General Multilingual"
+     }
     },
     {
      "id": "qb-brain",
      "title": "Brain: Claude Haiku",
-     "instruction": "Open the Model card. Provider: Anthropic. Model: Claude Haiku. It is the fastest brain on the list, and you will see the latency number at the top of the page drop.",
-     "check": "Model says Anthropic, Claude Haiku."
+     "instruction": "Click the pencil on the Model card. Click the Model box, type haiku, and pick Claude Haiku 4.5 with the orange Anthropic logo. It is the fastest on the list: watch the Latency number at the top drop.",
+     "check": "The Model card says Claude Haiku 4.5, Anthropic.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-model.jpg",
+      "alt": "Vapi Model Settings: searching haiku shows Claude Haiku 4.5 and 5.5"
+     }
     },
     {
      "id": "qb-mouth",
      "title": "Mouth: a Deepgram Flux voice",
-     "instruction": "Open the Voice card. Provider: Deepgram. Model: Flux. Pick a voice: preview two or three and choose one that fits your agent. Don’t see Flux in the list? Choose Aura-2 instead.",
-     "check": "Voice says Deepgram, Flux, and a voice you like."
+     "instruction": "Click the pencil on the Voice card. Click the Voice model box, type flux, and pick Flux (Deepgram). Then open the Voice box under it, preview two or three voices and choose one that fits your agent.",
+     "check": "The Voice card shows a Deepgram Flux voice you like.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-voice.jpg",
+      "alt": "Vapi Voice Settings: searching flux in Voice model shows Deepgram Flux"
+     }
     },
     {
      "id": "qb-prompt",
      "title": "Write your own prompt",
-     "instruction": "First Message: one short sentence that ends in a question, like 'Tony’s Pizza, what can I get you?'. System Prompt: write who it is, its one job, what to ask for and how to talk. A template:\n```\nYou are [name], the phone assistant for [business].\nYour one job: [take an order / book a visit / answer questions about ...].\nAsk for: [name], [what they want], [when]. One question at a time.\nKeep every reply to one or two short sentences. This is a phone call: no lists or links.\nIf you don't know something, say so and offer to take a message.\n```\nStuck for an idea? Ask ChatGPT or Claude: 'Write a short phone agent prompt for…'. Then press Publish.",
-     "check": "Your prompt is in and you pressed Publish."
+     "instruction": "The big System prompt box is under the three cards. Write who it is, its one job, what to ask for and how to talk. A template:\n```\nYou are [name], the phone assistant for [business].\nYour one job: [take an order / book a visit / answer questions about ...].\nAsk for: [name], [what they want], [when]. One question at a time.\nKeep every reply to one or two short sentences. This is a phone call: no lists or links.\nIf you don't know something, say so and offer to take a message.\n```\nScroll to the bottom for First message: one short sentence that ends in a question, like 'Tony’s Pizza, what can I get you?'. Stuck for an idea? Ask ChatGPT or Claude: 'Write a short phone agent prompt for…'. Then click the orange Publish button, top right.",
+     "check": "Your prompt is in and you pressed Publish.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-prompt.jpg",
+      "alt": "Vapi assistant page: System prompt box, First message at the bottom, Talk and Publish at the top right"
+     }
     },
     {
      "id": "qb-talk",
      "title": "Talk to it in the browser",
-     "instruction": "Press Talk (top right), allow the microphone and talk to it with your headphones on. Cutting you off? Check the transcriber is Flux. Rambling? Add 'two sentences max' near the top of the prompt. Change one thing, Publish, Talk again.",
-     "check": "It answers you and stays on its job."
+     "instruction": "Click Talk (top right, next to Publish), allow the microphone and talk to it with your headphones on. Cutting you off? Check the transcriber is Flux. Rambling? Add 'two sentences max' near the top of the prompt. Change one thing, Publish, Talk again.",
+     "check": "It answers you and stays on its job.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-cards.jpg",
+      "alt": "Vapi assistant page with Flux, Claude Haiku 4.5 and Deepgram cards, and the Talk button at the top right"
+     }
     },
     {
      "id": "qb-number",
      "title": "Get a free phone number",
-     "instruction": "In the sidebar, click Phone Numbers, then Create Phone Number, then Free Vapi Number. Pick a US area code (415 is often sold out; try 707 or 628) and Create. Free numbers are US only, take incoming calls and can’t dial out. It can take a couple of minutes to go live.",
-     "check": "Your new number is in the list."
+     "instruction": "In the sidebar, click Phone Numbers, then Create Phone Number. The window opens on Import Twilio: click Free Vapi Number on the left instead. Type a US area code (415 is often sold out; try 707 or 628) and click Create. Free numbers are US only, one per account, and take incoming calls only. It can take a couple of minutes to go live.",
+     "check": "Your new number is in the list.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-number.jpg",
+      "alt": "Vapi Create Phone Number window with Free Vapi Number selected and the Area code box"
+     }
     },
     {
      "id": "qb-connect-number",
      "title": "Point the number at your agent and call it",
-     "instruction": "Open your number. Under Inbound Settings, choose your assistant and Save. Call the number from your phone. Bam: you have a phone agent.",
-     "check": "It picks up when you call."
+     "instruction": "Open your number and scroll down to Inbound Settings. Under Assistant, choose your assistant. If the top right button says Save, click it; when it says Saved, you're set. Call the number from your phone. Bam: you have a phone agent.",
+     "check": "It picks up when you call.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-inbound.jpg",
+      "alt": "Vapi phone number Inbound Settings with an assistant chosen"
+     }
     }
    ]
   },
@@ -300,39 +336,49 @@
    "steps": [
     {
      "id": "c-open",
-     "title": "Open Composer",
-     "instruction": "In the Vapi dashboard, click Composer in the sidebar. Set approvals to 'Ask before updates, deletes, runs, and publishing', so you see every change before it happens.",
-     "check": "Composer is open and waiting for a message."
-    },
-    {
-     "id": "c-load",
-     "title": "Point it at your agent",
-     "instruction": "Open your assistant and copy its ID (it’s near the name at the top). Paste it into Composer: 'Load my assistant <ID>. It’s a phone agent for <what it does>.'",
-     "check": "Composer describes your assistant back to you."
+     "title": "Open Composer on your agent",
+     "instruction": "Open your assistant’s page and click Composer (top right). It opens beside your agent and already knows which one you’re on. Leave the mode under the message box on Ask for approval, so you see every change before it happens. Not sure where to start? Click Improve this agent.",
+     "check": "Composer is open beside your assistant.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-composer.jpg",
+      "alt": "Vapi Composer panel beside an assistant, with an example request typed in"
+     }
     },
     {
      "id": "c-ask",
      "title": "Ask it to improve things",
-     "instruction": "Try a few of these, one at a time, and approve the changes you like:\n```\nKeep every answer to two sentences and sound friendlier.\nIf the caller goes quiet for 10 seconds, ask if they're still there, then end the call politely.\nAdd a tool that transfers the caller to my cell if they ask for a human.\nWhy does my agent keep interrupting people?\nGenerate a test suite for my agent.\n```\nPress Publish after changes, then Talk to hear the difference.",
+     "instruction": "Try a few of these, one at a time, and approve the changes you like:\n```\nKeep every answer to two sentences and sound friendlier.\nIf the caller goes quiet for 10 seconds, ask if they're still there, then end the call politely.\nAdd a tool that transfers the caller to my cell if they ask for a human.\nWhy does my agent keep interrupting people?\nGenerate a test suite for my agent.\n```\nApprove the changes you like, press Publish, then Talk to hear the difference.",
      "check": "At least one change is published and you can hear it."
     },
     {
      "id": "c-connect",
      "title": "Connect Google or Slack",
-     "instruction": "Built-in tools need a one-time connection: Integrations, then Tool Providers, then Google Calendar, Google Sheets or Slack, then Connect. Use a test calendar or a new sheet, not your real one.",
-     "check": "The provider shows as connected."
+     "instruction": "Built-in tools need a one-time connection. In the sidebar, click Integrations and type google or slack in the search box. Under Tool Providers, click Google Calendar, Google Sheets or Slack and connect your account. Use a test calendar or a new sheet, not your real one.",
+     "check": "The provider shows as connected.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-tool-providers.jpg",
+      "alt": "Vapi Integrations, Tool Providers with Google Calendar, Google Sheets and Slack"
+     }
     },
     {
      "id": "c-tool",
      "title": "Add a tool (or ask Composer to)",
-     "instruction": "Tools, then Create Tool. Pick one:\n• Google Calendar: make two tools, Check Availability and Create Event. Set the time zone (it defaults to UTC).\n• Google Sheets: Add Row. Paste the sheet ID (the part of the sheet’s URL between /d/ and /edit). Put headers in row 1: name, request, phone, time.\n• Slack: Send Message. Name the channel in the description, and invite the Vapi app to that channel.\nThe description matters: it’s how the agent knows WHEN to use the tool. Or tell Composer: 'I want my agent to check my calendar before booking appointments.'",
-     "check": "The tool is saved."
+     "instruction": "In the sidebar, click Tools, then Create Tool. Scroll the menu to Integrations and pick one:\n• Google Calendar: it has two kinds, Check Availability and Create Event. Make one of each. Set the time zone (it defaults to UTC).\n• Google Sheets: Add Row. Paste the sheet ID (the part of the sheet’s URL between /d/ and /edit). Put headers in row 1: name, request, phone, time.\n• Slack: Send Message. Name the channel in the description, and invite the Vapi app to that channel.\nOther handy ones in the same menu: Transfer Call, Hang Up, Send Text, Query (answers from your files).\nFill in the Description: it’s how the agent knows WHEN to use the tool. Or tell Composer: 'I want my agent to check my calendar before booking appointments.'",
+     "check": "The tool is saved.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-create-tool.jpg",
+      "alt": "Vapi Tools, Create Tool menu listing tool types"
+     }
     },
     {
      "id": "c-attach",
      "title": "Attach it and add the golden rule",
-     "instruction": "Open your assistant, then the Tools tab, then Add Tool, and pick your tool. In the System Prompt, add when to use it and the golden rule:\n```\nRead the details back and get a yes before you use any tool.\nOnly say something is booked or sent after the tool says it worked.\nIf a tool fails, say so and offer to take a message.\n```\nPublish.",
-     "check": "The tool is listed on your assistant and you pressed Publish."
+     "instruction": "Open your assistant, click the Tools tab, then Add tool, and pick your tool. In the System Prompt, add when to use it and the golden rule:\n```\nRead the details back and get a yes before you use any tool.\nOnly say something is booked or sent after the tool says it worked.\nIf a tool fails, say so and offer to take a message.\n```\nPublish.",
+     "check": "The tool is listed on your assistant and you pressed Publish.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-assistant-tools.jpg",
+      "alt": "Vapi assistant Tools tab with Add Tool"
+     }
     },
     {
      "id": "c-test",
@@ -343,7 +389,7 @@
     {
      "id": "c-more",
      "title": "Extra credit",
-     "instruction": "Structured Outputs (sidebar): pull out the caller’s name, request and mood after every call; results show in Logs, Calls. Query tool: upload a menu or FAQ and let the agent answer from it. Idle Messages (assistant, Advanced): what it says when the caller goes quiet. Or ask Composer: 'What else could my agent do?'",
+     "instruction": "Structured Outputs (on the same Tools tab, Add Field): pull out the caller’s name, request and mood after every call; results show in Logs. Query tool: upload a menu or FAQ and let the agent answer from it. Advanced tab: what it says when the caller goes quiet, and how long a call can last. Or ask Composer: 'What else could my agent do?'",
      "check": "You tried one more feature."
     }
    ]
@@ -379,8 +425,22 @@
     {
      "id": "n-tool",
      "title": "Make the Vapi tool",
-     "instruction": "In Vapi: Tools, then Create Tool, then API Request. URL: your n8n Production URL. Method: POST. Add body fields the agent must fill in, each with a clear description: name, request, phone, time. Description of the tool: when to use it, for example 'Use after the caller confirms their name and request.' Save, then add it on your assistant’s Tools tab and Publish. (Or ask Composer: 'Add a tool that sends the caller’s name and request to my n8n webhook URL.')",
-     "check": "The API Request tool is attached to your assistant."
+     "instruction": "In Vapi: Tools, then Create Tool, then API Request (under Integrations). Tool Name: something like requestSong or bookVisit. Description: when to use it, for example 'Use after the caller confirms their name and request.' Don’t leave it empty: it’s how the agent knows when to call it. Request URL: your n8n Production URL. Method: POST. (Or ask Composer: 'Add a tool that sends the caller’s name and request to my n8n webhook URL.')",
+     "check": "The tool has a name, a description, your URL and POST.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-api-request.jpg",
+      "alt": "Vapi API Request tool: Tool Name, Description, Request URL and POST"
+     }
+    },
+    {
+     "id": "n-body",
+     "title": "Say what the agent sends",
+     "instruction": "Scroll to Request Body and click Add Property for each thing the agent should fill in, like song and artist, or name, time and phone. Give each a short description. Save, then add the tool on your assistant’s Tools tab and Publish.",
+     "check": "The tool is attached to your assistant.",
+     "image": {
+      "src": "/lesson-shots/vapi-quick-build/vapi-api-body.jpg",
+      "alt": "Vapi API Request tool Request Body with song and artist properties"
+     }
     },
     {
      "id": "n-prompt",
