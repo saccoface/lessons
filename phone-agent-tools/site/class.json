@@ -1,0 +1,429 @@
+{
+ "schemaVersion": 1,
+ "id": "phone-agent-tools",
+ "title": "Level Up Your Phone Agent",
+ "icon": "🛠️",
+ "owner": "Dana Sacco",
+ "summary": "Teach your phone agent to do real things: book your calendar, log calls to a sheet, post to Slack, or run a whole n8n workflow mid-call. Three self-paced stations, from your very first agent to custom workflows.",
+ "detail": "Three stations, at your own pace, headphones on. Station 1 is for anyone without a phone agent yet: build one in about 20 minutes with Deepgram Flux, Claude Haiku and a free Vapi number. Station 2 uses Vapi Composer, a chat box that builds for you, and Vapi's built-in tools: Google Calendar, Google Sheets, Slack, transfers and more. Station 3 connects your agent to n8n so one phone call can run a whole workflow. Show and tell at the end.",
+ "outcome": "A phone agent with at least one working tool, so a phone call makes something real happen.",
+ "audience": "Mixed technical and non-technical",
+ "type": "Workshop",
+ "difficulty": "medium",
+ "track": "community",
+ "minutes": 180,
+ "setupMinutes": 30,
+ "runner": null,
+ "prereqs": [
+  "A laptop with Chrome, headphones with a mic, and your phone.",
+  "Came to Build Your First Phone Agent? Bring your Vapi login. Your agent is ready for station 2.",
+  "New? Nothing to set up in advance; station 1 covers it.",
+  "For tools: a Google or Slack account you don't mind filling with test data.",
+  "Station 3: an n8n account (free trial)."
+ ],
+ "artifact": "A live phone agent that books, logs or posts something real when you call it.",
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "slides": [
+  {
+   "n": 1,
+   "kicker": "WELCOME",
+   "title": "Level Up Your Phone Agent",
+   "bullets": [
+    "Tonight your phone agent stops just talking and starts doing things.",
+    "Three stations. Pick the one that fits you.",
+    "Show and tell at the end."
+   ],
+   "note": "Pizza first. Quick show of hands: who already has a phone agent from last time? Who's brand new?"
+  },
+  {
+   "n": 2,
+   "kicker": "LATE? NO PROBLEM",
+   "title": "Oops, I'm late",
+   "bullets": [
+    "Open the event page and press Catch me up",
+    "A voice helper asks which slide we're on",
+    "Then walks you through what you missed, one step at a time"
+   ],
+   "note": "Leave this up for a few seconds and point at the QR code. Helpers: send late folks here first."
+  },
+  {
+   "n": 3,
+   "kicker": "TONIGHT",
+   "title": "Three stations",
+   "bullets": [
+    "Station 1: Your first phone agent (20 min, brand new folks)",
+    "Station 2: Vapi Composer and built-in tools (no code)",
+    "Station 3: n8n workflows (for the more technical)",
+    "Move between them at your own pace. Headphones on.",
+    "Last 20 minutes: show what you built"
+   ],
+   "note": "Everyone works independently; Dana and helpers walk the room. Nobody has to do all three."
+  },
+  {
+   "n": 4,
+   "kicker": "THE RECIPE",
+   "title": "Ears, brain, mouth",
+   "bullets": [
+    "Ears: Deepgram Flux (knows when you've finished talking)",
+    "Brain: Claude Haiku (fast, so no awkward pauses)",
+    "Mouth: a Deepgram Flux voice",
+    "Vapi is the phone: the number, the call, the plumbing"
+   ],
+   "note": "Same recipe as Build Your First Phone Agent. If Flux isn't in the voice list, Aura-2 is the fallback."
+  },
+  {
+   "n": 5,
+   "kicker": "STATION 1",
+   "title": "Your first phone agent",
+   "bullets": [
+    "Deepgram key, then paste it into Vapi",
+    "Blank assistant: Flux, Haiku, Flux",
+    "Write your own short prompt. No interview tonight.",
+    "Talk to it in the browser, then get a free number",
+    "Done when your phone rings and it picks up"
+   ],
+   "note": "DEMO: share the Vapi dashboard. Show the three cards (Transcriber, Model, Voice), the System Prompt box, the Talk button and Phone Numbers. About two minutes, not a full walkthrough: the page has screenshots for every click."
+  },
+  {
+   "n": 6,
+   "kicker": "HOW TOOLS WORK",
+   "title": "The agent decides, the tool does",
+   "bullets": [
+    "1. The caller asks for something",
+    "2. The agent decides it needs a tool and fills in the details",
+    "3. Vapi runs the tool: your calendar, a sheet, Slack, n8n",
+    "4. The tool answers: worked or failed",
+    "5. The agent tells the caller what actually happened"
+   ],
+   "note": "This is the idea for stations 2 and 3. Step 5 is where bots lie, which matters next week."
+  },
+  {
+   "n": 7,
+   "kicker": "STATION 2",
+   "title": "Vapi Composer: the cheat code",
+   "bullets": [
+    "Composer is a chat box in the Vapi dashboard that builds for you",
+    "Tell it what you want in plain English",
+    "It changes your assistant, adds tools, writes tests",
+    "Set it to ask before it changes anything",
+    "Use it a lot. It's the fastest way to learn Vapi."
+   ],
+   "note": "DEMO: open Composer in the sidebar, paste your assistant ID and ask it something from the next slide. Let the room watch it propose changes and approve them."
+  },
+  {
+   "n": 8,
+   "kicker": "STATION 2",
+   "title": "Things to ask Composer",
+   "bullets": [
+    "\"Make my agent sound more energetic and keep answers to two sentences.\"",
+    "\"I want my agent to check my calendar before booking appointments.\"",
+    "\"Add a tool that transfers the caller to my cell if they ask for a human.\"",
+    "\"If the caller goes quiet for 10 seconds, ask if they're still there, then hang up politely.\"",
+    "\"Generate a test suite for my pizza ordering agent.\"",
+    "\"Why does my agent keep interrupting people?\""
+   ],
+   "note": "Pick one or two live. The test suite one is impressive: it writes fake callers that test your agent for you."
+  },
+  {
+   "n": 9,
+   "kicker": "STATION 2",
+   "title": "Built-in tools, no code",
+   "bullets": [
+    "Google Calendar: check availability, create an event",
+    "Google Sheets: add a row for every call",
+    "Slack: post a message to a channel",
+    "Transfer Call and End Call",
+    "Query tool: answer from your own files",
+    "Structured Outputs: pull name, order, mood out of every call"
+   ],
+   "note": "Pattern for all of them: Integrations to connect Google or Slack, Tools then Create Tool, then attach it on your assistant's Tools tab and Publish. Or just ask Composer."
+  },
+  {
+   "n": 10,
+   "kicker": "STATION 3",
+   "title": "n8n: when you want a whole workflow",
+   "bullets": [
+    "n8n is a visual automation tool: boxes joined by lines",
+    "Vapi calls an n8n webhook in the middle of a phone call",
+    "n8n does several steps: check the calendar, book, email, post to Slack",
+    "Then it sends one answer back for the agent to say",
+    "Free 14-day n8n Cloud trial, no install"
+   ],
+   "note": "DEMO: show a finished workflow: Webhook, Google Calendar, Respond to Webhook. Then the Vapi API Request tool pointing at the webhook's Production URL."
+  },
+  {
+   "n": 11,
+   "kicker": "STATION 3",
+   "title": "Three workflows to try",
+   "bullets": [
+    "Receptionist: check availability, book it, confirm by email",
+    "Lead catcher: add a row to Google Sheets, email a summary to you",
+    "Team alert: post the caller's request to Slack",
+    "Same shape every time: Webhook, do things, Respond to Webhook"
+   ],
+   "note": "Recommend the lead catcher for first-timers. It's the one most likely to work in an hour."
+  },
+  {
+   "n": 12,
+   "kicker": "THE GOLDEN RULE",
+   "title": "Never say it's done unless it's done",
+   "bullets": [
+    "Put this in your prompt:",
+    "\"Read the details back and get a yes before you use any tool.\"",
+    "\"Only say something is booked or sent after the tool says it worked.\"",
+    "\"If a tool fails, say so and offer to take a message.\""
+   ],
+   "note": "This matters more than anything else tonight, and it's exactly what people will attack next week."
+  },
+  {
+   "n": 13,
+   "kicker": "KEEP IT SAFE",
+   "title": "Your keys are passwords",
+   "bullets": [
+    "Never paste an API key into a chat, doc or screenshot",
+    "Never read it out loud",
+    "Use a test calendar and a test sheet, not your real ones",
+    "If a key leaks, delete it and make a new one"
+   ],
+   "note": "Quick one. Especially before show and tell, when screens go up."
+  },
+  {
+   "n": 14,
+   "kicker": "SHOW AND TELL",
+   "title": "What did you build?",
+   "bullets": [
+    "Two minutes each, if we have time",
+    "Call your agent on speaker",
+    "Show the calendar, sheet or Slack message it made"
+   ],
+   "note": "Ask for volunteers. Call the agent on speaker so the room hears it."
+  },
+  {
+   "n": 15,
+   "kicker": "NEXT WEEK",
+   "title": "Break My Agent",
+   "bullets": [
+    "Bring tonight's agent",
+    "Swap numbers with someone and try to break each other's",
+    "The toughest agent wins",
+    "No agent yet? There's a quick-build station there too."
+   ],
+   "note": "Plug the Luma link for next Tuesday. Play a clip of the bot-breaking video as a teaser if there's time."
+  }
+ ],
+ "flow": [
+  {
+   "type": "slides",
+   "title": "Intro: the three stations",
+   "from": 1,
+   "to": 15
+  },
+  {
+   "type": "steps",
+   "title": "The stations",
+   "note": "Pick your station. Every step has the exact clicks, and most have a screenshot."
+  }
+ ],
+ "sections": [
+  {
+   "title": "Station 1: your first phone agent in 20 minutes",
+   "summary": "Never built a phone agent? Start here, headphones on, at your own pace. No interview tonight: you write your own short prompt. Ears, brain, mouth: Flux listens, Claude Haiku thinks, Flux speaks.",
+   "steps": [
+    {
+     "id": "qb-key",
+     "title": "Get your Deepgram API key",
+     "instruction": "Open console.deepgram.com and sign up (no credit card; new accounts get $200 of free credit). On the left, open Settings, then API Keys, then Create a New API Key. Name it phone-tools, keep the default permissions, and create it. Copy the key straight away: it is shown only once. Keep it somewhere private, never in a chat, doc or screenshot.",
+     "check": "The key is saved somewhere private."
+    },
+    {
+     "id": "qb-connect",
+     "title": "Give the key to Vapi",
+     "instruction": "Sign up at vapi.ai and open dashboard.vapi.ai. In the left sidebar, scroll down to Integrations. Under Voice Providers, click Deepgram, paste your key into API Key and Save.",
+     "check": "Deepgram shows as Connected."
+    },
+    {
+     "id": "qb-create",
+     "title": "Create a blank assistant",
+     "instruction": "In the sidebar, click Assistants, then Create Assistant, then Blank Template. Name it something you will recognise, like pizza line or front desk. The page has three cards: Transcriber (the ears), Model (the brain) and Voice (the mouth).",
+     "check": "You are on your new assistant’s page."
+    },
+    {
+     "id": "qb-ears",
+     "title": "Ears: Deepgram Flux",
+     "instruction": "Open the Transcriber card. Provider: Deepgram. Model: Flux General English (scroll past the Nova models). Flux knows when you have finished talking, so your agent stops cutting people off.",
+     "check": "Transcriber says Deepgram, Flux."
+    },
+    {
+     "id": "qb-brain",
+     "title": "Brain: Claude Haiku",
+     "instruction": "Open the Model card. Provider: Anthropic. Model: Claude Haiku. It is the fastest brain on the list, and you will see the latency number at the top of the page drop.",
+     "check": "Model says Anthropic, Claude Haiku."
+    },
+    {
+     "id": "qb-mouth",
+     "title": "Mouth: a Deepgram Flux voice",
+     "instruction": "Open the Voice card. Provider: Deepgram. Model: Flux. Pick a voice: preview two or three and choose one that fits your agent. Don’t see Flux in the list? Choose Aura-2 instead.",
+     "check": "Voice says Deepgram, Flux, and a voice you like."
+    },
+    {
+     "id": "qb-prompt",
+     "title": "Write your own prompt",
+     "instruction": "First Message: one short sentence that ends in a question, like 'Tony’s Pizza, what can I get you?'. System Prompt: write who it is, its one job, what to ask for and how to talk. A template:\n```\nYou are [name], the phone assistant for [business].\nYour one job: [take an order / book a visit / answer questions about ...].\nAsk for: [name], [what they want], [when]. One question at a time.\nKeep every reply to one or two short sentences. This is a phone call: no lists or links.\nIf you don't know something, say so and offer to take a message.\n```\nStuck for an idea? Ask ChatGPT or Claude: 'Write a short phone agent prompt for…'. Then press Publish.",
+     "check": "Your prompt is in and you pressed Publish."
+    },
+    {
+     "id": "qb-talk",
+     "title": "Talk to it in the browser",
+     "instruction": "Press Talk (top right), allow the microphone and talk to it with your headphones on. Cutting you off? Check the transcriber is Flux. Rambling? Add 'two sentences max' near the top of the prompt. Change one thing, Publish, Talk again.",
+     "check": "It answers you and stays on its job."
+    },
+    {
+     "id": "qb-number",
+     "title": "Get a free phone number",
+     "instruction": "In the sidebar, click Phone Numbers, then Create Phone Number, then Free Vapi Number. Pick a US area code (415 is often sold out; try 707 or 628) and Create. Free numbers are US only, take incoming calls and can’t dial out. It can take a couple of minutes to go live.",
+     "check": "Your new number is in the list."
+    },
+    {
+     "id": "qb-connect-number",
+     "title": "Point the number at your agent and call it",
+     "instruction": "Open your number. Under Inbound Settings, choose your assistant and Save. Call the number from your phone. Bam: you have a phone agent.",
+     "check": "It picks up when you call."
+    }
+   ]
+  },
+  {
+   "title": "Station 2: Vapi Composer and built-in tools",
+   "summary": "Already have a phone agent? Give it something to do. Composer is the cheat code: it builds and changes things in Vapi from plain English. No code.",
+   "steps": [
+    {
+     "id": "c-open",
+     "title": "Open Composer",
+     "instruction": "In the Vapi dashboard, click Composer in the sidebar. Set approvals to 'Ask before updates, deletes, runs, and publishing', so you see every change before it happens.",
+     "check": "Composer is open and waiting for a message."
+    },
+    {
+     "id": "c-load",
+     "title": "Point it at your agent",
+     "instruction": "Open your assistant and copy its ID (it’s near the name at the top). Paste it into Composer: 'Load my assistant <ID>. It’s a phone agent for <what it does>.'",
+     "check": "Composer describes your assistant back to you."
+    },
+    {
+     "id": "c-ask",
+     "title": "Ask it to improve things",
+     "instruction": "Try a few of these, one at a time, and approve the changes you like:\n```\nKeep every answer to two sentences and sound friendlier.\nIf the caller goes quiet for 10 seconds, ask if they're still there, then end the call politely.\nAdd a tool that transfers the caller to my cell if they ask for a human.\nWhy does my agent keep interrupting people?\nGenerate a test suite for my agent.\n```\nPress Publish after changes, then Talk to hear the difference.",
+     "check": "At least one change is published and you can hear it."
+    },
+    {
+     "id": "c-connect",
+     "title": "Connect Google or Slack",
+     "instruction": "Built-in tools need a one-time connection: Integrations, then Tool Providers, then Google Calendar, Google Sheets or Slack, then Connect. Use a test calendar or a new sheet, not your real one.",
+     "check": "The provider shows as connected."
+    },
+    {
+     "id": "c-tool",
+     "title": "Add a tool (or ask Composer to)",
+     "instruction": "Tools, then Create Tool. Pick one:\n• Google Calendar: make two tools, Check Availability and Create Event. Set the time zone (it defaults to UTC).\n• Google Sheets: Add Row. Paste the sheet ID (the part of the sheet’s URL between /d/ and /edit). Put headers in row 1: name, request, phone, time.\n• Slack: Send Message. Name the channel in the description, and invite the Vapi app to that channel.\nThe description matters: it’s how the agent knows WHEN to use the tool. Or tell Composer: 'I want my agent to check my calendar before booking appointments.'",
+     "check": "The tool is saved."
+    },
+    {
+     "id": "c-attach",
+     "title": "Attach it and add the golden rule",
+     "instruction": "Open your assistant, then the Tools tab, then Add Tool, and pick your tool. In the System Prompt, add when to use it and the golden rule:\n```\nRead the details back and get a yes before you use any tool.\nOnly say something is booked or sent after the tool says it worked.\nIf a tool fails, say so and offer to take a message.\n```\nPublish.",
+     "check": "The tool is listed on your assistant and you pressed Publish."
+    },
+    {
+     "id": "c-test",
+     "title": "Test it for real",
+     "instruction": "Talk to it, or call your number, and ask for the thing. Then check the calendar, sheet or Slack channel. Did it really happen? If not, open Logs, then Calls, and look at the tool call in the transcript.",
+     "check": "The event, row or message really appears."
+    },
+    {
+     "id": "c-more",
+     "title": "Extra credit",
+     "instruction": "Structured Outputs (sidebar): pull out the caller’s name, request and mood after every call; results show in Logs, Calls. Query tool: upload a menu or FAQ and let the agent answer from it. Idle Messages (assistant, Advanced): what it says when the caller goes quiet. Or ask Composer: 'What else could my agent do?'",
+     "check": "You tried one more feature."
+    }
+   ]
+  },
+  {
+   "title": "Station 3: workflows with n8n",
+   "summary": "For the more technical. n8n chains several steps together (check the calendar, book, email, post to Slack) and Vapi calls it mid-call. Shape: Vapi API Request tool → n8n Webhook → your steps → Respond to Webhook → the agent says the answer.",
+   "steps": [
+    {
+     "id": "n-signup",
+     "title": "Get n8n",
+     "instruction": "Sign up at n8n.io for the free 14-day Cloud trial. Create a new workflow.",
+     "check": "You have an empty workflow open."
+    },
+    {
+     "id": "n-webhook",
+     "title": "Start with a Webhook",
+     "instruction": "Add a Webhook node. HTTP Method: POST. Respond: Using 'Respond to Webhook' Node. Copy the Production URL (not the Test URL: that one only works while you’re clicking Listen).",
+     "check": "You have the Production URL copied."
+    },
+    {
+     "id": "n-steps",
+     "title": "Add your steps",
+     "instruction": "Pick a recipe. The caller’s details arrive in the webhook body (for example {{ $json.body.name }}).\n• Lead catcher (easiest): Google Sheets, Append Row → Gmail, Send a summary to yourself.\n• Receptionist: Google Calendar, Get Availability → IF free → Google Calendar, Create Event → Gmail confirmation.\n• Team alert: Slack, Send Message with the caller’s request.\nSign in to Google or Slack inside each node when it asks.",
+     "check": "Each node runs green when you test it with sample data."
+    },
+    {
+     "id": "n-respond",
+     "title": "Answer the agent",
+     "instruction": "End with a Respond to Webhook node that returns JSON the agent can read out, for example:\n```\n{ \"status\": \"booked\", \"message\": \"Booked Tuesday at 3pm. A confirmation email is on its way.\" }\n```\nIf something failed, return a status of failed and say why, so the agent never pretends. Then Publish (activate) the workflow.",
+     "check": "The workflow is active."
+    },
+    {
+     "id": "n-tool",
+     "title": "Make the Vapi tool",
+     "instruction": "In Vapi: Tools, then Create Tool, then API Request. URL: your n8n Production URL. Method: POST. Add body fields the agent must fill in, each with a clear description: name, request, phone, time. Description of the tool: when to use it, for example 'Use after the caller confirms their name and request.' Save, then add it on your assistant’s Tools tab and Publish. (Or ask Composer: 'Add a tool that sends the caller’s name and request to my n8n webhook URL.')",
+     "check": "The API Request tool is attached to your assistant."
+    },
+    {
+     "id": "n-prompt",
+     "title": "Tell the agent when to use it",
+     "instruction": "Add to the System Prompt: when to call the tool, to read details back first, and the golden rule: only say it worked if the tool’s answer says it worked. Publish.",
+     "check": "The rules are in the prompt."
+    },
+    {
+     "id": "n-test",
+     "title": "Call it and watch it run",
+     "instruction": "Call your agent and ask for the thing. In n8n, open Executions to watch the run. In Vapi, Logs, then Calls shows what the agent sent. Check the sheet, calendar, inbox or Slack.",
+     "check": "The phone call made something real happen."
+    }
+   ]
+  },
+  {
+   "title": "Show and tell",
+   "summary": "Last 20 minutes, if there's time.",
+   "steps": [
+    {
+     "id": "s-show",
+     "title": "Show the room",
+     "instruction": "Call your agent on speaker, ask it to do its thing, then show the calendar, sheet or Slack message it made. Two minutes each.",
+     "check": "The room heard it work."
+    },
+    {
+     "id": "s-next",
+     "title": "Bring it next week",
+     "instruction": "Next week is Break My Agent: swap numbers with someone and try to break each other's agents. Keep tonight's agent running and bring it.",
+     "check": "Your agent still answers."
+    }
+   ]
+  }
+ ],
+ "troubleshooting": [
+  "Your number rings out: open the number in Vapi and check an assistant is chosen under Inbound Settings. New numbers can take a few minutes.",
+  "Vapi ignores your changes: you didn't press Publish.",
+  "No Flux voice in the Voice card: pick Deepgram Aura-2 instead.",
+  "The tool never fires: it isn't on the assistant's Tools tab, or the prompt and tool description never say when to use it.",
+  "Calendar books at the wrong time: set the time zone on the tool. It defaults to UTC.",
+  "Slack posts nothing: invite the Vapi app to the channel and name the channel in the tool description.",
+  "n8n never runs: you used the Test URL, or the workflow isn't active. Use the Production URL.",
+  "The agent says 'done' but nothing happened: add the golden rule to the prompt and return a clear status from the tool.",
+  "It talks over you: use headphones, and check the transcriber is Flux."
+ ]
+}
