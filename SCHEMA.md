@@ -36,6 +36,8 @@ last valid version keeps serving.
 | `flow` | FlowBlock[] | ≥ 1. The order the room actually runs in. |
 | `sections` | Section[] | ≤ 40. Written walkthrough steps. `[]` if the class has none. |
 | `troubleshooting` | string[] | ≤ 60 items. What goes wrong and what to do. |
+| `series` | object, optional | `{id, title, summary, part}` groups classes into one program (Week 1, Week 2…). Part 1 may add `comingSoon: [{title, summary, cohosts?}]` for weeks not built yet. |
+| `cohosts` | string[], optional | ≤ 12 short names. Example partners who could co-host, shown at the top of the class page. |
 
 Unknown top-level fields are rejected, so a typo surfaces instead of being silently ignored.
 Whole file: 256 KB maximum.

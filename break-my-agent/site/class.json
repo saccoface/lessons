@@ -563,5 +563,15 @@
   "The practice agent won't start: check the Deepgram key, allow the microphone, and use Chrome.",
   "Your partner's agent never picks up: check you have the right number, and that they haven't run out of Vapi credit.",
   "The agent talks over people: use headphones, and check the transcriber is Flux."
+ ],
+ "series": {
+  "id": "phone-lab",
+  "title": "4 Week Phone Lab",
+  "summary": "",
+  "part": 3
+ },
+ "cohosts": [
+  "Vapi",
+  "Coval (guest judge)"
  ]
 }

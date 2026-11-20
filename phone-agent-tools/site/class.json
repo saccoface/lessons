@@ -503,5 +503,14 @@
   "n8n never runs: you used the Test URL, or the workflow isn't active. Use the Production URL.",
   "The agent says 'done' but nothing happened: add the golden rule to the prompt and return a clear status from the tool.",
   "It talks over you: use headphones, and check the transcriber is Flux."
+ ],
+ "series": {
+  "id": "phone-lab",
+  "title": "4 Week Phone Lab",
+  "summary": "",
+  "part": 2
+ },
+ "cohosts": [
+  "Vapi"
  ]
 }

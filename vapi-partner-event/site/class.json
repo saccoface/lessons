@@ -439,5 +439,24 @@
     "Your number rings out: it is not live yet, or no assistant is attached in Vapi’s inbound settings.",
     "Vapi answers but ignores your prompt: you changed it and never pressed Publish.",
     "The number rings out or you get a network message: it is not live yet. Wait a few minutes and call again."
+  ],
+  "series": {
+    "id": "phone-lab",
+    "title": "4 Week Phone Lab",
+    "summary": "Four nights, one phone agent. Build your first voice agent with a real phone number, teach it to do real things with tools, then pair up and try to break each other's. Week 4 with Twilio is coming soon.",
+    "part": 1,
+    "comingSoon": [
+      {
+        "title": "Twilio night",
+        "summary": "A Twilio session to round out the lab. Details coming soon.",
+        "cohosts": [
+          "Twilio"
+        ]
+      }
+    ]
+  },
+  "cohosts": [
+    "Vapi · Vitali",
+    "ADAL · Jax"
   ]
 }
