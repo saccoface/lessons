@@ -4,25 +4,26 @@
   "title": "Avatar Workshop",
   "icon": "👤︎",
   "owner": "Dana Sacco",
-  "summary": "Guess Who’s Talking. Attendees build a photoreal avatar that listens with Flux, thinks with Claude and lip-syncs through Anam, then play a mystery-guest game against each other. Runs in the browser on this site — nothing to install.",
-  "detail": "Your microphone goes to Deepgram’s Voice Agent, which listens with Flux, thinks with Claude, and speaks. That speech drives an Anam avatar in audio-passthrough mode, so the face lip-syncs to it.",
-  "outcome": "A talking avatar running on your own laptop that holds a live voice conversation in character, and a mystery-guest game you can play against a partner.",
+  "summary": "Give a voice agent a face, built with Pipecat. Learn why businesses use avatars, try one in the browser, then build your own Pipecat bot: Deepgram Flux listens and speaks, Claude thinks and SpatialReal animates a photoreal face. Leave able to turn it into a front-desk assistant, tutor or anything else.",
+  "detail": "Everyone sits down, adds their own keys and talks to a live avatar in the browser: it interviews them for a couple of minutes, so they feel how an avatar looks, sounds and keeps up. The SpatialReal team then presents their product and pricing. The main part builds the same avatar as a Pipecat pipeline on each laptop, with a guided tour of bot.py: frames, processors, the pipeline order, memory and events. The last part turns it into a business assistant using one setting and a text file.",
+  "outcome": "Your own Pipecat avatar bot running on your laptop, an understanding of how a Pipecat pipeline fits together, and a front-desk version you can adapt for real work.",
   "audience": "Mixed technical and non-technical",
   "type": "Workshop",
   "difficulty": "easy",
   "track": "community",
-  "minutes": 45,
+  "minutes": 60,
   "setupMinutes": 45,
   "runner": "avatar",
   "prereqs": [
     "Wired headphones, not speakers — on speakers the avatar talks to itself.",
-    "An Anam API key from lab.anam.ai.",
     "A Deepgram API key from console.deepgram.com. New accounts get credit, no card needed.",
-    "Chrome, and a microphone."
+    "A SpatialReal API key and App ID from app.spatialreal.ai (Apps → Create API Key). The free tier covers the workshop.",
+    "Chrome, and a microphone.",
+    "For the Pipecat build: an Anthropic API key, and uv (it installs Python for you)."
   ],
-  "artifact": "A talking avatar in character, and a mystery-guest game the attendee plays with a partner.",
+  "artifact": "A Pipecat avatar bot on the attendee’s own laptop that can be switched to a front-desk assistant, tutor or any other character.",
   "links": {
-    "starterRepo": "https://github.com/danasacco-beep/talking-avatar-starter",
+    "starterRepo": "https://github.com/danasacco-beep/pipecat-avatar-starter",
     "deck": null
   },
   "slides": [
@@ -36,7 +37,7 @@
     {
       "n": 2,
       "kicker": "WELCOME",
-      "title": "Guess Who’s Talking",
+      "title": "Give your voice agent a face",
       "bullets": [
         "Links for the room: dpgr.am/gwt-links"
       ],
@@ -44,197 +45,362 @@
     },
     {
       "n": 3,
-      "kicker": "EVERYONE",
-      "title": "Tech and non-tech teams",
+      "kicker": "WHY AVATARS",
+      "title": "Why put a face on a voice agent?",
       "bullets": [
-        "Laptops",
-        "An lab.anam.ai key",
-        "A Deepgram key",
-        "Headphones — wired, not speakers"
+        "People look at faces: a screen with a face gets attention a waveform does not",
+        "Seeing lips move helps people follow speech in a loud room",
+        "A face sets the tone — calm for a clinic, upbeat for a store",
+        "It makes a screen feel staffed when nobody is free"
       ],
-      "note": "Both tracks need all four before anything else starts."
+      "note": "The face is not the intelligence. The listening, thinking and speaking are the same voice agent; the avatar is how it shows up on a screen."
     },
     {
       "n": 4,
-      "kicker": "TECH TRACK",
-      "title": "Tech leads grab",
+      "kicker": "WHO USES THEM",
+      "title": "Where avatars earn their keep",
       "bullets": [
-        "github.com/danasacco-beep/talking-avatar-starter",
-        "nodejs.org — the green LTS button"
+        "Front desks and kiosks: hotels, clinic check-in, offices, event booths",
+        "Training and role-play: sales calls, job interviews, hard conversations",
+        "Tutoring and language practice",
+        "Support on a website or in an app",
+        "Internal help desks: HR, IT, new-hire onboarding"
       ],
-      "note": "Only needed for the local install. On this site the workshop runs in the browser."
+      "note": "Ask the room which one their company could use. The common thread: a person would otherwise be standing at a screen, waiting or repeating the same answers."
     },
     {
       "n": 5,
-      "kicker": "NON-TECH TRACK",
-      "title": "Non-tech people… let’s learn about the Playground",
-      "bullets": [],
-      "note": "Everyone else builds the same character in Deepgram’s Playground, with nothing to install."
+      "kicker": "WHO USES THEM",
+      "title": "When to skip the face",
+      "bullets": [
+        "Phone calls — there is no screen, so use a plain voice agent",
+        "When every fraction of a second or cent matters",
+        "When people need to read, not watch: forms, code, long numbers",
+        "When a human must answer: diagnoses, legal or money decisions"
+      ],
+      "note": "Same pipeline either way. Removing the avatar is deleting one line, which is the point of Pipecat."
     },
     {
       "n": 6,
-      "kicker": "NON-TECH TRACK",
-      "title": "In the Playground",
+      "kicker": "EVERYONE",
+      "title": "What you need",
       "bullets": [
-        "Paste your API key at the top. Check the mic is on, wired headphones not speakers.",
-        "Find the prompt box — this is where you give the agent its entire persona.",
-        "Pick a Flux voice and remove the greeting message.",
-        "Lower the temperature to 0.3–0.5 for this.",
-        "Turn on turn detection so you can interrupt the agent."
+        "A laptop with Chrome, and wired headphones (not speakers)",
+        "A Deepgram key — console.deepgram.com",
+        "A SpatialReal API key + App ID — app.spatialreal.ai → Apps",
+        "To build it yourself: an Anthropic key, plus uv (docs.astral.sh/uv)"
       ],
-      "note": "Same character design, no terminal."
+      "note": "Everyone tries the avatar in the browser first. The Pipecat build is the main event and most people can do it; anyone who would rather not install anything stays in the browser."
     },
     {
-      "n": 7,
-      "kicker": "THE GAME",
-      "title": "The Rules",
+      "kicker": "MEET SPATIALREAL",
+      "title": "Over to SpatialReal",
       "bullets": [
-        "Never say your name.",
-        "One fact, and no inventing.",
-        "Speak, don’t write.",
-        "Stay inside your own world."
+        "What SpatialReal is and who uses it",
+        "How the face is made and lip-synced",
+        "Pricing, and how to start for free",
+        "Questions"
       ],
-      "note": "The four constraints that make the game work. They are already written into the character prompt."
+      "note": "The SpatialReal team presents here with their own slides: the product and pricing. Then we build the same avatar with Pipecat.",
+      "n": 7
     },
     {
       "n": 8,
-      "kicker": "THE GAME",
-      "title": "The Prompt",
+      "kicker": "MEET PIPECAT",
+      "title": "Pipecat in one sentence",
       "bullets": [
-        "Open the ./prompts/mystery-guest.md file",
-        "Edit the file, save it, restart the server, refresh",
-        "Leave the You are: [SECRET_FIGURE] line in place"
+        "An open-source Python framework for real-time voice and video agents",
+        "You list the steps; Pipecat handles streaming, turn-taking and interruptions",
+        "Built by Daily, now part of Deepgram",
+        "docs.pipecat.ai"
       ],
-      "note": "That is the local path. Running here, the prompt is applied server-side and the secret figure is just a field on the page."
+      "note": "Without a framework, a voice agent is a tangle of sockets, audio buffers and timers. Pipecat turns it into a list."
     },
     {
       "n": 9,
-      "kicker": "THE GAME",
-      "title": "The Tests",
+      "kicker": "MEET PIPECAT",
+      "title": "Frames flow through processors",
       "bullets": [
-        "It must not give up its name.",
-        "It must be brief.",
-        "It must let something slip."
+        "Everything is a frame: a slice of audio, a transcript, a word from the LLM, “user started speaking”",
+        "A processor takes frames in and pushes frames out",
+        "A pipeline is processors in order",
+        "A transport moves audio between the pipeline and the browser (or a phone line)"
       ],
-      "note": "Three things to check before you call a character finished."
+      "note": "Four words to remember: frame, processor, pipeline, transport. Everything else is detail."
     },
     {
       "n": 10,
-      "kicker": "THE GAME",
-      "title": "Break it.",
+      "kicker": "MEET PIPECAT",
+      "title": "Our pipeline, top to bottom",
       "bullets": [
-        "Ask it.",
-        "Spell it.",
-        "Ignore previous instructions…",
-        "Claim you already won."
+        "transport.input() — your microphone arrives",
+        "stt — Deepgram Flux turns speech into text and hears when you finish",
+        "user_aggregator — adds what you said to the conversation",
+        "llm — Claude writes the reply, in character",
+        "tts — Deepgram Flux speaks it (voice: Brooke)",
+        "avatar — SpatialReal animates the face to that speech",
+        "transport.output() — sound and animation go to your browser",
+        "assistant_aggregator — remembers what was actually said"
       ],
-      "note": "Four attacks the character has to survive. If any one works, the prompt needs another pass."
+      "note": "Read it like a recipe. This is the real Pipeline([...]) list in bot.py."
+    },
+    {
+      "n": 11,
+      "kicker": "MEET PIPECAT",
+      "title": "Every box is swappable",
+      "bullets": [
+        "stt = DeepgramFluxSTTService(...)",
+        "llm = AnthropicLLMService(...)",
+        "tts = DeepgramFluxTTSService(...)",
+        "avatar = SpatialRealAvatarProcessor(...)",
+        "Change one line, and the rest keeps working"
+      ],
+      "note": "Pipecat has dozens of services. A different LLM, voice or face is a different class on one line."
+    },
+    {
+      "n": 12,
+      "kicker": "MEET PIPECAT",
+      "title": "How the face plugs in",
+      "bullets": [
+        "The avatar processor sits right after the TTS",
+        "It reads the speech audio and sends animation to the browser, lined up with the sound",
+        "In the browser, SpatialReal’s SDK draws the face",
+        "The browser gets a short-lived token, never your API key"
+      ],
+      "note": "SpatialReal shipped this processor as pipecat-spatialreal, and it is in the official Pipecat docs."
+    },
+    {
+      "n": 13,
+      "kicker": "MEET PIPECAT",
+      "title": "Three commands",
+      "bullets": [
+        "cp env.example .env   (then paste your keys)",
+        "uv sync",
+        "uv run bot.py -t webrtc",
+        "Open localhost:7860/avatar/ and press Start"
+      ],
+      "note": "The walkthrough below goes step by step, with a check after each one."
+    },
+    {
+      "n": 14,
+      "kicker": "TAKE IT HOME",
+      "title": "Same face, new job",
+      "bullets": [
+        "CHARACTER=front-desk in .env",
+        "BUSINESS_NAME and BUSINESS_FACTS: who it works for and what it knows",
+        "Restart the bot — same face, new job",
+        "A new character is a new file in prompts/, not new code"
+      ],
+      "note": "This is the move that turns a workshop demo into something useful on Monday."
+    },
+    {
+      "n": 15,
+      "kicker": "TAKE IT HOME",
+      "title": "After today",
+      "bullets": [
+        "No install: this page works any time with your own keys",
+        "Your own build: github.com/danasacco-beep/pipecat-avatar-starter",
+        "Put it online: Pipecat Cloud hosts Pipecat bots",
+        "On the phone: Pipecat has telephony transports (no face needed)"
+      ],
+      "note": "Everything runs on the attendee’s own keys, so there is nothing to hand back after the event."
+    },
+    {
+      "n": 16,
+      "kicker": "TAKE IT HOME",
+      "title": "Keep going",
+      "bullets": [
+        "docs.pipecat.ai — guides and every service",
+        "docs.pipecat.ai → Video → SpatialReal",
+        "app.spatialreal.ai/avatars/library — more faces"
+      ],
+      "note": "Thank the room, and point at the starter repo one more time."
     }
   ],
   "flow": [
     {
+      "type": "slides",
+      "title": "Why avatars",
+      "from": 1,
+      "to": 6
+    },
+    {
       "type": "runner",
-      "title": "Run it here",
-      "note": "Nothing to install. Bring your own Anam and Deepgram keys, pick an avatar, and have a partner set the secret figure."
+      "title": "Sit down and try it",
+      "note": "Nothing to install. Paste your SpatialReal and Deepgram keys, pick a face and press Start. The avatar interviews you for a couple of minutes, so you get a feel for how it looks, sounds and keeps up, and whether you would use one. Your answers, without names, join the room totals at the top of the page."
     },
     {
       "type": "slides",
-      "title": "Slides",
-      "from": 1,
-      "to": 10
+      "title": "Meet SpatialReal",
+      "from": 7,
+      "to": 7
+    },
+    {
+      "type": "slides",
+      "title": "Meet Pipecat",
+      "from": 8,
+      "to": 13
+    },
+    {
+      "type": "steps",
+      "title": "Build it with Pipecat",
+      "note": "Follow along on your own laptop. Each step ends with a check, so you know it worked before moving on."
+    },
+    {
+      "type": "slides",
+      "title": "Take it home",
+      "from": 14,
+      "to": 16
     }
   ],
   "sections": [
     {
-      "title": "Tech track — run it on your machine",
-      "summary": "Eight steps, about 45 minutes, most of it waiting on sign-ups. Nothing here is typed into an AI; you do every step yourself.",
+      "title": "Build it with Pipecat",
+      "summary": "The avatar you just tried, running as your own Pipecat bot on your laptop: Deepgram Flux listens and speaks, Claude thinks, SpatialReal draws the face. About 20 minutes, most of it sign-ups.",
       "steps": [
         {
-          "id": "node",
-          "title": "Install Node.js",
-          "instruction": "Download the LTS build from nodejs.org and click through the installer with its defaults. Then open a terminal — Terminal on Mac, PowerShell on Windows — and run node -v.",
-          "check": "You see a version number starting v20 or higher. If it says command not found, close the terminal, reopen it and try again."
+          "id": "uv",
+          "title": "Install uv",
+          "instruction": "uv installs Python and the project’s packages in one go. Mac: run curl -LsSf https://astral.sh/uv/install.sh | sh in Terminal. Windows: follow docs.astral.sh/uv/getting-started/installation. Then close and reopen the terminal.",
+          "check": "uv --version prints a version number."
         },
         {
           "id": "download",
-          "title": "Download the project",
-          "instruction": "On the repo page click the green Code button, then Download ZIP. Unzip it to your Desktop and rename the folder to exactly talking-avatar, because the later commands assume that name.",
-          "check": "The folder holds server.js, a public folder, a prompts folder, and a hidden .env.example. Press Cmd+Shift+. on Mac to reveal hidden files."
-        },
-        {
-          "id": "anam-key",
-          "title": "Get your Anam key",
-          "instruction": "Sign in at lab.anam.ai, find API Keys in the left menu, create one named class, and copy it somewhere safe for a moment.",
-          "check": "You have an Anam key copied and ready to paste."
-        },
-        {
-          "id": "deepgram-key",
-          "title": "Get your Deepgram key",
-          "instruction": "Sign in at console.deepgram.com, click API Keys, then Create a New API Key. Name it class and leave the permission as Member.",
-          "check": "You copied the key straight away — Deepgram shows it once. If you lose it, just make another."
-        },
-        {
-          "id": "install",
-          "title": "Install the dependencies",
-          "instruction": "In the terminal run cd ~/Desktop/talking-avatar (Windows: cd $HOME\\Desktop\\talking-avatar), then npm install.",
-          "check": "You see roughly \"added 80 packages\" and a new node_modules folder. That takes under a minute."
-        },
-        {
-          "id": "start",
-          "title": "Start the app",
-          "instruction": "Run npm start and leave this terminal window open. The app runs only while it stays open.",
-          "check": "Four lines print, ending with the localhost:4400 address. If you see \"Port 4400 is already in use\", put PORT=4401 in .env."
+          "title": "Download the starter",
+          "instruction": "On github.com/danasacco-beep/pipecat-avatar-starter click the green Code button, then Download ZIP. Unzip it to your Desktop, and in the terminal run cd ~/Desktop/pipecat-avatar-starter.",
+          "check": "The folder holds bot.py, a client folder, a prompts folder and env.example."
         },
         {
           "id": "keys",
-          "title": "Open it and save your keys",
-          "instruction": "Go to http://localhost:4400 in Chrome and allow the microphone. In the first card on the right, paste the Anam key and the Deepgram key, then click Save keys.",
-          "check": "It says the keys were verified and written to .env, and the Avatar and Voice lists fill in. A rejected key usually means a stray space."
+          "title": "Collect four keys",
+          "instruction": "Deepgram: console.deepgram.com → API Keys → Create a New API Key. Anthropic: console.anthropic.com → API Keys → Create Key. SpatialReal: app.spatialreal.ai → Apps → Create API Key, and copy both the API key and the App ID (it starts with app_).",
+          "check": "You have a Deepgram key, an Anthropic key, a SpatialReal key and an App ID. Each key is shown once — if you lose one, make another."
+        },
+        {
+          "id": "face",
+          "title": "Pick a face",
+          "instruction": "Open app.spatialreal.ai/avatars/library, hover an avatar you like and click its copy icon. Vivian is f37f5990-4ee1-4add-8136-df9940f85567.",
+          "check": "You have an avatar ID — a long string of letters, numbers and dashes."
+        },
+        {
+          "id": "env",
+          "title": "Fill in .env",
+          "instruction": "Run cp env.example .env, open .env in any text editor and paste DEEPGRAM_API_KEY, ANTHROPIC_API_KEY, SPATIALREAL_API_KEY, SPATIALREAL_APP_ID and SPATIALREAL_AVATAR_ID.",
+          "check": "Every line you filled has a value right after the = sign, with no spaces or quotes. .env stays on your laptop; it is never uploaded."
+        },
+        {
+          "id": "run",
+          "title": "Start the bot",
+          "instruction": "Run uv sync (about a minute the first time), then uv run bot.py -t webrtc. Leave this terminal open — the bot runs only while it stays open.",
+          "check": "The terminal ends with the bot listening on localhost:7860. If it names a missing setting, fix that line in .env and run it again."
         },
         {
           "id": "talk",
           "title": "Talk to it",
-          "instruction": "Headphones on. Pick an avatar and a voice, then have a partner type the Secret figure so you do not know it. Pick your microphone and check the green bar moves. Click Start conversation.",
-          "check": "The status turns green and says Listening, and the avatar greets you in character. Interrupting it is fine — it stops and listens."
+          "instruction": "Headphones on. Open http://localhost:7860/avatar/ in Chrome, allow the microphone and press Start.",
+          "check": "The face loads, greets you and asks how the night is going, and answers when you speak. Talk over it: it stops and listens."
         }
       ]
     },
     {
-      "title": "Non-tech track — build it in the Playground",
-      "summary": "Same character, same voice, nothing installed. Runs in the browser at playground.deepgram.com.",
+      "title": "Read the code: a guided tour of bot.py",
+      "summary": "Seven short stops through the file, so you understand what each part does and could build the next one yourself.",
       "steps": [
         {
-          "id": "pg-key",
-          "title": "Paste your key and check your audio",
-          "instruction": "Paste your Deepgram API key at the top of the Playground. Confirm the microphone is on and that you are on wired headphones rather than speakers.",
-          "check": "The Playground accepts the key and your microphone is selected."
+          "id": "tour-services",
+          "title": "The four services",
+          "instruction": "Open bot.py and scroll to run_bot(). Find the numbered comments 1 to 4: Ears (DeepgramFluxSTTService), Brain (AnthropicLLMService), Voice (DeepgramFluxTTSService) and Face (SpatialRealAvatarProcessor). Each is one object, made with a key and a few settings.",
+          "check": "You can point at the line that picks the voice (DEEPGRAM_VOICE, default flux-brooke-en) and the line that picks the model (CLAUDE_MODEL near the top)."
         },
         {
-          "id": "pg-prompt",
-          "title": "Write the persona",
-          "instruction": "Find the prompt box. This is where the agent gets its entire personality. Write the mystery-guest rules: stay in character, never volunteer the name, answer questions in the first person.",
-          "check": "The prompt names who the character is and states plainly that it must not reveal the name until it is guessed."
+          "id": "tour-ears",
+          "title": "Ears: Flux knows when you have finished",
+          "instruction": "DeepgramFluxSTTService streams your audio to Deepgram Flux. Flux returns the words and also decides when your turn is over, so there is no separate silence detector to tune. That end-of-turn signal is what lets the avatar answer quickly and stop when you interrupt.",
+          "check": "Pause mid-sentence for a second and keep going. The avatar should wait rather than jump in."
         },
         {
-          "id": "pg-voice",
-          "title": "Pick a voice and clear the greeting",
-          "instruction": "Choose a Flux voice, then delete the greeting message so the character opens in its own words instead of a canned line.",
-          "check": "No greeting text remains and a Flux voice is selected."
+          "id": "tour-brain",
+          "title": "Brain: the prompt is the character",
+          "instruction": "AnthropicLLMService sends the conversation to Claude. Its system_instruction is the text of prompts/host-interview.md. CLAUDE_MODEL is claude-haiku-4-5, chosen because it starts talking fastest (about 0.7 seconds in our tests).",
+          "check": "Open prompts/host-interview.md and find the seven questions it asks and the rules it follows."
         },
         {
-          "id": "pg-temp",
-          "title": "Lower the temperature",
-          "instruction": "Set the temperature to somewhere between 0.3 and 0.5. Higher values wander off character during a guessing game.",
-          "check": "Temperature is in range and the character stays consistent across a few turns."
+          "id": "tour-pipeline",
+          "title": "The pipeline is the order things happen",
+          "instruction": "Find Pipeline([...]). Read it top to bottom: transport.input(), stt, user_aggregator, llm, tts, avatar, transport.output(), assistant_aggregator. Frames flow down this list. The avatar comes after tts because it needs the speech audio to animate the face.",
+          "check": "You can say in one sentence why the avatar is not before tts."
+        },
+        {
+          "id": "tour-memory",
+          "title": "Memory: the two aggregators",
+          "instruction": "LLMContextAggregatorPair makes two processors that share one LLMContext. user_aggregator adds what you said; assistant_aggregator, placed after the output, adds what the bot actually spoke. If you interrupt, only the words that were spoken are remembered.",
+          "check": "Ask the avatar what you asked it first. It remembers, because of the context."
+        },
+        {
+          "id": "tour-run",
+          "title": "Worker, runner and events",
+          "instruction": "PipelineWorker runs the pipeline for one conversation; WorkerRunner keeps it going until the browser disconnects. Event handlers react to moments: on_client_ready makes the avatar greet you first, on_client_disconnected shuts the session down.",
+          "check": "Find greet() and change its message, restart, and hear a different opening."
+        },
+        {
+          "id": "tour-token",
+          "title": "Why the key never reaches the browser",
+          "instruction": "The /spatialreal-token route uses your SpatialReal key on the server to get a token that expires in an hour, and gives the browser only that. It also refuses requests from other websites, so a random page cannot spend your credits.",
+          "check": "Open http://localhost:7860/spatialreal-token in a tab: you see a token, not your API key."
+        }
+      ]
+    },
+    {
+      "title": "Make it yours",
+      "summary": "Change the voice, the face and the job — each is one line in .env or one text file. This is how you use it after today.",
+      "steps": [
+        {
+          "id": "swap-voice",
+          "title": "Change the voice",
+          "instruction": "In .env set DEEPGRAM_VOICE to another Flux voice — flux-kit-en, flux-cole-en, flux-hannah-en and dozens more are listed at developers.deepgram.com/docs/flux-tts/voices. Restart the bot (Ctrl+C, then uv run bot.py -t webrtc) and refresh the page.",
+          "check": "The same face speaks with the new voice and still lip-syncs. One line changed."
+        },
+        {
+          "id": "swap-face",
+          "title": "Change the face",
+          "instruction": "Copy another avatar ID from app.spatialreal.ai/avatars/library into SPATIALREAL_AVATAR_ID, restart and refresh.",
+          "check": "A different person appears, with the same voice and character."
+        },
+        {
+          "id": "front-desk",
+          "title": "Give it a real job",
+          "instruction": "In .env set CHARACTER=front-desk, BUSINESS_NAME to a business (your own, or a made-up café) and BUSINESS_FACTS to a few plain sentences: hours, address, what you sell, who to ask for help. Restart and refresh.",
+          "check": "The avatar greets you as that business’s assistant, answers from your facts, and says it is not sure when you ask something the facts do not cover."
+        },
+        {
+          "id": "new-character",
+          "title": "Write your own character",
+          "instruction": "Copy prompts/front-desk.md to a new file, say prompts/tutor.md, and rewrite it. Any [UPPER_CASE] word in brackets is filled from .env, so [SUBJECT] reads SUBJECT=. Set CHARACTER=tutor and restart.",
+          "check": "Your character runs without touching bot.py. If a placeholder is missing from .env, the terminal names it."
+        },
+        {
+          "id": "no-install",
+          "title": "Use it with no install",
+          "instruction": "Anyone on your team can use the version at the top of this page any time: paste their own Deepgram and SpatialReal keys, pick a face and talk. Nothing is stored on this site.",
+          "check": "A teammate gets it running in under five minutes with only a browser."
+        },
+        {
+          "id": "ship",
+          "title": "Take it further",
+          "instruction": "To put your bot online for others, Pipecat Cloud hosts Pipecat bots — start at docs.pipecat.ai. To answer phone calls instead, Pipecat has telephony transports for providers such as Twilio; drop the avatar line, since phones have no screen.",
+          "check": "You know which path fits your idea: browser, hosted, or phone."
         }
       ]
     }
   ],
   "troubleshooting": [
     "The avatar talks to itself: you are on speakers. Switch to wired headphones.",
-    "Port 4400 is already in use: close whatever is using it, or set PORT=4401 in .env.",
-    "A key is rejected: it was pasted with extra whitespace, or it is the other service’s key.",
-    "No video: the avatar streams over WebRTC from Anam, so a weak network shows audio without a face.",
-    "The avatar appears but never speaks: check the voice is a Flux voice. Pairing Flux listening with an Aura voice connects cleanly and then produces no sound."
+    "The avatar appears for a second, then vanishes: the free SpatialReal tier allows 2 sessions at once. Close other tabs running an avatar and press Start again.",
+    "SpatialReal needs both an API key and an App ID, and the App ID starts with app_. They sit side by side on the Apps page.",
+    "A key is rejected: copy it again, whole, with no spaces. A Deepgram key is 40 letters and numbers, not the dashed key ID shown in the list.",
+    "Pipecat: the terminal says a setting is not set — that line in .env is empty or misspelled. Fix it and restart the bot.",
+    "Pipecat: CHARACTER=… has no prompts/….md — the name must match a file in prompts/, without .md.",
+    "Pipecat: port 7860 is in use — run uv run bot.py -t webrtc --port 7861, open that port, and change PIPECAT_ALLOWED_ORIGINS in .env to match.",
+    "Sessions stop after 10 minutes on the free SpatialReal tier. Press Start again."
   ]
 }
