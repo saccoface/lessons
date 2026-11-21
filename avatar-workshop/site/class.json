@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "avatar-workshop",
-  "title": "Avatar Workshop",
+  "title": "Avatar Workshop (1 class)",
   "icon": "👤︎",
   "owner": "Dana Sacco",
   "summary": "Give a voice agent a face, built with Pipecat. Learn why businesses use avatars, try one in the browser, then build your own Pipecat bot: Deepgram Flux listens and speaks, Claude thinks and SpatialReal animates a photoreal face. Leave able to turn it into a front-desk assistant, tutor or anything else.",
