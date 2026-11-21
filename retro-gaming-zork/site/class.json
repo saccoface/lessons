@@ -19,7 +19,7 @@
  "difficulty": "easy",
  "track": "community",
  "minutes": 75,
- "setupMinutes": 10,
+ "setupMinutes": 20,
  "runner": "retro",
  "prereqs": [
   "A laptop with Google Chrome and a microphone.",

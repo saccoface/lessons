@@ -19,7 +19,7 @@
  "difficulty": "medium",
  "track": "community",
  "minutes": 90,
- "setupMinutes": 10,
+ "setupMinutes": 20,
  "runner": "gamecoach",
  "prereqs": [
   "A laptop with Google Chrome and a microphone.",
