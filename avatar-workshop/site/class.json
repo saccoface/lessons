@@ -23,7 +23,7 @@
   ],
   "artifact": "A Pipecat avatar bot on the attendee’s own laptop that can be switched to a front-desk assistant, tutor or any other character.",
   "links": {
-    "starterRepo": "https://github.com/danasacco-beep/pipecat-avatar-starter",
+    "starterRepo": "https://github.com/saccoface/pipecat-avatar-starter",
     "deck": null
   },
   "slides": [
@@ -199,7 +199,7 @@
       "title": "After today",
       "bullets": [
         "No install: this page works any time with your own keys",
-        "Your own build: github.com/danasacco-beep/pipecat-avatar-starter",
+        "Your own build: github.com/saccoface/pipecat-avatar-starter",
         "Put it online: Pipecat Cloud hosts Pipecat bots",
         "On the phone: Pipecat has telephony transports (no face needed)"
       ],
@@ -267,7 +267,7 @@
         {
           "id": "download",
           "title": "Download the starter",
-          "instruction": "On github.com/danasacco-beep/pipecat-avatar-starter click the green Code button, then Download ZIP. Unzip it to your Desktop, and in the terminal run cd ~/Desktop/pipecat-avatar-starter.",
+          "instruction": "On github.com/saccoface/pipecat-avatar-starter click the green Code button, then Download ZIP. Unzip it to your Desktop, and in the terminal run cd ~/Desktop/pipecat-avatar-starter.",
           "check": "The folder holds bot.py, a client folder, a prompts folder and env.example."
         },
         {
