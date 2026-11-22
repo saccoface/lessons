@@ -11,7 +11,7 @@
   "type": "Workshop",
   "difficulty": "easy",
   "track": "community",
-  "minutes": 90,
+  "minutes": 180,
   "setupMinutes": 15,
   "runner": "interview",
   "prereqs": [
@@ -442,10 +442,11 @@
   ],
   "series": {
     "id": "phone-lab",
-    "title": "Phone Lab + Christmas Bonus (5 classes)",
-    "summary": "Three nights, one phone agent. Build your first voice agent with a real phone number, teach it to do real things with tools, then pair up and try to break each other's. Plus a Christmas bonus event: details coming soon.",
+    "title": "Phone Lab + Christmas Bonus (6 classes)",
+    "summary": "Three nights, one phone agent. Build your first voice agent with a real phone number, teach it to do real things with tools, then pair up and try to break each other's. Plus a Christmas bonus event, and an Intro to Twilio class coming soon.",
     "part": 1,
     "comingSoon": [
+      {"title": "Intro to Twilio", "summary": "Coming soon.", "cohosts": ["Twilio"]},
       {
         "title": "Christmas bonus event",
         "summary": "A festive bonus night to round out the lab. Details coming soon.",
