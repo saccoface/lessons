@@ -51,19 +51,117 @@
   },
   {
    "n": 3,
-   "kicker": "TONIGHT",
-   "title": "Three stations",
+   "kicker": "YOUR HELPERS",
+   "title": "Who's here to help tonight",
    "bullets": [
-    "Station 1: Your first phone agent (20 min, brand new folks)",
-    "Station 2: Vapi Composer and built-in tools (no code)",
-    "Station 3: n8n workflows (for the more technical)",
-    "Move between them at your own pace. Headphones on.",
-    "Last 20 minutes: show what you built"
+    "Dana, Deepgram: Station 1, back of the room",
+    "Vitali, Vapi: Station 2, middle of the room. Back again!",
+    "Jose, n8n: Station 3, front of the room",
+    "Dr. Larissa: questions about anything. She looked over this whole lab.",
+    "Round of applause for everyone here to help tonight"
    ],
-   "note": "Everyone works independently; Dana and helpers walk the room. Nobody has to do all three."
+   "note": "Introduce each helper and have them wave from their spot so people know where to go. Dr. Larissa isn't tied to a station: she's here out of the kindness of her heart, she reviewed the lab with Dana, and she's an expert on everything, so send any question her way. Then: let's have a round of applause for everyone here to help tonight: Jose from n8n, Vitali for coming back again, and Dr. Larissa."
   },
   {
    "n": 4,
+   "kicker": "PICK YOUR STATION",
+   "title": "Do you have a voice agent yet?",
+   "bullets": [
+    "Never built a phone agent? Station 1: back of the room with Dana. You'll have one in about 20 minutes.",
+    "Already have one? Pick where to level it up:",
+    "Station 2, Vapi: middle of the room with Vitali. Stay in the Vapi dashboard, no code. Composer builds for you.",
+    "Station 3, n8n: front of the room with Jose. Connect your agent to 2,000+ apps and multi-step workflows.",
+    "Not sure? Start at Station 2. Your agent carries over to Station 3.",
+    "Questions about anything? Grab Dr. Larissa.",
+    "Move at your own pace, headphones on. Last 20 minutes: show what you built."
+   ],
+   "note": "Ask the room out loud: who has a voice agent? If you've never built one, head to the back of the room with Dana now. Everyone else, the next slides show what Vapi and n8n can each do, so pick the one that fits what you want to build, then move to the middle (Vitali, Vapi) or the front (Jose, n8n)."
+  },
+  {
+   "n": 5,
+   "kicker": "STATION 2 · PRESENTED BY VITALI, VAPI",
+   "title": "Everything you can do in Vapi",
+   "bullets": [
+    "Composer: describe what you want in plain English and it builds it",
+    "Tools: API Request, Function, Transfer Call, Hang Up, Send Text, Dial Keypad, Handoff, Voicemail, Query, MCP",
+    "Built-in apps: Google Calendar (check and book), Google Sheets (add a row), Slack (send a message), GoHighLevel (contacts and calendar)",
+    "Zapier, Make and Composio plug in as MCP servers",
+    "Knowledge base: upload your files and the agent answers from them",
+    "Squads: a team of assistants that pass the call to each other",
+    "Phone numbers: a free US number for incoming calls, or bring Twilio, Telnyx or Vonage to call out",
+    "Campaigns: call a whole contact list, with voicemail detection",
+    "Structured Outputs and call analysis: name, order, mood and a summary from every call",
+    "Evals and Simulations: an AI caller tests your agent before real people do",
+    "Call logs, recordings, transcripts, Boards and alerts",
+    "Text too: chat assistants, inbound SMS and a widget for your website"
+   ],
+   "note": "VITALI'S SLIDE: hand the mic to Vitali from Vapi to present this one. Don't read it all. This is the menu: point at two or three things people get excited about (Composer, Google Calendar, Squads, Simulations). Pattern for any tool: Integrations to connect Google or Slack, Tools then Create Tool, attach it on your assistant's Tools tab, Publish. Or just ask Composer. Vapi Workflows were retired in August, so don't send anyone looking for them."
+  },
+  {
+   "n": 6,
+   "kicker": "STATION 3",
+   "title": "Everything you can do with n8n",
+   "bullets": [
+    "2,000+ apps you connect by dragging boxes on a canvas",
+    "Sales: HubSpot, Salesforce",
+    "Messages: Slack, Discord, Telegram, WhatsApp, Twilio texts",
+    "Data: Notion, Airtable, Google Sheets, Postgres, Supabase",
+    "Stores and payments: Shopify, Stripe",
+    "Email and calendar: Gmail, Outlook, Google Calendar",
+    "Files and code: Google Drive, Dropbox, GitHub",
+    "Fun: Spotify, Philips Hue, Home Assistant",
+    "AI Agent node with Claude, memory and your own documents",
+    "Logic: If, Switch, loops, Wait, schedules, and your own JavaScript or Python",
+    "Deepgram, Vapi and anything else with an API: the HTTP Request node",
+    "Free n8n Cloud trial with no credit card, or self-host it free"
+   ],
+   "note": "The difference from Station 2: Vapi tools do one thing during the call. n8n can do many things in a row, branch on what the caller said, wait, and keep working after the call ends. Next slide shows what that looks like."
+  },
+  {
+   "n": 7,
+   "kicker": "STATION 3",
+   "title": "What an n8n workflow looks like",
+   "bullets": [
+    "A support hotline: the caller says their name and company",
+    "lookupCustomer: n8n finds them in HubSpot (industry, plan) and tells the agent who's calling",
+    "The agent talks to them like it knows them: \"I see Northwind is on our Enterprise plan in healthcare\"",
+    "createTicket: Claude writes up the bug, Asana creates the task and assigns an engineer, HubSpot notes it",
+    "The agent reads back the ticket number before they hang up",
+    "Later, a second workflow: when the engineer marks it done in Asana, Gmail emails the customer"
+   ],
+   "note": "Walk the picture with the phone conversation on the right. Two tools, one n8n webhook: a Switch sends each tool to its own path, the same way n8n's own Vapi booking templates work. The phone part is still Vapi with Deepgram listening and speaking. HubSpot plus Asana plus an email when it's fixed is the part Vapi can't do alone. You won't build all of this tonight: the Station 3 steps start with one webhook.",
+   "image": "/lesson-shots/phone-agent-tools/n8n-workflow.png"
+  },
+  {
+   "n": 8,
+   "kicker": "STATION 3",
+   "title": "Just for fun: karaoke night",
+   "bullets": [
+    "Guests call your agent to sign up for a song",
+    "The agent asks their name and what they want to sing",
+    "addSong: n8n searches YouTube for the karaoke version",
+    "Adds it to the \"Karaoke night\" playlist playing on your TV",
+    "Counts the queue, and the agent says \"You're number 4. Watch the TV.\""
+   ],
+   "note": "The fun one. One tool, one webhook. The search step uses the HTTP Request node with the YouTube search API (the YouTube node has Playlist Item: Add but no plain search). Log in to n8n with the Google account that owns the playlist. Heads-up if anyone builds it for real: a TV that's already playing the playlist may need it reopened to show new songs.",
+   "image": "/lesson-shots/phone-agent-tools/karaoke-workflow.png"
+  },
+  {
+   "n": 9,
+   "kicker": "VAPI + n8n",
+   "title": "Start in Vapi, move to n8n",
+   "bullets": [
+    "Yes, they work together. Your Vapi agent stays your agent.",
+    "During the call: a Vapi API Request tool calls your n8n Webhook (use the Production URL)",
+    "n8n does the work and answers with Respond to Webhook. The agent says the result.",
+    "After the call: point Vapi's server URL at an n8n Webhook to get the full call report",
+    "n8n can call people back through your Vapi agent (needs a Twilio number: free Vapi numbers only take calls)",
+    "So build in Vapi first, then move to n8n when you want more"
+   ],
+   "note": "This answers the question everyone asks: do I have to pick one? No. Station 2 people can walk over to Station 3 later and keep the same agent. There's no official Vapi node in n8n; the webhook is how Vapi's own docs connect them."
+  },
+  {
+   "n": 10,
    "kicker": "THE RECIPE",
    "title": "Ears, brain, mouth",
    "bullets": [
@@ -75,7 +173,7 @@
    "note": "Same recipe as Build Your First Phone Agent. If Flux isn't in the voice list, Aura-2 is the fallback."
   },
   {
-   "n": 5,
+   "n": 11,
    "kicker": "STATION 1",
    "title": "Your first phone agent",
    "bullets": [
@@ -88,7 +186,7 @@
    "note": "DEMO: share the Vapi dashboard. Show the three cards (Transcriber, Model, Voice), the System Prompt box, the Talk button and Phone Numbers. About two minutes, not a full walkthrough: the page has screenshots for every click."
   },
   {
-   "n": 6,
+   "n": 12,
    "kicker": "HOW TOOLS WORK",
    "title": "The agent decides, the tool does",
    "bullets": [
@@ -101,7 +199,7 @@
    "note": "This is the idea for stations 2 and 3. Step 5 is where bots lie, which matters next week."
   },
   {
-   "n": 7,
+   "n": 13,
    "kicker": "STATION 2",
    "title": "Vapi Composer: the cheat code",
    "bullets": [
@@ -114,7 +212,7 @@
    "note": "DEMO: open Composer in the sidebar, paste your assistant ID and ask it something from the next slide. Let the room watch it propose changes and approve them."
   },
   {
-   "n": 8,
+   "n": 14,
    "kicker": "STATION 2",
    "title": "Things to ask Composer",
    "bullets": [
@@ -128,34 +226,7 @@
    "note": "Pick one or two live. The test suite one is impressive: it writes fake callers that test your agent for you."
   },
   {
-   "n": 9,
-   "kicker": "STATION 2",
-   "title": "Built-in tools, no code",
-   "bullets": [
-    "Google Calendar: check availability, create an event",
-    "Google Sheets: add a row for every call",
-    "Slack: post a message to a channel",
-    "Transfer Call and End Call",
-    "Query tool: answer from your own files",
-    "Structured Outputs: pull name, order, mood out of every call"
-   ],
-   "note": "Pattern for all of them: Integrations to connect Google or Slack, Tools then Create Tool, then attach it on your assistant's Tools tab and Publish. Or just ask Composer."
-  },
-  {
-   "n": 10,
-   "kicker": "STATION 3",
-   "title": "n8n: the apps Vapi doesn't have",
-   "bullets": [
-    "Vapi already does calendar, Sheets, Slack and transfers on its own",
-    "n8n connects your agent to hundreds of other apps",
-    "Vapi calls an n8n webhook in the middle of the phone call",
-    "n8n does the work, then sends back one sentence for the agent to say",
-    "Free 14-day n8n Cloud trial: no credit card, no install"
-   ],
-   "note": "Make the point clearly: if Vapi has a built-in tool for it, use Vapi (station 2). Reach for n8n when the app you want isn't in Vapi's Create Tool menu, or when one call should do several things in a row."
-  },
-  {
-   "n": 11,
+   "n": 15,
    "kicker": "STATION 3",
    "title": "What n8n adds",
    "bullets": [
@@ -169,7 +240,7 @@
    "note": "DEMO: call your agent and request a song. Show the requestSong tool in Vapi, then the n8n workflow: Webhook, Spotify Search Song, Add an item to a playlist, Respond to Webhook. Open the playlist so the room sees the song land."
   },
   {
-   "n": 12,
+   "n": 16,
    "kicker": "THE GOLDEN RULE",
    "title": "Never say it's done unless it's done",
    "bullets": [
@@ -181,7 +252,7 @@
    "note": "This matters more than anything else tonight, and it's exactly what people will attack next week."
   },
   {
-   "n": 13,
+   "n": 17,
    "kicker": "KEEP IT SAFE",
    "title": "Your keys are passwords",
    "bullets": [
@@ -193,7 +264,7 @@
    "note": "Quick one. Especially before show and tell, when screens go up."
   },
   {
-   "n": 14,
+   "n": 18,
    "kicker": "SHOW AND TELL",
    "title": "What did you build?",
    "bullets": [
@@ -204,7 +275,7 @@
    "note": "Ask for volunteers. Call the agent on speaker so the room hears it."
   },
   {
-   "n": 15,
+   "n": 19,
    "kicker": "NEXT WEEK",
    "title": "Break My Agent",
    "bullets": [
@@ -221,7 +292,7 @@
    "type": "slides",
    "title": "Intro: the three stations",
    "from": 1,
-   "to": 15
+   "to": 19
   },
   {
    "type": "steps",
@@ -506,7 +577,7 @@
  ],
  "series": {
   "id": "phone-lab",
-  "title": "Phone Lab + Christmas Bonus (6 classes)",
+  "title": "Phone Lab + Christmas Bonus (5 classes)",
   "summary": "",
   "part": 2
  },
