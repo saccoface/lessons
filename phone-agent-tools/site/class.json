@@ -511,6 +511,7 @@
   "part": 2
  },
  "cohosts": [
-  "Vapi"
+  "Vapi",
+  "n8n"
  ]
 }
