@@ -5,7 +5,7 @@
   "icon": "👤︎",
   "owner": "Dana Sacco",
   "summary": "Give a voice agent a face, built with Pipecat. Learn why businesses use avatars, try one in the browser, then build your own Pipecat bot: Deepgram Flux listens and speaks, Claude thinks and SpatialReal animates a photoreal face. Leave able to turn it into a front-desk assistant, tutor or anything else.",
-  "detail": "Everyone sits down, adds their own keys and talks to a live avatar in the browser: it interviews them for a couple of minutes, so they feel how an avatar looks, sounds and keeps up. The SpatialReal team then presents their product and pricing. The main part builds the same avatar as a Pipecat pipeline on each laptop, with a guided tour of bot.py: frames, processors, the pipeline order, memory and events. The last part turns it into a business assistant using one setting and a text file.",
+  "detail": "Everyone sits down, adds their own keys and talks to a live avatar in the browser: it interviews them for a couple of minutes, so they feel how an avatar looks, sounds and keeps up. The main part builds the same avatar as a Pipecat pipeline on each laptop, with a guided tour of bot.py: frames, processors, the pipeline order, memory and events. The last part turns it into a business assistant using one setting and a text file.",
   "outcome": "Your own Pipecat avatar bot running on your laptop, an understanding of how a Pipecat pipeline fits together, and a front-desk version you can adapt for real work.",
   "audience": "Mixed technical and non-technical",
   "type": "Workshop",
@@ -402,5 +402,9 @@
     "Pipecat: CHARACTER=… has no prompts/….md — the name must match a file in prompts/, without .md.",
     "Pipecat: port 7860 is in use — run uv run bot.py -t webrtc --port 7861, open that port, and change PIPECAT_ALLOWED_ORIGINS in .env to match.",
     "Sessions stop after 10 minutes on the free SpatialReal tier. Press Start again."
+  ],
+  "cohosts": [
+    "Pipecat team",
+    "SpatialReal team"
   ]
 }
