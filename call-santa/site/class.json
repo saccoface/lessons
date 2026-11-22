@@ -4,9 +4,9 @@
   "title": "Call Santa: Build a Santa Phone Line",
   "icon": "🎅",
   "owner": "Dana Sacco",
-  "summary": "An elf walks you through building a real phone number your kids can call to talk to a jolly Santa who knows their names, their good deeds and their dog's name. No code, nothing to install.",
+  "summary": "An elf walks you through building a Santa phone line for the kids in your life: your kids, grandkids, nieces, nephews or godkids. They call a real number and a jolly Santa knows their names, their good deeds and their dog's name. No code, nothing to install.",
   "detail": "Pick an elf guide, paste two free keys, and tell Santa about your family by talking it through with the elf. Pick the Christmas music he answers over, press one button, and the page builds your Santa in Vapi with Deepgram's jolly Cliff voice, a real recorded ho ho ho and a free phone number. After the kids call, Santa's Mailbag has every recording, transcript and wish list to keep.",
-  "outcome": "A real phone number your kids can call to reach Santa, plus the recording and wish list from every call.",
+  "outcome": "A real phone number the kids in your life can call to reach Santa, plus the recording and wish list from every call.",
   "audience": "Mixed technical and non-technical",
   "type": "Workshop",
   "difficulty": "easy",
@@ -18,7 +18,7 @@
     "A free Deepgram account (console.deepgram.com) and an API key. It wakes up your elf and becomes Santa's ears and voice. New accounts get free credit.",
     "A free Vapi account (dashboard.vapi.ai) and its Private API key. Vapi answers the phone and gives you a free number.",
     "A laptop with a desktop browser and a microphone (headsets are provided in the room).",
-    "Your kids' first names, ages, a good deed or two from this year, and a few fun facts Santa can magically know."
+    "The kids’ first names, ages, a good deed or two from this year, and a few fun facts Santa can magically know."
   ],
   "artifact": "A working Santa phone number, and a mailbag of call recordings and wish lists.",
   "links": {
@@ -29,27 +29,27 @@
     {
       "n": 1,
       "kicker": "🎄 CHRISTMAS BONUS",
-      "title": "Call Santa: build a Santa phone line your kids can call",
+      "title": "Call Santa: a Santa phone line for the kids in your life",
       "bullets": [
         "A real phone number that rings Santa at the North Pole",
-        "He knows your kids’ names, their good deeds and their wish lists",
+        "Your kids, grandkids, nieces, nephews: Santa knows their names, good deeds and wish lists",
         "No code. An elf walks you through every step"
       ],
-      "note": "Welcome everyone. Tonight is the Phone Lab’s Christmas bonus. By the end, every grown-up here has a real phone number their kids can call to talk to Santa."
+      "note": "Welcome everyone. Tonight is the Phone Lab’s Christmas bonus. By the end, every grown-up here has a real phone number that the kids in their life can call to talk to Santa."
     },
     {
       "n": 2,
       "kicker": "🎁 WHAT YOU TAKE HOME",
       "title": "By the end of tonight, you will have:",
       "bullets": [
-        "A real phone number your kids can call, any time in December",
+        "A real phone number the kids in your life can call, any time in December",
         "A jolly, old-sounding Santa who greets each child by name",
         "The nice list: Santa names their good deeds from this year",
         "Funny nudges in your words (“be nicer to your sister, or… coal!”)",
         "Christmas music under the call and a real “ho ho ho”",
         "Santa’s Mailbag: every call’s recording, transcript and wish list"
       ],
-      "note": "Set expectations: this is a real phone line on the real phone network, not a demo. Parents keep it all December."
+      "note": "Set expectations: this is a real phone line on the real phone network, not a demo. Everyone keeps it all December."
     },
     {
       "n": 3,
@@ -57,7 +57,7 @@
       "title": "Ears, brain, voice and a phone line",
       "bullets": [
         "Vapi answers the phone and gives you a free number",
-        "Deepgram Flux is Santa’s ears: it hears your child and knows when they’re done talking",
+        "Deepgram Flux is Santa’s ears: it hears the child and knows when they’re done talking",
         "Claude, run by Vapi, is Santa’s brain, so there’s no extra AI account",
         "Deepgram’s Cliff voice speaks, made jolly, then slower and deeper so he sounds like Santa",
         "Your family details become Santa’s prompt"
@@ -107,7 +107,7 @@
       "kicker": "📞 RING RING!",
       "title": "Call your Santa",
       "bullets": [
-        "Call your new number from your phone and say your child’s name",
+        "Call your new number from your phone and say the child’s name",
         "Listen for the music, the jolly voice and the real “ho ho ho”",
         "Change anything on the page, then press Update my Santa",
         "Open Santa’s Mailbag to hear the recording and see the wish list"
@@ -170,7 +170,7 @@
       "title": "Merry Christmas from the Phone Lab",
       "bullets": [
         "You built a real voice agent on a real phone number",
-        "Share how your kids’ calls go!",
+        "Share how the calls go, and add the cutest to the playlist!",
         "Keep your keys private, and rotate them after the holidays"
       ],
       "note": "Close the lab. Thank cohosts. Ask people to share (with permission) their favorite kid moments."
