@@ -42,7 +42,7 @@
       "title": "Activate your Moose helper",
       "bullets": [
         "Go to console.deepgram.com and sign up. It’s free, with $200 of credit and no card needed",
-        "Open API Keys, then Create a New API Key, and copy it",
+        "Open API Keys, then Create a New API Key. Name it demo-dec1, then copy it",
         "Open tonight’s lesson on dgeventhub.com and paste your key in the box at the top",
         "Say hi to your Moose. Missed a demo, or want to reach someone who demoed? Ask him"
       ],
