@@ -11,7 +11,7 @@
   "type": "Workshop",
   "difficulty": "easy",
   "track": "community",
-  "minutes": 60,
+  "minutes": 75,
   "setupMinutes": 10,
   "runner": "santa",
   "prereqs": [
@@ -25,12 +25,174 @@
     "starterRepo": null,
     "deck": null
   },
-  "slides": [],
+  "slides": [
+    {
+      "n": 1,
+      "kicker": "🎄 CHRISTMAS BONUS",
+      "title": "Call Santa: build a Santa phone line your kids can call",
+      "bullets": [
+        "A real phone number that rings Santa at the North Pole",
+        "He knows your kids’ names, their good deeds and their wish lists",
+        "No code. An elf walks you through every step"
+      ],
+      "note": "Welcome everyone. Tonight is the Phone Lab’s Christmas bonus. By the end, every grown-up here has a real phone number their kids can call to talk to Santa."
+    },
+    {
+      "n": 2,
+      "kicker": "🎁 WHAT YOU TAKE HOME",
+      "title": "By the end of tonight, you will have:",
+      "bullets": [
+        "A real phone number your kids can call, any time in December",
+        "A jolly, old-sounding Santa who greets each child by name",
+        "The nice list: Santa names their good deeds from this year",
+        "Funny nudges in your words (“be nicer to your sister, or… coal!”)",
+        "Christmas music under the call and a real “ho ho ho”",
+        "Santa’s Mailbag: every call’s recording, transcript and wish list"
+      ],
+      "note": "Set expectations: this is a real phone line on the real phone network, not a demo. Parents keep it all December."
+    },
+    {
+      "n": 3,
+      "kicker": "🦌 HOW SANTA WORKS",
+      "title": "Ears, brain, voice and a phone line",
+      "bullets": [
+        "Vapi answers the phone and gives you a free number",
+        "Deepgram Flux is Santa’s ears: it hears your child and knows when they’re done talking",
+        "Claude, run by Vapi, is Santa’s brain, so there’s no extra AI account",
+        "Deepgram’s Cliff voice speaks, made jolly, then slower and deeper so he sounds like Santa",
+        "Your family details become Santa’s prompt"
+      ],
+      "note": "This is the same stack as Week 1: a phone line, ears, a brain and a voice. The only new part is the Santa voice, which this site makes older and adds the real recorded laugh to."
+    },
+    {
+      "n": 4,
+      "kicker": "🧝 MEET YOUR ELF",
+      "title": "Jingle or Twinkle will guide you",
+      "bullets": [
+        "Two elves, both Deepgram voices played 25% faster so they sound tiny",
+        "Talk to your elf: it asks about your family and fills in the form for you",
+        "It plays the music choices and answers questions when you’re stuck",
+        "Your elf runs on your own Deepgram key"
+      ],
+      "note": "The elf is a Deepgram Voice Agent. The squeaky elf sound is the same trick as Santa’s, in reverse: play the voice faster and it gets higher."
+    },
+    {
+      "n": 5,
+      "kicker": "📝 BEFORE YOU START",
+      "title": "Two free accounts and a few family facts",
+      "bullets": [
+        "Deepgram: console.deepgram.com → API Keys → Create key (free credit included)",
+        "Vapi: dashboard.vapi.ai → API Keys → copy the PRIVATE key",
+        "Each child’s first name and age, one or two good deeds, and their wish list",
+        "Little things Santa can “magically” know: a lost tooth, a pet’s name",
+        "A headset or quiet corner to talk to your elf"
+      ],
+      "note": "The only time anyone goes to the Vapi website is to copy that key. The lesson page sets up everything else. Remind people: Private key, not Public."
+    },
+    {
+      "n": 6,
+      "kicker": "⭐ KEEP THE MAGIC SAFE",
+      "title": "Santa’s rules, built in",
+      "bullets": [
+        "First names only: no addresses, schools or last names",
+        "Santa never promises a gift. He’ll “talk to the elves”",
+        "Nobody is ever naughty. Coal is only a joke, and only if you ask for it",
+        "If a child sounds sad or unsafe, Santa gently sends them to a grown-up",
+        "Keys and family details aren’t stored on this site. Recordings live in your own Vapi account"
+      ],
+      "note": "Point out these rules are locked into every Santa. Grown-ups can add funny nudges, but Santa always ends by saying they’re on the nice list."
+    },
+    {
+      "n": 7,
+      "kicker": "📞 RING RING!",
+      "title": "Call your Santa",
+      "bullets": [
+        "Call your new number from your phone and say your child’s name",
+        "Listen for the music, the jolly voice and the real “ho ho ho”",
+        "Change anything on the page, then press Update my Santa",
+        "Open Santa’s Mailbag to hear the recording and see the wish list"
+      ],
+      "note": "Everyone calls their own Santa. Walk the room and help anyone whose new number isn’t ringing yet (it can take a few minutes)."
+    },
+    {
+      "n": 8,
+      "kicker": "📬 SANTA’S MAILBAG",
+      "title": "Keep every call",
+      "bullets": [
+        "Every call shows the date, who called and what they wished for",
+        "Press Download to save a recording, or Download all",
+        "Vapi only keeps recordings for a while, so save the ones you love",
+        "Come back any time in December: paste your Vapi key and open the mailbag"
+      ],
+      "note": "These recordings are going to be family treasures. Strongly encourage people to download them before Vapi’s retention runs out."
+    },
+    {
+      "n": 9,
+      "kicker": "☃️ AFTER CHRISTMAS",
+      "title": "Your agent is yours: change it in Vapi",
+      "bullets": [
+        "Go to dashboard.vapi.ai and sign in",
+        "Click Assistants in the left menu",
+        "Open “Santa (dgeventhub)”",
+        "Everything Santa says comes from the System Prompt in the Model section"
+      ],
+      "note": "Now take them into the Vapi dashboard live. Show the Assistants list and open the Santa assistant."
+    },
+    {
+      "n": 10,
+      "kicker": "✏️ CHANGE THE PROMPT",
+      "title": "Turn Santa into someone new",
+      "bullets": [
+        "In Model → System Prompt, replace Santa’s instructions with your new character",
+        "Change First Message to how the new character answers the phone",
+        "Change the Voice: pick Deepgram, then any Aura-2 or Flux voice",
+        "Set Background Sound to Off, or paste a link to new music",
+        "Press Publish. The same phone number now rings your new character"
+      ],
+      "note": "Do it live: paste a short Tooth Fairy or birthday prompt, publish, and call the number. Note: pressing Update my Santa on the lesson page later puts Santa back."
+    },
+    {
+      "n": 11,
+      "kicker": "🎉 IDEAS FOR THE NEW YEAR",
+      "title": "Same number, new magic",
+      "bullets": [
+        "The Tooth Fairy, on call for the next wobbly tooth",
+        "A birthday call from their favorite character",
+        "A bedtime-story line, or the Easter Bunny in spring",
+        "A homework buddy who quizzes spelling words",
+        "Or remove the number under Phone Numbers when you’re done"
+      ],
+      "note": "Encourage reuse. Everything from Week 1 to 3 applies: tools, testing, breaking it."
+    },
+    {
+      "n": 12,
+      "kicker": "🎅 THANK YOU",
+      "title": "Merry Christmas from the Phone Lab",
+      "bullets": [
+        "You built a real voice agent on a real phone number",
+        "Share how your kids’ calls go!",
+        "Keep your keys private, and rotate them after the holidays"
+      ],
+      "note": "Close the lab. Thank cohosts. Ask people to share (with permission) their favorite kid moments."
+    }
+  ],
   "flow": [
+    {
+      "type": "slides",
+      "title": "What we’re building",
+      "from": 1,
+      "to": 6
+    },
     {
       "type": "runner",
       "title": "Build your Santa with your elf",
-      "note": "Seven steps on one page: pick an elf, paste your Deepgram and Vapi keys, tell Santa about your family, pick the music, make your Santa, call him, then open Santa's Mailbag."
+      "note": "Seven steps on one page: pick an elf, paste your Deepgram and Vapi keys, tell Santa about your family, pick the music, make your Santa, call him, then open Santa’s Mailbag."
+    },
+    {
+      "type": "slides",
+      "title": "Call Santa, and change him after Christmas",
+      "from": 7,
+      "to": 12
     }
   ],
   "sections": [],
@@ -42,5 +204,15 @@
     "The elf will not talk: check the Deepgram key, allow the microphone in the address bar, and press Wake up again.",
     "No wish list in the mailbag: it appears about a minute after the call ends. Press Check for new calls.",
     "Recordings are kept by Vapi for a limited time. Download the ones you love."
+  ],
+  "series": {
+    "id": "phone-lab",
+    "title": "Phone Lab + Christmas Bonus (5 classes)",
+    "summary": "",
+    "part": 4,
+    "bonus": true
+  },
+  "cohosts": [
+    "Vapi"
   ]
 }
