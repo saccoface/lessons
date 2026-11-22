@@ -38,6 +38,18 @@
     },
     {
       "n": 2,
+      "kicker": "FIRST THING",
+      "title": "Activate your Moose helper",
+      "bullets": [
+        "Go to console.deepgram.com and sign up. It’s free, with $200 of credit and no card needed",
+        "Open API Keys, then Create a New API Key, and copy it",
+        "Open tonight’s lesson on dgeventhub.com and paste your key in the box at the top",
+        "Say hi to your Moose. Missed a demo, or want to reach someone who demoed? Ask him"
+      ],
+      "note": "Give the room a minute to do this before moving on. The Moose runs on each person’s own key."
+    },
+    {
+      "n": 3,
       "kicker": "TONIGHT",
       "title": "How tonight goes",
       "bullets": [
@@ -50,7 +62,7 @@
       "note": ""
     },
     {
-      "n": 3,
+      "n": 4,
       "kicker": "DEEPGRAM",
       "title": "What Deepgram makes",
       "bullets": [
@@ -62,7 +74,7 @@
       "note": "Keep it short. The point is: we make the ears and the voice for voice apps."
     },
     {
-      "n": 4,
+      "n": 5,
       "kicker": "VOICE EVERYWHERE",
       "title": "Voice AI fits anywhere people talk",
       "bullets": [
@@ -76,7 +88,7 @@
       "note": ""
     },
     {
-      "n": 5,
+      "n": 6,
       "kicker": "WHY DEMO NIGHT",
       "title": "Why we do demo nights",
       "bullets": [
@@ -88,7 +100,7 @@
       "note": ""
     },
     {
-      "n": 6,
+      "n": 7,
       "kicker": "NEXT TUESDAY",
       "title": "Level Up Your Phone Agent",
       "bullets": [
@@ -100,20 +112,19 @@
       "note": "Next Tuesday, December 8. The Luma link is in the 'Sign up for what’s next' cards below the slides."
     },
     {
-      "n": 7,
+      "n": 8,
       "kicker": "STARTING IN JANUARY",
       "title": "New labs at the Hub",
       "bullets": [
         "Robots: our Physical AI Lab starts in January",
         "Video games: our Voice Game Lab starts shortly after",
         "I’ll be hosting both, right here at 505 Howard. It’s going to be really fun",
-        "My demo tonight is a sneak peek at both",
-        "Registration links are right below the slides"
+        "My demo tonight is a sneak peek at both"
       ],
       "note": ""
     },
     {
-      "n": 8,
+      "n": 9,
       "kicker": "PHYSICAL AI LAB",
       "title": "Meet the robot",
       "bullets": [
@@ -125,7 +136,7 @@
       "note": "Hold up the robot and let it talk before this slide."
     },
     {
-      "n": 9,
+      "n": 10,
       "kicker": "PHYSICAL AI LAB",
       "title": "Things will break. That’s robotics.",
       "bullets": [
@@ -137,7 +148,7 @@
       "note": ""
     },
     {
-      "n": 10,
+      "n": 11,
       "kicker": "VOICE GAME LAB",
       "title": "Voice Game Lab, every week",
       "bullets": [
@@ -149,7 +160,7 @@
       "note": ""
     },
     {
-      "n": 11,
+      "n": 12,
       "kicker": "VOICE GAME LAB",
       "title": "Night one: who you’ll hear from",
       "bullets": [
@@ -161,7 +172,7 @@
       "note": "Volley numbers are the company’s own (Jan 2025 press release). AstroBeam’s founders made Job Simulator at Owlchemy Labs; their second voice game, Robo Detective, launches on XREAL glasses."
     },
     {
-      "n": 12,
+      "n": 13,
       "kicker": "DEMOS",
       "title": "Tonight’s demos",
       "bullets": [
@@ -178,7 +189,7 @@
       "type": "slides",
       "title": "Welcome to Demo Night",
       "from": 1,
-      "to": 12
+      "to": 13
     },
     {
       "type": "runner",
