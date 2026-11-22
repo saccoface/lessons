@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "call-santa",
+  "title": "Call Santa: Build a Santa Phone Line",
+  "icon": "🎅",
+  "owner": "Dana Sacco",
+  "summary": "An elf walks you through building a real phone number your kids can call to talk to a jolly Santa who knows their names, their good deeds and their dog's name. No code, nothing to install.",
+  "detail": "Pick an elf guide, paste two free keys, and tell Santa about your family by talking it through with the elf. Pick the Christmas music he answers over, press one button, and the page builds your Santa in Vapi with Deepgram's jolly Cliff voice, a real recorded ho ho ho and a free phone number. After the kids call, Santa's Mailbag has every recording, transcript and wish list to keep.",
+  "outcome": "A real phone number your kids can call to reach Santa, plus the recording and wish list from every call.",
+  "audience": "Mixed technical and non-technical",
+  "type": "Workshop",
+  "difficulty": "easy",
+  "track": "community",
+  "minutes": 60,
+  "setupMinutes": 10,
+  "runner": "santa",
+  "prereqs": [
+    "A free Deepgram account (console.deepgram.com) and an API key. It wakes up your elf and becomes Santa's ears and voice. New accounts get free credit.",
+    "A free Vapi account (dashboard.vapi.ai) and its Private API key. Vapi answers the phone and gives you a free number.",
+    "A laptop with a desktop browser and a microphone (headsets are provided in the room).",
+    "Your kids' first names, ages, a good deed or two from this year, and a few fun facts Santa can magically know."
+  ],
+  "artifact": "A working Santa phone number, and a mailbag of call recordings and wish lists.",
+  "links": {
+    "starterRepo": null,
+    "deck": null
+  },
+  "slides": [],
+  "flow": [
+    {
+      "type": "runner",
+      "title": "Build your Santa with your elf",
+      "note": "Seven steps on one page: pick an elf, paste your Deepgram and Vapi keys, tell Santa about your family, pick the music, make your Santa, call him, then open Santa's Mailbag."
+    }
+  ],
+  "sections": [],
+  "troubleshooting": [
+    "Connect fails: use the Private key from Vapi (API Keys), not the Public key, and copy the Deepgram key again without spaces.",
+    "Make my Santa is greyed out: connect both keys, add at least one child's first name, and choose the music.",
+    "No phone number: Vapi gives each account one free number. Give Santa your current Vapi number (the button on the page; it stops answering for your other agent), delete an old number in Vapi under Phone Numbers and press Update my Santa, or sign up for Vapi with another Google account and use its Private key.",
+    "A new number does not ring yet: free numbers can take a few minutes to activate. Press Check my number.",
+    "The elf will not talk: check the Deepgram key, allow the microphone in the address bar, and press Wake up again.",
+    "No wish list in the mailbag: it appears about a minute after the call ends. Press Check for new calls.",
+    "Recordings are kept by Vapi for a limited time. Download the ones you love."
+  ]
+}

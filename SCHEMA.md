@@ -29,7 +29,7 @@ last valid version keeps serving.
 | `track` | enum | `community` · `teaching` |
 | `minutes` | number | 1–1440. How long the class runs. |
 | `setupMinutes` | number or null | 0–1440. Preparation before the room starts. |
-| `runner` | enum or null | `avatar` · `interview` · `robot` · `drawing` · `retro` · `gamecoach` · `null`. **See below.** |
+| `runner` | enum or null | `avatar` · `interview` · `robot` · `drawing` · `retro` · `gamecoach` · `santa` · `null`. **See below.** |
 | `prereqs` | string[] | ≤ 60 items. What an attendee needs before starting. |
 | `links` | object | `{ "starterRepo": url-or-null, "deck": url-or-null }`. `https:` only. |
 | `slides` | Slide[] | ≤ 200. The deck, in order. |
@@ -89,6 +89,7 @@ Rules:
 | `drawing` | A booth game: a Deepgram voice agent describes a secret drawing in plain shapes, the visitor draws it with a mouse, guesses, and sees it beside the real one on a wall of drawings. |
 | `retro` | Play a classic text adventure (Zork I) by voice: Deepgram Flux listens with the game's words as keyterms, a Flux voice narrates, and the original game runs in the browser. |
 | `gamecoach` | A voice game design coach (Deepgram Voice Agent): a story interview or a build walkthrough for the attendee's own voice game, writing design.md and a Godot characters.gd as they talk. |
+| `santa` | Call Santa: an elf guide (Deepgram Voice Agent, sped up) walks a grown-up through building a Santa phone line in their own Vapi account with their own Deepgram key: family details, music, one-button assistant + free number, and Santa's Mailbag of call recordings and wish lists. |
 | `null` | Slides and written steps only. |
 
 A class **cannot** introduce a new runner. Anything outside this list is rejected on import.
