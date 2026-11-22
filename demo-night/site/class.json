@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "id": "demo-night",
+  "title": "Open Mic: Demo Night",
+  "icon": "🎤",
+  "owner": "Dana Sacco",
+  "summary": "A night of demos from people building with Deepgram and Pipecat, then an open mic. Food and drinks included.",
+  "detail": "Welcome to the Deepgram Collab Hub at 505 Howard. A few minutes on Deepgram and what’s coming next, then demos from the community. The demo board below is live: if your project uses Deepgram or Pipecat for voice, add yourself.",
+  "outcome": "You’ve seen what people are building with voice AI right now, met the builders, and know what’s coming to the Hub next.",
+  "artifact": "A list of new voice projects and the people behind them, plus sign-ups for the next labs.",
+  "audience": "Mixed technical and non-technical",
+  "type": "Demo day",
+  "difficulty": "easy",
+  "track": "community",
+  "minutes": 180,
+  "setupMinutes": 30,
+  "runner": "demoboard",
+  "prereqs": [
+    "Nothing to bring but yourself",
+    "Demoing? Your laptop with the project running, and a charger",
+    "Your demo uses Deepgram or Pipecat for voice"
+  ],
+  "links": {
+    "starterRepo": null,
+    "deck": null
+  },
+  "slides": [
+    {
+      "n": 1,
+      "kicker": "WELCOME",
+      "title": "Welcome to 505 Howard",
+      "bullets": [
+        "Eat the food. Drink the beer. That’s what it’s here for.",
+        "This is Open Mic: Demo Night with Deepgram",
+        "Wi-Fi is on the screen, demos start in a few minutes"
+      ],
+      "note": "Welcome everyone to the Deepgram Collab Hub. Point at the food and drinks before anything else."
+    },
+    {
+      "n": 2,
+      "kicker": "TONIGHT",
+      "title": "How tonight goes",
+      "bullets": [
+        "A few minutes on Deepgram and why we do this",
+        "What’s coming up: one more build night this month, and two labs next year",
+        "Demos: about 10 minutes each",
+        "Open mic: anyone with a voice project can jump up after",
+        "Then hang out, eat, drink, meet people"
+      ],
+      "note": ""
+    },
+    {
+      "n": 3,
+      "kicker": "DEEPGRAM",
+      "title": "What Deepgram makes",
+      "bullets": [
+        "Speech to text: Flux and Nova hear people in real time, and Flux knows when you’ve finished talking",
+        "Text to speech: Aura and Flux voices that sound like people, fast enough for a live conversation",
+        "Voice Agent API: listen, think and talk back over one connection",
+        "Works with the tools builders already use, like Pipecat, Vapi and LiveKit"
+      ],
+      "note": "Keep it short. The point is: we make the ears and the voice for voice apps."
+    },
+    {
+      "n": 4,
+      "kicker": "VOICE EVERYWHERE",
+      "title": "Voice AI fits anywhere people talk",
+      "bullets": [
+        "Phone agents that answer, book and follow up",
+        "Video games where you talk to the characters",
+        "Robots, toys and gadgets you talk to",
+        "Avatars and digital humans",
+        "Captions on glasses, wearables and accessibility tools",
+        "Call centers, meeting notes, medical scribes"
+      ],
+      "note": ""
+    },
+    {
+      "n": 5,
+      "kicker": "WHY DEMO NIGHT",
+      "title": "Why we do demo nights",
+      "bullets": [
+        "People keep building things with Deepgram we never imagined",
+        "Tonight you see them first, from the people who built them",
+        "Steal ideas, ask questions, find people to build with",
+        "Got something of your own? There’s an open mic at the end"
+      ],
+      "note": ""
+    },
+    {
+      "n": 6,
+      "kicker": "NEXT TUESDAY",
+      "title": "Level Up Your Phone Agent",
+      "bullets": [
+        "Teach your phone agent to do real things: tools, calendars, Slack, n8n workflows",
+        "No agent yet? A quick-build station gets you one in minutes",
+        "Same place, same food and drinks",
+        "Sign-up link is on the lesson page, just under the slides"
+      ],
+      "note": "Next Tuesday, December 8. The Luma link is in the 'Sign up for what’s next' cards below the slides."
+    },
+    {
+      "n": 7,
+      "kicker": "NEXT YEAR",
+      "title": "Two labs at the Hub next year",
+      "bullets": [
+        "Physical AI Lab: build a talking robot",
+        "Voice Game Lab: build a game you play with your voice",
+        "Free, with food, here at 505 Howard",
+        "Sign-up links are on the lesson page"
+      ],
+      "note": ""
+    },
+    {
+      "n": 8,
+      "kicker": "PHYSICAL AI LAB",
+      "title": "Meet the robot",
+      "bullets": [
+        "A cardboard robot with a Deepgram voice: it listens, talks and moves its mouth in time",
+        "5 weeks, starting in early June, one evening a week",
+        "Each week adds one piece, and you take the robot home",
+        "Miss a week? Catch up at a lunch session, or just come to the next one"
+      ],
+      "note": "Hold up the robot and let it talk before this slide."
+    },
+    {
+      "n": 9,
+      "kicker": "PHYSICAL AI LAB",
+      "title": "Things will break. That’s robotics.",
+      "bullets": [
+        "Wires come loose, servos jitter, code does weird things",
+        "We fix it together, every week",
+        "My promise: everyone who wants a working robot at the end will have one",
+        "We got this."
+      ],
+      "note": ""
+    },
+    {
+      "n": 10,
+      "kicker": "VOICE GAME LAB",
+      "title": "Voice Game Lab, every week",
+      "bullets": [
+        "Night one: hear from game developers and play games designed for voice",
+        "Then pick your path: one of our lessons, with an agent that guides you through every step, or code your own game from scratch",
+        "By the end of night one you’ll know the game you want to make",
+        "The weeks after: we build our games, together"
+      ],
+      "note": ""
+    },
+    {
+      "n": 11,
+      "kicker": "VOICE GAME LAB",
+      "title": "Night one: who you’ll hear from",
+      "bullets": [
+        "LightHouse for the Blind and Visually Impaired: how blind and low-vision players game, and why voice matters",
+        "Joe Sparks, creator of Total Distortion, the 1995 cult music-video adventure game",
+        "An engineer from Volley, the largest voice game company: Jeopardy! and other TV game shows you play by voice, with more than 20 million players and 100 million game sessions a year",
+        "Devin Reimer of AstroBeam, a Deepgram customer: Stellar Cafe on Steam, a VR game where you talk to the characters"
+      ],
+      "note": "Volley numbers are the company’s own (Jan 2025 press release). AstroBeam’s founders made Job Simulator at Owlchemy Labs; their second voice game, Robo Detective, launches on XREAL glasses."
+    },
+    {
+      "n": 12,
+      "kicker": "DEMOS",
+      "title": "Tonight’s demos",
+      "bullets": [
+        "The live demo board is on the lesson page, under these slides",
+        "Using Deepgram or Pipecat in a voice app? Add your name",
+        "The board updates the moment someone signs up",
+        "About 10 minutes each, then open mic"
+      ],
+      "note": ""
+    }
+  ],
+  "flow": [
+    {
+      "type": "slides",
+      "title": "Welcome to Demo Night",
+      "from": 1,
+      "to": 12
+    },
+    {
+      "type": "runner",
+      "title": "Tonight’s demo board",
+      "note": "Live: add your demo and it appears on everyone’s screen in a few seconds."
+    }
+  ],
+  "sections": [],
+  "troubleshooting": [
+    "Your name doesn’t show up: wait a few seconds, or refresh the page.",
+    "“Already on the board”: someone added the same name and project. Ask Dana to edit it.",
+    "Need a screen, a mic or a phone line for your demo? Tell Dana before the demos start."
+  ]
+}
