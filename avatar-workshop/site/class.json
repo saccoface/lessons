@@ -5,7 +5,7 @@
   "icon": "👤︎",
   "owner": "Dana Sacco",
   "summary": "Give a voice agent a face, then give it a job. Learn where businesses use avatars, talk to a live one in the browser, and turn it into a front desk for your own business: Deepgram listens, thinks and speaks, and SpatialReal animates a photoreal face. Nothing to install.",
-  "detail": "A short talk on where avatars earn their keep. Everyone adds their own Deepgram and SpatialReal keys and talks to a live avatar that interviews them, and the room sees the totals. Then each person gives the avatar a job: a business name, what it should know and a personality, and the room tries to break it. The SpatialReal team shows how the face is made and what it costs. 90 minutes, with drinks and snacks (no dinner).",
+  "detail": "A short talk on where avatars earn their keep. Everyone adds their own Deepgram and SpatialReal keys and talks to a live avatar that interviews them, and the room sees the totals. Then each person gives the avatar a job: a business name, what it should know and a personality, and the room tries to break it. The SpatialReal team shows how the face is made and what it costs. Then everyone learns how to put their avatar on their own website. 90 minutes, with drinks and snacks (no dinner).",
   "outcome": "A front-desk avatar for your own business that you built and tested, a sense of where avatars help and where they don't, and a page you can come back to with your own keys.",
   "audience": "Mixed technical and non-technical",
   "type": "Workshop",
@@ -22,7 +22,7 @@
   ],
   "artifact": "A front-desk avatar for the attendee’s own business, running in the browser on their own keys.",
   "links": {
-    "starterRepo": null,
+    "starterRepo": "https://github.com/saccoface/avatar-website-starter",
     "deck": null
   },
   "slides": [
@@ -143,19 +143,31 @@
         "Pricing, and how to start for free",
         "Questions"
       ],
-      "note": "The SpatialReal team presents here with their own slides: the product and pricing. Then we build the same avatar with Pipecat.",
+      "note": "The SpatialReal team presents here with their own slides: the product and pricing.",
       "n": 10
+    },
+    {
+      "kicker": "TAKE IT HOME",
+      "title": "Put it on your website",
+      "bullets": [
+        "Pick Your business, fill it in, press Download my avatar",
+        "Open github.com/saccoface/avatar-website-starter and press Deploy to Render",
+        "Paste your two keys and your avatar file: you get a live web address",
+        "Add it to your site as a page or a box on any page"
+      ],
+      "note": "Your keys stay on the server, never in the visitor's browser. The starter has limits built in (2 visitors at once, 5 minutes each) so a busy page can't run up a bill. Free Render sleeps when idle, so the first visit can take about a minute to wake.",
+      "n": 11
     },
     {
       "kicker": "TAKE IT HOME",
       "title": "After today",
       "bullets": [
-        "This page works any time with your own keys — nothing to install",
+        "This page works any time with your own keys, nothing to install",
         "More faces: app.spatialreal.ai/avatars/library",
-        "Want to build one in code? A Pipecat class is coming"
+        "Your avatar's website code: github.com/saccoface/avatar-website-starter"
       ],
       "note": "Thank the room and the SpatialReal team.",
-      "n": 11
+      "n": 12
     }
   ],
   "flow": [
@@ -186,7 +198,7 @@
       "type": "slides",
       "title": "Take it home",
       "from": 11,
-      "to": 11
+      "to": 12
     }
   ],
   "sections": [],
