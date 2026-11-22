@@ -101,13 +101,14 @@
     },
     {
       "n": 7,
-      "kicker": "NEXT YEAR",
-      "title": "Two labs at the Hub next year",
+      "kicker": "STARTING IN JANUARY",
+      "title": "New labs at the Hub",
       "bullets": [
-        "Physical AI Lab: build a talking robot",
-        "Voice Game Lab: build a game you play with your voice",
-        "Free, with food, here at 505 Howard",
-        "Sign-up links are on the lesson page"
+        "Robots: our Physical AI Lab starts in January",
+        "Video games: our Voice Game Lab starts shortly after",
+        "I’ll be hosting both, right here at 505 Howard. It’s going to be really fun",
+        "My demo tonight is a sneak peek at both",
+        "Registration links are right below the slides"
       ],
       "note": ""
     },
@@ -117,7 +118,7 @@
       "title": "Meet the robot",
       "bullets": [
         "A cardboard robot with a Deepgram voice: it listens, talks and moves its mouth in time",
-        "5 weeks, starting in early June, one evening a week",
+        "5 weeks, starting in January, one evening a week",
         "Each week adds one piece, and you take the robot home",
         "Miss a week? Catch up at a lunch session, or just come to the next one"
       ],
