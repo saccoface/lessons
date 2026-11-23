@@ -179,7 +179,7 @@
    "bullets": [
     "Deepgram key, then paste it into Vapi",
     "Blank assistant: Flux, Haiku, Flux",
-    "Write your own short prompt. No interview tonight.",
+    "Write your own prompt and keep going, or take the Flux interview: it takes longer but writes a more thorough prompt",
     "Talk to it in the browser, then get a free number",
     "Done when your phone rings and it picks up"
    ],
@@ -273,6 +273,19 @@
     "Show the calendar, sheet or Slack message it made"
    ],
    "note": "Ask for volunteers. Call the agent on speaker so the room hears it."
+  },
+  {
+   "n": 19,
+   "kicker": "NEXT UP",
+   "title": "Call Santa: a Santa phone line for the kids in your life",
+   "bullets": [
+    "Our next event: build a Santa Claus phone line for kids to call",
+    "For the kids in your life: your kids, grandkids, nieces, nephews",
+    "They call a real number and a jolly Santa knows their names and their wish lists",
+    "About an hour, no code",
+    "Cookies and milk served"
+   ],
+   "note": "Keep it light: it's a really cute one. Anyone with kids in their family or their life should come. Plug the Luma link."
   }
  ],
  "flow": [
@@ -280,7 +293,7 @@
    "type": "slides",
    "title": "Intro: the three stations",
    "from": 1,
-   "to": 18
+   "to": 19
   },
   {
    "type": "steps",
@@ -291,7 +304,7 @@
  "sections": [
   {
    "title": "Station 1: your first phone agent in 20 minutes",
-   "summary": "Never built a phone agent? Start here, headphones on, at your own pace. No interview tonight: you write your own short prompt. Ears, brain, mouth: Flux listens, Claude Haiku thinks, Flux speaks.",
+   "summary": "Never built a phone agent? Start here, headphones on, at your own pace. Write your own short prompt, or take the Flux interview if you'd like a more thorough one (it takes longer). Ears, brain, mouth: Flux listens, Claude Haiku thinks, Flux speaks.",
    "steps": [
     {
      "id": "qb-key",
@@ -355,8 +368,8 @@
     },
     {
      "id": "qb-prompt",
-     "title": "Write your own prompt",
-     "instruction": "The big System prompt box is under the three cards. Write who it is, its one job, what to ask for and how to talk. A template:\n```\nYou are [name], the phone assistant for [business].\nYour one job: [take an order / book a visit / answer questions about ...].\nAsk for: [name], [what they want], [when]. One question at a time.\nKeep every reply to one or two short sentences. This is a phone call: no lists or links.\nIf you don't know something, say so and offer to take a message.\n```\nScroll to the bottom for First message: one short sentence that ends in a question, like 'Tony’s Pizza, what can I get you?'. Stuck for an idea? Ask ChatGPT or Claude: 'Write a short phone agent prompt for…'. Then click the orange Publish button, top right.",
+     "title": "Write your prompt (or take the interview)",
+     "instruction": "Two ways to get a prompt. Pick one.\n\nConfident writing your own? Do it now and move on: it's the quick way.\n\nWant a more thorough, planned prompt? Take the Flux interview: a voice agent asks about your business and writes the prompt for you. It takes longer, about 10 to 15 minutes. Open it here: https://dgeventhub.com/lessons/vapi-partner-event#run Paste the same Deepgram key there, answer its questions, then copy the prompt it writes into Vapi's System prompt box and come back to the next step.\n\nWriting your own: The big System prompt box is under the three cards. Write who it is, its one job, what to ask for and how to talk. A template:\n```\nYou are [name], the phone assistant for [business].\nYour one job: [take an order / book a visit / answer questions about ...].\nAsk for: [name], [what they want], [when]. One question at a time.\nKeep every reply to one or two short sentences. This is a phone call: no lists or links.\nIf you don't know something, say so and offer to take a message.\n```\nScroll to the bottom for First message: one short sentence that ends in a question, like 'Tony’s Pizza, what can I get you?'. Stuck for an idea? Ask ChatGPT or Claude: 'Write a short phone agent prompt for…'. Then click the orange Publish button, top right.",
      "check": "Your prompt is in and you pressed Publish.",
      "image": {
       "src": "/lesson-shots/vapi-quick-build/vapi-prompt.jpg",
