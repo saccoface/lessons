@@ -196,7 +196,7 @@
     "4. The tool answers: worked or failed",
     "5. The agent tells the caller what actually happened"
    ],
-   "note": "This is the idea for stations 2 and 3. Step 5 is where bots lie, which matters next week."
+   "note": "This is the idea for stations 2 and 3. Step 5 is where bots lie, so it matters."
   },
   {
    "n": 13,
@@ -249,7 +249,7 @@
     "\"Only say something is booked or sent after the tool says it worked.\"",
     "\"If a tool fails, say so and offer to take a message.\""
    ],
-   "note": "This matters more than anything else tonight, and it's exactly what people will attack next week."
+   "note": "This matters more than anything else tonight: an agent that says \"booked\" when nothing was booked is worse than no agent."
   },
   {
    "n": 17,
@@ -273,18 +273,6 @@
     "Show the calendar, sheet or Slack message it made"
    ],
    "note": "Ask for volunteers. Call the agent on speaker so the room hears it."
-  },
-  {
-   "n": 19,
-   "kicker": "NEXT WEEK",
-   "title": "Break My Agent",
-   "bullets": [
-    "Bring tonight's agent",
-    "Swap numbers with someone and try to break each other's",
-    "The toughest agent wins",
-    "No agent yet? There's a quick-build station there too."
-   ],
-   "note": "Plug the Luma link for next Tuesday. Play a clip of the bot-breaking video as a teaser if there's time."
   }
  ],
  "flow": [
@@ -292,7 +280,7 @@
    "type": "slides",
    "title": "Intro: the three stations",
    "from": 1,
-   "to": 19
+   "to": 18
   },
   {
    "type": "steps",
@@ -554,12 +542,6 @@
      "title": "Show the room",
      "instruction": "Call your agent on speaker, ask it to do its thing, then show the calendar, sheet or Slack message it made. Two minutes each.",
      "check": "The room heard it work."
-    },
-    {
-     "id": "s-next",
-     "title": "Bring it next week",
-     "instruction": "Next week is Break My Agent: swap numbers with someone and try to break each other's agents. Keep tonight's agent running and bring it.",
-     "check": "Your agent still answers."
     }
    ]
   }
