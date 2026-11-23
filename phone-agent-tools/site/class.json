@@ -5,7 +5,7 @@
  "icon": "🛠️",
  "owner": "Dana Sacco",
  "summary": "Teach your phone agent to do real things: book your calendar, log calls to a sheet, post to Slack, or reach apps Vapi doesn’t have, like Spotify and Notion, through n8n. Three self-paced stations, from your very first agent to custom workflows.",
- "detail": "Three stations, at your own pace, headphones on. Station 1 is for anyone without a phone agent yet: build one in about 20 minutes with Deepgram Flux, Claude Haiku and a free Vapi number. Station 2 uses Vapi Composer, a chat box that builds for you, and Vapi's built-in tools: Google Calendar, Google Sheets, Slack, transfers and more. Station 3 connects your agent to n8n for the apps Vapi doesn’t have built in, like adding a song to a Spotify playlist or saving an idea to Notion. Show and tell at the end.",
+ "detail": "Three stations, at your own pace, headphones on. Station 1 is for anyone without a phone agent yet: build one in about 20 minutes with Deepgram Flux, Claude Haiku and a free Vapi number. Station 2 uses Vapi Composer, a chat box that builds for you, and Vapi's built-in tools: Google Calendar, Google Sheets, Slack, transfers and more. Station 3 connects your agent to n8n for the apps Vapi doesn’t have built in, like adding a song to a Spotify playlist or saving an idea to Notion. Share what you built at the end.",
  "outcome": "A phone agent with at least one working tool, so a phone call makes something real happen.",
  "audience": "Mixed technical and non-technical",
  "type": "Workshop",
@@ -34,7 +34,7 @@
    "bullets": [
     "Tonight your phone agent stops just talking and starts doing things.",
     "Three stations. Pick the one that fits you.",
-    "Show and tell at the end."
+    "Share what you built at the end."
    ],
    "note": "Pizza first. Quick show of hands: who already has a phone agent from last time? Who's brand new?"
   },
@@ -73,7 +73,7 @@
     "Station 3, n8n: front of the room with Jose. Connect your agent to 2,000+ apps and multi-step workflows.",
     "Not sure? Start at Station 2. Your agent carries over to Station 3.",
     "Questions about anything? Grab Dr. Larissa.",
-    "Move at your own pace, headphones on. Last 20 minutes: show what you built."
+    "Move at your own pace, headphones on. At the end: share what you built."
    ],
    "note": "Ask the room out loud: who has a voice agent? If you've never built one, head to the back of the room with Dana now. Everyone else, the next slides show what Vapi and n8n can each do, so pick the one that fits what you want to build, then move to the middle (Vitali, Vapi) or the front (Jose, n8n)."
   },
@@ -261,18 +261,20 @@
     "Use a test calendar and a test sheet, not your real ones",
     "If a key leaks, delete it and make a new one"
    ],
-   "note": "Quick one. Especially before show and tell, when screens go up."
+   "note": "Quick one. Especially before anyone posts a screenshot of their workflow."
   },
   {
    "n": 18,
-   "kicker": "SHOW AND TELL",
-   "title": "What did you build?",
+   "kicker": "SHARE IT",
+   "title": "Share what you built",
    "bullets": [
-    "Two minutes each, if we have time",
-    "Call your agent on speaker",
-    "Show the calendar, sheet or Slack message it made"
+    "Post a picture of your n8n workflow, or whatever you built, in the Deepgram Discord: discord.gg/deepgram",
+    "Use the San Francisco Bay Area channel",
+    "Share it on X, LinkedIn, everywhere: tag @DeepgramAI, @Vapi_AI and @n8n_io",
+    "Get more people into voice AI: that's the whole point",
+    "Dana has no Twitter friends. Leave your handle on the event page, under Share what you built, so she can add you."
    ],
-   "note": "Ask for volunteers. Call the agent on speaker so the room hears it."
+   "note": "No show and tell tonight, so this replaces it. Ask everyone to post before they leave: a screenshot of their workflow or a short clip of the agent working. Then the Twitter bit, played for laughs: Dana has no Twitter friends, please help. The box is on the event page, right under Share what you built."
   },
   {
    "n": 19,
@@ -567,14 +569,20 @@
    ]
   },
   {
-   "title": "Show and tell",
-   "summary": "Last 20 minutes, if there's time.",
+   "title": "Share what you built",
+   "summary": "Before you go, show the world what your agent can do.",
    "steps": [
     {
-     "id": "s-show",
-     "title": "Show the room",
-     "instruction": "Call your agent on speaker, ask it to do its thing, then show the calendar, sheet or Slack message it made. Two minutes each.",
-     "check": "The room heard it work."
+     "id": "share-discord",
+     "title": "Post it in the Deepgram Discord",
+     "instruction": "Join the Deepgram Discord at https://discord.gg/deepgram and open the San Francisco Bay Area channel. Post a picture of your n8n workflow or your Vapi tool, or a short clip of your agent doing its thing, with one line on what it does.",
+     "check": "Your post is up in the San Francisco Bay Area channel."
+    },
+    {
+     "id": "share-social",
+     "title": "Share it everywhere",
+     "instruction": "Post it on X (Twitter), LinkedIn, wherever you hang out, and tag @DeepgramAI, @Vapi_AI and @n8n_io so we can cheer you on and reshare it. The more people see what a phone agent can do, the more people get into voice AI.",
+     "check": "You posted it and tagged us."
     }
    ]
   }
