@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "pipecat-playground",
+  "title": "Pipecat Playground",
+  "icon": "🐱",
+  "owner": "Dana Sacco",
+  "summary": "Build a real voice bot one Pipecat feature at a time, right in your browser. Each tab adds something (turn-taking, new voices and LLMs, tools, a Flow) and you talk to it as it grows, watching every frame and the matching bot.py. Bring your own free Deepgram key.",
+  "detail": "The opener for our Pipecat series. You build one live bot across seven tabs: give it a personality, tune how it knows you’ve finished talking, swap its ears, brain and voice, give it tools that really run, turn it into a Pipecat Flow, watch its frames like Whisker does, then download the bot.py and run it yourself. It runs on your own Deepgram key in the browser; nothing to install.",
+  "outcome": "A working voice bot you built yourself, plus the Pipecat bot.py that does the same job on your machine.",
+  "artifact": "Your own bot.py: Pipecat code for the bot you built, ready to run locally or deploy to Pipecat Cloud.",
+  "audience": "Mixed technical and non-technical",
+  "type": "Conference demo",
+  "difficulty": "easy",
+  "track": "community",
+  "minutes": 30,
+  "setupMinutes": 5,
+  "runner": null,
+  "prereqs": [
+    "A laptop with Chrome, Edge or Safari, and a microphone (headphones help)",
+    "A free Deepgram API key from console.deepgram.com ($200 credit, no card needed)",
+    "Nothing to install"
+  ],
+  "links": {
+    "starterRepo": null,
+    "deck": null
+  },
+  "slides": [],
+  "flow": [
+    {
+      "type": "steps",
+      "title": "Open the playground",
+      "note": "Self-guided. Go station by station, or jump to the one you care about."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Try it",
+      "summary": "Open the playground, then work through the stations along the top.",
+      "steps": [
+        {
+          "id": "open",
+          "title": "Open the Pipecat Playground",
+          "instruction": "Open https://dgeventhub.com/pipecat-playground/ in a new tab. Paste your Deepgram key in the box on the right and press Start my bot. Allow the microphone.",
+          "check": "Your bot greets you and answers when you talk."
+        },
+        {
+          "id": "pipeline",
+          "title": "01 Say hello",
+          "instruction": "Give your bot a name, a greeting and a system prompt, then talk to it. Watch the frames hop through its pipeline and check the latency of each turn. Ask for a long story and talk over it to see an interruption.",
+          "check": "You can point to where speech becomes text and where text becomes speech."
+        },
+        {
+          "id": "turns",
+          "title": "02 Turn-taking",
+          "instruction": "Watch your call on the timeline. Move eot_threshold and eot_timeout_ms, apply, and try pausing mid-sentence.",
+          "check": "You can say why a pause in the middle of a sentence doesn’t end your turn."
+        },
+        {
+          "id": "swap",
+          "title": "03 Swap services",
+          "instruction": "Switch your bot’s speech-to-text, LLM and voice while you talk to it, and watch which lines of bot.py change.",
+          "check": "You’ve seen that swapping a provider is about one line."
+        },
+        {
+          "id": "tools",
+          "title": "04 Function calling",
+          "instruction": "Turn on tools (weather, time, dice, notes, page color, hang up) and ask for things that need them. Follow each call step by step.",
+          "check": "You can explain how the LLM decides to call a tool and what comes back."
+        },
+        {
+          "id": "flows",
+          "title": "05 Pipecat Flows",
+          "instruction": "Switch on the Flow and order pizza or sushi. Watch the conversation move from node to node and the kitchen ticket fill in.",
+          "check": "You can see which functions each node allows."
+        },
+        {
+          "id": "debug-ship",
+          "title": "06 and 07: Watch it run, then ship it",
+          "instruction": "Click through every frame your bot produced, like Whisker shows. Add Whisker or Tail to bot.py, pick how people reach your bot, and download bot.py.",
+          "check": "You have a bot.py you can run."
+        },
+        {
+          "id": "more",
+          "title": "08 What else?",
+          "instruction": "Browse the 22 things people build with Pipecat. Each card names the real example file in the Pipecat repo (https://github.com/pipecat-ai/pipecat) so you can start from it.",
+          "check": "You’ve picked one thing you want to build next."
+        }
+      ]
+    }
+  ],
+  "troubleshooting": [
+    "No answer: check the key box for an error, and that you allowed the microphone in the address bar.",
+    "The bot hears itself and keeps talking: use headphones.",
+    "No mic? Type in the box under your key instead.",
+    "Your key is only used in that tab. It’s swapped for a 30-second token and never saved."
+  ]
+}
