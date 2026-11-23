@@ -477,6 +477,26 @@
    "summary": "For the more technical. Use n8n for the apps Vapi doesn’t have built in (Spotify, Notion, HubSpot, Shopify, Philips Hue, Discord and hundreds more), or to chain several apps in one call. Shape: Vapi API Request tool → n8n Webhook → your steps → Respond to Webhook → the agent says the answer.",
    "steps": [
     {
+     "id": "n-idea-hotline",
+     "title": "What's possible: a support hotline that knows who's calling",
+     "instruction": "Before you build, see what n8n can do with a phone agent. A customer calls with a bug. The agent's lookupCustomer tool asks n8n to find them in HubSpot, so the agent knows their company, industry and plan. Then its createTicket tool has Claude write up the problem, Asana assigns it to an engineer, and the agent reads back the ticket number. Later, when the engineer marks it done, n8n emails the customer. Two tools, one webhook: a Switch sends each tool to its own path.",
+     "check": "You've seen how one webhook can handle two tools.",
+     "image": {
+      "src": "/lesson-shots/phone-agent-tools/n8n-workflow.png",
+      "alt": "n8n workflow: Vapi tool call, Switch, HubSpot lookup and Respond to Webhook; AI Agent with Claude, Asana task, HubSpot note and Respond to Webhook; later an Asana Trigger and Gmail. Beside it, the phone conversation with Maria from Northwind Pharma."
+     }
+    },
+    {
+     "id": "n-idea-karaoke",
+     "title": "What's possible: karaoke night",
+     "instruction": "Just for fun. Guests call your agent to sign up for a song. Its addSong tool asks n8n to search YouTube for the karaoke version, add it to the playlist playing on your TV, and count the queue, so the agent can say \"You're number 4. Watch the TV.\" Pick something you'd like your own agent to do, then build the small version below: one tool, one webhook.",
+     "check": "You know what you want your agent to do with n8n.",
+     "image": {
+      "src": "/lesson-shots/phone-agent-tools/karaoke-workflow.png",
+      "alt": "n8n workflow: Vapi tool call, YouTube search, Code, YouTube Playlist Item Add, count the queue, Respond to Webhook, with a TV showing the karaoke playlist and the phone conversation beside it."
+     }
+    },
+    {
      "id": "n-signup",
      "title": "Get n8n",
      "instruction": "Sign up at n8n.io for the free 14-day Cloud trial. No credit card needed. There’s no free Cloud plan after the 14 days (n8n’s free Community Edition is self-hosted only), so it’s perfect for tonight. Then create a new workflow.",
