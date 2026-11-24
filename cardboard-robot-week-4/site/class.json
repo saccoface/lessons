@@ -11,7 +11,7 @@
     "part": 4
   },
   "summary": "The finale. A short polish session, then every robot gets the floor: show its look, its personalities and the coolest thing it can do. Guests welcome.",
-  "detail": "The first half hour is open studio: catch up on anything you missed, fix anything wobbly, and rehearse. Then show and tell: each builder gets a couple of minutes to introduce their robot, switch it between personalities, and show off its best skill, live, in front of the room. We film every robot, and the room votes. There is an optional lunchtime study hall at The Hub the same day: drop in for help, catch up, or get ahead.",
+  "detail": "The first half hour is open studio: catch up on anything you missed, fix anything wobbly, and rehearse. Then show and tell: each builder gets a couple of minutes to introduce their robot, switch it between personalities, and show off its best skill, live, in front of the room. We film every robot, and the room votes.",
   "outcome": "Your robot shown off to a live audience, and a clip of it.",
   "artifact": "A finished talking robot and a video of it in front of guests.",
   "audience": "Mixed technical and non-technical",
@@ -104,8 +104,8 @@
   "flow": [
     {
       "type": "steps",
-      "title": "Lunch study hall (before tonight)",
-      "note": "Optional, at lunchtime on the same Tuesday. Drop in for help, catch up, or get ahead."
+      "title": "Study hall (from 11 AM)",
+      "note": "Drop in any time before class. Snacks, decorating, upgrades and catch-up."
     },
     {
       "type": "slides",
@@ -127,26 +127,26 @@
   ],
   "sections": [
     {
-      "title": "Lunch study hall: final fixes",
-      "summary": "Optional, at lunchtime on the same Tuesday at The Hub. Fix anything wobbly and rehearse before the show.",
+      "title": "Study hall",
+      "summary": "Every Tuesday from 11 AM until class starts. Drop in any time, on your lunch break or after work. We'll have snacks.",
       "steps": [
         {
-          "id": "study-hall-fix",
-          "title": "Fix anything wobbly",
-          "instruction": "Loose wires, buzzing servos, a mouth that's out of time: bring it here.",
-          "check": "Everything moves smoothly."
+          "id": "study-hall-decorate",
+          "title": "Finish the look",
+          "instruction": "Last chance to decorate before the show.",
+          "check": "Drop in any time before class."
         },
         {
-          "id": "study-hall-charge",
-          "title": "Charge up",
-          "instruction": "Pi, BreadVolt or Bluetooth robot? Charge the battery and your phone this afternoon.",
-          "check": "Everything is charged."
+          "id": "study-hall-upgrade",
+          "title": "Final fixes",
+          "instruction": "Fix anything wobbly, charge your batteries and phone, and rehearse your demo.",
+          "check": "Drop in any time before class."
         },
         {
-          "id": "study-hall-demo",
-          "title": "Rehearse your demo",
-          "instruction": "Pick one personality switch and one skill, and run through it with a helper.",
-          "check": "Your demo fits in two minutes."
+          "id": "study-hall-catchup",
+          "title": "Missed Evening 3?",
+          "instruction": "We'll catch you up: skills, Bluetooth or the Pi.",
+          "check": "Drop in any time before class."
         }
       ]
     }
