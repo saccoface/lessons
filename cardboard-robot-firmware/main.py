@@ -1,6 +1,10 @@
 # Physical AI Lab: Robot desk assistant. Pico servo driver (MicroPython), mouth and eyes.
+# Talks to the robot page over USB OR Bluetooth (Pico W / Pico 2 W). Over Bluetooth the robot
+# can sit on a wall charger or BreadVolt and be driven from a phone with no cable. It shows up as
+# "Robot-XXXX", where XXXX comes from the board's serial number, so every robot in a room has its
+# own name. Tested on a Pico 2 W with an Android phone, 2026-11-24 (about 50 ms round trip).
 #
-# The browser sends one command per line over USB serial:
+# The browser sends one command per line over USB serial or Bluetooth:
 #   "35"  or "M35"  move the mouth servo to 35 degrees   (Class 1)
 #   "N120"          move the neck servo to 120 degrees   (optional neck)
 #   "L" / "R"       both eyes look left / right for about 2 s, then back to centre   (Class 2 eyes)
@@ -15,11 +19,12 @@
 #   mouth signal (orange/yellow) -> GP15  (pin 20, bottom left)
 #   neck signal  (orange/yellow) -> GP14  (pin 19, just above it)
 #   left eye     (orange/yellow) -> GP13  (pin 17)    right eye -> GP12 (pin 16)   (Class 2 upgrade)
-#   red (power) and brown (ground) of every servo go to a breadboard's + and - rails,
-#   fed 5 V by a USB charger or power bank. One jumper joins the - rail to GND (pin 23).
-#   Nothing goes on VBUS (pin 40): a servo powered from the Pico resets it when it moves fast.
+#   Class 1, mouth only, laptop power: mouth red -> VBUS (pin 40), brown -> GND (pin 38).
+#   If the Pico resets when the mouth moves, or for any extra servo: red and brown of every servo
+#   go to a breadboard's + and - rails, fed 5 V by a USB charger or a BreadVolt. One jumper joins
+#   the - rail to GND (pin 23), and then nothing goes on VBUS (pin 40). Never both.
 #
-# Works on the Pico, Pico H, Pico 2 and Pico 2 W.
+# Needs a Pico W or Pico 2 W (the W has the radio) running the matching "W" MicroPython build.
 #
 # Flash it with Thonny (thonny.org):
 #   1. Hold BOOTSEL while plugging the Pico in. A drive appears: RPI-RP2 (Pico) or RP2350 (Pico 2).
@@ -36,6 +41,9 @@ import select
 import time
 import random
 from machine import Pin, PWM
+import machine
+import ubinascii
+import bluetooth
 
 MIN_US, MAX_US = 500, 2400   # MG90S pulse range for 0 and 180 degrees
 REST_MS = 1500               # stop driving a still servo after this long, so it doesn't buzz
@@ -70,6 +78,59 @@ class Servo:
             self.resting = True
 
 
+
+# ---- Bluetooth: a "UART" service (Nordic UART UUIDs, the common standard for text over BLE) ----
+NUS = bluetooth.UUID('6E400001-B5A3-F393-E0A9-E50E24DCCA9E')
+NUS_TX = (bluetooth.UUID('6E400003-B5A3-F393-E0A9-E50E24DCCA9E'), bluetooth.FLAG_READ | bluetooth.FLAG_NOTIFY)
+NUS_RX = (bluetooth.UUID('6E400002-B5A3-F393-E0A9-E50E24DCCA9E'), bluetooth.FLAG_WRITE | bluetooth.FLAG_WRITE_NO_RESPONSE)
+IRQ_CONNECT, IRQ_DISCONNECT, IRQ_WRITE = 1, 2, 3
+
+NAME = 'Robot-' + ubinascii.hexlify(machine.unique_id()).decode()[-4:].upper()
+ble = bluetooth.BLE()
+ble.active(True)
+ble.config(gap_name=NAME)
+((tx_handle, rx_handle),) = ble.gatts_register_services(((NUS, (NUS_TX, NUS_RX)),))
+ble.gatts_set_buffer(rx_handle, 128, True)   # append, so fast writes aren't lost between loops
+central = None
+ble_in = ''
+
+
+def adv_field(kind, data):
+    return bytes((len(data) + 1, kind)) + data
+
+
+ADV = adv_field(0x01, b'\x06') + adv_field(0x09, NAME.encode())
+RESP = adv_field(0x07, bytes(NUS))   # the service UUID, so the page can filter on it
+
+
+def advertise():
+    ble.gap_advertise(100000, adv_data=ADV, resp_data=RESP)   # every 100 ms
+
+
+def ble_irq(event, data):
+    global central, ble_in
+    if event == IRQ_CONNECT:
+        central = data[0]
+    elif event == IRQ_DISCONNECT:
+        central = None
+        advertise()
+    elif event == IRQ_WRITE and data[1] == rx_handle:
+        ble_in += ble.gatts_read(rx_handle).decode()
+
+
+ble.irq(ble_irq)
+advertise()
+
+
+def reply(text):
+    print(text)
+    if central is not None:
+        try:
+            ble.gatts_notify(central, tx_handle, text + '\n')
+        except OSError:
+            pass
+
+
 mouth = Servo(15)
 neck = Servo(14)
 left_eye = Servo(13)
@@ -101,7 +162,7 @@ def hold(ms):
 def handle(cmd):
     global mouth_moved, hold_until
     if cmd == '?':
-        print('ROBOT READY')
+        reply('ROBOT READY')
         return
     c = cmd[0]
     if c == 'X':
@@ -152,10 +213,12 @@ def update_eyes():
 poll = select.poll()
 poll.register(sys.stdin, select.POLLIN)
 buf = ''
+ble_part = ''
+print('BLUETOOTH NAME ' + NAME)
 print('ROBOT READY')
 
 while True:
-    if poll.poll(50):
+    if poll.poll(5):   # short wait so Bluetooth commands aren't held up
         ch = sys.stdin.read(1)
         if ch in '\r\n':
             if buf:
@@ -163,6 +226,15 @@ while True:
             buf = ''
         elif len(buf) < 8:
             buf += ch
+    if ble_in:
+        irq_state = machine.disable_irq()
+        data, ble_in = ble_in, ''
+        machine.enable_irq(irq_state)
+        lines = (ble_part + data).replace('\r', '\n').split('\n')
+        ble_part = lines.pop()[-8:]   # an unfinished line waits for the rest
+        for line in lines:
+            if line:
+                handle(line[:8])
     update_eyes()
     mouth.rest_if_idle()
     neck.rest_if_idle()

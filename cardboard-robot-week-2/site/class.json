@@ -1,30 +1,31 @@
 {
   "schemaVersion": 1,
   "id": "cardboard-robot-week-2",
-  "title": "Class 2 (lunch): Decorate it, give it eyes",
+  "title": "Class 2: More servos, more personalities",
   "icon": "👀",
   "owner": "Dana Sacco",
   "series": {
     "id": "cardboard-robot",
-    "title": "Physical AI Lab: Build a Robot Desk Assistant (5 classes)",
-    "summary": "",
+    "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
+    "summary": "Four Tuesday evenings, one robot, with a study hall before each one for catching up and asking questions. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed.",
     "part": 2
   },
-  "summary": "A lunchtime build session. Decorate your robot with the supplies on the table, and if you want, add the eyes upgrade: two moving eyes that glance around while it talks and that it can cross or point when you ask.",
-  "detail": "Bring your robot from Class 1. Most of the hour is decorating: we bring the supplies. Want more? Pick up an eyeball kit: two eyeballs, two small servos and four wires. They go in behind the face, plug into the same breadboard, and the robot program on your Pico already knows how to drive them. Tick My robot has moving eyes on this page, and your robot gets two new function calls: cross its eyes, and look left or right. While it talks, its eyes glance around on their own.",
-  "outcome": "A decorated robot with its own look and, if you took the upgrade, eyes that move while it talks and on request.",
-  "artifact": "A decorated talking robot, optionally with moving eyes driven by function calls.",
+  "summary": "Give your robot's servos their own power, add two moving eyes, and give it several personalities you can switch between by voice: \"let me talk to the Tooth Fairy\". The laptop stays the brain tonight.",
+  "detail": "Bring your robot from Evening 1. First the servos get their own power supply, so adding more doesn't reset the Pico: a breadboard fed by a phone charger, or a BreadVolt battery module if you bought one. Then the eyes: two eyeballs on two small servos, from the group order. The robot program on your Pico already knows how to drive them. Tick My robot has moving eyes on this page and your robot can cross its eyes or look left and right when you ask, and its eyes glance around while it talks. The second half is all voice studio: build more personalities, each with its own name, voice and first line, and switch between them mid-conversation. Asking it to cross its eyes is your first function call, a taste of Evening 3.",
+  "outcome": "A robot with moving eyes on their own power supply, and several personalities you swap by voice.",
+  "artifact": "A talking robot with moving eyes and switchable personalities.",
   "audience": "Mixed technical and non-technical",
   "type": "Workshop",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "track": "community",
-  "minutes": 60,
+  "minutes": 90,
   "setupMinutes": 30,
   "runner": "robot",
   "prereqs": [
-    "Your robot from Class 1, with its Pico and breadboard.",
+    "Your robot from Evening 1, with its Pico.",
     "Your laptop with Google Chrome, and your Deepgram API key.",
-    "Everything else is on the table: decorating supplies, and eyeball kits for the eyes upgrade."
+    "Power for the servos, your choice: a USB charger with the flat USB-A port (an old phone charger is perfect; we have a few spares), or a SunFounder BreadVolt (about $10) for battery power.",
+    "Eye servos: 2 per person, from the group order in Evening 1. We bring the eyeballs and the breadboards."
   ],
   "links": {
     "starterRepo": null,
@@ -34,37 +35,42 @@
     {
       "n": 1,
       "kicker": "WELCOME BACK",
-      "title": "Class 2: Decorate it, give it eyes",
+      "title": "Class 2: More servos, more personalities",
       "bullets": [
-        "Lunch, glue and googly eyes.",
-        "Everyone decorates. Want moving eyes? Grab an eyeball kit.",
-        "Eat first, glue second: keep food away from the electronics."
+        "First half: the servos get their own power, and your robot gets eyes.",
+        "Second half: more personalities, and switching between them by voice.",
+        "The laptop stays the brain tonight."
       ],
-      "note": "A relaxed lunch class. Show off a decorated robot with moving eyes at the start so people know what's possible."
+      "note": "Show a robot with moving eyes switching personality at the start, so people know where the evening goes."
     },
     {
       "n": 2,
       "kicker": "SUPPLIES CHECKLIST",
       "title": "What each robot needs today",
       "bullets": [
-        "☐ Your robot from Class 1, with its Pico and breadboard",
-        "☐ Decorating supplies, on the table",
-        "Eyes upgrade (optional): ☐ 2 × eyeballs ☐ 2 × MG90S servos with horns ☐ 2 × male-to-female jumper wires (signal) ☐ 4 × male-to-male jumper wires (power)",
+        "☐ Your robot from Evening 1, with its Pico",
+        "☐ 1 × half-size breadboard with + and − rails (on the table; already have one from Evening 1? keep it)",
+        "Power, one of: ☐ USB-to-2-pin power lead + a USB-A charger, or ☐ your BreadVolt, set to 5 V",
+        "☐ 1 × male-to-male jumper (ground to the Pico)",
+        "Eyes: ☐ 2 × eyeballs ☐ 2 × MG90S servos with horns ☐ 2 × male-to-female jumpers (signal) ☐ 4 × male-to-male jumpers (power)",
         "☐ Glue gun (one per table, with a helper nearby)",
         "Bring: your laptop and your Deepgram key"
       ],
-      "note": "Dana brings the eyeballs. Pre-bag the eye kits so people grab one and go. Every Pico already runs the program with eyes support (it's loaded at Class 1 check-in), so nobody reloads anything. If someone joined late with a blank Pico, load it at the helper table like Class 1."
+      "note": "Dana brings the eyeballs. The eye servos come from the group order placed after Evening 1: hand out 2 per person from the chip-in list. Pre-bag the eye kits so people grab one and go. Every Pico already runs the program with eyes support, so nobody reloads anything. Helper table: spare USB-A chargers, USB-C to USB-A adapters, a power strip per table, spare 2-pin leads."
     },
     {
       "n": 3,
-      "kicker": "DECORATE · 25 MIN",
-      "title": "Give it a look",
+      "kicker": "POWER · 10 MIN",
+      "title": "Give the servos their own power",
       "bullets": [
-        "Hair, ears, a hat, a cape: make it look like its personality.",
-        "Keep the mouth flap free to move, and don't glue over the servo.",
-        "Leave the back open so you can reach the wires."
+        "Take the mouth's red off pin 40 and brown off pin 38.",
+        "Red → breadboard + row, brown → − row.",
+        "One jumper from the − row to GND (pin 23): everything shares one ground.",
+        "Feed the rows: the 2-pin lead into a charger (red pin → +, black → −), or press your BreadVolt onto the rails and switch it on.",
+        "Nothing on pin 40 from now on. Plug the Pico back into the laptop."
       ],
-      "note": "Walk the room with a robot that talks while people work. Remind anyone doing eyes to cut the eye holes before they decorate the face."
+      "note": "Anyone who hit resets in Evening 1 is already wired this way: they skip to the eyes. Check the BreadVolt's jumpers are on 5 V, not 3.3 V. Connected but the mouth won't move = the servo has no power: the BreadVolt is switched off or the lead isn't in a charger.",
+      "image": "/slides/cardboard-robot/power-10-breadvolt-power-not-brain.svg"
     },
     {
       "n": 4,
@@ -84,11 +90,12 @@
       "title": "Wire the eyes",
       "bullets": [
         "Left eye's orange wire to GP13 (pin 17), right eye's to GP12 (pin 16), with male-to-female jumpers.",
-        "Both reds to the breadboard's + row, both browns to the − row, like the mouth.",
+        "Both reds to the + row, both browns to the − row, like the mouth.",
         "Nothing new goes on the Pico's power pins.",
         "Plug the Pico back into your laptop."
       ],
-      "note": "Left and right mean the robot's left and right, as if you were the robot. Pins 16 and 17 are on the left side, just above GP14 (pin 19) and GP15 (pin 20). Helpers check every board before it's plugged in."
+      "note": "Left and right mean the robot's left and right, as if you were the robot. Pins 16 and 17 are on the left side, just above GP14 (pin 19) and GP15 (pin 20). Helpers check every board before it's plugged in.",
+      "image": "/slides/cardboard-robot/power-08-breadboard-wiring.svg"
     },
     {
       "n": 6,
@@ -104,62 +111,101 @@
     },
     {
       "n": 7,
-      "kicker": "SHOW AND TELL · 5 MIN",
+      "kicker": "PROFILES · 15 MIN",
+      "title": "A robot with more than one personality",
+      "bullets": [
+        "Under Profile, press Add a profile: start from a starter (like Arnie) or a blank one.",
+        "Give it a Robot name, a Personality, a First thing it says and its own Voice.",
+        "Make them as different as you can: grumpy and cheerful, fast and slow, a pirate and a tooth fairy.",
+        "Start talking and say: let me talk to the Tooth Fairy (or whatever you named it). It changes voice and personality on the spot."
+      ],
+      "note": "Switching works because the agent understands what you asked for and calls switch_profile; the page swaps the personality and voice live, without hanging up. So any natural phrasing works: \"switch to Arnie\", \"put the pirate on\". Remove this profile deletes the one you're on, so check before pressing."
+    },
+    {
+      "n": 8,
+      "kicker": "PROFILES · 15 MIN",
+      "title": "Make them hand off to each other",
+      "bullets": [
+        "In each personality, say who else lives in the robot and when to hand over.",
+        "Example: \"If someone asks about teeth, offer to get the Tooth Fairy.\"",
+        "Try a three-way: start with one, get passed to a second, ask for the first back.",
+        "Keep each one's replies short so the switches feel quick."
+      ],
+      "note": "Good pairs to suggest: a grumpy security guard and a cheerful receptionist; a pirate captain and a parrot; a coach and a nervous rookie."
+    },
+    {
+      "n": 9,
+      "kicker": "SNEAK PEEK",
+      "title": "You just used a function call",
+      "bullets": [
+        "\"Cross your eyes\" and \"let me talk to the Tooth Fairy\" are both function calls.",
+        "The agent decides it needs one, your page runs it, and real hardware (or a new voice) answers.",
+        "Next evening your robot gets skills the same way: the bus, timers, notes, look-ups, the weather."
+      ],
+      "note": "Point at the Tool lines in the transcript while a robot crosses its eyes. That's the whole idea of Evening 3."
+    },
+    {
+      "n": 10,
+      "kicker": "TEST CORNER · 5 MIN",
       "title": "Meet the neighbours",
       "bullets": [
         "Turn to the next table and introduce your robot.",
-        "Let it introduce itself too.",
+        "Let each of its personalities introduce itself.",
         "Film a clip with Film a clip and share it with #RobotLunchLab."
       ],
       "note": ""
     },
     {
-      "n": 8,
-      "kicker": "NEXT CLASS",
-      "title": "Class 3: more personalities, more skills",
+      "n": 11,
+      "kicker": "NEXT EVENING",
+      "title": "Evening 3: skills, and cut the cord",
       "bullets": [
-        "Give your robot more personalities and switch between them by voice.",
-        "Pick its skills: Muni trips, timers, notes, look-ups and more.",
-        "Bring your robot and your Deepgram key."
+        "Your robot gets skills: real function calls with real data.",
+        "And it gets off the laptop. Android phone? Use Chrome. iPhone? Download the free Bluefy app before you come.",
+        "Your phone becomes the robot's brain over Bluetooth, and the robot sits on a charger or BreadVolt.",
+        "Want it all inside the box? Bring a Raspberry Pi set up at home. The steps are on the Evening 3 page."
       ],
-      "note": ""
+      "note": "Bluetooth works on Android (tested: about 50 ms from phone to mouth). iPhone with Bluefy is still being tested, and nobody has run 50 robots on Bluetooth in one room yet: pitch that as part of the fun. Send the Evening 3 page to anyone thinking about a Pi now, so they set it up at home."
     }
   ],
   "flow": [
     {
       "type": "slides",
-      "title": "Decorate (25 min)",
+      "title": "Power and eyes (35 min)",
       "from": 1,
-      "to": 3
-    },
-    {
-      "type": "slides",
-      "title": "Eyes upgrade (optional)",
-      "from": 4,
       "to": 6
     },
     {
+      "type": "slides",
+      "title": "More personalities (35 min)",
+      "from": 7,
+      "to": 9
+    },
+    {
       "type": "runner",
-      "title": "Test your robot",
-      "note": "Connect your robot, then tick My robot has moving eyes under Eyes if you added them."
+      "title": "Your robot's voice studio",
+      "note": "Connect your robot, tick My robot has moving eyes under Eyes, then build your profiles."
     },
     {
       "type": "slides",
-      "title": "Show and tell, and next class",
-      "from": 7,
-      "to": 8
+      "title": "Show and tell, and next evening",
+      "from": 10,
+      "to": 11
     }
   ],
   "sections": [],
   "troubleshooting": [
+    "Connected but the mouth won't move: the servos have no power. Switch the BreadVolt on, or plug the 2-pin lead into a charger.",
+    "Your charger is USB-C only: the 2-pin lead is USB-A. Use a USB-C to USB-A adapter from the helper table, or a table charger.",
     "The eyes don't move at all: check the orange wires are on GP13 (pin 17) and GP12 (pin 16), and the reds and browns are on the + and − rows. Still nothing? The Pico has an old program: load the current one at the helper table.",
     "The eyes cross outward: swap the left and right eye wires.",
     "Left and right are backwards: swap the two eye wires.",
     "An eye catches on the face: make the hole a little bigger, or move the servo back.",
-    "The Pico resets when the eyes move: the eye servos are getting power from the Pico. All reds go to the + row, never to the Pico.",
+    "The servos twitch on their own: the ground jumper from the − row to pin 23 is missing.",
+    "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the BreadVolt is switched on or the power lead is in a charger, nothing is on pin 40, and the ground jumper to pin 23 is in.",
+    "It won't switch personality: say the profile's Robot name clearly, and check the profile has a name.",
     "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome (or Chromium on a Raspberry Pi).",
     "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
-    "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the power lead is in a charger or power bank, nothing is on pin 40, and the ground jumper to pin 23 is in.",
     "It cuts you off: raise Patience. It's slow to answer: lower it.",
     "It talks to itself, or stops mid-sentence for no reason: it's hearing its own voice. Switch off Let me interrupt it (barge-in), or move the laptop away from the robot's speaker.",
     "Deepgram stopped the session: check the key was pasted whole, and that the account has credit."

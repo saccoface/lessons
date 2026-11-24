@@ -1,16 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "cardboard-robot-week-5",
-  "title": "Class 5: Show and tell",
+  "title": "Robot show and tell (stand-alone night)",
   "icon": "🎤",
   "owner": "Dana Sacco",
-  "series": {
-    "id": "cardboard-robot",
-    "title": "Physical AI Lab: Build a Robot Desk Assistant (5 classes)",
-    "summary": "",
-    "part": 5
-  },
-  "summary": "The evening finale. A short polish session, then every robot gets the floor: show its look, its personalities and the coolest thing it can do. Guests welcome.",
+  "summary": "A stand-alone show and tell for talking cardboard robots: a short polish session, then every robot gets the floor. The Physical AI Lab's own show and tell is now Class 4.",
   "detail": "The first half hour is open studio: catch up on anything you missed, fix anything wobbly, and rehearse. Then show and tell: each builder gets a couple of minutes to introduce their robot, switch it between personalities, and show off its best skill, live, in front of the room. We film every robot, and the room votes.",
   "outcome": "Your robot shown off to a live audience, and a clip of it.",
   "artifact": "A finished talking robot and a video of it in front of guests.",
@@ -24,7 +18,7 @@
   "prereqs": [
     "Your robot, charged if it runs on a Pi.",
     "Your Deepgram API key.",
-    "Your laptop: it runs your robot, or opens your Pi with Raspberry Pi Connect."
+    "Its brain: your laptop, your phone (charged, for Bluetooth robots), or your laptop to open your Pi with Raspberry Pi Connect."
   ],
   "links": {
     "starterRepo": null,
@@ -34,7 +28,7 @@
     {
       "n": 1,
       "kicker": "SHOW AND TELL",
-      "title": "Class 5: Show and tell",
+      "title": "Robot show and tell",
       "bullets": [
         "It talks, it moves its mouth, maybe its eyes.",
         "It has personalities, skills, and maybe no wires at all.",
@@ -48,6 +42,7 @@
       "title": "What each robot needs tonight",
       "bullets": [
         "☐ Your robot, charged if it runs on a Pi",
+        "☐ Bluetooth robot: your phone, charged",
         "Bring: your laptop and your Deepgram key"
       ],
       "note": "Helper table: catch-up kits (ready Class 1 robots, eye kits), spare charged batteries, spare cables. For the show: a phone tripod, a plain backdrop, a mic or quiet corner, voting cards."
@@ -92,7 +87,7 @@
     {
       "n": 6,
       "kicker": "WRAP",
-      "title": "Five classes, one robot",
+      "title": "One robot, many tricks",
       "bullets": [
         "A robot that listens, thinks, talks, moves, looks things up and gets you to the bus on time.",
         "Thank you for building with us."

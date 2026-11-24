@@ -1,35 +1,30 @@
 {
   "schemaVersion": 1,
   "id": "cardboard-robot-week-4",
-  "title": "Class 4: Go wireless (or keep decorating)",
-  "icon": "🔋",
+  "title": "Class 4: Show and tell",
+  "icon": "🎤",
   "owner": "Dana Sacco",
   "series": {
     "id": "cardboard-robot",
-    "title": "Physical AI Lab: Build a Robot Desk Assistant (5 classes)",
-    "summary": "",
+    "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
+    "summary": "Four Tuesday evenings, one robot, with a study hall before each one for catching up and asking questions. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed.",
     "part": 4
   },
-  "summary": "A daytime open build. Bring your own Raspberry Pi and battery pack, and the Pi becomes the robot's brain, with a USB speakerphone as its ears and voice. Then unplug it and walk away with it. No Pi? Keep decorating and tuning your robot from your laptop.",
-  "detail": "This class is optional and bring-your-own: if you want your robot to run without a laptop, bring a Raspberry Pi 4 or 5 that you've set up at home, a USB speakerphone and a battery pack (the steps are under Before you start). The Pi runs Chromium and opens this same page, so your robot works exactly as before: same personalities, same skills. You control the Pi from your laptop with Raspberry Pi Connect while you set it up, then close it and carry your robot away. No Pi? Your robot keeps running from your laptop, and you spend the class decorating and polishing it for show and tell.",
-  "outcome": "Pi track: a robot that talks, moves and uses its skills with no laptop and no wall plug. No Pi: a better-dressed, better-tuned robot ready for show and tell.",
-  "artifact": "A fully wireless talking robot, or a polished laptop robot.",
+  "summary": "The finale. A short polish session, then every robot gets the floor: show its look, its personalities and the coolest thing it can do. Guests welcome.",
+  "detail": "The first half hour is open studio: catch up on anything you missed, fix anything wobbly, and rehearse. Then show and tell: each builder gets a couple of minutes to introduce their robot, switch it between personalities, and show off its best skill, live, in front of the room. We film every robot, and the room votes.",
+  "outcome": "Your robot shown off to a live audience, and a clip of it.",
+  "artifact": "A finished talking robot and a video of it in front of guests.",
   "audience": "Mixed technical and non-technical",
-  "type": "Workshop",
-  "difficulty": "medium",
+  "type": "Demo day",
+  "difficulty": "easy",
   "track": "community",
-  "minutes": 60,
-  "setupMinutes": 20,
+  "minutes": 90,
+  "setupMinutes": 30,
   "runner": "robot",
   "prereqs": [
-    "Your robot from Class 3, your laptop and your Deepgram key.",
-    "Doing the Pi upgrade? Bring a Raspberry Pi 4 or 5 (2 GB or more) with its memory card and power supply, set up at home as below, a USB speakerphone (any brand, for example an EMEET M0 Plus), and a battery pack. No Pi? Skip the rest of this list.",
-    "Battery: a USB power bank of 20,000 mAh with a USB-C port rated 30 W or more, and a second USB port for the servos. It runs a Pi robot for about 6 hours. A smaller 10,000 mAh bank works for about 3.",
-    "Optional upgrade list, to match the instructor's robot. Buy these yourself: ☐ Raspberry Pi 5 (4 GB) ☐ Raspberry Pi 5 Active Cooler ☐ 32 GB microSD card ☐ Official Raspberry Pi 27 W USB-C power supply, for setting up at home ☐ USB speakerphone, for example an EMEET M0 Plus ☐ Anker 20,000 mAh power bank with a USB-C port rated 30 W or more.",
-    "1. On your computer, install Raspberry Pi Imager from raspberrypi.com/software and use it to put Raspberry Pi OS (64-bit, with desktop) on the memory card. In its settings, add a username and password and the Hub's wifi from your event email.",
-    "2. Start the Pi once with a screen, keyboard and mouse, and finish the welcome steps.",
-    "3. Turn on Raspberry Pi Connect (its icon is in the top bar) and sign in with a free Raspberry Pi ID. On your laptop, check you can see the Pi's screen at connect.raspberrypi.com.",
-    "4. Plug in your speakerphone, check the Pi plays sound through it, then open Chromium and visit this page once, so it's ready."
+    "Your robot, charged if it runs on a Pi or a BreadVolt.",
+    "Your Deepgram API key.",
+    "Its brain: your laptop, your phone (charged, for Bluetooth robots), or your laptop to open your Pi with Raspberry Pi Connect."
   ],
   "links": {
     "starterRepo": null,
@@ -38,143 +33,102 @@
   "slides": [
     {
       "n": 1,
-      "kicker": "WELCOME BACK",
-      "title": "Class 4: Go wireless",
+      "kicker": "SHOW AND TELL",
+      "title": "Class 4: Show and tell",
       "bullets": [
-        "Brought a Raspberry Pi? Today it takes over from your laptop, running on a battery.",
-        "No Pi? Keep decorating and tuning: show and tell is next.",
-        "Either way, Deepgram does the listening and talking."
+        "It talks, it moves its mouth, maybe its eyes.",
+        "It has personalities, skills, and maybe no wires at all.",
+        "Tonight it gets the floor."
       ],
-      "note": "Ask for a show of hands: who brought a Pi? Seat Pi people together so helpers can work the tables."
+      "note": "Open with your own robot doing its best trick. Invite guests for the show and tell half."
     },
     {
       "n": 2,
       "kicker": "SUPPLIES CHECKLIST",
-      "title": "What each robot needs today",
+      "title": "What each robot needs tonight",
       "bullets": [
-        "☐ Your robot, with its Pico and breadboard",
-        "Pi track: ☐ your Raspberry Pi 4 or 5, set up at home ☐ your USB speakerphone ☐ your battery pack, charged",
-        "Pi track: ☐ 1 × USB-A to micro-USB data cable, for the Pico (on the table)",
-        "Pi track: ☐ 1 × short cable from the battery to the Pi's USB-C port (on the table)",
-        "Pi track: ☐ Velcro strips or tape",
-        "Decorating track: supplies on the table",
+        "☐ Your robot, charged if it runs on a Pi or a BreadVolt",
+        "☐ Bluetooth robot: your phone, charged",
         "Bring: your laptop and your Deepgram key"
       ],
-      "note": "Attendees bring the Pi, its memory card, a speakerphone and a battery; we supply the cables. Helper table: a setup station with a screen, keyboard, mouse and micro-HDMI cable for anyone whose Pi isn't set up yet; spare cables; one or two spare charged batteries. A Pi 5 run from a power bank limits its USB ports and may warn about power; that's fine here because the servos run from the breadboard."
+      "note": "Helper table: catch-up kits (ready Class 1 robots, eye kits), spare charged batteries, spare cables. For the show: a phone tripod, a plain backdrop, a mic or quiet corner, voting cards."
     },
     {
       "n": 3,
-      "kicker": "PI TRACK · 1 OF 3",
-      "title": "Plug in the Pi",
+      "kicker": "POLISH · 30 MIN",
+      "title": "Get it ready",
       "bullets": [
-        "Speakerphone into a blue USB port on the Pi.",
-        "Unplug the Pico from your laptop and plug it into another blue port, with the USB-A cable.",
-        "Battery: the Pi goes in the USB-C port, and the servo power lead goes in the other port.",
-        "Fix the Pi and battery inside the robot, on the floor at the back, with velcro or tape. Cut a small notch for the charging cable."
+        "Missed a class? Helpers have kits to catch up.",
+        "Fix anything wobbly, buzzing or slow.",
+        "Pick your demo: one personality switch and one skill.",
+        "Tune Patience for a full room so it doesn't talk over people.",
+        "Rehearse once with a partner."
       ],
-      "note": "Done when: the Pi's light flickers and the speakerphone lights up. The battery is the heaviest part, so low and at the back keeps the robot from tipping. Tip: tape the back flap on one side only, like a hinge, so you can open it to charge or fix things."
+      "note": "Walk the room and push people to keep the demo short: one switch, one skill, one laugh."
     },
     {
       "n": 4,
-      "kicker": "PI TRACK · 2 OF 3",
-      "title": "Open the Pi from your laptop",
+      "kicker": "SHOW AND TELL · 50 MIN",
+      "title": "Show it off",
       "bullets": [
-        "On your laptop, go to connect.raspberrypi.com and open your Pi's screen.",
-        "On the Pi, open Chromium and go to this lesson page."
+        "Two minutes each: introduce your robot and let it introduce itself.",
+        "Switch it to another personality.",
+        "Show its best skill live: a Muni trip, a timer, a fact, a coin flip.",
+        "We film every robot. Share yours with #RobotLunchLab."
       ],
-      "note": "If someone's Pi didn't come up on the wifi, send them to the setup station. Connect's screen sharing can't paste reliably; to get the key across, type it, or a helper can copy it on with SSH."
+      "note": "Run the order by table. Keep a timer visible. If a robot freezes, the builder can demo from the laptop or the phone: it's the same page."
     },
     {
       "n": 5,
-      "kicker": "PI TRACK · 3 OF 3",
-      "title": "Set it up on the Pi",
+      "kicker": "VOTE",
+      "title": "And the winners are",
       "bullets": [
-        "Paste your Deepgram key and connect the robot, like Class 1.",
-        "Pick the speakerphone if Chromium asks for a microphone.",
-        "Set the mouth again, and tick your eyes and skills again: they're saved per computer.",
-        "Recreate your personalities, or copy them across from your laptop's Code panel.",
-        "Start talking."
+        "Best personality",
+        "Best skill",
+        "Best look",
+        "Most likely to take over The Hub"
       ],
-      "note": "Profiles, skills and mouth settings live in each browser, so the Pi starts fresh. Speakerphones cancel their own echo well, so barge-in can usually stay on."
+      "note": "Hand out voting cards at the start of show and tell, count during the last demos."
     },
     {
       "n": 6,
-      "kicker": "NO PI? · 30 MIN",
-      "title": "Decorate and polish",
+      "kicker": "WRAP",
+      "title": "Four evenings, one robot",
       "bullets": [
-        "Finish the look you started in Class 2.",
-        "Tune Patience for a noisy room. Does it still know when you're done?",
-        "Write the personality and pick the skills you'll show off in Class 5.",
-        "Rehearse a 2-minute demo with a partner."
+        "A robot that listens, thinks, talks, moves, looks things up and gets you to the bus on time.",
+        "Thank you for building with us."
       ],
-      "note": "Everything here runs on the laptop, exactly as before. Pair a no-Pi person with a Pi person for the walk test at the end."
-    },
-    {
-      "n": 7,
-      "kicker": "CUT THE CORD",
-      "title": "Walk away with it",
-      "bullets": [
-        "Pi track: close the Pi on your laptop, check nothing is plugged into a wall or laptop, then pick the robot up and carry it to another table. Keep talking.",
-        "No Pi? Show your robot to a Pi builder, and hear theirs."
-      ],
-      "note": "Done when: it holds a conversation on the far side of the room."
-    },
-    {
-      "n": 8,
-      "kicker": "NEXT CLASS",
-      "title": "Class 5: show and tell",
-      "bullets": [
-        "Show off your robot and everything it can do.",
-        "Bring it charged, or bring your laptop to run it.",
-        "Invite a friend: guests are welcome."
-      ],
-      "note": ""
+      "note": "Ask what people would add next. Collect ideas for the next series."
     }
   ],
   "flow": [
     {
       "type": "slides",
-      "title": "Pick your track",
+      "title": "Polish",
       "from": 1,
-      "to": 2
-    },
-    {
-      "type": "slides",
-      "title": "Pi track: move it onto the Pi",
-      "from": 3,
-      "to": 5
-    },
-    {
-      "type": "slides",
-      "title": "No Pi? Decorate and polish",
-      "from": 6,
-      "to": 6
+      "to": 3
     },
     {
       "type": "runner",
-      "title": "Run your robot",
-      "note": "Pi track: open this page in Chromium on the Raspberry Pi. No Pi: use it on your laptop as usual."
+      "title": "Polish your robot",
+      "note": "Open this page on your robot's brain: your laptop, your phone (Connect by Bluetooth) or the Pi."
     },
     {
       "type": "slides",
-      "title": "Cut the cord",
-      "from": 7,
-      "to": 8
+      "title": "Show and tell",
+      "from": 4,
+      "to": 6
     }
   ],
   "sections": [],
   "troubleshooting": [
-    "The Pi isn't on the wifi, or Connect can't find it: take it to the setup station and fix the wifi with a screen and keyboard.",
-    "Connect robot shows nothing on the Pi: the Pico cable is charge-only. Swap it for a data cable.",
-    "The robot can't hear you: in Chromium, click the lock icon and pick your speakerphone as the microphone.",
-    "No sound: set your speakerphone as the Pi's audio output in the speaker menu at the top right.",
-    "The sound is choppy or the speakerphone keeps disconnecting: the Pi is short of power for its USB ports. Use the battery's highest-power USB-C port and a short, thick cable, or plug in the Pi's own power supply for now.",
-    "The Pi shows a lightning bolt or restarts: the battery port can't keep up. Try the other port or a thicker cable.",
-    "The battery switches itself off: some power banks sleep on low current. Press its button to wake it.",
-    "Chromium shows an Unlock Keyring box and pages won't load: press Cancel, then ask a helper to switch the keyring off.",
+    "Behind? Ask a helper for the kit for the stage you're on. You can demo at any stage, from a laptop, a phone or a Pi.",
+    "It talks over people in the noisy room: raise Patience a little, or switch off barge-in.",
+    "The battery dies mid-demo: helpers have charged spares, or run it from your laptop.",
+    "A Bluetooth robot drops mid-demo: keep the phone's screen on and stay near the robot. Reconnect with Connect by Bluetooth, or plug it into a laptop.",
     "Connect robot does nothing at all: you're not in Chrome. Open the page in Chrome (or Chromium on a Raspberry Pi).",
     "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
-    "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the power lead is in a charger or power bank, nothing is on pin 40, and the ground jumper to pin 23 is in.",
+    "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the BreadVolt is switched on or the power lead is in a charger, nothing is on pin 40, and the ground jumper to pin 23 is in.",
     "It cuts you off: raise Patience. It's slow to answer: lower it.",
     "It talks to itself, or stops mid-sentence for no reason: it's hearing its own voice. Switch off Let me interrupt it (barge-in), or move the laptop away from the robot's speaker.",
     "Deepgram stopped the session: check the key was pasted whole, and that the account has credit."
