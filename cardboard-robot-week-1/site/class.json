@@ -7,11 +7,11 @@
   "series": {
     "id": "cardboard-robot",
     "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
-    "summary": "Four Tuesday evenings, one robot, with a study hall before each one for catching up and asking questions. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed.",
+    "summary": "Four Tuesday evenings, one robot, plus four lunchtime study halls, one on each of those Tuesdays, for setup help, catching up and getting ahead. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed.",
     "part": 1
   },
   "summary": "Build a desk robot that talks, with a mouth that moves when it speaks. It runs on your laptop's power: three wires, no breadboard. Most of the evening goes into its personality and its Deepgram voice, and it ends with a short talk on your power options, so you know what to bring next week.",
-  "detail": "Bring your own Raspberry Pi Pico W with the pins already attached; we load the robot program onto it when you check in. Your robot's body arrives already folded with its servo glued in. You draw its face, hook up the paperclip that opens its mouth, and connect the servo's three wires straight to the Pico, so your laptop powers everything. If your robot restarts every time the mouth moves, your laptop can't supply enough power: a helper gives you a breadboard, a USB power lead and a charger, and your robot gets two plugs. Then the rest of the evening happens on this page: meet Jervis, the snarky starter personality, write your own, try Deepgram voices and tune how Flux decides you've finished talking. We finish with what each wire does and your power options for Evening 2.",
+  "detail": "Bring your own Raspberry Pi Pico W with the pins already attached; we load the robot program onto it when you check in. Your robot's body arrives already folded with its servo glued in. You draw its face, hook up the paperclip that opens its mouth, and connect the servo's three wires straight to the Pico, so your laptop powers everything. If your robot restarts every time the mouth moves, your laptop can't supply enough power: a helper gives you a breadboard, a USB power lead and a charger, and your robot gets two plugs. Then the rest of the evening happens on this page: meet Jervis, the snarky starter personality, write your own, try Deepgram voices and tune how Flux decides you've finished talking. We finish with what each wire does and your power options for Evening 2. There is an optional lunchtime study hall at The Hub the same day: drop in for help, catch up, or get ahead.",
   "outcome": "A robot on your table that holds a real conversation in a voice and personality you wrote, moves its mouth as it speaks, and a clip of it to share. You also know which power upgrade you want for Evening 2.",
   "artifact": "A talking desk robot running the attendee's own Deepgram voice agent, and a short video of it.",
   "audience": "Mixed technical and non-technical",
@@ -262,12 +262,18 @@
         "Your servos get their own power, and your robot gets moving eyes.",
         "Bring a USB charger with the flat USB-A port (an old phone charger is perfect), or a BreadVolt (about $10) if you want it on a battery.",
         "Moving eyes are 2 more servos. We're placing one bulk order for the group: chip in about $5 before you leave and yours arrive in time.",
-        "Robots can stay on the shelf at The Hub between evenings."
+        "Robots can stay on the shelf at The Hub between evenings.",
+        "Stuck or behind? Come to the lunchtime study hall at The Hub that Tuesday."
       ],
       "note": "Eye servos are a group buy, not in the budget. Collect about $5 a person at the helper table and write down every name. Right after class, Dana orders MG90S servos on Amazon for everyone who chipped in (2 each, about 100 for a full room; 12-packs work out to about $2.50 a servo) and checks the delivery date lands before Evening 2. Dana brings the eyeballs. Many new chargers are USB-C only and the 2-pin lead is USB-A: we have USB-C to USB-A adapters, but tell people to look for the flat port."
     }
   ],
   "flow": [
+    {
+      "type": "steps",
+      "title": "Lunch study hall (before tonight)",
+      "note": "Optional, at lunchtime on the same Tuesday. Drop in for help, catch up, or get ahead."
+    },
     {
       "type": "slides",
       "title": "Build it (20 min)",
@@ -292,7 +298,38 @@
       "to": 18
     }
   ],
-  "sections": [],
+  "sections": [
+    {
+      "title": "Lunch study hall: get ready for tonight",
+      "summary": "Optional, at lunchtime on the same Tuesday at The Hub. Drop in, get set up, and tonight's build goes faster.",
+      "steps": [
+        {
+          "id": "study-hall-pico",
+          "title": "Get your Pico loaded",
+          "instruction": "Bring your Pico W with pins. Helpers load MicroPython and the robot program, and write its Bluetooth name on a sticker. No Pico yet? Ask about a spare.",
+          "check": "Your Pico has a dot and a Robot-XXXX sticker."
+        },
+        {
+          "id": "study-hall-key",
+          "title": "Make your Deepgram key",
+          "instruction": "Sign up for a free Deepgram account and create an API key. Keep it somewhere you can paste from tonight.",
+          "check": "You can paste your key."
+        },
+        {
+          "id": "study-hall-chrome",
+          "title": "Check your laptop",
+          "instruction": "Open this page in Google Chrome. Plug in your loaded Pico and press Connect robot.",
+          "check": "It says Robot connected."
+        },
+        {
+          "id": "study-hall-idea",
+          "title": "Start a personality",
+          "instruction": "Think about who your robot is: a name, a job, how it talks. Jot a few lines down.",
+          "check": "You have a few lines to paste into Personality tonight."
+        }
+      ]
+    }
+  ],
   "troubleshooting": [
     "Your Pico has no pins (a plain Pico W or Pico 2 W): the jumper wires can't attach without soldering. Swap it for a spare with headers from the helper table.",
     "Connect robot shows \"No compatible devices found\": the Pico isn't running MicroPython and the robot program yet, it's in BOOTSEL mode (a drive called RPI-RP2 or RP2350 is open), or the cable only charges. Swap the cable first.",

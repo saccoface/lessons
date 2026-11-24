@@ -7,11 +7,11 @@
   "series": {
     "id": "cardboard-robot",
     "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
-    "summary": "Four Tuesday evenings, one robot, with a study hall before each one for catching up and asking questions. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed.",
+    "summary": "",
     "part": 3
   },
   "summary": "Give your robot skills, real function calls that answer with real data: Muni trips, timers, notes, look-ups, the weather. Then get it off the laptop: drive it from your phone over Bluetooth (Android in Chrome, or iPhone with the free Bluefy app), or move its brain onto a Raspberry Pi.",
-  "detail": "First, skills. Each one is a function call: the agent decides when it needs one, your page runs it and hands back a real answer. Ask how to get to the Ferry Building and it tells you which Muni bus to catch, where, and when the next one comes. Then cut the cord. Until now the laptop has been the brain: the mic, the connection to the Deepgram Voice Agent, the speaker. Way A, Bluetooth: open this page on your phone and it sends the same little commands to the Pico by radio instead of a cable, while the robot sits on a charger or BreadVolt. It works on Android; iPhone with Bluefy is still being tested. Way B, a Raspberry Pi you set up at home rides inside the robot with a speakerphone and a battery, and opens this same page. Same personalities, same skills either way. Got time left? Add extras: eyebrows, a neck.",
+  "detail": "First, skills. Each one is a function call: the agent decides when it needs one, your page runs it and hands back a real answer. Ask how to get to the Ferry Building and it tells you which Muni bus to catch, where, and when the next one comes. Then cut the cord. Until now the laptop has been the brain: the mic, the connection to the Deepgram Voice Agent, the speaker. Way A, Bluetooth: open this page on your phone and it sends the same little commands to the Pico by radio instead of a cable, while the robot sits on a charger or BreadVolt. It works on Android; iPhone with Bluefy is still being tested. Way B, a Raspberry Pi you set up at home rides inside the robot with a speakerphone and a battery, and opens this same page. Same personalities, same skills either way. Got time left? Add extras: eyebrows, a neck. There is an optional lunchtime study hall at The Hub the same day: drop in for help, catch up, or get ahead.",
   "outcome": "A robot with the skills you picked, answering with real data, that talks and moves with no laptop attached: driven by your phone over Bluetooth, or by a Raspberry Pi inside it.",
   "artifact": "A wireless talking robot with function-call skills.",
   "audience": "Mixed technical and non-technical",
@@ -242,12 +242,18 @@
       "bullets": [
         "Show off your robot and everything it can do.",
         "Bring it with its brain: your laptop, your phone (charged) or your Pi (charged).",
-        "Invite a friend: guests are welcome."
+        "Invite a friend: guests are welcome.",
+        "Stuck or behind? Come to the lunchtime study hall at The Hub that Tuesday."
       ],
       "note": ""
     }
   ],
   "flow": [
+    {
+      "type": "steps",
+      "title": "Lunch study hall (before tonight)",
+      "note": "Optional, at lunchtime on the same Tuesday. Drop in for help, catch up, or get ahead."
+    },
     {
       "type": "slides",
       "title": "Skills (30 min)",
@@ -284,7 +290,38 @@
       "to": 17
     }
   ],
-  "sections": [],
+  "sections": [
+    {
+      "title": "Lunch study hall: get ready to cut the cord",
+      "summary": "Optional, at lunchtime on the same Tuesday at The Hub. Set up your phone or your Pi now, so the evening is for skills and walking away with it.",
+      "steps": [
+        {
+          "id": "study-hall-phone",
+          "title": "Check your phone",
+          "instruction": "Android: open this page in Chrome with Bluetooth and Location on. iPhone: install the free Bluefy app and open this page in it.",
+          "check": "You see the Connect by Bluetooth button."
+        },
+        {
+          "id": "study-hall-bt",
+          "title": "Try Bluetooth once",
+          "instruction": "Power the robot from a charger, tap Connect by Bluetooth and pick the name on your sticker. Press Wiggle the mouth.",
+          "check": "The mouth wiggles from your phone."
+        },
+        {
+          "id": "study-hall-pi",
+          "title": "Pi owners: setup station",
+          "instruction": "Bring your Pi. The station has a screen, keyboard and mouse to fix wifi, turn on Raspberry Pi Connect and test the speakerphone.",
+          "check": "You can see the Pi's screen from your laptop."
+        },
+        {
+          "id": "study-hall-catchup",
+          "title": "Catch up on Class 2",
+          "instruction": "Eyes or personalities not done? Finish them here.",
+          "check": "Your eyes move and it switches personality by voice."
+        }
+      ]
+    }
+  ],
   "troubleshooting": [
     "It makes up an answer instead of using a skill: check the skill is ticked, then ask more directly (\"check the weather in Paris\").",
     "Muni says it can't find a place: give a street address or a well-known place in San Francisco.",

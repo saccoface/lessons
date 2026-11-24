@@ -7,11 +7,11 @@
   "series": {
     "id": "cardboard-robot",
     "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
-    "summary": "Four Tuesday evenings, one robot, with a study hall before each one for catching up and asking questions. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed.",
+    "summary": "",
     "part": 2
   },
   "summary": "Give your robot's servos their own power, add two moving eyes, and give it several personalities you can switch between by voice: \"let me talk to the Tooth Fairy\". The laptop stays the brain tonight.",
-  "detail": "Bring your robot from Evening 1. First the servos get their own power supply, so adding more doesn't reset the Pico: a breadboard fed by a phone charger, or a BreadVolt battery module if you bought one. Then the eyes: two eyeballs on two small servos, from the group order. The robot program on your Pico already knows how to drive them. Tick My robot has moving eyes on this page and your robot can cross its eyes or look left and right when you ask, and its eyes glance around while it talks. The second half is all voice studio: build more personalities, each with its own name, voice and first line, and switch between them mid-conversation. Asking it to cross its eyes is your first function call, a taste of Evening 3.",
+  "detail": "Bring your robot from Evening 1. First the servos get their own power supply, so adding more doesn't reset the Pico: a breadboard fed by a phone charger, or a BreadVolt battery module if you bought one. Then the eyes: two eyeballs on two small servos, from the group order. The robot program on your Pico already knows how to drive them. Tick My robot has moving eyes on this page and your robot can cross its eyes or look left and right when you ask, and its eyes glance around while it talks. The second half is all voice studio: build more personalities, each with its own name, voice and first line, and switch between them mid-conversation. Asking it to cross its eyes is your first function call, a taste of Evening 3. There is an optional lunchtime study hall at The Hub the same day: drop in for help, catch up, or get ahead.",
   "outcome": "A robot with moving eyes on their own power supply, and several personalities you swap by voice.",
   "artifact": "A talking robot with moving eyes and switchable personalities.",
   "audience": "Mixed technical and non-technical",
@@ -163,12 +163,18 @@
         "Your robot gets skills: real function calls with real data.",
         "And it gets off the laptop. Android phone? Use Chrome. iPhone? Download the free Bluefy app before you come.",
         "Your phone becomes the robot's brain over Bluetooth, and the robot sits on a charger or BreadVolt.",
-        "Want it all inside the box? Bring a Raspberry Pi set up at home. The steps are on the Evening 3 page."
+        "Want it all inside the box? Bring a Raspberry Pi set up at home. The steps are on the Evening 3 page.",
+        "Stuck or behind? Come to the lunchtime study hall at The Hub that Tuesday."
       ],
       "note": "Bluetooth works on Android (tested: about 50 ms from phone to mouth). iPhone with Bluefy is still being tested, and nobody has run 50 robots on Bluetooth in one room yet: pitch that as part of the fun. Send the Evening 3 page to anyone thinking about a Pi now, so they set it up at home."
     }
   ],
   "flow": [
+    {
+      "type": "steps",
+      "title": "Lunch study hall (before tonight)",
+      "note": "Optional, at lunchtime on the same Tuesday. Drop in for help, catch up, or get ahead."
+    },
     {
       "type": "slides",
       "title": "Power and eyes (35 min)",
@@ -193,7 +199,32 @@
       "to": 11
     }
   ],
-  "sections": [],
+  "sections": [
+    {
+      "title": "Lunch study hall: catch up and power up",
+      "summary": "Optional, at lunchtime on the same Tuesday at The Hub. Catch up on Class 1 and get the servos onto their own power before the evening.",
+      "steps": [
+        {
+          "id": "study-hall-catchup",
+          "title": "Catch up on Class 1",
+          "instruction": "Missed it, or the mouth isn't working? Helpers have built bodies and Pico kits.",
+          "check": "Your robot talks and its mouth moves."
+        },
+        {
+          "id": "study-hall-power",
+          "title": "Move the servos to their own power",
+          "instruction": "Do the Give the servos their own power slide early: breadboard + charger, or your BreadVolt. Not sure which to buy? Ask here.",
+          "check": "Nothing is on pin 40 and the mouth still moves."
+        },
+        {
+          "id": "study-hall-eyes",
+          "title": "Start the eyes",
+          "instruction": "Pick up your eye kit (if you chipped in) and cut the eye holes before you decorate.",
+          "check": "Both eye holes are cut."
+        }
+      ]
+    }
+  ],
   "troubleshooting": [
     "Connected but the mouth won't move: the servos have no power. Switch the BreadVolt on, or plug the 2-pin lead into a charger.",
     "Your charger is USB-C only: the 2-pin lead is USB-A. Use a USB-C to USB-A adapter from the helper table, or a table charger.",
