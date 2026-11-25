@@ -269,7 +269,7 @@
         "Breadboard + phone charger: up to about 5 servos. Two plugs: laptop and wall. About $5.",
         "Breadboard + BreadVolt: about 3 servos on a rechargeable battery. About $10.",
         "Bluetooth: your phone becomes the brain, the robot sits on a charger or BreadVolt. About $0–20.",
-        "Raspberry Pi: a new brain inside the robot. About $130–170."
+        "Raspberry Pi: a new brain inside the robot. A Pi 5 is about $60, plus a cooler, a power supply, a memory card and a USB speakerphone if you don't already have them."
       ],
       "note": "",
       "image": "/slides/cardboard-robot/power-13-power-options.svg"
