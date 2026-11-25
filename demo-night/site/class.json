@@ -5,7 +5,7 @@
   "icon": "🎤",
   "owner": "Dana Sacco",
   "summary": "A night of demos from people building with Deepgram and Pipecat, then an open mic. Food and drinks included.",
-  "detail": "Welcome to the Deepgram Collab Hub at 505 Howard. A few minutes on Deepgram and what’s coming next, then demos from the community. The demo board below is live: if your project uses Deepgram or Pipecat for voice, add yourself.",
+  "detail": "Welcome to the Deepgram Collab Hub at 505 Howard. A few minutes on Deepgram and what’s coming next, then demos from the community. The demo board below is live: projects that use Deepgram or Pipecat go first. Building with voice on something else? Add yourself too, and you’ll come up after them if there’s time.",
   "outcome": "You’ve seen what people are building with voice AI right now, met the builders, and know what’s coming to the Hub next.",
   "artifact": "A list of new voice projects and the people behind them, plus sign-ups for the next labs.",
   "audience": "Mixed technical and non-technical",
@@ -18,7 +18,7 @@
   "prereqs": [
     "Nothing to bring but yourself",
     "Demoing? Your laptop with the project running, and a charger",
-    "Your demo uses Deepgram or Pipecat for voice"
+    "Deepgram and Pipecat demos go first; other voice projects go after, if there’s time"
   ],
   "links": {
     "starterRepo": null,
@@ -56,7 +56,7 @@
         "A few minutes on Deepgram and why we do this",
         "What’s coming up: one more build night this month, and two labs next year",
         "Demos: about 10 minutes each",
-        "Open mic: anyone with a voice project can jump up after",
+        "Open mic: if there’s time, any voice project can jump up after the Deepgram and Pipecat demos",
         "Then hang out, eat, drink, meet people"
       ],
       "note": ""
@@ -95,7 +95,8 @@
         "A chance to see the different ways people are using Deepgram",
         "Hear about each project from the person who built it",
         "Ask questions and meet other people building with voice",
-        "Got something of your own? There’s an open mic at the end"
+        "Got something of your own? There’s an open mic at the end for any voice project, if there’s time",
+        "Coming soon: a voice night open to every voice project"
       ],
       "note": ""
     },
@@ -177,7 +178,8 @@
       "title": "Tonight’s demos",
       "bullets": [
         "The live demo board is on the lesson page, under these slides",
-        "Using Deepgram or Pipecat in a voice app? Add your name",
+        "Using Deepgram or Pipecat in a voice app? Add your name. You go first",
+        "Other voice project? Add it too. You’ll go after them, if there’s time",
         "The board updates the moment someone signs up",
         "About 10 minutes each, then open mic"
       ],
