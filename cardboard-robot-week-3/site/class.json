@@ -31,7 +31,8 @@
     "1. On your computer, install Raspberry Pi Imager from raspberrypi.com/software and use it to put Raspberry Pi OS (64-bit, with desktop) on the memory card. In its settings, add a username and password and the Hub's wifi from your event email.",
     "2. Start the Pi once with a screen, keyboard and mouse, and finish the welcome steps.",
     "3. Turn on Raspberry Pi Connect (its icon is in the top bar) and sign in with a free Raspberry Pi ID. On your laptop, check you can see the Pi's screen at connect.raspberrypi.com.",
-    "4. Plug in your speakerphone, check the Pi plays sound through it, then open Chromium and visit this page once, so it's ready."
+    "4. Plug in your speakerphone, check the Pi plays sound through it, then open Chromium and visit this page once, so it's ready.",
+    "Robot lab files (the robot program and anything else we share): https://dgeventhub.com/downloads/cardboard-robot/"
   ],
   "links": {
     "starterRepo": null,
@@ -324,7 +325,7 @@
     "Its notes are gone: notes are kept in this browser. A different laptop, phone or browser starts empty.",
     "There's no Connect by Bluetooth button, or it does nothing: on iPhone you're in Safari or Chrome, so open the page in Bluefy instead. On Android, use Chrome.",
     "Your robot's name doesn't show up: turn on Bluetooth (and Location on Android), check the Pico has power from the charger, and move closer. Only one phone can connect at a time: is someone else connected to it?",
-    "No robot names appear at all: the Pico has an old program without Bluetooth. Load the robot file again (Class 1, Load your Pico).",
+    "No robot names appear at all: the Pico has an old program without Bluetooth. Load the robot file again from https://dgeventhub.com/downloads/cardboard-robot/",
     "The wrong robot moved: you picked a neighbour's name. Disconnect and pick the name written on your box.",
     "Connected by Bluetooth but the mouth won't move: the servos have no power. Switch the BreadVolt on, or plug the 2-pin lead into the charger.",
     "Bluetooth keeps dropping: stay in the same room as the robot and keep the page open with the screen on. Phones cut connections when the screen locks.",

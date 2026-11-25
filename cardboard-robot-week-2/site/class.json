@@ -25,7 +25,8 @@
     "Your robot from Evening 1, with its Pico.",
     "Your laptop with Google Chrome, and your Deepgram API key.",
     "Power for the servos, your choice: a USB charger with the flat USB-A port (an old phone charger is perfect; we have a few spares), or a SunFounder BreadVolt (about $10) for battery power.",
-    "Eye servos: 2 per person, from the group order in Evening 1. We bring the eyeballs and the breadboards."
+    "Eye servos: 2 per person, from the group order in Evening 1. We bring the eyeballs and the breadboards.",
+    "Robot lab files (the robot program and anything else we share): https://dgeventhub.com/downloads/cardboard-robot/"
   ],
   "links": {
     "starterRepo": null,
@@ -228,7 +229,7 @@
   "troubleshooting": [
     "Connected but the mouth won't move: the servos have no power. Switch the BreadVolt on, or plug the 2-pin lead into a charger.",
     "Your charger is USB-C only: the 2-pin lead is USB-A. Use a USB-C to USB-A adapter, or a table charger.",
-    "The eyes don't move at all: check the orange wires are on GP13 (pin 17) and GP12 (pin 16), and the reds and browns are on the + and − rows. Still nothing? Load the robot file again (Class 1, Load your Pico).",
+    "The eyes don't move at all: check the orange wires are on GP13 (pin 17) and GP12 (pin 16), and the reds and browns are on the + and − rows. Still nothing? Load the robot file again from https://dgeventhub.com/downloads/cardboard-robot/",
     "The eyes cross outward: swap the left and right eye wires.",
     "Left and right are backwards: swap the two eye wires.",
     "An eye catches on the face: make the hole a little bigger, or move the servo back.",

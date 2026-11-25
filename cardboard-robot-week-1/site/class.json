@@ -7,7 +7,7 @@
   "series": {
     "id": "cardboard-robot",
     "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
-    "summary": "Four Tuesday evenings, one robot, plus a drop-in study hall every Tuesday from 11 AM until class, with snacks, from the second week on: decorate your box, do upgrades, or catch up on an evening you missed. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed.",
+    "summary": "Four Tuesday evenings, one robot, plus a drop-in study hall every Tuesday from 11 AM until class, with snacks, from the second week on: decorate your box, do upgrades, or catch up on an evening you missed. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed. Every file you need is in the robot lab files: https://dgeventhub.com/downloads/cardboard-robot/",
     "part": 1
   },
   "summary": "Build a desk robot that talks, with a mouth that moves when it speaks. You build the body yourself from a cardboard box, wire one servo to your Pico with three wires, and it runs on your laptop's power. Most of the evening goes into its personality and its Deepgram voice, and it ends with a short talk on your power options, so you know what to bring next week.",
@@ -24,7 +24,7 @@
   "prereqs": [
     "A laptop with Google Chrome. This matters: Safari and Firefox can't talk to USB devices, so the robot won't connect in them.",
     "Your own Raspberry Pi Pico W WITH THE PINS ALREADY ATTACHED (about $7). Look for \"Pico WH\" or \"Pico W with headers\". A Pico 2 W with headers works too. It has to be a W: the W has the radio for Bluetooth in Evening 3.",
-    "Load the robot program onto it at home (about 1 minute, nothing to install). 1: Download the file for your board: Pico W or Pico WH → https://dgeventhub.com/downloads/cardboard-robot/robot-pico-w.uf2 · Pico 2 W → https://dgeventhub.com/downloads/cardboard-robot/robot-pico2-w.uf2",
+    "Load the robot program onto it at home (about 1 minute, nothing to install). 1: Go to the robot lab files, https://dgeventhub.com/downloads/cardboard-robot/ , and download the file for your board: robot-pico-w.uf2 for a Pico W or Pico WH, robot-pico2-w.uf2 for a Pico 2 W.",
     "2: Hold the small white BOOTSEL button on the Pico and plug it into your computer with a micro-USB data cable. Let go when a drive called RPI-RP2 (Pico W) or RP2350 (Pico 2 W) appears.",
     "3: Drag the file onto that drive. The drive disappears and the Pico restarts: done. Didn't manage it? Bring it anyway and we'll do it together at the start of class.",
     "A free Deepgram account and API key. Use the sign-up QR code at your table.",
@@ -69,7 +69,7 @@
       "kicker": "BEFORE YOU BUILD",
       "title": "Load your Pico (if you didn't at home)",
       "bullets": [
-        "Download the file for your board: Pico W / WH → robot-pico-w.uf2 · Pico 2 W → robot-pico2-w.uf2 (links in Before you come on this page).",
+        "Download the file for your board: Pico W / WH → robot-pico-w.uf2 · Pico 2 W → robot-pico2-w.uf2 from the robot lab files: dgeventhub.com/downloads/cardboard-robot.",
         "Hold the white BOOTSEL button on the Pico and plug it into your laptop.",
         "A drive appears: RPI-RP2 or RP2350. Let go of the button.",
         "Drag the file onto the drive. It disappears and the Pico restarts: done.",

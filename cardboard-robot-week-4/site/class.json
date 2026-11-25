@@ -24,7 +24,8 @@
   "prereqs": [
     "Your robot, charged if it runs on a Pi or a BreadVolt.",
     "Your Deepgram API key.",
-    "Its brain: your laptop, your phone (charged, for Bluetooth robots), or your laptop to open your Pi with Raspberry Pi Connect."
+    "Its brain: your laptop, your phone (charged, for Bluetooth robots), or your laptop to open your Pi with Raspberry Pi Connect.",
+    "Robot lab files (the robot program and anything else we share): https://dgeventhub.com/downloads/cardboard-robot/"
   ],
   "links": {
     "starterRepo": null,
