@@ -24,8 +24,8 @@
   "prereqs": [
     "Your robot from Evening 1, with its Pico.",
     "Your laptop with Google Chrome, and your Deepgram API key.",
-    "Power for the servos, your choice: a USB charger with the flat USB-A port (an old phone charger is perfect; we have a few spares), or a SunFounder BreadVolt (about $10) for battery power.",
-    "Eye servos: 2 per person, from the group order in Evening 1. We bring the eyeballs and the breadboards.",
+    "Power for the servos, your choice: your own USB charger with the flat USB-A port (an old phone charger is perfect), one from the group order, or a SunFounder BreadVolt (about $10) for battery power.",
+    "Eye servos: 2 per robot, from the group order in Evening 1 (or bring your own MG90S). We bring the eyeballs and the breadboards.",
     "Robot lab files (the robot program and anything else we share): https://dgeventhub.com/downloads/cardboard-robot/"
   ],
   "links": {
