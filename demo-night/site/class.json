@@ -132,24 +132,13 @@
         "A cardboard robot with a Deepgram voice: it listens, talks and moves its mouth in time",
         "5 weeks, starting in January, one evening a week",
         "Each week adds one piece, and you take the robot home",
-        "Miss a week? Catch up at a lunch session, or just come to the next one"
+        "Miss a week? Catch up at a lunch session, or just come to the next one",
+        "Want the full tour? Come to Women in Robotics x Deepgram on December 15, an evening event where I go through the robot lab in detail. Link below the slides"
       ],
-      "note": "Hold up the robot and let it talk before this slide."
+      "note": "Hold up the robot and let it talk before this slide. Plug Women in Robotics x Deepgram, Dec 15: Dana walks through the robot lab in detail there. The Luma link is in the cards under the slides."
     },
     {
       "n": 10,
-      "kicker": "PHYSICAL AI LAB",
-      "title": "Things will break. That’s robotics.",
-      "bullets": [
-        "Wires come loose, servos jitter, code does weird things",
-        "We fix it together, every week",
-        "My promise: everyone who wants a working robot at the end will have one",
-        "We got this."
-      ],
-      "note": ""
-    },
-    {
-      "n": 11,
       "kicker": "VOICE GAME LAB",
       "title": "Voice Game Lab, every week",
       "bullets": [
@@ -161,7 +150,7 @@
       "note": ""
     },
     {
-      "n": 12,
+      "n": 11,
       "kicker": "VOICE GAME LAB",
       "title": "Night one: who you’ll hear from",
       "bullets": [
@@ -171,19 +160,6 @@
         "Devin Reimer of AstroBeam, a Deepgram customer: Stellar Cafe on Steam, a VR game where you talk to the characters"
       ],
       "note": "Volley numbers are the company’s own (Jan 2025 press release). AstroBeam’s founders made Job Simulator at Owlchemy Labs; their second voice game, Robo Detective, launches on XREAL glasses."
-    },
-    {
-      "n": 13,
-      "kicker": "DEMOS",
-      "title": "Tonight’s demos",
-      "bullets": [
-        "The live demo board is on the lesson page, under these slides",
-        "Using Deepgram or Pipecat in a voice app? Add your name. You go first",
-        "Other voice project? Add it too. You’ll go after them, if there’s time",
-        "The board updates the moment someone signs up",
-        "About 10 minutes each, then open mic"
-      ],
-      "note": ""
     }
   ],
   "flow": [
@@ -191,7 +167,7 @@
       "type": "slides",
       "title": "Welcome to Demo Night",
       "from": 1,
-      "to": 13
+      "to": 11
     },
     {
       "type": "runner",
