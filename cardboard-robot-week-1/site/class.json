@@ -179,11 +179,11 @@
       "kicker": "VOICE STUDIO · 20 MIN",
       "title": "Write its personality",
       "bullets": [
-        "Press Stop. Under Personality, write who it is: its name, its job, what it cares about.",
-        "Then how it talks: short or chatty, formal or slangy, any catchphrase.",
-        "Then the rules: one or two sentences per reply, what it won't talk about, how it handles being interrupted.",
-        "Give it a Robot name and change the First thing it says.",
-        "Start again. Try to throw it off: does it stay in character?",
+        "Two ways to write it. Pick one.",
+        "Write it yourself: under Personality, say who it is, how it talks, what it cares about, and its rules (one or two sentences per reply, what it won't talk about).",
+        "Or get interviewed: press 🎙 Interview me. A Flux voice interviewer asks you about your robot out loud, then writes its name, personality and first line for you.",
+        "Read what you've got and change anything that isn't quite right.",
+        "Press Start talking. Try to throw it off: does it stay in character?",
         "Rewrite, test, rewrite. Most good robots take three tries."
       ],
       "note": ""
