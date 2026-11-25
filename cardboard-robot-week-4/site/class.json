@@ -40,18 +40,18 @@
         "It has personalities, skills, and maybe no wires at all.",
         "Tonight it gets the floor."
       ],
-      "note": "Open with your own robot doing its best trick. Invite guests for the show and tell half."
+      "note": ""
     },
     {
       "n": 2,
       "kicker": "SUPPLIES CHECKLIST",
       "title": "What each robot needs tonight",
       "bullets": [
-        "☐ Your robot, charged if it runs on a Pi or a BreadVolt",
-        "☐ Bluetooth robot: your phone, charged",
+        "Your robot, charged if it runs on a Pi or a BreadVolt",
+        "Bluetooth robot: your phone, charged",
         "Bring: your laptop and your Deepgram key"
       ],
-      "note": "Helper table: catch-up kits (ready Class 1 robots, eye kits), spare charged batteries, spare cables. For the show: a phone tripod, a plain backdrop, a mic or quiet corner, voting cards."
+      "note": ""
     },
     {
       "n": 3,
@@ -64,7 +64,7 @@
         "Tune Patience for a full room so it doesn't talk over people.",
         "Rehearse once with a partner."
       ],
-      "note": "Walk the room and push people to keep the demo short: one switch, one skill, one laugh."
+      "note": ""
     },
     {
       "n": 4,
@@ -76,7 +76,7 @@
         "Show its best skill live: a Muni trip, a timer, a fact, a coin flip.",
         "We film every robot. Share yours with #RobotLunchLab."
       ],
-      "note": "Run the order by table. Keep a timer visible. If a robot freezes, the builder can demo from the laptop or the phone: it's the same page."
+      "note": ""
     },
     {
       "n": 5,
@@ -88,7 +88,7 @@
         "Best look",
         "Most likely to take over The Hub"
       ],
-      "note": "Hand out voting cards at the start of show and tell, count during the last demos."
+      "note": ""
     },
     {
       "n": 6,
@@ -98,7 +98,7 @@
         "A robot that listens, thinks, talks, moves, looks things up and gets you to the bus on time.",
         "Thank you for building with us."
       ],
-      "note": "Ask what people would add next. Collect ideas for the next series."
+      "note": ""
     }
   ],
   "flow": [

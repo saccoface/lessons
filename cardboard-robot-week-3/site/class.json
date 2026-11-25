@@ -47,7 +47,7 @@
         "Second half: get it off the laptop. Your phone over Bluetooth, or a Raspberry Pi.",
         "Time left? Extras: eyebrows, a neck."
       ],
-      "note": "Show of hands: Android? iPhone with Bluefy? Brought a Pi? Seat Pi people together so helpers can work the tables, and keep Bluetooth people a little spread out."
+      "note": ""
     },
     {
       "n": 2,
@@ -59,7 +59,7 @@
         "Your page does the real work: asks Muni, sets a timer, saves a note.",
         "The answer goes back to the agent, and it says it in its own voice."
       ],
-      "note": "Two minutes. They used two already in Evening 2: crossing the eyes and switching personality. Show the Tool lines in the transcript and the Code panel: the skills you tick become the functions in the agent's settings."
+      "note": ""
     },
     {
       "n": 3,
@@ -71,7 +71,7 @@
         "Remember notes · Plan a Muni trip · Look things up · Dice, coins and picking",
         "Each one you tick shows a Try: line. Say it and watch the Tool lines."
       ],
-      "note": "Fewer skills keep a robot focused. Push people to choose what fits their robot, not tick everything. Notes are kept in that browser only. Look things up uses Wikipedia, and says so when there's no article instead of guessing."
+      "note": ""
     },
     {
       "n": 4,
@@ -83,7 +83,7 @@
         "It tells you the line, where to catch it, which way it's heading, and when the next one comes.",
         "Trips start from The Hub at 505 Howard, unless you say where you're starting from."
       ],
-      "note": "Live arrival times come from 511.org; stops and routes come from Muni's published timetable. Short trips get \"just walk\". The credit line under the skills list is required by Muni's data licence; leave it there."
+      "note": ""
     },
     {
       "n": 5,
@@ -95,7 +95,7 @@
         "Tell it, in its personality, when to use each skill.",
         "Test it with a partner playing someone who needs help."
       ],
-      "note": "Good pairs: a commute helper with Muni and the weather; a game host with dice and timers; a study buddy with look-ups, notes and timers."
+      "note": ""
     },
     {
       "n": 6,
@@ -107,7 +107,7 @@
         "B · A Raspberry Pi inside: about $130–170, bring your own, proven.",
         "Both keep the Pico, servos and breadboard exactly as wired in Evening 2."
       ],
-      "note": "Neither? Stay on the laptop, add extras, and polish for show and tell.",
+      "note": "",
       "image": "/slides/cardboard-robot/bluetooth-01-two-ways.svg"
     },
     {
@@ -115,15 +115,15 @@
       "kicker": "SUPPLIES CHECKLIST",
       "title": "What each robot needs for the cord-cutting",
       "bullets": [
-        "Bluetooth: ☐ your phone, charged (Android with Chrome, or iPhone with Bluefy installed)",
-        "Bluetooth: ☐ 1 × USB-A to micro-USB cable, Pico to the charger (on the table) ☐ a 2-port USB charger, or your BreadVolt",
-        "Bluetooth, optional: ☐ a small Bluetooth speaker for inside the robot",
-        "Pi: ☐ your Raspberry Pi 4 or 5, set up at home ☐ your USB speakerphone ☐ your battery pack, charged",
-        "Pi: ☐ 1 × USB-A to micro-USB data cable, for the Pico ☐ 1 × short cable from the battery to the Pi's USB-C port ☐ Velcro strips or tape",
-        "Extras: ☐ spare MG90S servos for eyebrows or a neck (helper table)",
+        "Bluetooth: your phone, charged (Android with Chrome, or iPhone with Bluefy installed)",
+        "Bluetooth: 1 × USB-A to micro-USB cable, Pico to the charger (on the table) a 2-port USB charger, or your BreadVolt",
+        "Bluetooth, optional: a small Bluetooth speaker for inside the robot",
+        "Pi: your Raspberry Pi 4 or 5, set up at home your USB speakerphone your battery pack, charged",
+        "Pi: 1 × USB-A to micro-USB data cable, for the Pico 1 × short cable from the battery to the Pi's USB-C port Velcro strips or tape",
+        "Extras: spare MG90S servos for eyebrows or a neck (ask us)",
         "Bring: your laptop and your Deepgram key"
       ],
-      "note": "Charger ports: a Bluetooth robot on a charger uses 2 ports (Pico + servo lead), so a 6-port charger serves 3. Count them before class. USB-C to micro-USB cables don't fit a USB-A charger, so have USB-A to micro-USB cables on every table. Every Pico loaded since Evening 1 already has the Bluetooth program; a Pico loaded before Nov 24 needs the current main.py at the helper table. Pi helper table: a setup station with a screen, keyboard, mouse and micro-HDMI cable; spare cables; one or two spare charged batteries."
+      "note": ""
     },
     {
       "n": 8,
@@ -135,7 +135,7 @@
         "The Pico W is still the controller, and the servos are wired exactly as before.",
         "The robot never needs wifi. Only your phone uses the internet."
       ],
-      "note": "The voice comes out of the phone: prop it behind the robot, or pair a small Bluetooth speaker and put it inside. A Bluetooth speaker plays a little late, so the mouth can run slightly ahead of the voice.",
+      "note": "",
       "image": "/slides/cardboard-robot/bluetooth-02-bluetooth-who-does-what.svg"
     },
     {
@@ -147,7 +147,7 @@
         "The servos stay on their own power: the 2-pin lead in the charger's second port, or your BreadVolt.",
         "Nothing changes on the breadboard. Pin 40 stays empty."
       ],
-      "note": "This is exactly how it was tested: Pico on a wall charger, servos on a BreadVolt, Android phone as the brain, no laptop. Power check: the Pico draws about 0.1 A, three servos about 0.9 A, and each charger port gives about 2.4 A.",
+      "note": "",
       "image": "/slides/cardboard-robot/bluetooth-03-bluetooth-wall.svg"
     },
     {
@@ -159,7 +159,7 @@
         "Unplug the Pico's USB cable when you run it this way. Never both.",
         "The BreadVolt gives about 1.5 A: enough for the Pico and three servos."
       ],
-      "note": "Advanced option: the wall-charger way is the one we've tested. Make sure the BreadVolt is set to 5 V before adding the VSYS jumper.",
+      "note": "",
       "image": "/slides/cardboard-robot/bluetooth-04-bluetooth-battery.svg"
     },
     {
@@ -168,11 +168,11 @@
       "title": "Connect from your phone",
       "bullets": [
         "Android: open this page in Chrome, with Bluetooth and Location on. iPhone: open it in the Bluefy app.",
-        "Paste your key, then tap Connect by Bluetooth and pick your robot: Robot- plus the four characters on the sticker on your box.",
+        "Paste your key, tap Connect by Bluetooth and pick a Robot- name. Press Wiggle the mouth: if someone else's robot moves, disconnect and try the next name. Write yours on your box.",
         "Set the mouth and tick your eyes and skills again: they're saved per phone.",
         "Recreate your personalities, or copy them across from your laptop's Code panel. Then start talking."
       ],
-      "note": "Every Pico has its own name, from its serial number, so 50 robots don't get mixed up. Lost sticker? Plug the Pico into a laptop and open Thonny: it prints BLUETOOTH NAME Robot-XXXX when it starts. If a phone can't find its robot in a crowded room, move closer and try again, or fall back to the cable. Nobody leaves without a working robot.",
+      "note": "",
       "image": "/slides/cardboard-robot/bluetooth-05-bluetooth-connect.svg"
     },
     {
@@ -185,7 +185,7 @@
         "Battery: the Pi goes in the USB-C port, and the servo power lead goes in the other port.",
         "Fix the Pi and battery inside the robot, on the floor at the back, with velcro or tape. Cut a small notch for the charging cable."
       ],
-      "note": "Done when: the Pi's light flickers and the speakerphone lights up. The battery is the heaviest part, so low and at the back keeps the robot from tipping. Tip: tape the back flap on one side only, like a hinge, so you can open it to charge or fix things."
+      "note": ""
     },
     {
       "n": 13,
@@ -195,7 +195,7 @@
         "On your laptop, go to connect.raspberrypi.com and open your Pi's screen.",
         "On the Pi, open Chromium and go to this lesson page."
       ],
-      "note": "If someone's Pi didn't come up on the wifi, send them to the setup station. Connect's screen sharing can't paste reliably; to get the key across, type it, or a helper can copy it on with SSH."
+      "note": ""
     },
     {
       "n": 14,
@@ -208,7 +208,7 @@
         "Recreate your personalities, or copy them across from your laptop's Code panel.",
         "Start talking."
       ],
-      "note": "Profiles, skills and mouth settings live in each browser, so the Pi starts fresh. Speakerphones cancel their own echo well, so barge-in can usually stay on."
+      "note": ""
     },
     {
       "n": 15,
@@ -220,7 +220,7 @@
         "Count your servos against your power: a BreadVolt feeds about 3, a charger port about 5.",
         "Three or more servos: a 470–1000 µF capacitor across + and − helps."
       ],
-      "note": "Extras are for people who finished early. The neck uses the robot page's neck controls. Eyebrows need new firmware commands, so treat them as decoration for now unless a helper has the eyebrow program ready.",
+      "note": "",
       "image": "/slides/cardboard-robot/power-09-how-many-servos.svg"
     },
     {
@@ -233,7 +233,7 @@
         "Still on the laptop? Show your robot to a wireless builder, and hear theirs.",
         "Ask it a skill question while you walk: how do I get home from here?"
       ],
-      "note": "Done when: it holds a conversation with no laptop attached. Bluetooth reaches about one room."
+      "note": ""
     },
     {
       "n": 17,
@@ -324,8 +324,8 @@
     "Its notes are gone: notes are kept in this browser. A different laptop, phone or browser starts empty.",
     "There's no Connect by Bluetooth button, or it does nothing: on iPhone you're in Safari or Chrome, so open the page in Bluefy instead. On Android, use Chrome.",
     "Your robot's name doesn't show up: turn on Bluetooth (and Location on Android), check the Pico has power from the charger, and move closer. Only one phone can connect at a time: is someone else connected to it?",
-    "No robot names appear at all: the Pico has an old program without Bluetooth. Take it to the helper table for the current main.py.",
-    "The wrong robot moved: you picked a neighbour's name. Disconnect and pick the name on your box's sticker.",
+    "No robot names appear at all: the Pico has an old program without Bluetooth. Load the robot file again (Class 1, Load your Pico).",
+    "The wrong robot moved: you picked a neighbour's name. Disconnect and pick the name written on your box.",
     "Connected by Bluetooth but the mouth won't move: the servos have no power. Switch the BreadVolt on, or plug the 2-pin lead into the charger.",
     "Bluetooth keeps dropping: stay in the same room as the robot and keep the page open with the screen on. Phones cut connections when the screen locks.",
     "The Pi isn't on the wifi, or Connect can't find it: take it to the setup station and fix the wifi with a screen and keyboard.",
