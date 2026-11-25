@@ -10,7 +10,8 @@
 #   "L" / "R"       both eyes look left / right for about 2 s, then back to centre   (Class 2 eyes)
 #   "E"             eyes back to centre now
 #   "X"             cross the eyes for about 2 s, then back to centre
-#   "?"             answers "ROBOT READY", so the page knows it found the right board
+#   "?"             answers "ROBOT READY Robot-XXXX", so the page knows it found the right board
+#                   and can show the robot's Bluetooth name
 #
 # While the mouth is moving (the robot is talking), the eyes glance a little every 3-6 s
 # on their own. When it's quiet, the eye servos switch off so they don't buzz or use power.
@@ -162,7 +163,7 @@ def hold(ms):
 def handle(cmd):
     global mouth_moved, hold_until
     if cmd == '?':
-        reply('ROBOT READY')
+        reply('ROBOT READY ' + NAME)   # the page shows the name so people can write it on the box
         return
     c = cmd[0]
     if c == 'X':

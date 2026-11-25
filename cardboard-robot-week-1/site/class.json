@@ -167,6 +167,7 @@
       "bullets": [
         "Paste your Deepgram key.",
         "Quit Thonny if it's open, then press Connect robot.",
+        "The page shows your robot's Bluetooth name (Robot- and four characters): write it on your box. You'll need it in Evening 3.",
         "Set the mouth, slowly and in order: shut first, then open. Stop before it buzzes.",
         "Press Wiggle the mouth to check.",
         "Press Start talking and say hello to Jervis."
