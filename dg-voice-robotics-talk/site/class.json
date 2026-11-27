@@ -189,7 +189,7 @@
    "bullets": [
     "Controller: phone or laptop. Mic, speaker, and the Deepgram voice agent running in a web page.",
     "Microcontroller: Pico W. Receives commands over USB or Bluetooth and drives the servos.",
-    "Motion: servos. One for the mouth, two for the eyes, more for add-ons."
+    "Motion: servos. One for the mouth, two for the eyes, and an optional neck."
    ],
    "note": ""
   },
@@ -201,7 +201,7 @@
     "Wi-Fi: needs network setup and a relay server. A phone still runs the voice.",
     "Raspberry Pi: works, but costs more per robot.",
     "Bluetooth: built into the Pico W. No setup or server.",
-    "54 ms median round trip from phone to robot, with no visible delay in mouth sync (Android with Chrome, robot on a wall charger, no laptop). iPhone uses the free Bluefy app."
+    "54 ms median round trip from phone to robot, with no visible delay in mouth sync (Android with Chrome, robot on a wall charger, no laptop). iPhone with the free Bluefy app is still being tested."
    ],
    "note": ""
   },
