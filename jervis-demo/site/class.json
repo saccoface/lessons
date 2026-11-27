@@ -1,0 +1,166 @@
+{
+ "schemaVersion": 1,
+ "id": "jervis-demo",
+ "title": "Jervis Demo",
+ "icon": "🤖",
+ "owner": "Dana Sacco",
+ "series": {
+  "id": "cardboard-robot",
+  "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
+  "summary": "",
+  "part": 9,
+  "bonus": true
+ },
+ "summary": "Meet Jervis, Dana's own robot, with everything switched on: every skill, moving eyes and a camera so he can see what's in front of him. A demo stand for events, separate from the four lab evenings.",
+ "detail": "Jervis is a furry desk robot built the same way as the lab robots, then taken all the way: a Raspberry Pi 5 inside runs this page over Wi-Fi, a Pico moves his mouth, eyes and neck, a USB speaker and mic give him a voice and ears, and a USB camera lets him look. Ask him what he sees, hold something up, or have him read a label. He answers in character, through the Deepgram Voice Agent. This page is the demo setup and the checklist for running him at an event.",
+ "outcome": "Jervis running on his own: talking, moving his mouth and eyes, using skills, and describing what his camera sees.",
+ "artifact": "A live robot demo that sees, talks and moves.",
+ "audience": "Mixed technical and non-technical",
+ "type": "Conference demo",
+ "difficulty": "medium",
+ "track": "community",
+ "minutes": 30,
+ "setupMinutes": 20,
+ "runner": "robot",
+ "prereqs": [
+  "Jervis: Raspberry Pi 5 on its X1202 battery board, Pico 2 W, BreadVolt, four servos (mouth, neck, two eyes), USB speaker, USB mic and the Hue HD USB camera.",
+  "A strong USB-C charger for the X1202 (27 W, 5 V 5 A). A phone charger is not enough for a Pi 5.",
+  "The BreadVolt charged before the demo.",
+  "A Deepgram API key, and an Anthropic API key for the camera skill. Both are pasted on this page on the robot's own Pi and stay in that browser."
+ ],
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "slides": [],
+ "flow": [
+  {
+   "type": "steps",
+   "title": "Set up Jervis",
+   "note": "Wiring, power and the checklist before people arrive."
+  },
+  {
+   "type": "runner",
+   "title": "Talk to Jervis",
+   "note": "Open this page on Jervis's Pi. Tick \"See with the camera\" under Skills, then Start talking."
+  }
+ ],
+ "sections": [
+  {
+   "title": "How Jervis is wired",
+   "summary": "Every wire, so he can be put back together. Hold the Pico with its USB port at the top; pin numbers count from that end.",
+   "steps": [
+    {
+     "id": "pi-power",
+     "title": "Pi and battery",
+     "instruction": "The Pi 5 sits on the X1202 battery board (pogo pins, no wires). The USB-C charger plugs into the X1202, not the Pi.",
+     "check": "The Pi's power light is green."
+    },
+    {
+     "id": "usb",
+     "title": "USB into the Pi",
+     "instruction": "Into the Pi's USB ports: the Pico (micro-USB cable), the Hue HD camera, the USB speaker and the USB mic. Any port works.",
+     "check": "All four are plugged in."
+    },
+    {
+     "id": "breadvolt",
+     "title": "BreadVolt on the rails",
+     "instruction": "Push the BreadVolt into the breadboard's power rails: + on the red rail, − on the blue rail. Set its jumpers to 5 V.",
+     "check": "It sits flat on both rails at 5 V."
+    },
+    {
+     "id": "ground",
+     "title": "Ground jumper",
+     "instruction": "One jumper from Pico pin 23 (GND) to the − rail. Without it the servos have power but can't read the signal.",
+     "check": "Pin 23 is joined to the − rail."
+    },
+    {
+     "id": "servos",
+     "title": "Four servos",
+     "instruction": "Each servo plug takes three jumpers. Red to the + rail, brown to the − rail, orange to its Pico pin: mouth pin 20 (GP15), neck pin 19 (GP14), left eye pin 17 (GP13), right eye pin 16 (GP12).",
+     "check": "Every red is on +, every brown on −, every orange on its pin."
+    },
+    {
+     "id": "vbus",
+     "title": "Nothing on VBUS",
+     "instruction": "Leave Pico pin 40 (VBUS) empty. A servo there resets the Pico.",
+     "check": "Pin 40 is empty."
+    }
+   ]
+  },
+  {
+   "title": "Before a demo",
+   "summary": "About 20 minutes before people arrive.",
+   "steps": [
+    {
+     "id": "charge",
+     "title": "Charge the BreadVolt",
+     "instruction": "Plug a USB cable into the BreadVolt's charging port. The red CHG light means it is charging; it goes out when full. A flat BreadVolt is the usual reason the mouth won't move.",
+     "check": "CHG is off, and PWR lights when you switch it on."
+    },
+    {
+     "id": "boot",
+     "title": "Power the Pi",
+     "instruction": "Plug the X1202's charger into the wall and wait about a minute for the Pi to start. It opens this page on its own.",
+     "check": "The page is on Jervis's screen."
+    },
+    {
+     "id": "screen",
+     "title": "See his screen from a laptop",
+     "instruction": "On a laptop, go to connect.raspberrypi.com, sign in, and choose Connect via → Screen sharing next to robotfur.",
+     "check": "You can see and click on Jervis's screen."
+    },
+    {
+     "id": "connect",
+     "title": "Connect the Pico",
+     "instruction": "On the robot page, press Connect robot and pick \"Board in FS mode\". Do this after every restart. Then press Wiggle the mouth.",
+     "check": "It says Robot connected and the mouth moves."
+    },
+    {
+     "id": "camera",
+     "title": "Switch on the camera",
+     "instruction": "Under Skills, tick See with the camera and paste the Anthropic key once. The first time, allow the camera when Chromium asks.",
+     "check": "Ask \"what do you see?\" and he describes the room."
+    }
+   ]
+  },
+  {
+   "title": "Things to try",
+   "summary": "Good lines for a crowd.",
+   "steps": [
+    {
+     "id": "see",
+     "title": "What do you see?",
+     "instruction": "Hold something up and ask what it is, or ask him to read a label or a sign.",
+     "check": "He answers from a photo, not a guess."
+    },
+    {
+     "id": "eyes",
+     "title": "Cross your eyes",
+     "instruction": "Ask him to cross his eyes, or look left and right.",
+     "check": "His eyes move."
+    },
+    {
+     "id": "muni",
+     "title": "How do I get to the Ferry Building?",
+     "instruction": "He plans a Muni trip from 505 Howard with live times.",
+     "check": "He names a line and when the next one comes."
+    },
+    {
+     "id": "coin",
+     "title": "Flip a coin",
+     "instruction": "Quick skill for a crowd.",
+     "check": "He calls heads or tails."
+    }
+   ]
+  }
+ ],
+ "troubleshooting": [
+  "Mouth doesn't move but the page says Robot connected: the servos have no power. Charge the BreadVolt and switch it on (PWR light), then check the ground jumper from Pico pin 23 to the − rail.",
+  "\"Low voltage warning\" on the Pi, or it keeps restarting: the X1202 isn't getting enough power. Use the 27 W charger, firmly plugged into the X1202.",
+  "After a restart the robot page says Not connected: press Connect robot again. The page has to reconnect after every restart.",
+  "Pi Connect says robotfur is offline: the Pi is off or still starting. Wait a minute after power-on and refresh.",
+  "Jervis says he can't see: check the camera is plugged into the Pi, the camera skill is ticked, the Anthropic key is pasted, and Chromium was allowed to use the camera.",
+  "Only one program can use the Pico at a time. Close Thonny or any other tab connected to it."
+ ]
+}
