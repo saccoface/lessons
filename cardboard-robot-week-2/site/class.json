@@ -52,7 +52,7 @@
         "Your robot from Evening 1, with its Pico",
         "1 × half-size breadboard with + and − rails (on the table; already have one from Evening 1? keep it)",
         "Power, one of: USB-to-2-pin power lead + a USB-A charger, or your BreadVolt, set to 5 V",
-        "1 × male-to-male jumper (ground to the Pico)",
+        "Mouth power, if it's still on the Pico: 2 × male-to-male jumpers, plus 1 × male-to-female jumper (ground to the Pico)",
         "Eyes: 2 × eyeballs 2 × MG90S servos with horns 2 × male-to-female jumpers (signal) 4 × male-to-male jumpers (power)",
         "Glue guns, shared at each table",
         "Bring: your laptop and your Deepgram key"
@@ -65,8 +65,8 @@
       "title": "Give the servos their own power",
       "bullets": [
         "Take the mouth's red off pin 40 and brown off pin 38.",
-        "Red → breadboard + row, brown → − row.",
-        "One jumper from the − row to GND (pin 23): everything shares one ground.",
+        "Swap those two jumpers for male-to-male ones: red → breadboard + row, brown → − row.",
+        "One male-to-female jumper from the − row to GND (pin 23): everything shares one ground.",
         "Feed the rows: the 2-pin lead into a charger (red pin → +, black → −), or press your BreadVolt onto the rails and switch it on.",
         "Nothing on pin 40 from now on. Plug the Pico back into the laptop."
       ],
@@ -162,7 +162,7 @@
       "title": "Evening 3: skills, and cut the cord",
       "bullets": [
         "Your robot gets skills: real function calls with real data.",
-        "And it gets off the laptop. Android phone? Use Chrome. iPhone? Download the free Bluefy app before you come.",
+        "And it gets off the laptop. Android phone? Use Chrome. iPhone? Download the free Bluefy app before you come (iPhone is still being tested, so bring your laptop too).",
         "Your phone becomes the robot's brain over Bluetooth, and the robot sits on a charger or BreadVolt.",
         "Want it all inside the box? Bring a Raspberry Pi set up at home. The steps are on the Evening 3 page.",
         "Study hall: every Tuesday from 11 AM until class. Drop in any time: snacks, decorating, upgrades, and catch-up if you missed an evening.",
@@ -232,7 +232,6 @@
     "Your charger is USB-C only: the 2-pin lead is USB-A. Use a USB-C to USB-A adapter, or a table charger.",
     "The eyes don't move at all: check the orange wires are on GP13 (pin 17) and GP12 (pin 16), and the reds and browns are on the + and − rows. Still nothing? Load the robot file again from https://dgeventhub.com/downloads/cardboard-robot/",
     "The eyes cross outward: swap the left and right eye wires.",
-    "Left and right are backwards: swap the two eye wires.",
     "An eye catches on the face: make the hole a little bigger, or move the servo back.",
     "The servos twitch on their own: the ground jumper from the − row to pin 23 is missing.",
     "The page says the robot reset while talking: a servo is pulling power from the Pico. Check every red wire goes to the + row, the BreadVolt is switched on or the power lead is in a charger, nothing is on pin 40, and the ground jumper to pin 23 is in.",

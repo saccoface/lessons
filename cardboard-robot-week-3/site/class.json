@@ -24,7 +24,7 @@
   "prereqs": [
     "Your robot from Evening 2, your laptop and your Deepgram key.",
     "Know a few places you go in San Francisco: you'll ask your robot how to get there.",
-    "For Bluetooth, bring your phone, charged. Android: use Chrome. iPhone: install the free Bluefy app from the App Store before class (Safari and Chrome on iPhone can't use Bluetooth from a web page). Optional: a small Bluetooth speaker, so the voice comes from the robot.",
+    "For Bluetooth, bring your phone, charged. Android: use Chrome. iPhone: install the free Bluefy app from the App Store before class (Safari and Chrome on iPhone can't use Bluetooth from a web page). iPhone is still being tested, so bring your laptop as a backup. Optional: a small Bluetooth speaker, so the voice comes from the robot.",
     "Doing the Pi upgrade? Bring a Raspberry Pi 4 or 5 (2 GB or more) with its memory card and power supply, set up at home as below, a USB speakerphone (any brand, for example an EMEET M0 Plus), and a battery pack. No Pi? Skip the rest of this list.",
     "Battery: a USB power bank of 20,000 mAh with a USB-C port rated 30 W or more, and a second USB port for the servos. It runs a Pi robot for about 6 hours. A smaller 10,000 mAh bank works for about 3.",
     "Optional upgrade list, to match the instructor's robot. Buy these yourself: ☐ Raspberry Pi 5 (4 GB) ☐ Raspberry Pi 5 Active Cooler ☐ 32 GB microSD card ☐ Official Raspberry Pi 27 W USB-C power supply, for setting up at home ☐ USB speakerphone, for example an EMEET M0 Plus ☐ Anker 20,000 mAh power bank with a USB-C port rated 30 W or more.",

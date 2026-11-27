@@ -61,7 +61,7 @@
         "Glue guns, shared at each table",
         "A micro-USB data cable for your laptop",
         "Your laptop with Google Chrome, and your Deepgram key",
-        "Only if your robot keeps restarting: a breadboard kit (breadboard, USB power lead, 3 male-to-male jumpers, a USB charger)"
+        "Only if your robot keeps restarting: a breadboard kit (breadboard, USB power lead, 2 male-to-male jumpers, 1 male-to-female jumper, a USB charger)"
       ],
       "note": ""
     },
@@ -87,6 +87,7 @@
         "Controller: the Pico W. It turns the page's commands into servo signals.",
         "Actuator: the servo. It moves the mouth.",
         "Power: 5 volts from somewhere. Tonight, the laptop's USB port.",
+        "Power rails: a breadboard shares that 5 volts between servos. Not needed tonight unless your robot restarts.",
         "Keep two questions apart: where the thinking happens, and where the power comes from."
       ],
       "note": "",
@@ -140,7 +141,7 @@
         "That's a reset, not a short. The servo wants more power than your laptop's port gives, the Pico's voltage dips, and it restarts.",
         "The fix: give the servo its own power. Grab a breadboard kit.",
         "Lead's red pin → + row, black pin → − row. Plug the lead into a USB charger.",
-        "Move the servo's red to the + row and brown to the − row. One jumper from the − row to GND (pin 23).",
+        "Swap the servo's red and brown jumpers for male-to-male ones: red → + row, brown → − row. Then one male-to-female jumper from the − row to GND (pin 23).",
         "Take the red off pin 40: nothing on pin 40 now. Orange stays on GP15.",
         "Now your robot has two plugs: the laptop (the brain) and the charger (the muscles)."
       ],
