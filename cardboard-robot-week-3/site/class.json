@@ -11,7 +11,7 @@
     "part": 3
   },
   "summary": "Give your robot skills, real function calls that answer with real data: Muni trips, timers, notes, look-ups, the weather. Then get it off the laptop: drive it from your phone over Bluetooth (Android in Chrome, or iPhone with the free Bluefy app), or move its brain onto a Raspberry Pi.",
-  "detail": "First, skills. Each one is a function call: the agent decides when it needs one, your page runs it and hands back a real answer. Ask how to get to the Ferry Building and it tells you which Muni bus to catch, where, and when the next one comes. Then cut the cord. Until now the laptop has been the brain: the mic, the connection to the Deepgram Voice Agent, the speaker. Way A, Bluetooth: open this page on your phone and it sends the same little commands to the Pico by radio instead of a cable, while the robot sits on a charger or BreadVolt. It works on Android; iPhone with Bluefy is still being tested. Way B, a Raspberry Pi you set up at home rides inside the robot with a speakerphone and a battery, and opens this same page. Same personalities, same skills either way. Got time left? Add extras: eyebrows, a neck.",
+  "detail": "First, skills. Each one is a function call: the agent decides when it needs one, your page runs it and hands back a real answer. Ask how to get to the Ferry Building and it tells you which Muni bus to catch, where, and when the next one comes. Then cut the cord. Until now the laptop has been the brain: the mic, the connection to the Deepgram Voice Agent, the speaker. Way A, Bluetooth: open this page on your phone and it sends the same little commands to the Pico by radio instead of a cable, while the robot sits on a charger or BreadVolt. It works on Android; iPhone with Bluefy is still being tested. Way B, a Raspberry Pi you set up at home rides inside the robot with a speakerphone and a battery, and opens this same page. Same personalities, same skills either way. Bought the neck add-on? Fit it at the end and your robot turns its head to look around.",
   "outcome": "A robot with the skills you picked, answering with real data, that talks and moves with no laptop attached: driven by your phone over Bluetooth, or by a Raspberry Pi inside it.",
   "artifact": "A wireless talking robot with function-call skills.",
   "audience": "Mixed technical and non-technical",
@@ -25,6 +25,7 @@
     "Your robot from Evening 2, your laptop and your Deepgram key.",
     "Know a few places you go in San Francisco: you'll ask your robot how to get there.",
     "For Bluetooth, bring your phone, charged. Android: use Chrome. iPhone: install the free Bluefy app from the App Store before class (Safari and Chrome on iPhone can't use Bluetooth from a web page). iPhone is still being tested, so bring your laptop as a backup. Optional: a small Bluetooth speaker, so the voice comes from the robot.",
+    "Optional neck add-on (buy your own): 1 × MG90S metal-gear micro servo (the same servo as the mouth and eyes) and 1 × 3-inch (75 mm) lazy-susan turntable bearing, the flat square metal kind with 4 screw holes. Search \"MG90S servo\" and \"3 inch lazy susan bearing\". We bring the base boxes and jumper wires. A neck makes 4 servos, so power them from a USB charger port: a BreadVolt only feeds about 3.",
     "Doing the Pi upgrade? Bring a Raspberry Pi 4 or 5 (2 GB or more) with its memory card and power supply, set up at home as below, a USB speakerphone (any brand, for example an EMEET M0 Plus), and a battery pack. No Pi? Skip the rest of this list.",
     "Battery: a USB power bank of 20,000 mAh with a USB-C port rated 30 W or more, and a second USB port for the servos. It runs a Pi robot for about 6 hours. A smaller 10,000 mAh bank works for about 3.",
     "Optional upgrade list, to match the instructor's robot. Buy these yourself: ☐ Raspberry Pi 5 (4 GB) ☐ Raspberry Pi 5 Active Cooler ☐ 32 GB microSD card ☐ Official Raspberry Pi 27 W USB-C power supply, for setting up at home ☐ USB speakerphone, for example an EMEET M0 Plus ☐ Anker 20,000 mAh power bank with a USB-C port rated 30 W or more.",
@@ -46,7 +47,7 @@
       "bullets": [
         "First half: skills. Real function calls that answer with real data.",
         "Second half: get it off the laptop. Your phone over Bluetooth, or a Raspberry Pi.",
-        "Time left? Extras: eyebrows, a neck."
+        "Bought the neck add-on? Your robot learns to turn its head."
       ],
       "note": ""
     },
@@ -121,7 +122,7 @@
         "Bluetooth, optional: a small Bluetooth speaker for inside the robot",
         "Pi: your Raspberry Pi 4 or 5, set up at home your USB speakerphone your battery pack, charged",
         "Pi: 1 × USB-A to micro-USB data cable, for the Pico 1 × short cable from the battery to the Pi's USB-C port Velcro strips or tape",
-        "Extras: spare MG90S servos for eyebrows or a neck (ask us)",
+        "Neck add-on (if you bought it): 1 × MG90S servo 1 × 3-inch lazy-susan bearing with its screws 1 × short base box (on the table) 1 × male-to-female jumper 2 × male-to-male jumpers",
         "Bring: your laptop and your Deepgram key"
       ],
       "note": ""
@@ -213,19 +214,60 @@
     },
     {
       "n": 15,
-      "kicker": "EXTRAS · TIME LEFT",
-      "title": "Add an extra",
+      "kicker": "NECK · OPTIONAL ADD-ON",
+      "title": "Give it a neck",
       "bullets": [
-        "Eyebrows: a servo above each eye, on the same + and − rows.",
-        "A neck: the program already drives one on GP14 (pin 19).",
-        "Count your servos against your power: a BreadVolt feeds about 3, a charger port about 5.",
-        "Three or more servos: a 470–1000 µF capacitor across + and − helps."
+        "Only if you bought the neck add-on: 1 × MG90S metal-gear micro servo (the same servo as the mouth and eyes) and 1 × 3-inch (75 mm) lazy-susan turntable bearing, the flat square metal kind with 4 screw holes.",
+        "We have the base boxes and jumper wires.",
+        "Your robot sits on a short base box. The neck servo hides inside the base and turns the whole robot.",
+        "Four servos is more than a BreadVolt can feed: use a USB charger port for the servos.",
+        "No neck? Skip ahead to the walk test."
       ],
-      "note": "",
-      "image": "/slides/cardboard-robot/power-09-how-many-servos.svg"
+      "note": ""
     },
     {
       "n": 16,
+      "kicker": "NECK · 1 OF 3",
+      "title": "Make the base",
+      "image": "/slides/cardboard-robot/week-2-neck-base.svg",
+      "bullets": [
+        "Cut a box down to about 3 inches tall. This is the base.",
+        "Cut a small hole in the middle of its lid.",
+        "Hot-glue the neck servo under the lid by its two tabs, so its shaft pokes up through the hole.",
+        "Screw or glue the lazy-susan bearing on top, centred on the shaft.",
+        "Done when the bearing spins freely and the shaft sits in its middle."
+      ],
+      "note": ""
+    },
+    {
+      "n": 17,
+      "kicker": "NECK · 2 OF 3",
+      "title": "Mount the robot on the neck",
+      "image": "/slides/cardboard-robot/week-2-neck-head.svg",
+      "bullets": [
+        "Glue a servo horn to the middle of your robot's underside.",
+        "Lower the robot onto the bearing so the horn pushes onto the servo's shaft.",
+        "The bearing carries the weight; the servo only turns it.",
+        "Leave some slack in the cables so the robot can turn both ways without pulling them."
+      ],
+      "note": ""
+    },
+    {
+      "n": 18,
+      "kicker": "NECK · 3 OF 3",
+      "title": "Wire it and switch it on",
+      "image": "/slides/cardboard-robot/week-2-neck-turns.svg",
+      "bullets": [
+        "Neck orange → GP14 (pin 19), just above the mouth wire, with a male-to-female jumper.",
+        "Red → + row, brown → − row, with male-to-male jumpers. Nothing new on the Pico's power pins.",
+        "On the page, open Neck under Plug in your robot and tick My robot has a neck servo.",
+        "Set Looking left and Looking right, then press Look around.",
+        "Start talking and ask: look around. Watch the Tool line: turn_head and look_around are function calls."
+      ],
+      "note": ""
+    },
+    {
+      "n": 19,
       "kicker": "CUT THE CORD",
       "title": "Walk away with it",
       "bullets": [
@@ -237,7 +279,7 @@
       "note": ""
     },
     {
-      "n": 17,
+      "n": 20,
       "kicker": "NEXT EVENING",
       "title": "Evening 4: show and tell",
       "bullets": [
@@ -287,9 +329,15 @@
     },
     {
       "type": "slides",
-      "title": "Extras, walk test and next evening",
+      "title": "Optional: add a neck",
       "from": 15,
-      "to": 17
+      "to": 18
+    },
+    {
+      "type": "slides",
+      "title": "Walk test and next evening",
+      "from": 19,
+      "to": 20
     }
   ],
   "sections": [
@@ -343,6 +391,11 @@
     "Another program is using the port: quit Thonny and close other tabs with this page, unplug the Pico, plug it back in, and connect again.",
     "It cuts you off: raise Patience. It's slow to answer: lower it.",
     "It talks to itself, or stops mid-sentence for no reason: it's hearing its own voice. Switch off Let me interrupt it (barge-in), or move the laptop away from the robot's speaker.",
-    "Deepgram stopped the session: check the key was pasted whole, and that the account has credit."
+    "Deepgram stopped the session: check the key was pasted whole, and that the account has credit.",
+    "There's no Neck section on the page: refresh the page. It shows from Evening 3 on.",
+    "The Pico resets when the head turns: a servo is on the Pico's power. Every red goes to the + row, nothing on pin 40, and the servos are on a USB charger, not a BreadVolt.",
+    "The head turns the wrong way: swap the Looking left and Looking right numbers.",
+    "The head wobbles or sags: the weight is on the servo, not the bearing. Re-seat the robot so it rests on the bearing.",
+    "It never turns its head: tick My robot has a neck servo before you press Start talking."
   ]
 }

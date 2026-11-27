@@ -7,7 +7,7 @@
   "series": {
     "id": "cardboard-robot",
     "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
-    "summary": "Four Tuesday evenings, one robot, plus a drop-in study hall every Tuesday from 11 AM until class, with snacks, from the second week on: decorate your box, do upgrades, or catch up on an evening you missed. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi. Evening 4: show and tell. No coding needed. Every file you need is in the robot lab files: https://dgeventhub.com/downloads/cardboard-robot/",
+    "summary": "Four Tuesday evenings, one robot, plus a drop-in study hall every Tuesday from 11 AM until class, with snacks, from the second week on: decorate your box, do upgrades, or catch up on an evening you missed. Evening 1: build a robot that talks in a Deepgram voice and moves its mouth, powered by your laptop, and write its personality. Evening 2: give the servos their own power, add moving eyes, and give it several personalities you switch between by voice. Evening 3: skills (function calls) and cutting the cord: drive it from your phone over Bluetooth, or move it onto a Raspberry Pi, plus an optional turning neck. Evening 4: show and tell. No coding needed. Every file you need is in the robot lab files: https://dgeventhub.com/downloads/cardboard-robot/",
     "part": 1
   },
   "summary": "Build a desk robot that talks, with a mouth that moves when it speaks. You build the body yourself from a cardboard box, wire one servo to your Pico with three wires, and it runs on your laptop's power. Most of the evening goes into its personality and its Deepgram voice, and it ends with a short talk on your power options, so you know what to bring next week.",
@@ -254,7 +254,7 @@
       "kicker": "POWER · WHAT NEXT",
       "title": "Your robot works. What next?",
       "bullets": [
-        "Want more servos (eyes, eyebrows, a neck)? That's a power upgrade: a BreadVolt, or a breadboard and a phone charger. The laptop stays the brain.",
+        "Want more servos (eyes, a turning neck)? That's a power upgrade: a BreadVolt, or a breadboard and a phone charger. The laptop stays the brain.",
         "Want no laptop? That's a brain upgrade: your phone over Bluetooth, or a Raspberry Pi.",
         "A Pi is a new brain, not more power. You don't need one to add servos."
       ],
