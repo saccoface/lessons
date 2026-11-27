@@ -40,45 +40,29 @@
   },
   {
    "n": 2,
-   "kicker": "LATE? NO PROBLEM",
-   "title": "Oops, I'm late",
+   "kicker": "YOUR HELPERS",
+   "title": "Who's here tonight",
    "bullets": [
-    "Open the event page and press Catch me up",
-    "A voice helper asks which slide we're on",
-    "Then walks you through what you missed, one step at a time"
+    "Let me introduce everyone helping tonight"
    ],
-   "note": "Leave this up for a few seconds and point at the QR code. Helpers: send late folks here first."
+   "note": "Introduce whoever showed up to help and have them wave from their spot so people know where to go. Then a round of applause for everyone here to help tonight."
   },
   {
    "n": 3,
-   "kicker": "YOUR HELPERS",
-   "title": "Who's here to help tonight",
-   "bullets": [
-    "Dana, Deepgram: Station 1, back of the room",
-    "Vitali, Vapi: Station 2, middle of the room. Back again!",
-    "Jose, n8n: Station 3, front of the room",
-    "Dr. Larissa: questions about anything. She looked over this whole lab.",
-    "Round of applause for everyone here to help tonight"
-   ],
-   "note": "Introduce each helper and have them wave from their spot so people know where to go. Dr. Larissa isn't tied to a station: she's here out of the kindness of her heart, she reviewed the lab with Dana, and she's an expert on everything, so send any question her way. Then: let's have a round of applause for everyone here to help tonight: Jose from n8n, Vitali for coming back again, and Dr. Larissa."
-  },
-  {
-   "n": 4,
    "kicker": "PICK YOUR STATION",
    "title": "Do you have a voice agent yet?",
    "bullets": [
-    "Never built a phone agent? Station 1: back of the room with Dana. You'll have one in about 20 minutes.",
-    "Already have one? Pick where to level it up:",
-    "Station 2, Vapi: middle of the room with Vitali. Stay in the Vapi dashboard, no code. Composer builds for you.",
-    "Station 3, n8n: front of the room with Jose. Connect your agent to 2,000+ apps and multi-step workflows.",
-    "Not sure? Start at Station 2. Your agent carries over to Station 3.",
-    "Questions about anything? Grab Dr. Larissa.",
-    "Move at your own pace, headphones on. At the end: share what you built."
+    "No voice agent yet? Sit up front with Dana and build your first phone agent. You'll have one in about 30 minutes.",
+    "Already have one? Level it up:",
+    "Vapi: sit in the middle of the room",
+    "n8n: sit in the back of the room",
+    "Someone will be at both stations to help you through it.",
+    "The guide is right below these slides."
    ],
-   "note": "Ask the room out loud: who has a voice agent? If you've never built one, head to the back of the room with Dana now. Everyone else, the next slides show what Vapi and n8n can each do, so pick the one that fits what you want to build, then move to the middle (Vitali, Vapi) or the front (Jose, n8n)."
+   "note": "Ask the room out loud: who has a voice agent yet? If not, come up front with Dana and build your first phone agent, about 30 minutes or a little more. Already have one? Vapi in the middle, n8n in the back, and someone at each station will help. The step-by-step guide is right below the slides."
   },
   {
-   "n": 5,
+   "n": 4,
    "kicker": "STATION 2 · PRESENTED BY VITALI, VAPI",
    "title": "Everything you can do in Vapi",
    "bullets": [
@@ -98,7 +82,7 @@
    "note": "VITALI'S SLIDE: hand the mic to Vitali from Vapi to present this one. Don't read it all. This is the menu: point at two or three things people get excited about (Composer, Google Calendar, Squads, Simulations). Pattern for any tool: Integrations to connect Google or Slack, Tools then Create Tool, attach it on your assistant's Tools tab, Publish. Or just ask Composer. Vapi Workflows were retired in August, so don't send anyone looking for them."
   },
   {
-   "n": 6,
+   "n": 5,
    "kicker": "STATION 3",
    "title": "Everything you can do with n8n",
    "bullets": [
@@ -118,7 +102,7 @@
    "note": "The difference from Station 2: Vapi tools do one thing during the call. n8n can do many things in a row, branch on what the caller said, wait, and keep working after the call ends. Next slide shows what that looks like."
   },
   {
-   "n": 7,
+   "n": 6,
    "kicker": "STATION 3",
    "title": "What an n8n workflow looks like",
    "bullets": [
@@ -133,7 +117,7 @@
    "image": "/lesson-shots/phone-agent-tools/n8n-workflow.png"
   },
   {
-   "n": 8,
+   "n": 7,
    "kicker": "STATION 3",
    "title": "Just for fun: karaoke night",
    "bullets": [
@@ -147,7 +131,7 @@
    "image": "/lesson-shots/phone-agent-tools/karaoke-workflow.png"
   },
   {
-   "n": 9,
+   "n": 8,
    "kicker": "VAPI + n8n",
    "title": "Start in Vapi, move to n8n",
    "bullets": [
@@ -161,7 +145,7 @@
    "note": "This answers the question everyone asks: do I have to pick one? No. Station 2 people can walk over to Station 3 later and keep the same agent. There's no official Vapi node in n8n; the webhook is how Vapi's own docs connect them."
   },
   {
-   "n": 10,
+   "n": 9,
    "kicker": "THE RECIPE",
    "title": "Ears, brain, mouth",
    "bullets": [
@@ -173,7 +157,7 @@
    "note": "Same recipe as Build Your First Phone Agent. If Flux isn't in the voice list, Aura-2 is the fallback."
   },
   {
-   "n": 11,
+   "n": 10,
    "kicker": "STATION 1",
    "title": "Your first phone agent",
    "bullets": [
@@ -186,7 +170,7 @@
    "note": "DEMO: share the Vapi dashboard. Show the three cards (Transcriber, Model, Voice), the System Prompt box, the Talk button and Phone Numbers. About two minutes, not a full walkthrough: the page has screenshots for every click."
   },
   {
-   "n": 12,
+   "n": 11,
    "kicker": "HOW TOOLS WORK",
    "title": "The agent decides, the tool does",
    "bullets": [
@@ -199,7 +183,7 @@
    "note": "This is the idea for stations 2 and 3. Step 5 is where bots lie, so it matters."
   },
   {
-   "n": 13,
+   "n": 12,
    "kicker": "STATION 2",
    "title": "Vapi Composer: the cheat code",
    "bullets": [
@@ -212,7 +196,7 @@
    "note": "DEMO: open Composer in the sidebar, paste your assistant ID and ask it something from the next slide. Let the room watch it propose changes and approve them."
   },
   {
-   "n": 14,
+   "n": 13,
    "kicker": "STATION 2",
    "title": "Things to ask Composer",
    "bullets": [
@@ -226,7 +210,7 @@
    "note": "Pick one or two live. The test suite one is impressive: it writes fake callers that test your agent for you."
   },
   {
-   "n": 15,
+   "n": 14,
    "kicker": "STATION 3",
    "title": "What n8n adds",
    "bullets": [
@@ -240,7 +224,7 @@
    "note": "DEMO: call your agent and request a song. Show the requestSong tool in Vapi, then the n8n workflow: Webhook, Spotify Search Song, Add an item to a playlist, Respond to Webhook. Open the playlist so the room sees the song land."
   },
   {
-   "n": 16,
+   "n": 15,
    "kicker": "THE GOLDEN RULE",
    "title": "Never say it's done unless it's done",
    "bullets": [
@@ -252,7 +236,7 @@
    "note": "This matters more than anything else tonight: an agent that says \"booked\" when nothing was booked is worse than no agent."
   },
   {
-   "n": 17,
+   "n": 16,
    "kicker": "KEEP IT SAFE",
    "title": "Your keys are passwords",
    "bullets": [
@@ -264,7 +248,7 @@
    "note": "Quick one. Especially before anyone posts a screenshot of their workflow."
   },
   {
-   "n": 18,
+   "n": 17,
    "kicker": "SHARE IT",
    "title": "Share what you built",
    "bullets": [
@@ -277,7 +261,7 @@
    "note": "No show and tell tonight, so this replaces it. Ask everyone to post before they leave: a screenshot of their workflow or a short clip of the agent working. Then the Twitter bit, played for laughs: Dana has no Twitter friends, please help. The box is on the event page, right under Share what you built."
   },
   {
-   "n": 19,
+   "n": 18,
    "kicker": "NEXT UP",
    "title": "Call Santa: a Santa phone line for the kids in your life",
    "bullets": [
@@ -295,7 +279,7 @@
    "type": "slides",
    "title": "Intro: the three stations",
    "from": 1,
-   "to": 19
+   "to": 18
   },
   {
    "type": "steps",
@@ -321,7 +305,7 @@
     {
      "id": "qb-connect",
      "title": "Give the key to Vapi",
-     "instruction": "Sign up at vapi.ai and open dashboard.vapi.ai. In the left sidebar, click Integrations (hover over the icons to see their names). Under Voice Providers, click the Deepgram card, paste your key and save. Tip: the search box at the top finds any provider.",
+     "instruction": "Sign up at vapi.ai and open dashboard.vapi.ai. In the left sidebar, click Integrations (hover over the icons to see their names). Under Voice Providers, click the Deepgram card, paste your key, leave API Url blank, and save. Tip: the search box at the top finds any provider.",
      "check": "Deepgram moves up to the Connected row.",
      "image": {
       "src": "/lesson-shots/vapi-quick-build/vapi-integrations.jpg",
@@ -427,7 +411,7 @@
     {
      "id": "c-ask",
      "title": "Ask it to improve things",
-     "instruction": "Try a few of these, one at a time, and approve the changes you like:\n```\nKeep every answer to two sentences and sound friendlier.\nIf the caller goes quiet for 10 seconds, ask if they're still there, then end the call politely.\nAdd a tool that transfers the caller to my cell if they ask for a human.\nWhy does my agent keep interrupting people?\nGenerate a test suite for my agent.\n```\nApprove the changes you like, press Publish, then Talk to hear the difference.",
+     "instruction": "Start with “Update my agent…” so Composer changes your agent instead of just chatting back. Try a few of these, one at a time, and approve the changes you like:\n```\nKeep every answer to two sentences and sound friendlier.\nIf the caller goes quiet for 10 seconds, ask if they're still there, then end the call politely.\nAdd a tool that transfers the caller to my cell if they ask for a human.\nWhy does my agent keep interrupting people?\nGenerate a test suite for my agent.\n```\nComposer publishes each change it makes for you. Then click Talk to hear the difference.\n⚠️ Used Composer? Reload the page before you edit anything yourself. When you press Publish, look at the red lines: if Composer’s changes show up in red, they are about to be deleted. Close the window, add them back to your prompt, then publish.",
      "check": "At least one change is published and you can hear it."
     },
     {
@@ -453,7 +437,7 @@
     {
      "id": "c-attach",
      "title": "Attach it and add the golden rule",
-     "instruction": "Open your assistant, click the Tools tab, then Add tool, and pick your tool. In the System Prompt, add when to use it and the golden rule:\n```\nRead the details back and get a yes before you use any tool.\nOnly say something is booked or sent after the tool says it worked.\nIf a tool fails, say so and offer to take a message.\n```\nPublish.",
+     "instruction": "Open your assistant, click the Tools tab, then Add tool, and pick your tool. In the System Prompt, add when to use it and the golden rule:\n```\nRead the details back and get a yes before you use any tool.\nOnly say something is booked or sent after the tool says it worked.\nIf a tool fails, say so and offer to take a message.\n```\nPublish. Before the last click, check the red lines: nothing you or Composer added should be in red.",
      "check": "The tool is listed on your assistant and you pressed Publish.",
      "image": {
       "src": "/lesson-shots/vapi-quick-build/vapi-assistant-tools.jpg",
@@ -590,6 +574,7 @@
  "troubleshooting": [
   "Your number rings out: open the number in Vapi and check an assistant is chosen under Inbound Settings. New numbers can take a few minutes.",
   "Vapi ignores your changes: you didn't press Publish.",
+  "Composer's changes disappeared: the page had an old draft. Reload before editing, and check the red lines when you Publish.",
   "No Flux voice in the Voice card: pick Deepgram Aura-2 instead.",
   "The tool never fires: it isn't on the assistant's Tools tab, or the prompt and tool description never say when to use it.",
   "Calendar books at the wrong time: set the time zone on the tool. It defaults to UTC.",
