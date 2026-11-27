@@ -1,0 +1,292 @@
+{
+ "schemaVersion": 1,
+ "id": "dg-voice-robotics-talk",
+ "title": "General DG talk about voice and robotics",
+ "icon": "🎙️",
+ "owner": "Dana Sacco",
+ "series": {
+  "id": "cardboard-robot",
+  "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
+  "summary": "",
+  "part": 10,
+  "bonus": true
+ },
+ "summary": "A talk on Deepgram, voice AI and robotics: how a voice agent works, Deepgram's new LLMs and context layer, why voice is the way into robotics, and the Physical AI Lab. Ends with a live Jervis demo. Separate from the four lab evenings.",
+ "detail": "About 35 minutes of slides plus a Jervis demo, for launch nights and community events. It covers what Deepgram builds, how a voice agent listens, thinks and speaks, turn-taking, how Deepgram compares, the new Think-Live and Think-Fast models, the context layer, function calling, and how the Physical AI Lab robot is built and goes wireless.",
+ "outcome": "Attendees understand how voice agents work, why voice suits robots, and what they'd build in the Physical AI Lab.",
+ "artifact": "A free Deepgram key and a reason to sign up for the lab.",
+ "audience": "Mixed technical and non-technical",
+ "type": "Conference demo",
+ "difficulty": "easy",
+ "track": "community",
+ "minutes": 40,
+ "setupMinutes": 15,
+ "runner": null,
+ "prereqs": [
+  "Nothing. Attendees only need their phone."
+ ],
+ "links": {
+  "starterRepo": null,
+  "deck": null
+ },
+ "slides": [
+  {
+   "n": 1,
+   "kicker": "WELCOME",
+   "title": "Robots that talk back",
+   "bullets": [
+    "Revati Naik, San Francisco Chapter Lead, Women in Robotics",
+    "Dana Sacco, Senior AI Community Engineer, Deepgram",
+    "Talking desktop assistants, an introduction to robot building and animatronics, and an ongoing physical AI lab."
+   ],
+   "note": ""
+  },
+  {
+   "n": 2,
+   "kicker": "ABOUT ME",
+   "title": "I run developer events at Deepgram.",
+   "bullets": [
+    "Tuesdays: labs. Hands-on builds, like the robot lab I'll cover later.",
+    "Wednesdays: partner events with partner companies at 505 Howard."
+   ],
+   "note": ""
+  },
+  {
+   "n": 3,
+   "kicker": "WHAT DEEPGRAM DOES",
+   "title": "Deepgram builds speech-to-text, text-to-speech and voice agents.",
+   "bullets": [
+    "Listen: speech-to-text. Flux for live conversations, Nova-3 for transcription.",
+    "Speak: text-to-speech. Flux TTS and Aura-2, built for back-and-forth conversation in many languages.",
+    "All together: the Voice Agent API. Listening, thinking and speaking over one connection. This is what runs the robots."
+   ],
+   "note": ""
+  },
+  {
+   "n": 4,
+   "kicker": "HOW A VOICE AGENT WORKS",
+   "title": "Listen, think, speak, on every turn",
+   "bullets": [
+    "1. Listen: Flux STT turns speech into text and detects when the speaker has finished.",
+    "2. Think: an LLM decides what to say or what action to take.",
+    "3. Speak: Flux TTS turns the reply into speech in the chosen voice.",
+    "On the lab robots, the mouth servo moves with the voice."
+   ],
+   "note": ""
+  },
+  {
+   "n": 5,
+   "kicker": "TURN-TAKING",
+   "title": "Knowing when someone has finished talking is one of the hardest parts of voice AI.",
+   "bullets": [
+    "Flux detects the end of a thought, not just a pause.",
+    "If you interrupt, the agent stops and listens."
+   ],
+   "note": ""
+  },
+  {
+   "n": 6,
+   "kicker": "HOW WE COMPARE",
+   "title": "Three ways to build a voice agent",
+   "bullets": [
+    "One speech-to-speech model: natural conversation, but limited visibility, no own LLM or voice. Keeps tone inside the model.",
+    "Separate vendors combined: visibility and your own LLM or voice, but often slower, with integration work. Tone is lost between steps.",
+    "Deepgram: built for conversation, visibility and control of each step, your own LLM or voice. Tone carried by the context layer (rolling out)."
+   ],
+   "note": ""
+  },
+  {
+   "n": 7,
+   "kicker": "NEW: DEEPGRAM LLMS",
+   "title": "Two models: one for the conversation, one for the task",
+   "bullets": [
+    "Think-Live (conversation): handles backchannels like “mhmm”, tells whether “yeah” means “I agree” or “keep going”, flags when a caller is frustrated. Available in the Voice Agent API, alongside the reasoning LLM you choose.",
+    "Think-Fast (tasks): calls tools during the conversation and writes replies meant to be spoken, with numbers and dates as words. Solved 60% of simulated support calls vs 46% for the next-best model its size. Early access on the Deepgram LLM API, with a smaller model, phoneLLM mini."
+   ],
+   "note": ""
+  },
+  {
+   "n": 8,
+   "kicker": "NEW: THE CONTEXT LAYER",
+   "title": "Tone and pace travel with the words",
+   "bullets": [
+    "Cheerful “I'm fine.”, annoyed “I'm fine.”, tired “I'm fine.”: a plain transcript makes all three identical.",
+    "The context layer passes tone and pace from speech-to-text to the LLM, and emphasis and pauses from the LLM to text-to-speech.",
+    "RCS, the open Real-time Context Standard, is in alpha in Pipecat today. Tone-aware speech-to-text and text-to-speech that follows the markup are coming."
+   ],
+   "note": ""
+  },
+  {
+   "n": 9,
+   "kicker": "WHAT THAT MEANS FOR A ROBOT",
+   "title": "A robot that responds to how you sound, not just what you say",
+   "bullets": [
+    "User sounds upset: slows down and uses a calmer tone.",
+    "Room is loud: keeps answers short and confirms what it heard.",
+    "User is in a hurry: skips small talk and completes the task.",
+    "This is the direction, not all available today. It arrives first in Pipecat, which is open source."
+   ],
+   "note": ""
+  },
+  {
+   "n": 10,
+   "kicker": "WHY VOICE + ROBOTICS",
+   "title": "Robots don't have keyboards.",
+   "bullets": [
+    "Voice is the natural way to interact with physical AI."
+   ],
+   "note": ""
+  },
+  {
+   "n": 11,
+   "kicker": "WHY NOW",
+   "title": "Three changes make voice-driven robots practical",
+   "bullets": [
+    "01 Voice is fast: turn detection and interruptions make conversations feel natural.",
+    "02 LLMs use tools: function calling turns a spoken request into a real action.",
+    "03 Hardware is cheap: a Bluetooth microcontroller costs about $7 and servos cost a few dollars."
+   ],
+   "note": ""
+  },
+  {
+   "n": 12,
+   "kicker": "FUNCTION CALLING",
+   "title": "From a spoken request to a physical action",
+   "bullets": [
+    "User says: “Look to your left.”",
+    "LLM calls a function: look_with_eyes(direction: \"left\")",
+    "Robot: eye servos turn left.",
+    "The same mechanism voice agents use to book appointments or check the weather."
+   ],
+   "note": ""
+  },
+  {
+   "n": 13,
+   "kicker": "THE PHYSICAL AI LAB",
+   "title": "4 Tuesdays. 1 talking robot each.",
+   "bullets": [
+    "Four Tuesday evenings at 505 Howard.",
+    "A study hall before every class to catch up or get help."
+   ],
+   "note": ""
+  },
+  {
+   "n": 14,
+   "kicker": "WEEK BY WEEK",
+   "title": "From a box to a robot that takes actions",
+   "bullets": [
+    "Tue 1, Build + talk: build the box, pick a Deepgram voice, write its personality, and get the mouth moving.",
+    "Tue 2, Eyes + personalities: add moving eyes and their own servo power, then switch between personalities by voice.",
+    "Tue 3, Skills + go wireless: add function calling, then go wireless over Bluetooth or with a Raspberry Pi.",
+    "Tue 4, Show and tell: demo your robot to guests."
+   ],
+   "note": ""
+  },
+  {
+   "n": 15,
+   "kicker": "WHAT'S IN THE BOX",
+   "title": "How the robot is put together",
+   "bullets": [
+    "Controller: phone or laptop. Mic, speaker, and the Deepgram voice agent running in a web page.",
+    "Microcontroller: Pico W. Receives commands over USB or Bluetooth and drives the servos.",
+    "Motion: servos. One for the mouth, two for the eyes, more for add-ons."
+   ],
+   "note": ""
+  },
+  {
+   "n": 16,
+   "kicker": "GOING WIRELESS",
+   "title": "Getting the robot off the laptop",
+   "bullets": [
+    "Wi-Fi: needs network setup and a relay server. A phone still runs the voice.",
+    "Raspberry Pi: works, but costs more per robot.",
+    "Bluetooth: built into the Pico W. No setup or server.",
+    "54 ms median round trip from phone to robot, with no visible delay in mouth sync (Android with Chrome, robot on a wall charger, no laptop). iPhone uses the free Bluefy app."
+   ],
+   "note": ""
+  },
+  {
+   "n": 17,
+   "kicker": "FUNCTION CALLING IN THE LAB",
+   "title": "Skills you can turn on",
+   "bullets": [
+    "Information skills: weather, Deepgram SF events, timers, notes, next Muni bus, Wikipedia look-up, dice, coins, pick-one.",
+    "Body skills: cross eyes, look left / right, or write your own.",
+    "Information skills call live data, like Muni arrival times. Body skills move the robot's servos. Developers can add their own."
+   ],
+   "note": ""
+  },
+  {
+   "n": 18,
+   "kicker": "AFTER THIS LAB",
+   "title": "This is the first lab in an ongoing series.",
+   "bullets": [
+    "The plan is to keep running robot labs throughout the year, each with a new robot."
+   ],
+   "note": ""
+  },
+  {
+   "n": 19,
+   "kicker": "A POSSIBLE NEXT LAB: ROBOTS THAT SEE",
+   "title": "With a camera, the voice agent can describe what's in front of it",
+   "bullets": [
+    "Accessibility: help blind and low-vision people read menus and signs, and describe their surroundings.",
+    "Finding things: remember where objects were last seen, like keys.",
+    "Reading help: read a book page aloud with a child.",
+    "Front desk: greet visitors and give directions.",
+    "Privacy built in from the start: ask before using the camera, and store nothing that isn't needed."
+   ],
+   "note": ""
+  },
+  {
+   "n": 20,
+   "kicker": "GET INVOLVED",
+   "title": "I'd like to build a core group for robot voice projects.",
+   "bullets": [
+    "No engineering background needed.",
+    "01 Sign up for the Physical AI Lab.",
+    "02 Invite someone who would enjoy it.",
+    "03 Tell me what the next robot should do."
+   ],
+   "note": ""
+  },
+  {
+   "n": 21,
+   "kicker": "LIVE DEMO",
+   "title": "Meet Jervis.",
+   "bullets": [
+    "A robot running on the Deepgram Voice Agent API.",
+    "Try: “What's the weather like?”",
+    "Try: “Cross your eyes.”",
+    "Try: “What's happening at Deepgram this week?”"
+   ],
+   "note": ""
+  },
+  {
+   "n": 22,
+   "kicker": "THANK YOU",
+   "title": "Thank you for coming.",
+   "bullets": [
+    "Sign up for the Physical AI Lab.",
+    "Get a free Deepgram key with $200 in credit: console.deepgram.com"
+   ],
+   "note": ""
+  }
+ ],
+ "flow": [
+  {
+   "type": "slides",
+   "title": "Deepgram, voice and robotics",
+   "from": 1,
+   "to": 20
+  },
+  {
+   "type": "slides",
+   "title": "Live demo and thanks",
+   "from": 21,
+   "to": 22
+  }
+ ],
+ "sections": [],
+ "troubleshooting": []
+}
