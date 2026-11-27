@@ -11,8 +11,8 @@
   "part": 9,
   "bonus": true
  },
- "summary": "Meet Jervis, Dana's own robot, with everything switched on: every skill, moving eyes and a camera so he can see what's in front of him. A demo stand for events, separate from the four lab evenings.",
- "detail": "Jervis is a furry desk robot built the same way as the lab robots, then taken all the way: a Raspberry Pi 5 inside runs this page over Wi-Fi, a Pico moves his mouth, eyes and neck, a USB speaker and mic give him a voice and ears, and a USB camera lets him look. Ask him what he sees, hold something up, or have him read a label. He answers in character, through the Deepgram Voice Agent. This page is the demo setup and the checklist for running him at an event.",
+ "summary": "Meet Jervis, Dana's own robot, with everything switched on: every skill, moving eyes and a camera so he can see and describe the people in front of him. A demo stand for events, separate from the four lab evenings.",
+ "detail": "Jervis is a furry desk robot built the same way as the lab robots, then taken all the way: a Raspberry Pi 5 inside runs this page over Wi-Fi, a Pico moves his mouth and eyes, a USB speaker and mic give him a voice and ears, and a USB camera lets him look. Step up and ask him to describe you. He answers in character, through the Deepgram Voice Agent. This page is the demo setup and the checklist for running him at an event.",
  "outcome": "Jervis running on his own: talking, moving his mouth and eyes, using skills, and describing what his camera sees.",
  "artifact": "A live robot demo that sees, talks and moves.",
  "audience": "Mixed technical and non-technical",
@@ -23,7 +23,7 @@
  "setupMinutes": 20,
  "runner": "robot",
  "prereqs": [
-  "Jervis: Raspberry Pi 5 on its X1202 battery board, Pico 2 W, BreadVolt, four servos (mouth, neck, two eyes), USB speaker, USB mic and the Hue HD USB camera.",
+  "Jervis: Raspberry Pi 5 on its X1202 battery board, Pico 2 W, BreadVolt, three servos (mouth and two eyes), USB speaker, USB mic and the Hue HD USB camera.",
   "A strong USB-C charger for the X1202 (27 W, 5 V 5 A). A phone charger is not enough for a Pi 5.",
   "The BreadVolt charged before the demo.",
   "A Deepgram API key, and an Anthropic API key for the camera skill. Both are pasted on this page on the robot's own Pi and stay in that browser."
@@ -76,8 +76,8 @@
     },
     {
      "id": "servos",
-     "title": "Four servos",
-     "instruction": "Each servo plug takes three jumpers. Red to the + rail, brown to the − rail, orange to its Pico pin: mouth pin 20 (GP15), neck pin 19 (GP14), left eye pin 17 (GP13), right eye pin 16 (GP12).",
+     "title": "Three servos",
+     "instruction": "Each servo plug takes three jumpers. Red to the + rail, brown to the − rail, orange to its Pico pin: mouth pin 20 (GP15), left eye pin 17 (GP13), right eye pin 16 (GP12). That's 10 jumpers counting the ground jumper.",
      "check": "Every red is on +, every brown on −, every orange on its pin."
     },
     {
@@ -120,7 +120,7 @@
      "id": "camera",
      "title": "Switch on the camera",
      "instruction": "Under Skills, tick See with the camera and paste the Anthropic key once. The first time, allow the camera when Chromium asks.",
-     "check": "Ask \"what do you see?\" and he describes the room."
+     "check": "Ask \"describe me\" and he describes the person in front of him."
     }
    ]
   },
@@ -130,9 +130,9 @@
    "steps": [
     {
      "id": "see",
-     "title": "What do you see?",
-     "instruction": "Hold something up and ask what it is, or ask him to read a label or a sign.",
-     "check": "He answers from a photo, not a guess."
+     "title": "Describe me",
+     "instruction": "Stand in front of the camera, at chest-to-face height, and ask him to describe you or what you're wearing.",
+     "check": "He answers from a photo, not a guess, and never guesses who you are."
     },
     {
      "id": "eyes",
