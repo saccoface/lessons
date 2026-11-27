@@ -32,11 +32,13 @@
    "kicker": "WELCOME",
    "title": "Level Up Your Phone Agent",
    "bullets": [
-    "Tonight your phone agent stops just talking and starts doing things.",
+    "Tonight's goal: give your phone agent a job. When someone calls, it does something real: books a meeting, adds a row to a sheet, posts to Slack, or runs an n8n workflow.",
+    "Why: an agent that only talks is a demo. An agent that gets things done is something people will actually use.",
+    "The most important thing tonight, the golden rule: never say it's done unless it's done.",
     "Three stations. Pick the one that fits you.",
-    "Share what you built at the end."
+    "Show and tell before you leave: finish early and you're on the big screen."
    ],
-   "note": "Pizza first. Quick show of hands: who already has a phone agent from last time? Who's brand new?"
+   "note": "Pizza first. Say the goal in one breath: tonight your agent stops just talking and starts doing. Then the golden rule, out loud, because it's the most important thing of the night: never say it's done unless it's done. You'll come back to it at the end. Quick show of hands: who already has a phone agent from last time? Who's brand new?"
   },
   {
    "n": 2,
@@ -152,9 +154,10 @@
     "Ears: Deepgram Flux (knows when you've finished talking)",
     "Brain: Claude Haiku (fast, so no awkward pauses)",
     "Mouth: a Deepgram Flux voice",
-    "Vapi is the phone: the number, the call, the plumbing"
+    "Vapi is the phone: the number, the call, the plumbing",
+    "Not just English: Flux Multilingual hears 10 languages (Spanish, French, German, Hindi, Japanese and more), and Deepgram has voices in many languages"
    ],
-   "note": "Same recipe as Build Your First Phone Agent. If Flux isn't in the voice list, Aura-2 is the fallback."
+   "note": "Same recipe as Build Your First Phone Agent. If Flux isn't in the voice list, Aura-2 is the fallback. Other languages: Flux Multilingual (flux-general-multi) covers English, Spanish, French, German, Hindi, Russian, Portuguese, Japanese, Italian and Dutch; Nova-3 Multilingual covers about 55 but without Flux's turn detection. In Vapi, pick it in the Transcriber card if it's listed, choose a voice in that language, and write the prompt in that language (or tell it which language to answer in)."
   },
   {
    "n": 10,
@@ -225,7 +228,7 @@
   },
   {
    "n": 15,
-   "kicker": "THE GOLDEN RULE",
+   "kicker": "THE GOLDEN RULE · MOST IMPORTANT THING TONIGHT",
    "title": "Never say it's done unless it's done",
    "bullets": [
     "Put this in your prompt:",
@@ -233,7 +236,7 @@
     "\"Only say something is booked or sent after the tool says it worked.\"",
     "\"If a tool fails, say so and offer to take a message.\""
    ],
-   "note": "This matters more than anything else tonight: an agent that says \"booked\" when nothing was booked is worse than no agent."
+   "note": "Say it like you said it at the start: this is the most important thing of the night. An agent that says \"booked\" when nothing was booked is worse than no agent. It comes back on the last slide."
   },
   {
    "n": 16,
@@ -255,10 +258,11 @@
     "Post a picture of your n8n workflow, or whatever you built, in the Deepgram Discord: discord.gg/deepgram",
     "Use the San Francisco Bay Area channel",
     "Share it on X, LinkedIn, everywhere: tag @DeepgramAI, @Vapi_AI and @n8n_io",
+    "Show and tell: finished early? Show the room your agent before you leave",
     "Get more people into voice AI: that's the whole point",
     "Dana has no Twitter friends. Leave your handle on the event page, under Share what you built, so she can add you."
    ],
-   "note": "No show and tell tonight, so this replaces it. Ask everyone to post before they leave: a screenshot of their workflow or a short clip of the agent working. Then the Twitter bit, played for laughs: Dana has no Twitter friends, please help. The box is on the event page, right under Share what you built."
+   "note": "People love show and tell more than anything, and it makes them feel special. Walk the room during the build and tap the people who finish first: before everyone leaves, put two or three of them on the big screen for a minute each (call the agent on speaker, or show the workflow). Grab a short clip of each for an X slideshow afterwards. Ask everyone else to post before they leave: a screenshot of their workflow or a short clip of the agent working. Then the Twitter bit, played for laughs: Dana has no Twitter friends, please help. The box is on the event page, right under Share what you built."
   },
   {
    "n": 18,
@@ -272,6 +276,18 @@
     "Cookies and milk served"
    ],
    "note": "Keep it light: it's a really cute one. Anyone with kids in their family or their life should come. Plug the Luma link."
+  },
+  {
+   "n": 19,
+   "kicker": "THANK YOU",
+   "title": "Never say it's done unless it's done",
+   "bullets": [
+    "The most important thing tonight: read it back, get a yes, and only say it worked after the tool says it worked.",
+    "Questions later? Find us in the Deepgram Discord: discord.gg/deepgram (San Francisco Bay Area channel)",
+    "Follow @DeepgramAI, @Vapi_AI and @n8n_io",
+    "The guide stays up on this page, so you can keep building at home."
+   ],
+   "note": "Leave this slide up while people pack up and chat. End where you started: the golden rule. Point at the Discord for questions after tonight."
   }
  ],
  "flow": [
@@ -279,7 +295,7 @@
    "type": "slides",
    "title": "Intro: the three stations",
    "from": 1,
-   "to": 18
+   "to": 19
   },
   {
    "type": "steps",
