@@ -67,9 +67,9 @@
    "kicker": "HOW A VOICE AGENT WORKS",
    "title": "Listen, think, speak, on every turn",
    "bullets": [
-    "1. Listen: Flux STT turns speech into text and detects when the speaker has finished.",
-    "2. Think: an LLM decides what to say or what action to take.",
-    "3. Speak: Flux TTS turns the reply into speech in the chosen voice.",
+    "Listen: Flux STT turns speech into text and detects when the speaker has finished.",
+    "Think: an LLM decides what to say or what action to take.",
+    "Speak: Flux TTS turns the reply into speech in the chosen voice.",
     "On the lab robots, the mouth servo moves with the voice."
    ],
    "note": ""
@@ -142,9 +142,9 @@
    "kicker": "WHY NOW",
    "title": "Three changes make voice-driven robots practical",
    "bullets": [
-    "01 Voice is fast: turn detection and interruptions make conversations feel natural.",
-    "02 LLMs use tools: function calling turns a spoken request into a real action.",
-    "03 Hardware is cheap: a Bluetooth microcontroller costs about $7 and servos cost a few dollars."
+    "Voice is fast: turn detection and interruptions make conversations feel natural.",
+    "LLMs use tools: function calling turns a spoken request into a real action.",
+    "Hardware is cheap: a Bluetooth microcontroller costs about $7 and servos cost a few dollars."
    ],
    "note": ""
   },
@@ -166,7 +166,7 @@
    "title": "4 Tuesdays. 1 talking robot each.",
    "bullets": [
     "Four Tuesday evenings at 505 Howard.",
-    "A study hall before every class to catch up or get help."
+    "From the second week, a drop-in study hall on class Tuesdays to catch up, decorate or get help."
    ],
    "note": ""
   },
@@ -176,8 +176,8 @@
    "title": "From a box to a robot that takes actions",
    "bullets": [
     "Tue 1, Build + talk: build the box, pick a Deepgram voice, write its personality, and get the mouth moving.",
-    "Tue 2, Eyes + personalities: add moving eyes and their own servo power, then switch between personalities by voice.",
-    "Tue 3, Skills + go wireless: add function calling, then go wireless over Bluetooth or with a Raspberry Pi.",
+    "Tue 2, Eyes + personalities: give the servos their own power, add moving eyes, then switch between personalities by voice.",
+    "Tue 3, Skills + go wireless: add skills with function calling, then go wireless over Bluetooth or with a Raspberry Pi.",
     "Tue 4, Show and tell: demo your robot to guests."
    ],
    "note": ""
@@ -244,9 +244,9 @@
    "title": "I'd like to build a core group for robot voice projects.",
    "bullets": [
     "No engineering background needed.",
-    "01 Sign up for the Physical AI Lab.",
-    "02 Invite someone who would enjoy it.",
-    "03 Tell me what the next robot should do."
+    "Sign up for the Physical AI Lab.",
+    "Invite someone who would enjoy it.",
+    "Tell me what the next robot should do."
    ],
    "note": ""
   },
