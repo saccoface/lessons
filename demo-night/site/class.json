@@ -148,18 +148,6 @@
         "The weeks after: we build our games, together"
       ],
       "note": ""
-    },
-    {
-      "n": 11,
-      "kicker": "VOICE GAME LAB",
-      "title": "Night one: who you’ll hear from",
-      "bullets": [
-        "LightHouse for the Blind and Visually Impaired: how blind and low-vision players game, and why voice matters",
-        "Joe Sparks, creator of Total Distortion, the 1995 cult music-video adventure game",
-        "An engineer from Volley, the largest voice game company: Jeopardy! and other TV game shows you play by voice, with more than 20 million players and 100 million game sessions a year",
-        "Devin Reimer of AstroBeam, a Deepgram customer: Stellar Cafe on Steam, a VR game where you talk to the characters"
-      ],
-      "note": "Volley numbers are the company’s own (Jan 2025 press release). AstroBeam’s founders made Job Simulator at Owlchemy Labs; their second voice game, Robo Detective, launches on XREAL glasses."
     }
   ],
   "flow": [
@@ -167,7 +155,7 @@
       "type": "slides",
       "title": "Welcome to Demo Night",
       "from": 1,
-      "to": 11
+      "to": 10
     },
     {
       "type": "runner",
