@@ -116,52 +116,16 @@
     },
     {
       "n": 8,
-      "kicker": "NEXT TUESDAY",
-      "title": "Level Up Your Phone Agent",
+      "kicker": "UPCOMING EVENTS",
+      "title": "Our upcoming events are posted below these slides",
       "bullets": [
-        "Teach your phone agent to do real things: tools, calendars, Slack, n8n workflows",
-        "No agent yet? A quick-build station gets you one in minutes",
-        "Same place, same food and drinks",
-        "Registration link is right below the slides"
+        "Level Up Your Phone Agent",
+        "A really fun Christmas event",
+        "An event with Women in Robotics",
+        "Luma links are below the slides",
+        "It’s demo time now!"
       ],
-      "note": "Next Tuesday, December 8. The Luma link is in the 'Sign up for what’s next' cards below the slides."
-    },
-    {
-      "n": 9,
-      "kicker": "STARTING IN JANUARY",
-      "title": "New labs at the Hub",
-      "bullets": [
-        "Robots: our Physical AI Lab starts in January",
-        "Video games: our Voice Game Lab starts shortly after",
-        "I’ll be hosting both, right here at 505 Howard. It’s going to be really fun",
-        "My demo tonight is a sneak peek at both"
-      ],
-      "note": ""
-    },
-    {
-      "n": 10,
-      "kicker": "PHYSICAL AI LAB",
-      "title": "Meet the robot",
-      "bullets": [
-        "A cardboard robot with a Deepgram voice: it listens, talks and moves its mouth in time",
-        "5 weeks, starting in January, one evening a week",
-        "Each week adds one piece, and you take the robot home",
-        "Miss a week? Catch up at a lunch session, or just come to the next one",
-        "Want the full tour? Come to Women in Robotics x Deepgram on December 15, an evening event where I go through the robot lab in detail. Link below the slides"
-      ],
-      "note": "Hold up the robot and let it talk before this slide. Plug Women in Robotics x Deepgram, Dec 15: Dana walks through the robot lab in detail there. The Luma link is in the cards under the slides."
-    },
-    {
-      "n": 11,
-      "kicker": "VOICE GAME LAB",
-      "title": "Voice Game Lab, every week",
-      "bullets": [
-        "Night one: hear from game developers and play games designed for voice",
-        "Then pick your path: one of our lessons, with an agent that guides you through every step, or code your own game from scratch",
-        "By the end of night one you’ll know the game you want to make",
-        "The weeks after: we build our games, together"
-      ],
-      "note": ""
+      "note": "Level Up is Dec 8, Women in Robotics is Dec 15, Call Santa is Dec 16. Then hand over to the first demo."
     }
   ],
   "flow": [
@@ -169,7 +133,7 @@
       "type": "slides",
       "title": "Welcome to Demo Night",
       "from": 1,
-      "to": 11
+      "to": 8
     },
     {
       "type": "runner",
