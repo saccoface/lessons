@@ -4,6 +4,9 @@
  "title": "General DG talk about voice and robotics",
  "icon": "🎙️",
  "owner": "Dana Sacco",
+ "cohosts": [
+  "Revati Naik, Women in Robotics"
+ ],
  "series": {
   "id": "cardboard-robot",
   "title": "Physical AI Lab: Build a Robot Desk Assistant (4 evenings)",
@@ -11,7 +14,7 @@
   "part": 10,
   "bonus": true
  },
- "summary": "A talk on Deepgram, voice AI and robotics: how a voice agent works, Deepgram's new LLMs and context layer, why voice is the way into robotics, and the Physical AI Lab. Ends with a live Jervis demo. Separate from the four lab evenings.",
+ "summary": "A talk on Deepgram, voice AI and robotics: how a voice agent works, Deepgram's new LLMs and context layer, why voice is the way into robotics, and the Physical AI Lab. Ends with a live Jervis demo, camera included. Separate from the four lab evenings.",
  "detail": "About 35 minutes of slides plus a Jervis demo, for launch nights and community events. It covers what Deepgram builds, how a voice agent listens, thinks and speaks, turn-taking, how Deepgram compares, the new Think-Live and Think-Fast models, the context layer, function calling, and how the Physical AI Lab robot is built and goes wireless.",
  "outcome": "Attendees understand how voice agents work, why voice suits robots, and what they'd build in the Physical AI Lab.",
  "artifact": "A free Deepgram key and a reason to sign up for the lab.",
@@ -23,7 +26,8 @@
  "setupMinutes": 15,
  "runner": null,
  "prereqs": [
-  "Nothing. Attendees only need their phone."
+  "Nothing for attendees. They only need their phone.",
+  "For the demo: Jervis set up with the camera skill on (see the Jervis Demo page)."
  ],
  "links": {
   "starterRepo": null,
@@ -255,8 +259,9 @@
    "kicker": "LIVE DEMO",
    "title": "Meet Jervis.",
    "bullets": [
-    "A robot running on the Deepgram Voice Agent API.",
-    "Try: “What's the weather like?”",
+    "A robot running on the Deepgram Voice Agent API, with a camera so he can see.",
+    "Try: “Describe me.”",
+    "Try: “What am I wearing?”",
     "Try: “Cross your eyes.”",
     "Try: “What's happening at Deepgram this week?”"
    ],
