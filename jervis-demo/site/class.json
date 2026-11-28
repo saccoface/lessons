@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "id": "jervis-demo",
- "title": "Jervis Demo",
+ "title": "Edward's Demo",
  "icon": "🤖",
  "owner": "Dana Sacco",
  "series": {
@@ -11,9 +11,9 @@
   "part": 9,
   "bonus": true
  },
- "summary": "Meet Jervis, Dana's own robot, with everything switched on: every skill, moving eyes and a camera so he can see and describe the people in front of him. A demo stand for events, separate from the four lab evenings.",
- "detail": "Jervis is a furry desk robot built the same way as the lab robots, then taken all the way: a Raspberry Pi 5 inside runs this page over Wi-Fi, a Pico moves his mouth and eyes, a USB speaker and mic give him a voice and ears, and a USB camera lets him look. Step up and ask him to describe you. He answers in character, through the Deepgram Voice Agent. This page is the demo setup and the checklist for running him at an event.",
- "outcome": "Jervis running on his own: talking, moving his mouth and eyes, using skills, and describing what his camera sees.",
+ "summary": "Meet Edward, Dana's own robot, with everything switched on: every skill, moving eyes and a camera so he can see and describe the people in front of him. A demo stand for events, separate from the four lab evenings.",
+ "detail": "Edward is a furry desk robot built the same way as the lab robots, then taken all the way: a Raspberry Pi 5 inside runs this page over Wi-Fi, a Pico moves his mouth and eyes, a USB speaker and mic give him a voice and ears, and a USB camera lets him look. Step up and ask him to describe you. He answers in character, through the Deepgram Voice Agent. This page is the demo setup and the checklist for running him at an event.",
+ "outcome": "Edward running on his own: talking, moving his mouth and eyes, using skills, and describing what his camera sees.",
  "artifact": "A live robot demo that sees, talks and moves.",
  "audience": "Mixed technical and non-technical",
  "type": "Conference demo",
@@ -23,7 +23,7 @@
  "setupMinutes": 20,
  "runner": "robot",
  "prereqs": [
-  "Jervis: Raspberry Pi 5 on its X1202 battery board, Pico 2 W, BreadVolt, three servos (mouth and two eyes), USB speaker, USB mic and the Hue HD USB camera.",
+  "Edward: Raspberry Pi 5 on its X1202 battery board, Pico 2 W, BreadVolt, three servos (mouth and two eyes), USB speaker, USB mic and the Hue HD USB camera.",
   "A strong USB-C charger for the X1202 (27 W, 5 V 5 A). A phone charger is not enough for a Pi 5.",
   "The BreadVolt charged before the demo.",
   "A Deepgram API key, and an Anthropic API key for the camera skill. Both are pasted on this page on the robot's own Pi and stay in that browser."
@@ -36,18 +36,18 @@
  "flow": [
   {
    "type": "steps",
-   "title": "Set up Jervis",
-   "note": "Wiring, power and the checklist before people arrive."
+   "title": "Set up Edward",
+   "note": "Power and the checklist before people arrive. The wiring is next to the robot, under Film a clip."
   },
   {
    "type": "runner",
-   "title": "Talk to Jervis",
-   "note": "Open this page on Jervis's Pi. Tick \"See with the camera\" under Skills, then Start talking."
+   "title": "Talk to Edward",
+   "note": "Open this page on Edward's Pi. Tick \"See with the camera\" under Skills, then Start talking."
   }
  ],
  "sections": [
   {
-   "title": "How Jervis is wired",
+   "title": "How Edward is wired",
    "summary": "Every wire, so he can be put back together. Hold the Pico with its USB port at the top; pin numbers count from that end.",
    "steps": [
     {
@@ -102,13 +102,13 @@
      "id": "boot",
      "title": "Power the Pi",
      "instruction": "Plug the X1202's charger into the wall and wait about a minute for the Pi to start. It opens this page on its own.",
-     "check": "The page is on Jervis's screen."
+     "check": "The page is on Edward's screen."
     },
     {
      "id": "screen",
      "title": "See his screen from a laptop",
      "instruction": "On a laptop, go to connect.raspberrypi.com, sign in, and choose Connect via → Screen sharing next to robotfur.",
-     "check": "You can see and click on Jervis's screen."
+     "check": "You can see and click on Edward's screen."
     },
     {
      "id": "connect",
@@ -160,7 +160,7 @@
   "\"Low voltage warning\" on the Pi, or it keeps restarting: the X1202 isn't getting enough power. Use the 27 W charger, firmly plugged into the X1202.",
   "After a restart the robot page says Not connected: press Connect robot again. The page has to reconnect after every restart.",
   "Pi Connect says robotfur is offline: the Pi is off or still starting. Wait a minute after power-on and refresh.",
-  "Jervis says he can't see: check the camera is plugged into the Pi, the camera skill is ticked, the Anthropic key is pasted, and Chromium was allowed to use the camera.",
+  "Edward says he can't see: check the camera is plugged into the Pi, the camera skill is ticked, the Anthropic key is pasted, and Chromium was allowed to use the camera.",
   "Only one program can use the Pico at a time. Close Thonny or any other tab connected to it."
  ]
 }
